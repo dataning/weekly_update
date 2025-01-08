@@ -483,40 +483,37 @@ def display_profile(profile_df: pd.DataFrame, filtered_df: pd.DataFrame):
 
     # Header section - using filtered_df for organization name if available
     organization_name = (
-        safe_get_value(filtered_df, 'organization_name') 
+        safe_get_value(filtered_df, 'name') 
         if not filtered_df.empty 
         else safe_get_value(profile_df, 'Filer_BusinessName_BusinessNameLine1Txt', "Organization Profile")
     )
     st.header(organization_name)
 
-    # Load NTEE data from filtered_df if available
+    # Load NTEE data from filtered_df 
     try:
-        if not filtered_df.empty and 'ntee_code' in filtered_df.columns:
-            ntee_info = filtered_df
-        else:
-            small_ntee = pd.read_parquet("app_data/small_ntee.parquet")
-            ao_ein = profile_df['EIN'].iloc[0]
-            ntee_info = small_ntee[small_ntee['ein'] == int(ao_ein)]
+        ntee_code = filtered_df['ntee_code_std'].iloc[0] if not filtered_df.empty else "Not Available"
+        ntee_description = filtered_df['Description'].iloc[0] if not filtered_df.empty else ""
+        ntee_definition = filtered_df['Definition'].iloc[0] if not filtered_df.empty else ""
     except Exception as e:
         st.error(f"Error loading NTEE data: {str(e)}")
-        ntee_info = pd.DataFrame()
+        ntee_code = "Not Available"
+        ntee_description = ""
+        ntee_definition = ""
 
     # Basic information row
     col1, col2, col3 = st.columns([3, 3, 3])
     with col1:
-        ein_value = (
-            safe_get_value(filtered_df, 'ein')
-            if not filtered_df.empty
-            else safe_get_value(profile_df, 'EIN')
-        )
+        ein_value = filtered_df['ein'].iloc[0] if not filtered_df.empty else "Not Available"
         st.markdown(f"**EIN:** {ein_value}")
+
     with col2:
         ruling_date = (
-            safe_get_value(filtered_df, 'ruling_date')
-            if not filtered_df.empty and 'ruling_date' in filtered_df.columns
-            else safe_get_value(ntee_info, 'ruling_date', "Not Available")
+            filtered_df['ruling'].iloc[0] 
+            if not filtered_df.empty and 'ruling' in filtered_df.columns 
+            else "Not Available"
         )
         st.markdown(f"**Since:** {ruling_date}")
+
     with col3:
         website_url = safe_get_value(profile_df, 'WebsiteAddressTxt')
         if website_url != "Not Available":
@@ -527,7 +524,7 @@ def display_profile(profile_df: pd.DataFrame, filtered_df: pd.DataFrame):
         else:
             st.markdown("**Website:** Not Available")
 
-    st.divider()
+        st.divider()
 
     # Mission and Address section
     col1, col2 = st.columns([5, 5])
@@ -565,18 +562,13 @@ def display_profile(profile_df: pd.DataFrame, filtered_df: pd.DataFrame):
                 st.components.v1.html(highcharts_html, height=350)
 
     with col2:
-        principal_officer = (
-            safe_get_value(filtered_df, 'principal_officer')
-            if not filtered_df.empty and 'principal_officer' in filtered_df.columns
-            else safe_get_value(profile_df, 'PrincipalOfficerNm')
-        )
+        principal_officer = safe_get_value(profile_df, 'PrincipalOfficerNm')
         display_metric(MetricConfig(
             label="Principal Officer",
             value=principal_officer,
             source="PrincipalOfficerNm field",
             box_class="box1"
         ))
-
         with st.expander("See details about Principal Officer", expanded=expander_state.is_expanded):
             st.write("Name of the organization's principal officer")
             if 'PrincipalOfficerNm' in profile_df.columns:
@@ -584,11 +576,7 @@ def display_profile(profile_df: pd.DataFrame, filtered_df: pd.DataFrame):
                 st.components.v1.html(highcharts_html, height=350)
 
     with col3:
-        preparer_firm = (
-            safe_get_value(filtered_df, 'preparer_firm')
-            if not filtered_df.empty and 'preparer_firm' in filtered_df.columns
-            else safe_get_value(profile_df, 'PreparerFirmGrp_PreparerFirmName_BusinessNameLine1Txt')
-        )
+        preparer_firm = safe_get_value(profile_df, 'PreparerFirmGrp_PreparerFirmName_BusinessNameLine1Txt')
         display_metric(MetricConfig(
             label="Preparer Firm",
             value=preparer_firm,
@@ -599,10 +587,15 @@ def display_profile(profile_df: pd.DataFrame, filtered_df: pd.DataFrame):
         with st.expander("See details about Preparer Firm", expanded=expander_state.is_expanded):
             st.write("Name of the firm that prepared the tax return")
             if 'PreparerFirmGrp_PreparerFirmName_BusinessNameLine1Txt' in profile_df.columns:
-                highcharts_html = create_highcharts_timeline(
-                    profile_df, 'PreparerFirmGrp_PreparerFirmName_BusinessNameLine1Txt'
+                # Create a copy of the DataFrame to avoid modifying the original
+                chart_df = profile_df.copy()
+                chart_df['PreparerFirmGrp_PreparerFirmName_BusinessNameLine1Txt'] = (
+                    chart_df['PreparerFirmGrp_PreparerFirmName_BusinessNameLine1Txt'].str.upper()
                 )
-                st.components.v1.html(highcharts_html, height=350)
+                highcharts_html = create_highcharts_timeline(
+                    chart_df, 'PreparerFirmGrp_PreparerFirmName_BusinessNameLine1Txt'
+                )
+            st.components.v1.html(highcharts_html, height=350)
 
     st.markdown('<div class="row-spacer"></div>', unsafe_allow_html=True)
 
@@ -625,11 +618,6 @@ def display_profile(profile_df: pd.DataFrame, filtered_df: pd.DataFrame):
             st.markdown("---\n*Reference: IRS Form 990 Schedule A, Part I*")
 
     with col2:
-        ntee_code = (
-            safe_get_value(filtered_df, 'ntee_code')
-            if not filtered_df.empty and 'ntee_code' in filtered_df.columns
-            else safe_get_value(ntee_info, 'ntee_code', "Not Available")
-        )
         display_metric(MetricConfig(
             label="NTEE",
             value=ntee_code,
@@ -639,13 +627,10 @@ def display_profile(profile_df: pd.DataFrame, filtered_df: pd.DataFrame):
 
         with st.expander("See details about NTEE", expanded=expander_state.is_expanded):
             st.write("**NTEE:** National Taxonomy of Exempt Entities - A classification system for nonprofit organizations")
-            if not ntee_info.empty:
-                if 'ntee_description' in filtered_df.columns:
-                    st.write(f"**Description**: {safe_get_value(filtered_df, 'ntee_description')}")
-                    st.write(f"**Definition**: {safe_get_value(filtered_df, 'ntee_definition')}")
-                elif 'Description' in ntee_info.columns:
-                    st.write(f"**Description**: {ntee_info['Description'].iloc[0]}")
-                    st.write(f"**Definition**: {ntee_info['Definition'].iloc[0]}")
+            if ntee_description:
+                st.write(f"**Description**: {ntee_description}")
+            if ntee_definition:
+                st.write(f"**Definition**: {ntee_definition}")
 
     with col3:
         address = (
