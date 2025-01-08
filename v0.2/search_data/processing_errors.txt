@@ -1,0 +1,2 @@
+EIN Processing Errors:
+EIN 880714148: Empty DataFrame returned
