@@ -1,0 +1,3646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Magic Carpet Task Tracker</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts: Roboto, Londrina Shadow, Monoton -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Londrina+Shadow&family=Monoton&display=swap"
+        rel="stylesheet" />
+    <!-- Dexie for IndexedDB -->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <!-- EasyMDE for Markdown Editing -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+
+    <style>
+        /* ================= Global Box-Sizing ================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Light mode colors */
+            --bg-color-light: #fafafa;
+            --text-color-light: #2f2f2f;
+            --border-color-light: #ddd;
+
+            /* Dark mode colors */
+            --bg-color-dark: #222;
+            --text-color-dark: #f1f1f1;
+            --border-color-dark: #444;
+
+            --radius: 6px;
+            --transition-speed: 0.3s;
+
+            /* 10 Predetermined Colors */
+            --color-1: #000000;
+            --color-2: #ff4713;
+            --color-3: #00573C;
+            --color-4: #c80058;
+            --color-5: #6E3FA3;
+            --color-6: #F2A900;
+            --color-7: #1E90E2;
+            --color-8: #2f4f4f;
+            --color-9: #ff00ff;
+            --color-10: #00ffff;
+
+            /* Branding Yellow */
+            --brand-yellow: #ffd700;
+
+            /* Slider custom CSS variables */
+            --offset-fill-light: #000;
+            --offset-fill-dark: var(--brand-yellow);
+            --thumb-bg-light: #fff;
+            --thumb-bg-dark: #000;
+            --thumb-border-light: #000;
+            --thumb-border-dark: #fff;
+            --track-bg: #ccc;
+            --offset-fill: var(--offset-fill-light);
+            --thumb-bg: var(--thumb-bg-light);
+            --thumb-border: var(--thumb-border-light);
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: "Roboto", sans-serif;
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        body.dark-mode {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+            --offset-fill: var(--offset-fill-dark);
+            --thumb-bg: var(--thumb-bg-dark);
+            --thumb-border: var(--thumb-border-dark);
+        }
+
+        /* ================= Header & Branding ================= */
+        .header-bar {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+            position: relative;
+        }
+
+        .branding {
+            grid-column: 2;
+            justify-self: center;
+            background: #000;
+            border: 4px solid var(--brand-yellow);
+            border-radius: 20px;
+            display: inline-block;
+            transform: rotate(-2deg);
+            box-shadow: 0 0 20px var(--brand-yellow), 10px 10px 20px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            position: relative;
+            min-width: fit-content;
+            padding: 20px;
+        }
+
+        .branding::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border-radius: 25px;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+            filter: blur(5px);
+        }
+
+        .branding h1 {
+            font-family: "Londrina Shadow", serif;
+            font-size: 36px;
+            color: var(--brand-yellow);
+            text-shadow: 0 0 10px var(--brand-yellow), 0 0 20px var(--brand-yellow), 0 0 30px var(--brand-yellow), 0 0 40px var(--brand-yellow), 0 0 50px var(--brand-yellow);
+            margin: 0;
+            line-height: 1;
+            animation: neon-glow 1.5s ease-in-out infinite alternate, flicker 5s ease-in-out infinite;
+        }
+
+        .branding h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--brand-yellow);
+            -webkit-text-stroke: 1px #000;
+            margin: 15px 0 0 0;
+            line-height: 1;
+            animation: neon-glow 1.5s ease-in-out 0.5s infinite alternate, flicker 7s ease-in-out infinite;
+        }
+
+        @keyframes neon-glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        @keyframes flicker {
+
+            0%,
+            18%,
+            22%,
+            25%,
+            53%,
+            57%,
+            100% {
+                text-shadow: none;
+            }
+
+            20%,
+            24%,
+            55% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        /* ================= Header Controls ================= */
+        .header-controls {
+            grid-column: 1;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .header-controls input[type="text"] {
+            padding: 6px 12px;
+            border: 1px solid var(--border-color-light);
+            border-radius: var(--radius);
+            font-size: 1em;
+            width: calc(150px + 2cm);
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+        }
+
+        body.dark-mode .header-controls input[type="text"] {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        .mode-toggle,
+        .dexie-btn,
+        .btn,
+        .small-btn,
+        .edit-btn {
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s, color 0.2s;
+        }
+
+        .mode-toggle:hover,
+        .dexie-btn:hover,
+        .btn:hover,
+        .small-btn:hover,
+        .edit-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            transform: scale(1.1);
+        }
+
+        .mode-toggle,
+        .dexie-btn {
+            background: none;
+            border: 1px solid currentColor;
+            border-radius: var(--radius);
+            padding: 6px 12px;
+        }
+
+        body.dark-mode .mode-toggle,
+        body.dark-mode .dexie-btn {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        /* A generic utility class for transitions on all properties */
+        .transition-all {
+            transition: all var(--transition-speed) !important;
+        }
+
+        /* ================= Offset Container ================= */
+        .offset-container {
+            grid-column: 3;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-self: flex-end;
+        }
+
+        .offset-container label {
+            white-space: nowrap;
+            margin-right: 10px;
+            font-size: 0.9em;
+            min-width: fit-content;
+            display: flex;
+            align-items: center;
+        }
+
+        .offset-container input[type="range"] {
+            -webkit-appearance: none;
+            width: 180px;
+            height: 4px;
+            background: linear-gradient(to right, var(--offset-fill) 0%, var(--offset-fill) var(--percent, 50%), var(--track-bg) var(--percent, 50%), var(--track-bg) 100%);
+            border-radius: 2px;
+            outline: none;
+            position: relative;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        .offset-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: var(--thumb-bg);
+            border: 2px solid var(--thumb-border);
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            margin-top: -6px;
+            box-sizing: border-box;
+        }
+
+        .offset-container input[type="range"]::-moz-range-track {
+            height: 4px;
+            border-radius: 1px;
+            background: linear-gradient(to right, var(--offset-fill) 0%, var(--offset-fill) var(--percent, 50%), var(--track-bg) var(--percent, 50%), var(--track-bg) 100%);
+        }
+
+        .offset-container input[type="range"]::-moz-range-thumb {
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: var(--thumb-bg);
+            border: 2px solid var(--thumb-border);
+            cursor: pointer;
+            margin-top: 0;
+            box-sizing: border-box;
+        }
+
+        .offset-container input[type="range"]::-webkit-slider-runnable-track {
+            height: 4px;
+            border-radius: 2px;
+            border: none;
+        }
+
+        /* ================= Combined Controls Row (2nd row) ================= */
+        .controls-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+            justify-content: center;
+        }
+
+        /* New left-filters container for the three select fields with styling similar to view-mode buttons */
+        .left-filters {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            left: 0;
+        }
+
+        .left-filters select {
+            padding: 8px 16px;
+            border: 1px solid currentColor;
+            border-radius: var(--radius);
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            transition: all var(--transition-speed);
+            margin-right: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+
+        body.dark-mode .left-filters select {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        /* ================= New CSS for drop zone highlight ================= */
+        .drop-zone-highlight {
+            border: 2px dashed var(--brand-yellow);
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .view-mode-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .view-mode-toggle {
+            display: inline-flex;
+            gap: 5px;
+        }
+
+        .view-mode-toggle button {
+            padding: 8px 16px;
+            border: 1px solid currentColor;
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            border-radius: var(--radius);
+            text-transform: capitalize;
+            margin-right: 5px;
+            transition: all var(--transition-speed);
+            font-size: 16px;
+        }
+
+        body.dark-mode .view-mode-toggle button {
+            color: var(--text-color-dark);
+            background-color: var(--bg-color-dark);
+        }
+
+        .view-mode-toggle button.active {
+            background-color: var(--text-color-light) !important;
+            color: var(--bg-color-light) !important;
+            border-width: 2px;
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+
+        body.dark-mode .view-mode-toggle button.active {
+            background-color: var(--text-color-dark) !important;
+            color: var(--bg-color-dark) !important;
+        }
+
+        .view-mode-toggle button:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            transform: scale(1.05);
+        }
+
+        .view-mode-toggle button.active:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+        }
+
+        .week-slider label {
+            margin-right: 10px;
+        }
+
+        .week-slider input[type="range"] {
+            width: 180px;
+        }
+
+        .contributor-version {
+            position: absolute;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contributor-version span {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .contributor-info {
+            position: relative;
+            cursor: pointer;
+            color: inherit;
+            text-decoration: underline;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .contributor-info .tooltip {
+            visibility: hidden;
+            width: 220px;
+            background-color: var(--bg-color-dark);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 10;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .contributor-info .tooltip a {
+            color: var(--brand-yellow);
+            text-decoration: underline;
+        }
+
+        .contributor-info .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--bg-color-dark) transparent transparent transparent;
+        }
+
+        .contributor-info:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* ================= Feedback Button (Dark Mode Styles) ================= */
+        .feedback-btn {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            padding: 6px 12px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        body.dark-mode .feedback-btn {
+            background-color: var(--bg-color-dark);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .feedback-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            border-color: #000 !important;
+            transform: scale(1.1);
+        }
+
+        body.dark-mode .feedback-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            border-color: #000 !important;
+        }
+
+        /* ================= Board & Columns ================= */
+        .board {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            background: inherit;
+            border: 1px solid var(--border-color-light);
+            border-radius: var(--radius);
+            padding: 10px;
+            min-height: 300px;
+            transition: border-color var(--transition-speed);
+            position: relative;
+            min-width: 200px;
+        }
+
+        body.dark-mode .column {
+            border-color: var(--border-color-dark);
+        }
+
+        .column h3 {
+            text-align: center;
+            border-bottom: 1px solid var(--border-color-light);
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        body.dark-mode .column h3 {
+            border-color: var(--border-color-dark);
+        }
+
+        .date-label {
+            font-size: 0.9em;
+            margin-top: 4px;
+        }
+
+        .add-task-btn {
+            background: none;
+            border: none;
+            color: #4a90e2;
+            font-size: 16px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .add-task-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* ================= Drop Zone for Drag & Drop ================= */
+        .drop-zone {
+            height: 10px;
+            margin: 5px 0;
+        }
+
+        /* ================= Task Card ================= */
+        .task {
+            position: relative;
+            color: #fff;
+            padding: 40px 12px 12px 12px;
+            border-radius: var(--radius);
+            margin-bottom: 8px;
+            cursor: grab;
+            transition: box-shadow 0.2s, transform 0.3s;
+            font-size: 14px;
+            background-color: var(--color-1);
+            user-select: none;
+        }
+
+        .task:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            transform: scale(1.01);
+        }
+
+        .task.highlight {
+            outline: 2px dashed var(--brand-yellow);
+            outline-offset: -5px;
+        }
+
+        .task-header {
+            margin-bottom: 8px;
+        }
+
+        .task-title {
+            user-select: text;
+            border: none;
+            background: transparent;
+            color: inherit;
+            font-size: 16px;
+            font-weight: 500;
+            padding-right: 50px;
+            width: 100%;
+        }
+
+        .task-title:focus {
+            outline: none;
+            border-bottom: 1px solid #4a90e2;
+        }
+
+        /* ================= Collapsed Task Card Layout ================= */
+        .collapsed-divider {
+            margin: 4px 0;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .collapsed-content {
+            margin-top: 4px;
+            font-size: 1.1em;
+        }
+
+        .collapsed-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 4px 0;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .collapsed-row:hover {
+            opacity: 0.8;
+        }
+
+        .collapsed-row .row-label {
+            font-weight: bold;
+            margin-left: 6px;
+        }
+
+        .editable-area {
+            flex: 1;
+            min-height: 24px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            overflow: hidden;
+        }
+
+        .collapsed-row input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: inherit;
+            padding: 2px 6px;
+        }
+
+        .count-badge {
+            position: absolute;
+            top: -4px;
+            right: -10px;
+            background: red;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 5px;
+            font-size: 0.7em;
+        }
+
+        .task-controls {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            display: flex;
+            gap: 0px;
+        }
+
+        .task-controls button.delete-task,
+        .task-controls button.collapse-toggle {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+        }
+
+        .task-controls button.delete-task:hover {
+            color: var(--brand-yellow);
+            transform: scale(1.1);
+        }
+
+        .task-controls button.collapse-toggle:hover {
+            color: var(--brand-yellow);
+            transform: scale(1.1);
+        }
+
+        .task-body {
+            margin-top: 10px;
+            background: #333;
+            padding: 10px;
+            border-radius: var(--radius);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= Inputs ================= */
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 6px;
+            margin: 4px 0;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color-light);
+            transition: border-color var(--transition-speed);
+            font-size: 1em;
+        }
+
+        body.dark-mode input,
+        body.dark-mode textarea,
+        body.dark-mode select {
+            border-color: var(--border-color-dark);
+        }
+
+        .input-modern {
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s, transform 0.3s;
+            background: transparent;
+            color: inherit;
+            font-size: 1em;
+        }
+
+        .input-modern:focus {
+            border-bottom: 2px solid var(--brand-yellow);
+            transform: scale(1.02);
+        }
+
+        .task-body input[type="date"] {
+            width: 140px;
+            height: 24px;
+            padding: 2px 4px;
+            font-size: 0.9em;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: inherit;
+        }
+
+        .task-body input[type="date"]::-webkit-calendar-picker-indicator {
+            width: 14px;
+            height: 14px;
+            filter: invert(1);
+            opacity: 0.7;
+            margin-left: 4px;
+            margin-right: 4px;
+            position: absolute;
+            right: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        body.dark-mode input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1) !important;
+        }
+
+        body:not(.dark-mode) input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0);
+        }
+
+        .task-body input[type="date"]::-moz-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 0.7;
+        }
+
+        .expiration-date-input {
+            padding: 2px 4px;
+            width: 150px;
+            margin-left: 10px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+        .color-palette {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .color-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            border: 1px solid var(--border-color-light);
+            border-radius: var(--radius);
+            background: #fff;
+            color: #000;
+            cursor: pointer;
+        }
+
+        body.dark-mode .color-btn {
+            border-color: var(--border-color-dark);
+        }
+
+        .hidden-color {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .hidden-file {
+            display: none;
+        }
+
+        .items-textarea {
+            height: 120px;
+            resize: vertical;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 1em;
+        }
+
+        .EasyMDEContainer {
+            margin-top: 8px;
+        }
+
+        .EasyMDEContainer .editor-toolbar {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+
+        .EasyMDEContainer .editor-toolbar button {
+            color: #000 !important;
+        }
+
+        .EasyMDEContainer.fullscreen {
+            background: var(--bg-color-light);
+            z-index: 9999 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            margin: 0 !important;
+            padding: 20px !important;
+        }
+
+        body.dark-mode .EasyMDEContainer.fullscreen {
+            background: var(--bg-color-dark);
+        }
+
+        .EasyMDEContainer.fullscreen .CodeMirror-fullscreen {
+            height: calc(100vh - 50px) !important;
+        }
+
+        .EasyMDEContainer.fullscreen .editor-toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10000;
+            border-radius: 0;
+            background-color: var(--bg-color-light) !important;
+            border-bottom: 1px solid var(--border-color-light);
+        }
+
+        body.dark-mode .EasyMDEContainer.fullscreen .editor-toolbar {
+            background-color: var(--bg-color-dark) !important;
+            border-color: var(--border-color-dark);
+        }
+
+        .EasyMDEContainer.fullscreen .editor-statusbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 5px 10px;
+            background: var(--bg-color-light);
+            border-top: 1px solid var(--border-color-light);
+        }
+
+        body.dark-mode .EasyMDEContainer.fullscreen .editor-statusbar {
+            background: var(--bg-color-dark);
+            border-color: var(--border-color-dark);
+        }
+
+        body.dark-mode .EasyMDEContainer .CodeMirror {
+            color: var(--text-color-dark);
+            background: var(--bg-color-dark);
+            caret-color: white;
+        }
+
+        body.dark-mode .EasyMDEContainer .CodeMirror-cursor {
+            border-left: 1px solid white !important;
+        }
+
+        body.dark-mode .EasyMDEContainer .CodeMirror div.CodeMirror-selected {
+            background: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        body.dark-mode .EasyMDEContainer .CodeMirror-line::selection,
+        body.dark-mode .EasyMDEContainer .CodeMirror-line>span::selection,
+        body.dark-mode .EasyMDEContainer .CodeMirror-line>span>span::selection {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .EasyMDEContainer .editor-preview,
+        .EasyMDEContainer .editor-preview-side {
+            background: var(--bg-color-light);
+            color: var(--text-color-light);
+            padding: 10px;
+        }
+
+        body.dark-mode .EasyMDEContainer .editor-preview,
+        body.dark-mode .EasyMDEContainer .editor-preview-side {
+            background: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        .EasyMDEContainer .editor-preview h1,
+        .EasyMDEContainer .editor-preview h2,
+        .EasyMDEContainer .editor-preview h3,
+        .EasyMDEContainer .editor-preview h4,
+        .EasyMDEContainer .editor-preview h5,
+        .EasyMDEContainer .editor-preview h6,
+        .EasyMDEContainer .editor-preview p,
+        .EasyMDEContainer .editor-preview ul,
+        .EasyMDEContainer .editor-preview ol {
+            color: inherit;
+            margin: 0.5em 0;
+        }
+
+        .EasyMDEContainer .editor-preview code,
+        .EasyMDEContainer .editor-preview pre {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius);
+            padding: 0.2em 0.4em;
+        }
+
+        body.dark-mode .EasyMDEContainer .editor-preview code,
+        body.dark-mode .EasyMDEContainer .editor-preview pre {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .EasyMDEContainer .editor-preview blockquote {
+            border-left: 4px solid var(--border-color-light);
+            margin: 1em 0;
+            padding-left: 1em;
+            color: inherit;
+        }
+
+        body.dark-mode .EasyMDEContainer .editor-preview blockquote {
+            border-left-color: var(--border-color-dark);
+        }
+
+        .EasyMDEContainer .editor-preview a {
+            color: #4a90e2;
+        }
+
+        body.dark-mode .EasyMDEContainer .editor-preview a {
+            color: var(--brand-yellow);
+        }
+
+        .chip-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 4px;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--border-color-light);
+            border-radius: 9999px;
+            padding: 4px 8px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s, transform 0.2s;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        body.dark-mode .chip {
+            border-color: var(--border-color-dark);
+        }
+
+        .chip:hover {
+            background-color: var(--brand-yellow);
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: var(--radius);
+            background-color: #fff;
+            color: #000;
+            margin-top: 4px;
+            transition: transform 0.2s, background-color 0.2s, color 0.2s;
+        }
+
+        .btn.save-btn {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+
+        .btn.save-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            transform: scale(1.1);
+        }
+
+        .btn i.fa-arrow-right {
+            color: #000 !important;
+        }
+
+        .btn:has(i.fa-arrow-right) {
+            background-color: #fff !important;
+            color: #000 !important;
+            border: 1px solid currentColor;
+        }
+
+        .attach-button {
+            padding: 2px 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.1);
+            color: inherit;
+            margin-left: 4px;
+            margin-right: 4px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            transition: transform 0.2s, background-color 0.2s, color 0.2s;
+        }
+
+        .attach-button i {
+            font-size: 0.9em;
+            margin-right: 4px;
+            color: inherit;
+        }
+
+        .attach-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* New styling for the Expiration button (when no date is set)
+       removed in favor of direct editing */
+        .expire-button {
+            font-size: 16px;
+            font-family: inherit;
+            color: inherit;
+            border: 1px solid currentColor;
+            padding: 6px 12px;
+            border-radius: var(--radius);
+            background: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .inline-row {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin: 4px 0;
+        }
+
+        .inline-row label {
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+
+        .inline-row .chip-container {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        .summary-container {
+            padding: 20px;
+            border-radius: var(--radius);
+            transition: background-color var(--transition-speed);
+            background-color: var(--bg-color-light);
+        }
+
+        body.dark-mode .summary-container {
+            background-color: var(--bg-color_dark);
+        }
+
+        .summary-container input[type="date"] {
+            width: 100%;
+            height: auto;
+            padding: 6px;
+            margin: 4px 0;
+            font-size: 1em;
+            border: 1px solid var(--border-color-light);
+            border-radius: var(--radius);
+            background: none;
+            color: inherit;
+        }
+
+        body.dark-mode .summary-container input[type="date"] {
+            border-color: var(--border-color-dark);
+        }
+
+        .arrow-btn {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            padding: 6px 12px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+        }
+
+        body.dark-mode .arrow-btn {
+            background-color: var(--bg-color-dark);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .arrow-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            border-color: #000 !important;
+            transform: scale(1.1);
+        }
+
+        body.dark-mode .arrow-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            border-color: #000 !important;
+        }
+
+        .summary-btn {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            padding: 6px 12px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        body.dark-mode .summary-btn {
+            background-color: var(--bg-color-dark);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .summary-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            border-color: #000 !important;
+            transform: scale(1.1);
+        }
+
+        body.dark-mode .summary-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            border-color: #000 !important;
+        }
+
+        .summary-input {
+            width: 100%;
+            height: auto;
+            padding: 6px;
+            margin: 4px 0;
+            font-size: 1em;
+            border: 1px solid var(--border-color-light);
+            border-radius: var(--radius);
+            background: none;
+            color: inherit;
+            transition: border-color var(--transition-speed);
+        }
+
+        body.dark-mode .summary-input {
+            border-color: var(--border-color-dark);
+        }
+
+        .excalidraw-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        .excalidraw-modal-content {
+            width: 90vw;
+            height: 90vh;
+            position: relative;
+            background: var(--bg-color-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        body.dark-mode .excalidraw-modal-content {
+            background: var(--bg-color-dark);
+        }
+
+        .generated-prompt-textarea {
+            width: 100%;
+            min-height: 300px;
+            max-height: 600px;
+            resize: vertical;
+            overflow: auto;
+            white-space: pre-wrap;
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            border: 1px solid var(--border-color-light);
+            padding: 10px;
+            font-family: monospace;
+            line-height: 1.4;
+        }
+
+        body.dark-mode .generated-prompt-textarea {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+            border: 1px solid var(--border-color-dark);
+        }
+
+        .avatar-stack {
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+            position: relative;
+        }
+
+        .avatar-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #666;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            margin-left: -8px;
+            border: 2px solid #fff;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .avatar-circle:first-child {
+            margin-left: 0;
+        }
+
+        .avatar-circle:hover {
+            z-index: 999;
+            transform: scale(1.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .avatar-circle {
+            border-color: var(--bg-color-dark);
+        }
+
+        .avatar-circle span {
+            pointer-events: none;
+        }
+
+        /* ================= Bus Route Expiration Timeline (Bigger) ================= */
+        /* NEW: Signal bar for expiration: 10 small bars representing 10 days remaining.
+       If remaining days > 10, no signal is shown.
+       If remaining days <= 10, fill (10 - remainingDays) bars green and remaining in yellow. */
+        .signal-bar {
+            display: flex;
+            gap: 2px;
+            margin-top: 5px;
+        }
+
+        .signal-bar div {
+            width: 10px;
+            height: 20px;
+            background-color: lightgray;
+        }
+
+        /* ================= Quick Add Modal, Help Modal, etc. ================= */
+        .quick-add-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+        }
+
+        .quick-add-modal {
+            background-color: var(--bg-color-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            width: 300px;
+            position: relative;
+        }
+
+        body.dark-mode .quick-add-modal {
+            background-color: var(--bg-color-dark);
+        }
+
+        .quick-add-modal h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .quick-add-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3em;
+        }
+
+        .status-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dropdown {
+            width: 140px;
+            height: 24px;
+            padding: 2px 4px;
+            font-size: 0.9em;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: var(--radius);
+            color: inherit;
+        }
+
+        /* Expanded view status – add border only in expanded task view */
+        .expanded-status-select {
+            border: 1px solid var(--border-color-light);
+            padding: 2px 4px;
+            border-radius: var(--radius);
+        }
+
+        body.dark-mode .expanded-status-select {
+            border: 1px solid var(--border-color-dark);
+        }
+
+        .help-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+        }
+
+        .help-modal {
+            background-color: var(--bg-color-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            width: 500px;
+            max-width: 90%;
+            position: relative;
+        }
+
+        body.dark-mode .help-modal {
+            background-color: var(--bg-color-dark);
+        }
+
+        .help-modal h2 {
+            margin-top: 0;
+        }
+
+        .help-modal ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .help-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Service Worker Registration for Offline Capability -->
+    <script>
+        if ("serviceWorker" in navigator && location.protocol.match(/^https?:/)) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/sw.js").catch((err) => {
+                    console.error("ServiceWorker registration failed:", err);
+                });
+            });
+        }
+    </script>
+
+    <!-- React, ReactDOM, Babel -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        /************************************************/
+        /* 0) CENTRAL CONFIGURATION OBJECT + fixTaskItems */
+        /************************************************/
+        const CONFIG = {
+            validDays: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            colors: {
+                preset: [
+                    "#000000",
+                    "#CC3A0F",
+                    "#00573C",
+                    "#C80058",
+                    "#4A1589",
+                    "#654100",
+                    "#004B8C",
+                    "#1A3636",
+                    "#660066",
+                    "#003C4D",
+                ],
+                brand: {
+                    yellow: "#ffd700",
+                },
+            },
+            views: {
+                daily: { minOffset: -52, maxOffset: 52 },
+                weekly: { minOffset: -13, maxOffset: 13 },
+                monthly: { minOffset: -5, maxOffset: 5 },
+            },
+            dateFormat: {
+                short: { day: "numeric", month: "numeric" },
+                long: { month: "long", year: "numeric" },
+            },
+        };
+
+        function fixTaskItems(task) {
+            if (!task.items) {
+                task.items = [];
+            } else if (!Array.isArray(task.items)) {
+                if (typeof task.items === "string" && task.items.trim().length) {
+                    task.items = [task.items];
+                } else {
+                    task.items = [];
+                }
+            }
+            if (!task.status) {
+                task.status = "Scoping";
+            }
+            return task;
+        }
+
+        /************************************************/
+        /* 1) HELPER FUNCTIONS & DEXIE SETUP            */
+        /************************************************/
+        const { useState, useRef, useEffect, useImperativeHandle } = React;
+        const generateId = () => "_" + Math.random().toString(36).substr(2, 9);
+
+        function parseDDMMYYYY(str) {
+            const parts = str.split("/");
+            if (parts.length !== 3) return null;
+            const dd = parseInt(parts[0], 10);
+            const mm = parseInt(parts[1], 10);
+            const yyyy = parseInt(parts[2], 10);
+            if (!dd || !mm || !yyyy) return null;
+            const d = new Date(yyyy, mm - 1, dd);
+            d.setHours(12, 0, 0, 0);
+            return d;
+        }
+
+        function formatDDMMYYYY(date) {
+            const d = new Date(date);
+            const dd = String(d.getDate()).padStart(2, "0");
+            const mm = String(d.getMonth() + 1).padStart(2, "0");
+            const yyyy = d.getFullYear();
+            return dd + "/" + mm + "/" + yyyy;
+        }
+
+        function getMonday(date) {
+            const d = new Date(date);
+            const day = d.getDay();
+            const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+            return new Date(d.setDate(diff));
+        }
+
+        function computeDate(dayLabel, offset, baseMonday) {
+            const dayIndex = CONFIG.validDays.indexOf(dayLabel);
+            const newDate = new Date(baseMonday);
+            newDate.setDate(newDate.getDate() + offset * 7 + dayIndex);
+            newDate.setHours(12, 0, 0, 0);
+            return newDate;
+        }
+
+        // Modified: calcWorkingDays now returns working days between two dates.
+        function calcWorkingDays(start, end) {
+            if (!start || !end) return 0;
+            const s = new Date(start);
+            const e = new Date(end);
+            if (s > e) return 0;
+            let count = 0;
+            let d = new Date(s);
+            while (d <= e) {
+                const day = d.getDay();
+                if (day >= 1 && day <= 5) count++;
+                d.setDate(d.getDate() + 1);
+            }
+            return count;
+        }
+
+        function truncateText(text, maxLength = 30) {
+            if (text.length <= maxLength) return text;
+            const front = Math.ceil(maxLength / 2);
+            const back = Math.floor(maxLength / 2);
+            return text.slice(0, front) + "..." + text.slice(text.length - back);
+        }
+
+        // Bump DB version to 2 to include "status" in the store definition and the color column
+        const db = new Dexie("TaskTrackerDB");
+        db.version(1).stores({
+            tasks: "id, title, items, tags, users, color, urls, attachments, dateAssigned, dateModified, day, expirationDate",
+        });
+
+        db.version(2).stores({
+            tasks: "id, title, items, tags, users, color, urls, attachments, dateAssigned, dateModified, day, expirationDate, status"
+        }).upgrade(async (tx) => {
+            const allTasks = await tx.tasks.toArray();
+            for (const t of allTasks) {
+                if (!t.status) {
+                    t.status = "Scoping";
+                }
+                await tx.tasks.put(t);
+            }
+        });
+
+        async function withRetry(operation, maxAttempts = 3) {
+            for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+                try {
+                    return await operation();
+                } catch (error) {
+                    if (attempt === maxAttempts) throw error;
+                    await new Promise((res) => setTimeout(res, 1000 * attempt));
+                }
+            }
+        }
+
+        async function updateTaskInDB(task) {
+            return withRetry(async () => {
+                if (!CONFIG.validDays.includes(task.day)) {
+                    await db.tasks.delete(task.id);
+                    return;
+                }
+                fixTaskItems(task);
+                task.dateModified = new Date();
+                await db.tasks.put(task);
+            });
+        }
+
+        async function deleteTaskFromDB(id) {
+            return withRetry(async () => {
+                await db.tasks.delete(id);
+            });
+        }
+
+        async function addTaskToDB(task) {
+            return withRetry(async () => {
+                if (!CONFIG.validDays.includes(task.day)) return;
+                fixTaskItems(task);
+                task.dateModified = new Date();
+                await db.tasks.add(task);
+            });
+        }
+
+        function processCSVRow(row) {
+            const splitField = (field) => field?.split(" | ").map((x) => x.trim()).filter(Boolean) || [];
+            return {
+                id: row[0],
+                title: row[1],
+                items: splitField(row[2]),
+                tags: splitField(row[3]).map((text) => ({ id: generateId(), text })),
+                users: splitField(row[4]).map((name) => ({ id: generateId(), name })),
+                urls: splitField(row[5]).map((url) => ({ id: generateId(), url })),
+                attachments: splitField(row[6]),
+                dateAssigned: parseDDMMYYYY(row[7]),
+                dateModified: parseDDMMYYYY(row[8]),
+                expirationDate: parseDDMMYYYY(row[9]),
+                color: "#000000" // Records the hex color code of the task card
+            };
+        }
+
+        async function exportDexieToCSV() {
+            try {
+                const tasks = await db.tasks.toArray();
+                if (!tasks.length) {
+                    alert("No tasks in DB to export.");
+                    return;
+                }
+                tasks.sort(
+                    (a, b) => new Date(b.dateModified) - new Date(a.dateModified) || new Date(b.dateAssigned) - new Date(a.dateAssigned)
+                );
+                const header = [
+                    "id",
+                    "title",
+                    "items",
+                    "tags",
+                    "users",
+                    "urls",
+                    "attachments",
+                    "Date Assigned",
+                    "Date Modified",
+                    "Expiration Date",
+                    "color",
+                    "status"
+                ];
+                const csvRows = [header.join(",")];
+                for (const t of tasks) {
+                    const itemsStr = Array.isArray(t.items) ? t.items.join(" | ") : String(t.items ?? "");
+                    const row = [
+                        t.id,
+                        `"${t.title}"`,
+                        `"${itemsStr}"`,
+                        `"${t.tags?.map((ch) => ch.text).join(" | ")}"`,
+                        `"${t.users?.map((u) => u.name).join(" | ")}"`,
+                        `"${t.urls?.map((u) => u.url).join(" | ")}"`,
+                        `"${t.attachments?.join(" | ")}"`,
+                        t.dateAssigned ? new Date(t.dateAssigned).toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric" }) : "",
+                        t.dateModified ? new Date(t.dateModified).toLocaleDateString() : "",
+                        t.expirationDate ? new Date(t.expirationDate).toLocaleDateString() : "",
+                        t.color || "",
+                        t.status || ""
+                    ];
+                    csvRows.push(row.join(","));
+                }
+                const csvString = csvRows.join("\n");
+                const blob = new Blob([csvString], { type: "text/csv;charset=utf-8;" });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.setAttribute("href", url);
+                link.setAttribute("download", "tasks_export.csv");
+                link.click();
+            } catch (err) {
+                console.error("Error exporting Dexie to CSV:", err);
+            }
+        }
+
+        /************************************************/
+        /* 2) DEXIE MODAL                               */
+        /************************************************/
+        const DexieModal = ({ tasks, onClose }) => {
+            const backdropRef = useRef(null);
+            const handleBackdropClick = (e) => {
+                if (e.target === backdropRef.current) {
+                    onClose();
+                }
+            };
+            return (
+                <div
+                    ref={backdropRef}
+                    style={{
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                        width: "100vw",
+                        height: "100vh",
+                        backgroundColor: "rgba(0,0,0,0.5)",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        zIndex: 1000,
+                    }}
+                    onClick={handleBackdropClick}
+                >
+                    <div
+                        className="dexie-modal-container"
+                        style={{
+                            backgroundColor: document.body.classList.contains("dark-mode") ? "#333" : "#fff",
+                            padding: "20px",
+                            maxHeight: "80%",
+                            overflowY: "auto",
+                            borderRadius: "6px",
+                        }}
+                    >
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <h2 style={{ color: document.body.classList.contains("dark-mode") ? "#fff" : "#000" }}>
+                                Dexie Task Table
+                            </h2>
+                            <button
+                                onClick={onClose}
+                                style={{
+                                    background: "none",
+                                    border: "none",
+                                    fontSize: "1.5em",
+                                    cursor: "pointer",
+                                    color: document.body.classList.contains("dark-mode") ? "#fff" : "#000",
+                                }}
+                            >
+                                ×
+                            </button>
+                        </div>
+                        <table style={{ borderCollapse: "collapse", width: "100%", tableLayout: "fixed" }}>
+                            <thead>
+                                <tr>
+                                    {[
+                                        "ID",
+                                        "Title",
+                                        "Items",
+                                        "Tags",
+                                        "Users",
+                                        "URLs",
+                                        "Attachments",
+                                        "Date Assigned",
+                                        "Date Modified",
+                                        "Expiration Date",
+                                        "Color",
+                                        "Status"
+                                    ].map((h) => (
+                                        <th key={h} style={{ border: "1px solid", padding: "5px", textAlign: "left" }}>
+                                            {h}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {tasks.map((t) => {
+                                    const displayItems = Array.isArray(t.items) ? t.items.join(" | ") : String(t.items ?? "");
+                                    return (
+                                        <tr key={t.id}>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>{t.id}</td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>{t.title}</td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>{displayItems}</td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>
+                                                {t.tags?.map((ch) => ch.text).join(" | ")}
+                                            </td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>
+                                                {t.users?.map((u) => u.name).join(" | ")}
+                                            </td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>
+                                                {t.urls?.map((u) => u.url).join(" | ")}
+                                            </td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>
+                                                {t.attachments?.join(" | ")}
+                                            </td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>
+                                                {t.dateAssigned ? new Date(t.dateAssigned).toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric" }) : ""}
+                                            </td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>
+                                                {t.dateModified ? new Date(t.dateModified).toLocaleDateString() : ""}
+                                            </td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>
+                                                {t.expirationDate ? new Date(t.expirationDate).toLocaleDateString() : ""}
+                                            </td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>{t.color}</td>
+                                            <td style={{ border: "1px solid", padding: "5px" }}>{t.status}</td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            );
+        };
+
+        /************************************************/
+        /* 3) EXCALIDRAW MODAL                          */
+        /************************************************/
+        const ExcalidrawModal = ({ onClose }) => {
+            const backdropRef = useRef(null);
+            const handleBackdropClick = (e) => {
+                if (e.target === backdropRef.current) {
+                    onClose();
+                }
+            };
+            return (
+                <div className="excalidraw-backdrop" ref={backdropRef} onClick={handleBackdropClick}>
+                    <div className="excalidraw-modal-content">
+                        <button
+                            onClick={onClose}
+                            style={{
+                                position: "absolute",
+                                top: "10px",
+                                right: "10px",
+                                background: "none",
+                                border: "none",
+                                fontSize: "1.5em",
+                                cursor: "pointer",
+                                color: document.body.classList.contains("dark-mode") ? "#fff" : "#000",
+                                zIndex: 999,
+                            }}
+                        >
+                            ×
+                        </button>
+                        <h2 style={{ margin: "10px", textAlign: "center" }}>Excalidraw Drawing Board</h2>
+                        <iframe
+                            src="https://excalidraw.com?embed=1"
+                            title="Excalidraw"
+                            style={{ width: "100%", height: "calc(100% - 60px)", border: "none" }}
+                        />
+                    </div>
+                </div>
+            );
+        };
+
+        /************************************************/
+        /* 3.5) EASYMDE                                 */
+        /************************************************/
+        function MarkdownEditor({ initialMarkdown, onChange }) {
+            const textareaRef = useRef(null);
+            const editorRef = useRef(null);
+
+            useEffect(() => {
+                const computeInitialValue = () => {
+                    if (Array.isArray(initialMarkdown)) {
+                        return initialMarkdown.join("\n");
+                    }
+                    if (typeof initialMarkdown === "string") {
+                        return initialMarkdown;
+                    }
+                    return "";
+                };
+
+                const initialValue = computeInitialValue();
+                editorRef.current = new EasyMDE({
+                    element: textareaRef.current,
+                    initialValue,
+                    autoDownloadFontAwesome: false,
+                    spellChecker: false,
+                    status: [
+                        "autosave",
+                        {
+                            className: "md-line-count",
+                            defaultValue: (el) => {
+                                el.innerHTML = "0 lines";
+                            },
+                            onUpdate: (el) => {
+                                if (editorRef.current) {
+                                    const lineCount = editorRef.current.codemirror.lineCount();
+                                    el.innerHTML = lineCount + (lineCount === 1 ? " line" : " lines");
+                                }
+                            },
+                        },
+                        {
+                            className: "md-word-count",
+                            defaultValue: (el) => {
+                                el.innerHTML = "0 words";
+                            },
+                            onUpdate: (el) => {
+                                if (editorRef.current) {
+                                    const str = editorRef.current.codemirror.getValue();
+                                    const wordCount = (str.match(/\S+/g) || []).length;
+                                    el.innerHTML = wordCount + (wordCount === 1 ? " word" : " words");
+                                }
+                            },
+                        },
+                    ],
+                    autoSave: {
+                        enabled: true,
+                        delay: 1000,
+                        uniqueId: "editorAutosave",
+                    },
+                    renderingConfig: {
+                        singleLineBreaks: false,
+                        codeSyntaxHighlighting: true,
+                    },
+                    toolbar: [
+                        "bold",
+                        "italic",
+                        "unordered-list",
+                        "ordered-list",
+                        "preview",
+                        "fullscreen",
+                        "guide",
+                    ],
+                });
+
+                editorRef.current.codemirror.on("change", () => {
+                    const value = editorRef.current.value();
+                    onChange(value);
+                });
+
+                return () => {
+                    if (editorRef.current) {
+                        editorRef.current.toTextArea();
+                        editorRef.current = null;
+                    }
+                };
+            }, []);
+
+            useEffect(() => {
+                if (editorRef.current) {
+                    let newVal = "";
+                    if (Array.isArray(initialMarkdown)) {
+                        newVal = initialMarkdown.join("\n");
+                    } else if (typeof initialMarkdown === "string") {
+                        newVal = initialMarkdown;
+                    }
+                    if (editorRef.current.value() !== newVal) {
+                        editorRef.current.value(newVal);
+                    }
+                }
+            }, [initialMarkdown]);
+
+            return (
+                <div className="EasyMDEContainer">
+                    <textarea ref={textareaRef} />
+                </div>
+            );
+        }
+
+        /************************************************/
+        /* 4) TASK CARD                                 */
+        /************************************************/
+        const TaskCard = React.memo(({ task, day, columnDate, onUpdate, onDelete, onReorder, forceCollapse, searchTerm }) => {
+            const [expanded, setExpanded] = useState(true);
+            const [editTask, setEditTask] = useState({ ...task });
+            const fileInputRef = useRef(null);
+            const colorInputRef = useRef(null);
+            const [editTagsCollapsed, setEditTagsCollapsed] = useState(false);
+            const [editUsersCollapsed, setEditUsersCollapsed] = useState(false);
+            const [editExpirationCollapsed, setEditExpirationCollapsed] = useState(false);
+            const [isDeleting, setIsDeleting] = useState(false);
+
+            useEffect(() => {
+                setEditTask({ ...task });
+            }, [task]);
+
+            useEffect(() => {
+                setExpanded(false);
+            }, [forceCollapse]);
+
+            const isHighlight = searchTerm ? editTask.title.toLowerCase().includes(searchTerm.toLowerCase()) : false;
+
+            // Updated: Compute progress based on remaining working days from today to expiration date.
+            // We define a fixed timeline of 10 weekdays.
+            function computeExpirationProgress() {
+                if (!editTask.expirationDate) return 0;
+                const today = new Date();
+                let remaining = calcWorkingDays(today, editTask.expirationDate);
+                if (remaining >= 10) return 0;
+                if (remaining <= 0) return 10;
+                return 10 - remaining;
+            }
+
+            const filledBars = computeExpirationProgress(); // number of green bars
+            const remainingDays = editTask.expirationDate ? calcWorkingDays(new Date(), editTask.expirationDate) : 0;
+            // NEW: Instead of the bus icon timeline, render a signal bar if remainingDays <= 10.
+            const renderSignalBar = () => {
+                if (!editTask.expirationDate || remainingDays > 10) return null;
+                return (
+                    <div className="signal-bar">
+                        {Array.from({ length: 10 }).map((_, i) => (
+                            <div
+                                key={i}
+                                style={{
+                                    backgroundColor: i < filledBars ? "green" : "yellow"
+                                }}
+                            />
+                        ))}
+                    </div>
+                );
+            };
+
+            const handleSave = () => {
+                onUpdate(editTask);
+                updateTaskInDB(editTask);
+                setExpanded(false);
+            };
+
+            const handleChange = (e) => {
+                const { name, value } = e.target;
+                setEditTask((prev) => ({ ...prev, [name]: value }));
+            };
+
+            const handleMarkdownChange = (newMarkdown) => {
+                setEditTask((prev) => ({ ...prev, items: [newMarkdown] }));
+            };
+
+            const handleTagsInput = (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    const val = e.target.value.trim();
+                    if (!val) return;
+                    const chip = { id: generateId(), text: val };
+                    setEditTask((prev) => ({
+                        ...prev,
+                        tags: prev.tags ? [...prev.tags, chip] : [chip],
+                    }));
+                    e.target.value = "";
+                }
+            };
+
+            const handleUsersInput = (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    const val = e.target.value.trim();
+                    if (!val) return;
+                    const chip = { id: generateId(), name: val };
+                    setEditTask((prev) => ({
+                        ...prev,
+                        users: prev.users ? [...prev.users, chip] : [chip],
+                    }));
+                    e.target.value = "";
+                }
+            };
+
+            const handleUrlsInput = (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    const val = e.target.value.trim();
+                    if (!val) return;
+                    const chip = { id: generateId(), url: val };
+                    setEditTask((prev) => ({
+                        ...prev,
+                        urls: prev.urls ? [...prev.urls, chip] : [chip],
+                    }));
+                    e.target.value = "";
+                }
+            };
+
+            const triggerFileSelect = () => fileInputRef.current.click();
+            const handleFileChange = (e) => {
+                const files = Array.from(e.target.files).map((f) => f.name);
+                setEditTask((prev) => ({
+                    ...prev,
+                    attachments: prev.attachments ? [...prev.attachments, ...files] : files,
+                }));
+            };
+
+            const removeAttachment = (fname) => {
+                setEditTask((prev) => ({
+                    ...prev,
+                    attachments: prev.attachments.filter((x) => x !== fname),
+                }));
+            };
+
+            const triggerColorSelect = () => colorInputRef.current.click();
+
+            const handleColorChange = (e) => {
+                const val = e.target.value;
+                setEditTask((prev) => {
+                    const updated = { ...prev, color: val };
+                    onUpdate(updated);
+                    updateTaskInDB(updated);
+                    return updated;
+                });
+            };
+
+            const presetColors = CONFIG.colors.preset;
+            const handleColorSelect = (col) => {
+                setEditTask((prev) => {
+                    const updated = { ...prev, color: col };
+                    onUpdate(updated);
+                    updateTaskInDB(updated);
+                    return updated;
+                });
+            };
+
+            const handleMoveNextDay = () => {
+                const dayIndex = CONFIG.validDays.indexOf(day);
+                if (day === "aggregated" || dayIndex < 0) return;
+                if (dayIndex === CONFIG.validDays.length - 1) {
+                    alert("No next day in this week!");
+                    return;
+                }
+                const nextDay = CONFIG.validDays[dayIndex + 1];
+                onReorder(task.id, null, nextDay);
+            };
+
+            const updateCollapsedTags = (value) => {
+                const vals = value.split(",").map((v) => v.trim()).filter(Boolean);
+                const newTags = vals.map((v) => ({ id: generateId(), text: v }));
+                const updated = { ...editTask, tags: newTags };
+                setEditTask(updated);
+                onUpdate(updated);
+                updateTaskInDB(updated);
+                setEditTagsCollapsed(false);
+            };
+
+            const updateCollapsedUsers = (value) => {
+                const vals = value.split(",").map((v) => v.trim()).filter(Boolean);
+                const newUsers = vals.map((v) => ({ id: generateId(), name: v }));
+                const updated = { ...editTask, users: newUsers };
+                setEditTask(updated);
+                onUpdate(updated);
+                updateTaskInDB(updated);
+                setEditUsersCollapsed(false);
+            };
+
+            const updateCollapsedExpiration = (value) => {
+                const newDateVal = value ? new Date(value) : null;
+                if (newDateVal) newDateVal.setHours(12, 0, 0, 0);
+                const updated = { ...editTask, expirationDate: newDateVal };
+                setEditTask(updated);
+                onUpdate(updated);
+                updateTaskInDB(updated);
+                setEditExpirationCollapsed(false);
+            };
+
+            const toggleExpanded = () => setExpanded((prev) => !prev);
+
+            const handleDelete = () => {
+                setIsDeleting(true);
+                setTimeout(() => {
+                    onDelete(task.id);
+                    deleteTaskFromDB(task.id);
+                }, 300);
+            };
+
+            return (
+                <div
+                    className={`task ${isHighlight ? "highlight" : ""}`}
+                    style={{ backgroundColor: editTask.color || "#000" }}
+                    draggable
+                    onDragStart={(e) => {
+                        e.dataTransfer.setData("taskId", task.id);
+                        e.dataTransfer.setData("sourceDay", day);
+                        e.currentTarget.style.opacity = "0.8";
+                        e.currentTarget.style.transform = "scale(1.05)";
+                        e.currentTarget.style.zIndex = 100;
+                    }}
+                    onDragEnd={(e) => {
+                        e.currentTarget.style.opacity = "1";
+                        e.currentTarget.style.transform = "scale(1)";
+                        e.currentTarget.style.zIndex = 1;
+                    }}
+                    onDragOver={(e) => e.preventDefault()}
+                    onDrop={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const sourceTaskId = e.dataTransfer.getData("taskId");
+                        const sourceDay = e.dataTransfer.getData("sourceDay");
+                        if (sourceDay === day && sourceTaskId && sourceTaskId !== task.id) {
+                            onReorder(sourceTaskId, task.id);
+                        }
+                    }}
+                >
+                    <div className="task-controls">
+                        <button className="delete-task" onClick={handleDelete} title="Delete Task">
+                            <i className="fa-solid fa-trash"></i>
+                        </button>
+                        <button className="collapse-toggle" onClick={() => setExpanded(!expanded)} title="Collapse/Expand Task">
+                            {expanded ? (
+                                <i className="fa-solid fa-minus"></i>
+                            ) : (
+                                <i className="fa-solid fa-plus"></i>
+                            )}
+                        </button>
+                    </div>
+                    <div className="task-header">
+                        <input
+                            type="text"
+                            name="title"
+                            value={editTask.title}
+                            onChange={handleChange}
+                            onBlur={!expanded ? handleSave : undefined}
+                            onDoubleClick={(e) => e.target.select()}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    handleSave();
+                                    e.preventDefault();
+                                }
+                            }}
+                            className="task-title"
+                        />
+                        {!expanded && (
+                            <div className="collapsed-content">
+                                <hr className="collapsed-divider" />
+
+                                {/* Collapsed Tags */}
+                                <div className="collapsed-row tags-row" onClick={() => setEditTagsCollapsed(true)} title="Click to edit tags">
+                                    <span className="row-label">Tags:</span>
+                                    <div className="editable-area">
+                                        {editTagsCollapsed ? (
+                                            <input
+                                                type="text"
+                                                defaultValue={editTask.tags?.map((x) => x.text).join(", ")}
+                                                autoFocus
+                                                onBlur={(e) => updateCollapsedTags(e.target.value)}
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "Enter") {
+                                                        e.preventDefault();
+                                                        updateCollapsedTags(e.target.value);
+                                                    }
+                                                }}
+                                            />
+                                        ) : editTask.tags?.length ? (
+                                            editTask.tags.map((tg) => (
+                                                <span key={tg.id} className="chip" title={tg.text}>
+                                                    {tg.text}
+                                                </span>
+                                            ))
+                                        ) : (
+                                            <span style={{ opacity: 0.6 }}>None</span>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* Collapsed Users */}
+                                <div className="collapsed-row users-row" onClick={() => setEditUsersCollapsed(true)} title="Click to edit users">
+                                    <span className="row-label">Users:</span>
+                                    <div className="editable-area">
+                                        {editUsersCollapsed ? (
+                                            <input
+                                                type="text"
+                                                defaultValue={editTask.users?.map((u) => u.name).join(", ")}
+                                                autoFocus
+                                                onBlur={(e) => updateCollapsedUsers(e.target.value)}
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "Enter") {
+                                                        e.preventDefault();
+                                                        updateCollapsedUsers(e.target.value);
+                                                    }
+                                                }}
+                                            />
+                                        ) : editTask.users && editTask.users.length > 0 ? (
+                                            <>
+                                                {editTask.users.slice(0, 4).map((u) => (
+                                                    <span key={u.id} className="chip" title={u.name}>
+                                                        {u.name}
+                                                    </span>
+                                                ))}
+                                                {editTask.users.length > 4 && (
+                                                    <span className="chip" title={editTask.users.map(u => u.name).join(', ')}>
+                                                        +{editTask.users.length - 4}
+                                                    </span>
+                                                )}
+                                            </>
+                                        ) : (
+                                            <span style={{ opacity: 0.6 }}>None</span>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* Collapsed Color */}
+                                <div className="collapsed-row">
+                                    <span className="row-label">Color:</span>
+                                    <div className="editable-area">
+                                        <div className="color-palette">
+                                            {presetColors.map((col, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="color-swatch"
+                                                    style={{
+                                                        backgroundColor: col,
+                                                        border: editTask.color === col ? "2px solid #4a90e2" : "none",
+                                                    }}
+                                                    onClick={() => handleColorSelect(col)}
+                                                ></div>
+                                            ))}
+                                            <button className="color-btn" onClick={triggerColorSelect} title="Custom Color">
+                                                <i className="fa-solid fa-eye-dropper" style={{ fontSize: "0.8em" }}></i>
+                                            </button>
+                                            <input
+                                                type="color"
+                                                ref={colorInputRef}
+                                                className="hidden-color"
+                                                value={editTask.color || "#000000"}
+                                                onInput={handleColorChange}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Collapsed Status */}
+                                <div className="collapsed-row" title="Click to change status">
+                                    <span className="row-label">Status:</span>
+                                    <div className="editable-area">
+                                        <select
+                                            name="status"
+                                            value={editTask.status}
+                                            onChange={(e) => {
+                                                const newStatus = e.target.value;
+                                                setEditTask(prev => {
+                                                    const updated = { ...prev, status: newStatus };
+                                                    onUpdate(updated);
+                                                    updateTaskInDB(updated);
+                                                    return updated;
+                                                });
+                                            }}
+                                            className="status-dropdown"
+                                        >
+                                            <option value="Scoping">Scoping</option>
+                                            <option value="In Progress">In Progress</option>
+                                            <option value="Completed">Completed</option>
+                                            <option value="Pending">Pending</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                {/* Collapsed Expiration */}
+                                <div className="collapsed-row" title="Click to edit expiration date">
+                                    <span className="row-label">Expires:</span>
+                                    <div className="editable-area">
+                                        {editTask.expirationDate && !editExpirationCollapsed ? (
+                                            <span onClick={() => setEditExpirationCollapsed(true)}>
+                                                {formatDDMMYYYY(editTask.expirationDate)} ({remainingDays} days left)
+                                            </span>
+                                        ) : (
+                                            <input
+                                                type="date"
+                                                className="expiration-date-input"
+                                                value={editTask.expirationDate ? new Date(editTask.expirationDate).toISOString().substring(0, 10) : ""}
+                                                autoFocus
+                                                onChange={(e) => {
+                                                    const val = e.target.value ? new Date(e.target.value) : null;
+                                                    if (val) val.setHours(12, 0, 0, 0);
+                                                    setEditTask((prev) => ({ ...prev, expirationDate: val }));
+                                                }}
+                                                onBlur={(e) => updateCollapsedExpiration(e.target.value)}
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "Enter") {
+                                                        e.preventDefault();
+                                                        updateCollapsedExpiration(e.target.value);
+                                                    }
+                                                }}
+                                            />
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* NEW: Signal Bar for Expiration */}
+                                {editTask.expirationDate && remainingDays <= 10 && renderSignalBar()}
+
+                                {/* Collapsed URLs/Attachments */}
+                                <div className="collapsed-row">
+                                    <span className="row-label">Files:</span>
+                                    <div className="editable-area" style={{ position: "relative" }}>
+                                        {editTask.urls?.length > 0 && (
+                                            <div style={{ position: "relative", display: "inline-block", marginRight: "6px" }}>
+                                                <i className="fa-solid fa-link" title="URL(s) present"></i>
+                                                <span className="count-badge">{editTask.urls.length}</span>
+                                            </div>
+                                        )}
+                                        {editTask.attachments?.length > 0 && (
+                                            <div style={{ position: "relative", display: "inline-block" }}>
+                                                <i className="fa-solid fa-paperclip" title="Attachment(s) present"></i>
+                                                <span className="count-badge">{editTask.attachments.length}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    {expanded && (
+                        <div className="task-body">
+                            <div>
+                                <label>Items:</label>
+                                <MarkdownEditor initialMarkdown={editTask.items} onChange={handleMarkdownChange} />
+                            </div>
+                            <div>
+                                <label>Color:</label>
+                                <div className="color-palette">
+                                    {presetColors.map((col, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="color-swatch"
+                                            style={{
+                                                backgroundColor: col,
+                                                border: editTask.color === col ? "2px solid #4a90e2" : "none",
+                                            }}
+                                            onClick={() => handleColorSelect(col)}
+                                        ></div>
+                                    ))}
+                                    <button className="color-btn" onClick={triggerColorSelect} title="Custom Color">
+                                        <i className="fa-solid fa-eye-dropper" style={{ fontSize: "0.8em" }}></i>
+                                    </button>
+                                    <input
+                                        type="color"
+                                        ref={colorInputRef}
+                                        className="hidden-color"
+                                        value={editTask.color || "#000000"}
+                                        onInput={handleColorChange}
+                                    />
+                                </div>
+                            </div>
+                            <hr />
+                            <div className="status-row" style={{ marginTop: "10px" }}>
+                                <label>Status:</label>
+                                <select
+                                    className="status-dropdown expanded-status-select"
+                                    name="status"
+                                    value={editTask.status}
+                                    onChange={(e) => {
+                                        const newStatus = e.target.value;
+                                        setEditTask(prev => {
+                                            const updated = { ...prev, status: newStatus };
+                                            onUpdate(updated);
+                                            updateTaskInDB(updated);
+                                            return updated;
+                                        });
+                                    }}
+                                >
+                                    <option value="Scoping">Scoping</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Pending">Pending</option>
+                                </select>
+                            </div>
+                            <hr />
+                            <div className="inline-row">
+                                <label>Tag(s):</label>
+                                <div className="chip-container">
+                                    {editTask.tags?.map((tg) => (
+                                        <div key={tg.id} className="chip" title="Click to remove" onClick={() =>
+                                            setEditTask((prev) => ({ ...prev, tags: prev.tags.filter((x) => x.id !== tg.id) }))
+                                        }>
+                                            {tg.text} &times;
+                                        </div>
+                                    ))}
+                                </div>
+                                <input type="text" className="input-modern" onKeyDown={handleTagsInput} placeholder="Press Enter to add tag" />
+                            </div>
+                            <div className="inline-row">
+                                <label>User(s):</label>
+                                <div className="chip-container">
+                                    {editTask.users?.map((u) => (
+                                        <div key={u.id} className="chip" title={u.name} onClick={() =>
+                                            setEditTask((prev) => ({ ...prev, users: prev.users.filter((x) => x.id !== u.id) }))
+                                        }>
+                                            {u.name} &times;
+                                        </div>
+                                    ))}
+                                </div>
+                                <input type="text" className="input-modern" onKeyDown={handleUsersInput} placeholder="Press Enter to add user" />
+                            </div>
+                            <div>
+                                <label>URL(s):</label>
+                                <div className="chip-container">
+                                    {editTask.urls?.map((chip) => (
+                                        <div key={chip.id} className="chip" title="Click to remove" onClick={() =>
+                                            setEditTask((prev) => ({ ...prev, urls: prev.urls.filter((x) => x.id !== chip.id) }))
+                                        }>
+                                            {truncateText(chip.url, 30)} &times;
+                                        </div>
+                                    ))}
+                                </div>
+                                <input type="text" className="input-modern" onKeyDown={handleUrlsInput} placeholder="Press Enter to add URL" />
+                            </div>
+                            <div>
+                                <label>Expiration Date:</label>
+                                <input
+                                    type="date"
+                                    name="expirationDate"
+                                    className="expiration-date-input"
+                                    value={editTask.expirationDate ? new Date(editTask.expirationDate).toISOString().substring(0, 10) : ""}
+                                    onChange={(e) => {
+                                        const val = e.target.value ? new Date(e.target.value) : null;
+                                        if (val) val.setHours(12, 0, 0, 0);
+                                        setEditTask((prev) => ({ ...prev, expirationDate: val }));
+                                    }}
+                                />
+                                {editTask.expirationDate && (
+                                    <div style={{ marginTop: "5px", fontSize: "0.9em" }}>
+                                        <strong>{remainingDays}</strong> working days left
+                                    </div>
+                                )}
+                            </div>
+                            {editTask.expirationDate && (
+                                <div style={{ marginTop: "8px" }}>
+                                    <hr />
+                                </div>
+                            )}
+                            <div style={{ marginTop: "10px", display: "flex", gap: "5px" }}>
+                                <button className="btn save-btn" onClick={handleSave}>Save</button>
+                                <button className="btn move-next-day" onClick={handleMoveNextDay} title="Move to next date column">
+                                    <i className="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        });
+
+        /************************************************/
+        /* 4. ERROR BOUNDARY                            */
+        /************************************************/
+        class ErrorBoundary extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { hasError: false, error: null };
+            }
+
+            static getDerivedStateFromError(error) {
+                return { hasError: true, error };
+            }
+
+            componentDidCatch(error, errorInfo) {
+                console.error("Error caught by boundary:", error, errorInfo);
+            }
+
+            render() {
+                if (this.state.hasError) {
+                    return (
+                        <div className="error-container">
+                            <h2>Something went wrong</h2>
+                            <button onClick={() => window.location.reload()}>Reload Application</button>
+                        </div>
+                    );
+                }
+                return this.props.children;
+            }
+        }
+
+        /************************************************/
+        /* 5) TASKBOARD                                 */
+        /************************************************/
+        const TaskBoard = React.forwardRef(
+            ({ viewMode, offset, setOffset, setViewMode, searchTerm, filterTag, filterUser, filterExpiration }, ref) => {
+                const [forceCollapse, setForceCollapse] = useState(0);
+                const [tasksByWeek, setTasksByWeek] = useState({});
+
+                // Original baseMonday used in daily view
+                const baseMonday = getMonday(new Date());
+                const emptyBoard = {
+                    Monday: [],
+                    Tuesday: [],
+                    Wednesday: [],
+                    Thursday: [],
+                    Friday: [],
+                };
+
+                const groupTasksByWeek = (fetchedTasks) => {
+                    const board = {};
+                    for (const t of fetchedTasks) {
+                        if (!CONFIG.validDays.includes(t.day)) continue;
+                        const diffWeeks = Math.floor((new Date(t.dateAssigned) - baseMonday) / (7 * 24 * 3600 * 1000));
+                        if (!board[diffWeeks]) {
+                            board[diffWeeks] = JSON.parse(JSON.stringify(emptyBoard));
+                        }
+                        board[diffWeeks][t.day].push(t);
+                    }
+                    return board;
+                };
+
+                useEffect(() => {
+                    const fetchTasks = async () => {
+                        try {
+                            const fetchedTasks = await db.tasks.toArray();
+                            fetchedTasks.forEach((tk) => fixTaskItems(tk));
+                            const board = groupTasksByWeek(fetchedTasks);
+                            setTasksByWeek(board);
+                        } catch (err) {
+                            console.error("Error fetching tasks:", err);
+                        }
+                    };
+                    fetchTasks();
+                }, []);
+
+                useEffect(() => {
+                    setForceCollapse(Date.now());
+                }, [viewMode]);
+
+                let columns = [];
+                if (viewMode === "daily") {
+                    const weeklyTasks = tasksByWeek[offset] || emptyBoard;
+                    columns = CONFIG.validDays.map((lbl) => ({
+                        label: lbl,
+                        tasks: weeklyTasks[lbl] || [],
+                        date: computeDate(lbl, offset, baseMonday).toLocaleDateString(undefined, { day: "numeric", month: "numeric" }),
+                        columnDate: new Date(computeDate(lbl, offset, baseMonday))
+                    }));
+                } else if (viewMode === "weekly") {
+                    // Modified: Week 1 is always the first week of the current month.
+                    const currentDate = new Date();
+                    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+                    let firstMonday = getMonday(firstDayOfMonth);
+                    if (firstMonday.getMonth() !== firstDayOfMonth.getMonth()) {
+                        firstMonday = new Date(firstMonday.getTime() + 7 * 24 * 3600 * 1000);
+                    }
+                    // Build columns for 4 weeks from firstMonday
+                    for (let i = 0; i < 4; i++) {
+                        const weekStart = new Date(firstMonday.getTime() + i * 7 * 24 * 3600 * 1000);
+                        const weekStartTime = weekStart.getTime();
+                        const weekEndTime = weekStartTime + 7 * 24 * 3600 * 1000;
+                        const allTasks = [];
+                        for (const wk in tasksByWeek) {
+                            for (const d in tasksByWeek[wk]) {
+                                allTasks.push(...tasksByWeek[wk][d]);
+                            }
+                        }
+                        const tasksInWeek = allTasks.filter(t => {
+                            const dateAssigned = new Date(t.dateAssigned);
+                            return dateAssigned.getTime() >= weekStartTime && dateAssigned.getTime() < weekEndTime;
+                        });
+                        columns.push({
+                            label: `Week ${i + 1}`,
+                            tasks: tasksInWeek,
+                            date: weekStart.toLocaleDateString(),
+                        });
+                    }
+                } else if (viewMode === "monthly") {
+                    // Modified: Month 1 is always January.
+                    const baseMonth = new Date(new Date().getFullYear(), 0, 1);
+                    for (let i = 0; i < 3; i++) {
+                        const monthDate = new Date(baseMonth.getFullYear(), baseMonth.getMonth() + i, 1);
+                        const monthStart = monthDate.getTime();
+                        const nextMonth = new Date(monthDate.getFullYear(), monthDate.getMonth() + 1, 1).getTime();
+                        const allTasks = [];
+                        for (const wk in tasksByWeek) {
+                            for (const d in tasksByWeek[wk]) {
+                                allTasks.push(...tasksByWeek[wk][d]);
+                            }
+                        }
+                        const tasksInMonth = allTasks.filter(t => {
+                            const dateAssigned = new Date(t.dateAssigned);
+                            return dateAssigned.getTime() >= monthStart && dateAssigned.getTime() < nextMonth;
+                        });
+                        columns.push({
+                            label: `Month ${i + 1}`,
+                            tasks: tasksInMonth,
+                            date: monthDate.toLocaleDateString("default", { month: "long", year: "numeric" }),
+                        });
+                    }
+                }
+
+                const matchesFilters = (t) => {
+                    if (filterTag) {
+                        const hasTag = t.tags?.some((x) => x.text.toLowerCase() === filterTag.toLowerCase());
+                        if (!hasTag) return false;
+                    }
+                    if (filterUser) {
+                        const lowerUser = filterUser.toLowerCase();
+                        const hasUser = t.users?.some((u) => u.name.toLowerCase() === lowerUser);
+                        if (!hasUser) return false;
+                    }
+                    if (filterExpiration) {
+                        if (filterExpiration === "overdue") {
+                            if (!t.expirationDate) return false;
+                            const now = new Date();
+                            if (new Date(t.expirationDate) >= now) return false;
+                        }
+                        if (filterExpiration === "none") {
+                            if (t.expirationDate) return false;
+                        }
+                    }
+                    return true;
+                };
+
+                columns = columns.map((col) => {
+                    const filteredTasks = col.tasks.filter((tk) => matchesFilters(tk));
+                    return { ...col, tasks: filteredTasks, columnDate: col.columnDate };
+                });
+
+                const updateTask = (t) => {
+                    setTasksByWeek((prev) => {
+                        for (const wk in prev) {
+                            for (const d in prev[wk]) {
+                                prev[wk][d] = prev[wk][d].map((x) => (x.id === t.id ? t : x));
+                            }
+                        }
+                        return { ...prev };
+                    });
+                };
+
+                const deleteTask = (id) => {
+                    setTasksByWeek((prev) => {
+                        for (const wk in prev) {
+                            for (const d in prev[wk]) {
+                                prev[wk][d] = prev[wk][d].filter((x) => x.id !== id);
+                            }
+                        }
+                        return { ...prev };
+                    });
+                };
+
+                const addTask = (dayLabel, weekIndex = offset, newTitle = "New Task") => {
+                    const dateObj = computeDate(dayLabel, weekIndex, baseMonday);
+                    const newTask = {
+                        id: generateId(),
+                        title: newTitle,
+                        items: [],
+                        color: "#000000",
+                        tags: [],
+                        users: [],
+                        urls: [],
+                        attachments: [],
+                        day: dayLabel,
+                        dateAssigned: dateObj,
+                        expirationDate: null,
+                        status: "Scoping",
+                        isNew: true,
+                    };
+                    setTasksByWeek((prev) => {
+                        const boardCopy = prev[weekIndex] || JSON.parse(JSON.stringify(emptyBoard));
+                        boardCopy[dayLabel] = [...boardCopy[dayLabel], newTask];
+                        return { ...prev, [weekIndex]: boardCopy };
+                    });
+                    addTaskToDB(newTask);
+                };
+
+                const reorderTask = (sourceTaskId, targetTaskId = null, newDay = null) => {
+                    setTasksByWeek((prev) => {
+                        let foundWeekIndex = null;
+                        let foundDay = null;
+                        for (const wk in prev) {
+                            for (const d in prev[wk]) {
+                                if (prev[wk][d].some((tt) => tt.id === sourceTaskId)) {
+                                    foundWeekIndex = Number(wk);
+                                    foundDay = d;
+                                    break;
+                                }
+                            }
+                            if (foundWeekIndex !== null) break;
+                        }
+                        if (foundWeekIndex === null || !foundDay) return prev;
+
+                        const boardCopy = prev[foundWeekIndex] || JSON.parse(JSON.stringify(emptyBoard));
+                        const tasksInDay = [...boardCopy[foundDay]];
+                        const idx = tasksInDay.findIndex((x) => x.id === sourceTaskId);
+                        if (idx === -1) return prev;
+
+                        const [movedTask] = tasksInDay.splice(idx, 1);
+                        boardCopy[foundDay] = tasksInDay;
+
+                        if (newDay && newDay !== foundDay) {
+                            movedTask.day = newDay;
+                            if (viewMode === "daily") {
+                                movedTask.dateAssigned = computeDate(newDay, offset, baseMonday);
+                            }
+                        }
+
+                        let insertDay = newDay && newDay !== foundDay ? newDay : foundDay;
+                        let tasksTargetArr = [...boardCopy[insertDay]];
+
+                        if (targetTaskId) {
+                            const tgtIdx = tasksTargetArr.findIndex((x) => x.id === targetTaskId);
+                            if (tgtIdx === -1) tasksTargetArr.push(movedTask);
+                            else tasksTargetArr.splice(tgtIdx, 0, movedTask);
+                        } else {
+                            tasksTargetArr.push(movedTask);
+                        }
+
+                        boardCopy[insertDay] = tasksTargetArr;
+                        updateTaskInDB(movedTask);
+                        return { ...prev, [foundWeekIndex]: boardCopy };
+                    });
+                };
+
+                // New helper for drop zones in the column – allows dropping between task cards
+                const handleDropInZone = (e, targetTaskId, day) => {
+                    e.preventDefault();
+                    const sourceTaskId = e.dataTransfer.getData("taskId");
+                    if (sourceTaskId && sourceTaskId !== targetTaskId) {
+                        reorderTask(sourceTaskId, targetTaskId, day);
+                    }
+                };
+
+                useImperativeHandle(ref, () => ({
+                    performSearch: (query) => {
+                        const q = query.toLowerCase();
+                        for (const wk in tasksByWeek) {
+                            for (const d in tasksByWeek[wk]) {
+                                if (tasksByWeek[wk][d].some((tt) => tt.title.toLowerCase().includes(q))) {
+                                    setOffset(Number(wk));
+                                    setViewMode("daily");
+                                    return;
+                                }
+                            }
+                        }
+                        alert("No task found with that search query.");
+                    },
+                    addTask,
+                }));
+
+                return (
+                    <div className="board">
+                        {columns.map((col, idx) => (
+                            <div key={idx} className="column" onDragOver={(e) => e.preventDefault()} onDrop={(e) => {
+                                e.currentTarget.classList.remove("drop-zone-highlight");
+                                handleDropInZone(e, null, col.label);
+                            }}
+                                onDragEnter={(e) => e.currentTarget.classList.add("drop-zone-highlight")}
+                                onDragLeave={(e) => e.currentTarget.classList.remove("drop-zone-highlight")}
+                            >
+                                <h3>
+                                    {col.label}
+                                    {col.date && (
+                                        <div className="date-label" style={{ fontSize: "0.8em" }}>
+                                            {col.date}
+                                        </div>
+                                    )}
+                                    {viewMode === "daily" && (
+                                        <button className="add-task-btn" onClick={() => addTask(col.label)}>
+                                            <i className="fa-solid fa-plus"></i>
+                                        </button>
+                                    )}
+                                </h3>
+                                {/* Drop zone at the top of column */}
+                                <div className="drop-zone"
+                                    onDragOver={(e) => e.preventDefault()}
+                                    onDragEnter={(e) => e.currentTarget.classList.add("drop-zone-highlight")}
+                                    onDragLeave={(e) => e.currentTarget.classList.remove("drop-zone-highlight")}
+                                    onDrop={(e) => {
+                                        e.currentTarget.classList.remove("drop-zone-highlight");
+                                        handleDropInZone(e, col.tasks[0] ? col.tasks[0].id : null, col.label);
+                                    }}
+                                ></div>
+                                {col.tasks.map((tk, index) => (
+                                    <React.Fragment key={tk.id + "_" + forceCollapse}>
+                                        <TaskCard task={tk} day={viewMode === "daily" ? col.label : "aggregated"} columnDate={col.columnDate} onUpdate={updateTask} onDelete={deleteTask} onReorder={reorderTask} forceCollapse={forceCollapse} searchTerm={searchTerm} />
+                                        <div className="drop-zone"
+                                            onDragOver={(e) => e.preventDefault()}
+                                            onDragEnter={(e) => e.currentTarget.classList.add("drop-zone-highlight")}
+                                            onDragLeave={(e) => e.currentTarget.classList.remove("drop-zone-highlight")}
+                                            onDrop={(e) => {
+                                                e.currentTarget.classList.remove("drop-zone-highlight");
+                                                handleDropInZone(e, (col.tasks[index + 1] ? col.tasks[index + 1].id : null), col.label);
+                                            }}
+                                        ></div>
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                );
+            }
+        );
+
+        /************************************************/
+        /* 6) SUMMARY VIEW                              */
+        /************************************************/
+        // New helper to format a Date as mm-dd.
+        function formatMMDD(date) {
+            const d = new Date(date);
+            const mm = String(d.getMonth() + 1).padStart(2, '0');
+            const dd = String(d.getDate()).padStart(2, '0');
+            return mm + '-' + dd;
+        }
+
+        // Reworked GanttChart component per new spec.
+        // Now accepts an optional "filterTag" prop and only includes rows for tags that match.
+        const GanttChart = ({ tasks, onClose, filterTag }) => {
+            // Build rows: one row per task per tag.
+            const rows = [];
+            tasks.forEach(task => {
+                if (task.tags && task.tags.length > 0) {
+                    task.tags.forEach(tag => {
+                        if (!filterTag || tag.text.toLowerCase().includes(filterTag.toLowerCase())) {
+                            rows.push({
+                                tag: tag.text,
+                                title: task.title,
+                                start: task.dateAssigned ? new Date(task.dateAssigned) : null,
+                                end: task.expirationDate ? new Date(task.expirationDate) : (task.dateAssigned ? new Date(task.dateAssigned) : null)
+                            });
+                        }
+                    });
+                }
+            });
+            if (rows.length === 0) {
+                return <div style={{ marginTop: "20px" }}>No data for Gantt Chart</div>;
+            }
+            // Determine the overall date range.
+            const minDate = new Date(Math.min(...rows.map(r => r.start.getTime())));
+            const maxDate = new Date(Math.max(...rows.map(r => r.end.getTime())));
+            // Generate daily date columns.
+            const dateColumns = [];
+            let d = new Date(minDate);
+            while (d <= maxDate) {
+                dateColumns.push(new Date(d));
+                d.setDate(d.getDate() + 1);
+            }
+            return (
+                <div style={{ marginTop: "20px", border: "1px solid", padding: "10px" }}>
+                    <button onClick={onClose} style={{ float: "right" }}>Close</button>
+                    <h3>Gantt Chart View</h3>
+                    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                        <thead>
+                            <tr>
+                                <th style={{ border: "1px solid", padding: "5px" }}>Tag</th>
+                                <th style={{ border: "1px solid", padding: "5px" }}>Title</th>
+                                {dateColumns.map((date, index) => (
+                                    <th key={index} style={{ border: "1px solid", padding: "5px" }}>{formatMMDD(date)}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {rows.map((row, index) => (
+                                <tr key={index}>
+                                    <td style={{ border: "1px solid", padding: "5px" }}>{row.tag}</td>
+                                    <td style={{ border: "1px solid", padding: "5px" }}>{row.title}</td>
+                                    {dateColumns.map((date, idx) => {
+                                        const inRange = row.start && row.end && (date >= row.start && date <= row.end);
+                                        return (
+                                            <td key={idx} style={{ border: "1px solid", padding: "5px", backgroundColor: inRange ? "orange" : "transparent" }}></td>
+                                        );
+                                    })}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        };
+
+        // SummaryView now accepts allUsers as a prop
+        const SummaryView = ({ allUsers }) => {
+            const [apiKey, setApiKey] = useState("");
+            const [email, setEmail] = useState("");
+            const [password, setPassword] = useState("");
+            const [startDate, setStartDate] = useState("");
+            const [endDate, setEndDate] = useState("");
+            const [tagFilter, setTagFilter] = useState("");
+            const [userFilter, setUserFilter] = useState("");
+            const [results, setResults] = useState([]);
+            const [loading, setLoading] = useState(false);
+            const [error, setError] = useState("");
+            const [promptText, setPromptText] = useState("");
+            const [copied, setCopied] = useState(false);
+            const [showAuthFields, setShowAuthFields] = useState(false);
+            const [showGantt, setShowGantt] = useState(false);
+
+            const fetchTasksForSummary = async () => {
+                try {
+                    let tasks = await db.tasks.toArray();
+                    tasks.forEach((tk) => fixTaskItems(tk));
+                    tasks = tasks.filter((t) => CONFIG.validDays.includes(t.day));
+                    if (startDate) {
+                        const sd = new Date(startDate);
+                        sd.setHours(12, 0, 0, 0);
+                        tasks = tasks.filter((t) => new Date(t.dateAssigned) >= sd);
+                    }
+                    if (endDate) {
+                        const ed = new Date(endDate);
+                        ed.setHours(12, 0, 0, 0);
+                        tasks = tasks.filter((t) => new Date(t.dateAssigned) <= ed);
+                    }
+                    if (tagFilter.trim()) {
+                        tasks = tasks.filter((t) => t.tags?.some((x) => x.text.toLowerCase().includes(tagFilter.toLowerCase())));
+                    }
+                    if (userFilter.trim()) {
+                        tasks = tasks.filter((t) => t.users?.some((u) => u.name.toLowerCase().includes(userFilter.toLowerCase())));
+                    }
+                    setResults(tasks);
+                    return tasks;
+                } catch (err) {
+                    console.error(err);
+                }
+            };
+
+            // Modified generatePrompt accepts an optional tasks parameter
+            const generatePrompt = async (existingTasks) => {
+                try {
+                    const tasksToUse = existingTasks ? existingTasks : await fetchTasksForSummary();
+                    const tableEntries = tasksToUse
+                        .map(
+                            (t) =>
+                                `- Title: ${t.title}; Items: ${Array.isArray(t.items) ? t.items.join(", ") : ""}; Tags: ${t.tags?.length ? t.tags.map((x) => x.text).join(", ") : "None"}; Users: ${t.users?.length ? t.users.map((u) => u.name).join(", ") : "None"}; URLs: ${t.urls?.length ? t.urls.map((u) => u.url).join(", ") : "None"};`
+                        )
+                        .join("\n");
+
+                    const refinedPromptPrefix = `You are a professional business solution consultant. I will provide you with a set of table entries (Title, Items, Tags, Users, URLs). Your job is to:
+
+1. Summarize the table in concise bullet points.
+2. Group similar tasks or notes if they share the same Tags or Users.
+3. If an entry is missing Items, Tags, Users, or URLs, write "None" for that field.
+4. End with a short concluding statement (1–2 sentences) highlighting any patterns or important insights.
+
+Make sure the final output contains:
+- Bullet points listing each entry, in a consistent format (e.g., “**Title**: … | **Items**: … | **Tags**: … | **Users**: … | **URLs**: …”).
+- No extra commentary beyond this summary.
+- A final sentence or two as a conclusion.
+
+Use only the data provided; do not make up additional facts.
+
+Here is the [FILTERED TABLE] data:
+`;
+
+                    const fullPrompt = refinedPromptPrefix + tableEntries;
+                    setPromptText(fullPrompt);
+                } catch (err) {
+                    console.error(err);
+                    setError("Error generating prompt. Please try again.");
+                }
+            };
+
+            // New consolidated handler: on clicking Pull Data, we fetch tasks, generate prompt and show Gantt Chart if tasks exist.
+            const handlePullData = async () => {
+                setLoading(true);
+                setError("");
+                try {
+                    const tasks = await fetchTasksForSummary();
+                    await generatePrompt(tasks);
+                    if (tasks && tasks.length > 0) {
+                        setShowGantt(true);
+                    } else {
+                        setShowGantt(false);
+                    }
+                } catch (err) {
+                    console.error(err);
+                    setError("Error during pull data.");
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            const generateSummary = async () => {
+                setLoading(true);
+                setError("");
+                try {
+                    const tasks = await fetchTasksForSummary();
+                    const prompt = tasks
+                        .map(
+                            (t) =>
+                                `Task Title: ${t.title}\nItems: ${Array.isArray(t.items) ? t.items.join(", ") : ""}\nTags: ${t.tags?.map((x) => x.text).join(", ")}\nUsers: ${t.users?.map((u) => u.name).join(", ")}\n`
+                        )
+                        .join("\n");
+                    const response = await fetch("https://api.openai.com/v1/engines/davinci/completions", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${apiKey}`,
+                        },
+                        body: JSON.stringify({
+                            prompt: `Generate a summary for the following tasks:\n${prompt}\nSummary:`,
+                            max_tokens: 150,
+                            temperature: 0.7,
+                        }),
+                    });
+                    if (!response.ok) {
+                        throw new Error("API request failed");
+                    }
+                    const data = await response.json();
+                    const summaryText = data.choices[0].text.trim();
+                    setResults((prev) => prev.map((task) => ({ ...task, summary: summaryText })));
+                } catch (err) {
+                    console.error(err);
+                    setError("Error generating summary. Please try again.");
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            const copyPromptToClipboard = () => {
+                if (!promptText) return;
+                navigator.clipboard.writeText(promptText);
+                setCopied(true);
+                setTimeout(() => setCopied(false), 1500);
+            };
+
+            return (
+                <div className="summary-container">
+                    <h2>Summary Configuration Panel</h2>
+                    <button className="summary-btn" onClick={() => setShowAuthFields(!showAuthFields)} style={{ marginBottom: "10px" }}>
+                        {showAuthFields ? "Hide Auth Settings" : "Show Auth Settings"}
+                    </button>
+                    {showAuthFields && (
+                        <div style={{ marginBottom: "15px" }}>
+                            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                <div style={{ flex: "1 1 200px" }}>
+                                    <label>API Key:</label>
+                                    <input type="text" value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="Enter API key" className="summary-input" />
+                                </div>
+                                <div style={{ flex: "1 1 200px" }}>
+                                    <label>Email Address:</label>
+                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" className="summary-input" />
+                                </div>
+                                <div style={{ flex: "1 1 200px" }}>
+                                    <label>Password:</label>
+                                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password" className="summary-input" />
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: "center", marginTop: "10px" }}>
+                        <div style={{ flex: "1 1 200px" }}>
+                            <label>Start Date:</label>
+                            <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className="summary-input" />
+                        </div>
+                        <div style={{ flex: "1 1 200px" }}>
+                            <label>End Date:</label>
+                            <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} className="summary-input" />
+                        </div>
+                        <div style={{ flex: "1 1 200px" }}>
+                            <label>Filter by Tag:</label>
+                            <input type="text" value={tagFilter} onChange={(e) => setTagFilter(e.target.value)} placeholder="Enter tag text" className="summary-input" />
+                        </div>
+                        <div style={{ flex: "1 1 200px" }}>
+                            <label>Filter by User:</label>
+                            <select value={userFilter} onChange={(e) => setUserFilter(e.target.value)} className="summary-input">
+                                <option value="">Filter User</option>
+                                {allUsers.map((u) => (
+                                    <option key={u} value={u}>{u.charAt(0).toUpperCase() + u.slice(1)}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+                    <div style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
+                        <button className="summary-btn" onClick={handlePullData} disabled={loading}>
+                            Pull Data
+                        </button>
+                        <button className="summary-btn" onClick={generateSummary} disabled={loading}>
+                            {loading ? "Generating..." : "Generate Summary 🚧 Feature in Development!"}
+                        </button>
+                    </div>
+
+                    {error && <p style={{ color: "red" }}>{error}</p>}
+                    {results.length > 0 && (
+                        <div style={{ marginTop: "20px", overflowX: "auto" }}>
+                            <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                                <thead>
+                                    <tr>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>Title</th>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>Items</th>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>Tags</th>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>Users</th>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>URLs</th>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>Start Date</th>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>End Date</th>
+                                        <th style={{ border: "1px solid", padding: "5px" }}>Summary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {results.map((t) => {
+                                        const itemsJoined = Array.isArray(t.items) ? t.items.join(" | ") : String(t.items ?? "");
+                                        return (
+                                            <tr key={t.id}>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{t.title}</td>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{itemsJoined}</td>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{t.tags?.map((x) => x.text).join(" | ")}</td>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{t.users?.map((u) => u.name).join(" | ")}</td>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{t.urls?.map((u) => u.url).join(" | ")}</td>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{t.dateAssigned ? formatMMDD(t.dateAssigned) : ""}</td>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{t.expirationDate ? formatMMDD(t.expirationDate) : ""}</td>
+                                                <td style={{ border: "1px solid", padding: "5px" }}>{t.summary || "N/A"}</td>
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+
+                    {promptText && (
+                        <div style={{ marginTop: "20px" }}>
+                            <label>Generated Prompt:</label>
+                            <textarea readOnly className="generated-prompt-textarea" value={promptText} />
+                            <button className="summary-btn" onClick={copyPromptToClipboard} style={{ marginTop: "10px" }}>
+                                {copied ? "Copied" : "Copy"}
+                            </button>
+                        </div>
+                    )}
+                    {showGantt && <GanttChart tasks={results} onClose={() => setShowGantt(false)} filterTag={tagFilter} />}
+                </div>
+            );
+        };
+
+        /************************************************/
+        /* 6.5) HELP MODAL                              */
+        /************************************************/
+        const HelpModal = ({ onClose }) => {
+            const backdropRef = useRef(null);
+
+            const handleBackdropClick = (e) => {
+                if (e.target === backdropRef.current) {
+                    onClose();
+                }
+            };
+
+            return (
+                <div ref={backdropRef} className="help-backdrop" onClick={handleBackdropClick}>
+                    <div className="help-modal">
+                        <button className="help-close-btn" onClick={onClose}>
+                            &times;
+                        </button>
+                        <h2>Help & Documentation</h2>
+                        <p>Here are some usage instructions, keyboard shortcuts, and FAQs:</p>
+                        <ul>
+                            <li><strong>Ctrl + T:</strong> Open Quick Add Task modal.</li>
+                            <li><strong>Drag & Drop:</strong> Reorder tasks or move them between days.</li>
+                            <li><strong>Click + or "Add Task":</strong> Create a new task in that column.</li>
+                            <li><strong>Search Bar:</strong> Type to quickly locate tasks by title.</li>
+                            <li><strong>Advanced Filters:</strong> Filter tasks by tags, users, or expiration status.</li>
+                            <li><strong>Dark Mode:</strong> Toggle the moon/sun icon.</li>
+                            <li><strong>Summary View:</strong> Provides a specialized summary or prompt generation.</li>
+                        </ul>
+                        <p><strong>FAQs:</strong></p>
+                        <ul>
+                            <li><em>How do I attach files?</em> Use the "Browse File" button in the expanded task view.</li>
+                            <li><em>Can I edit columns?</em> Columns are fixed to Monday–Friday.</li>
+                        </ul>
+                    </div>
+                </div>
+            );
+        };
+
+        /************************************************/
+        /* 7) QUICK ADD MODAL                           */
+        /************************************************/
+        const QuickAddModal = ({ isOpen, onClose, onAddTask, defaultDay }) => {
+            const backdropRef = useRef(null);
+            const [title, setTitle] = useState("");
+            const [day, setDay] = useState(defaultDay || "Monday");
+            const [details, setDetails] = useState("");
+
+            useEffect(() => {
+                if (isOpen) {
+                    setTitle("");
+                    setDetails("");
+                    if (defaultDay) {
+                        setDay(defaultDay);
+                    }
+                }
+            }, [isOpen, defaultDay]);
+
+            const handleBackdropClick = (e) => {
+                if (e.target === backdropRef.current) {
+                    onClose();
+                }
+            };
+
+            const handleSubmit = () => {
+                onAddTask(day, title || "New Task", details);
+                onClose();
+            };
+
+            if (!isOpen) return null;
+
+            return (
+                <div className="quick-add-backdrop" ref={backdropRef} onClick={handleBackdropClick}>
+                    <div className="quick-add-modal">
+                        <button className="quick-add-close" onClick={onClose}>
+                            &times;
+                        </button>
+                        <h2>Quick Add Task</h2>
+                        <label>Title:</label>
+                        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Task title" style={{ marginBottom: "8px" }} />
+                        <label>Day:</label>
+                        <select value={day} onChange={(e) => setDay(e.target.value)} style={{ marginBottom: "8px" }}>
+                            {CONFIG.validDays.map((d) => (
+                                <option key={d} value={d}>
+                                    {d}
+                                </option>
+                            ))}
+                        </select>
+                        <label>Details (optional):</label>
+                        <textarea value={details} onChange={(e) => setDetails(e.target.value)} placeholder="Any quick notes..." style={{ marginBottom: "8px" }} />
+                        <button onClick={handleSubmit} className="btn save-btn">
+                            Create
+                        </button>
+                    </div>
+                </div>
+            );
+        };
+
+        /************************************************/
+        /* 8) MAIN APP                                  */
+        /************************************************/
+        const useDarkMode = () => {
+            const [darkMode, setDarkMode] = useState(() => {
+                const saved = localStorage.getItem("darkMode");
+                return saved ? JSON.parse(saved) : false;
+            });
+            useEffect(() => {
+                localStorage.setItem("darkMode", JSON.stringify(darkMode));
+                document.body.classList.toggle("dark-mode", darkMode);
+            }, [darkMode]);
+            return [darkMode, setDarkMode];
+        };
+
+        const useDebounce = (value, delay) => {
+            const [debouncedValue, setDebouncedValue] = useState(value);
+            useEffect(() => {
+                const handler = setTimeout(() => setDebouncedValue(value), delay);
+                return () => clearTimeout(handler);
+            }, [value, delay]);
+            return debouncedValue;
+        };
+
+        const App = () => {
+            const [darkMode, setDarkMode] = useDarkMode();
+            const [showDBModal, setShowDBModal] = useState(false);
+            const [dbTasks, setDbTasks] = useState([]);
+            const [viewMode, setViewMode] = useState("daily");
+            const [headerSearch, setHeaderSearch] = useState("");
+            const [offset, setOffset] = useState(0);
+            const [showExcalidraw, setShowExcalidraw] = useState(false);
+
+            const [filterTag, setFilterTag] = useState("");
+            const [filterUser, setFilterUser] = useState("");
+            const [filterExpiration, setFilterExpiration] = useState("");
+
+            const [showQuickAdd, setShowQuickAdd] = useState(false);
+            const [showHelp, setShowHelp] = useState(false);
+
+            const [allTags, setAllTags] = useState([]);
+            const [allUsers, setAllUsers] = useState([]);
+
+            const boardRef = useRef(null);
+            const importFileRef = useRef(null);
+            const debouncedSearch = useDebounce(headerSearch, 300);
+
+            useEffect(() => {
+                if (debouncedSearch && boardRef.current) {
+                    boardRef.current.performSearch(debouncedSearch);
+                }
+            }, [debouncedSearch]);
+
+            useEffect(() => {
+                const loadUniqueTagsAndUsers = async () => {
+                    try {
+                        const tasks = await db.tasks.toArray();
+                        const tagSet = new Set();
+                        const userSet = new Set();
+                        for (const t of tasks) {
+                            if (Array.isArray(t.tags)) {
+                                for (const tg of t.tags) {
+                                    if (tg && tg.text) {
+                                        tagSet.add(tg.text);
+                                    }
+                                }
+                            }
+                            if (Array.isArray(t.users)) {
+                                for (const u of t.users) {
+                                    if (u && u.name) {
+                                        userSet.add(u.name.toLowerCase());
+                                    }
+                                }
+                            }
+                        }
+                        setAllTags([...tagSet]);
+                        setAllUsers([...userSet]);
+                    } catch (err) {
+                        console.error("Error fetching tags/users from DB:", err);
+                    }
+                };
+                loadUniqueTagsAndUsers();
+            }, []);
+
+            const handleViewDB = async () => {
+                try {
+                    const tasks = await db.tasks.toArray();
+                    tasks.forEach((tk) => fixTaskItems(tk));
+                    tasks.sort(
+                        (a, b) => new Date(b.dateModified) - new Date(a.dateModified) || new Date(b.dateAssigned) - new Date(a.dateAssigned)
+                    );
+                    setDbTasks(tasks);
+                    setShowDBModal(true);
+                } catch (err) {
+                    console.error("Error reading tasks from DB:", err);
+                }
+            };
+
+            const handleSearch = (e) => setHeaderSearch(e.target.value);
+
+            const handleFeedback = () => {
+                const receiverEmail = "ning.lu@blackrock.com";
+                const subject = "Feedback on Magic Carpet";
+                const mailtoLink = `mailto:${receiverEmail}?subject=${encodeURIComponent(subject)}`;
+                window.location.href = mailtoLink;
+            };
+
+            const toggleDarkMode = () => setDarkMode((prev) => !prev);
+
+            const handleImportClick = () => {
+                if (importFileRef.current) {
+                    importFileRef.current.value = "";
+                    importFileRef.current.click();
+                }
+            };
+
+            const handleImportFile = async (e) => {
+                if (!e.target.files?.length) return;
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = async (evt) => {
+                    const contents = evt.target.result;
+                    try {
+                        const lines = contents.split(/\r?\n/);
+                        lines.shift();
+                        const tasksToImport = [];
+                        const splitCSV = (line) => line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
+                        for (let line of lines) {
+                            line = line.trim();
+                            if (!line) continue;
+                            const row = splitCSV(line).map((cell) => cell.replace(/^"(.*)"$/, "$1"));
+                            if (row.length < 10) continue;
+                            const result = processCSVRow(row);
+                            if (!result.dateAssigned) continue;
+                            const dayIndex = result.dateAssigned.getDay();
+                            if (dayIndex < 1 || dayIndex > 5) continue;
+                            const dayLabel = CONFIG.validDays[dayIndex - 1];
+                            const taskObj = { ...result, day: dayLabel, color: "#000000" };
+                            fixTaskItems(taskObj);
+                            tasksToImport.push(taskObj);
+                        }
+                        await db.tasks.clear();
+                        if (tasksToImport.length > 0) {
+                            await db.tasks.bulkAdd(tasksToImport);
+                            alert("Imported tasks successfully!");
+                        } else {
+                            alert("No valid tasks found to import.");
+                        }
+                        setViewMode("daily");
+                        setOffset(0);
+                    } catch (error) {
+                        console.error("Error importing file:", error);
+                        alert("Error importing file, please check console for details.");
+                    }
+                };
+                reader.readAsText(file);
+            };
+
+            const handleGlobalKeyDown = (e) => {
+                if (e.ctrlKey && e.key.toLowerCase() === "t") {
+                    e.preventDefault();
+                    setShowQuickAdd(true);
+                }
+            };
+
+            useEffect(() => {
+                window.addEventListener("keydown", handleGlobalKeyDown);
+                return () => {
+                    window.removeEventListener("keydown", handleGlobalKeyDown);
+                };
+            }, []);
+
+            const doQuickAddTask = (selectedDay, title, details) => {
+                if (boardRef.current && viewMode === "daily") {
+                    boardRef.current.addTask(selectedDay, offset, title);
+                } else {
+                    boardRef.current.addTask(selectedDay, 0, title);
+                }
+            };
+
+            // NEW: Scroll to top when switching to Weekly or Monthly view.
+            useEffect(() => {
+                if (viewMode === "weekly" || viewMode === "monthly") {
+                    document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
+                }
+            }, [viewMode]);
+
+            return (
+                <div>
+                    <div className="header-bar">
+                        <div className="header-controls">
+                            <button className="dexie-btn" onClick={handleViewDB} title="View Task DB">
+                                <i className="fa-solid fa-database"></i>
+                            </button>
+                            <button className="dexie-btn" onClick={exportDexieToCSV} title="Export Task DB">
+                                <i className="fa-solid fa-file-export"></i>
+                            </button>
+                            <button className="dexie-btn" onClick={handleImportClick} title="Import Task DB" style={{ marginLeft: "1px" }}>
+                                <i className="fa-solid fa-file-import"></i>
+                            </button>
+                            <input type="file" accept=".csv,.xls,.xlsx" ref={importFileRef} style={{ display: "none" }} onChange={handleImportFile} />
+                            <button className="dexie-btn" onClick={() => setShowExcalidraw(true)} title="Excalidraw">
+                                <i className="fa-solid fa-pencil"></i>
+                            </button>
+                            <button className="mode-toggle" onClick={toggleDarkMode} title="Toggle Dark/Light Mode">
+                                {darkMode ? <i className="fa-solid fa-sun"></i> : <i className="fa-solid fa-moon"></i>}
+                            </button>
+                            <input type="text" placeholder="Search tasks..." value={headerSearch} onChange={handleSearch} />
+                        </div>
+                        <div className="branding">
+                            <h1>Magic Carpet</h1>
+                            <h2>Made by Aladdin Family</h2>
+                        </div>
+                        {viewMode !== "summary" && (
+                            <div className="offset-container">
+                                <label>
+                                    {viewMode === "daily"
+                                        ? "Week Offset"
+                                        : viewMode === "weekly"
+                                            ? "Month Offset"
+                                            : viewMode === "monthly"
+                                                ? "Quarter Offset"
+                                                : ""}
+                                    : {offset}
+                                </label>
+                                <input
+                                    type="range"
+                                    min={viewMode === "daily" ? CONFIG.views.daily.minOffset : viewMode === "weekly" ? CONFIG.views.weekly.minOffset : viewMode === "monthly" ? CONFIG.views.monthly.minOffset : 0}
+                                    max={viewMode === "daily" ? CONFIG.views.daily.maxOffset : viewMode === "weekly" ? CONFIG.views.weekly.maxOffset : viewMode === "monthly" ? CONFIG.views.monthly.maxOffset : 0}
+                                    step="1"
+                                    value={offset}
+                                    onChange={(e) => setOffset(Number(e.target.value))}
+                                    onDoubleClick={() => setOffset(0)}
+                                    onInput={(e) => {
+                                        const min = e.target.min;
+                                        const max = e.target.max;
+                                        const value = e.target.value;
+                                        const percent = ((value - min) / (max - min)) * 100 + "%";
+                                        e.target.style.setProperty("--percent", percent);
+                                    }}
+                                />
+                                <button className="arrow-btn" onClick={() => setOffset(offset - 1)}>
+                                    <i className="fa-solid fa-arrow-left"></i>
+                                </button>
+                                <button className="arrow-btn" onClick={() => setOffset(offset + 1)}>
+                                    <i className="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="controls-bar">
+                        <div className="left-filters">
+                            <select value={filterTag} onChange={(e) => setFilterTag(e.target.value)}>
+                                <option value="">Filter Tag</option>
+                                {allTags.map((t) => (
+                                    <option key={t} value={t}>{t}</option>
+                                ))}
+                            </select>
+                            <select value={filterUser} onChange={(e) => setFilterUser(e.target.value)}>
+                                <option value="">Filter User</option>
+                                {allUsers.map((u) => (
+                                    <option key={u} value={u}>{u.charAt(0).toUpperCase() + u.slice(1)}</option>
+                                ))}
+                            </select>
+                            <select value={filterExpiration} onChange={(e) => setFilterExpiration(e.target.value)}>
+                                <option value="">Expiration</option>
+                                <option value="overdue">Overdue</option>
+                                <option value="none">No Expiration</option>
+                            </select>
+                        </div>
+
+                        <div className="view-mode-container">
+                            <div className="view-mode-toggle">
+                                {["daily", "weekly", "monthly", "summary"].map((m) => (
+                                    <button key={m} className={viewMode === m ? "active" : ""} onClick={() => setViewMode(m)}>
+                                        {m.charAt(0).toUpperCase() + m.slice(1)}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="contributor-version">
+                            <span>
+                                Contributors:{" "}
+                                <span className="contributor-info">
+                                    PAG
+                                    <span className="tooltip">
+                                        Ning Lu. Learn more{" "}
+                                        <a href="https://example.com" target="_blank" rel="noopener noreferrer">here</a>.
+                                    </span>
+                                </span>
+                                , Version 0.2
+                            </span>
+                            <button className="feedback-btn" onClick={handleFeedback}>Feedback</button>
+                            <button className="feedback-btn" style={{ marginLeft: "6px" }} onClick={() => setShowHelp(true)}>?</button>
+                        </div>
+                    </div>
+
+                    {viewMode === "summary" ? (
+                        <SummaryView allUsers={allUsers} />
+                    ) : (
+                        <TaskBoard
+                            ref={boardRef}
+                            viewMode={viewMode}
+                            offset={offset}
+                            setOffset={setOffset}
+                            setViewMode={setViewMode}
+                            searchTerm={headerSearch}
+                            filterTag={filterTag}
+                            filterUser={filterUser}
+                            filterExpiration={filterExpiration}
+                        />
+                    )}
+
+                    {showDBModal && (
+                        <DexieModal tasks={dbTasks} onClose={() => setShowDBModal(false)} />
+                    )}
+                    {showExcalidraw && (
+                        <ExcalidrawModal onClose={() => setShowExcalidraw(false)} />
+                    )}
+
+                    {viewMode !== "summary" && (
+                        <div className="fab" onClick={() => setShowQuickAdd(true)} title="Quick Add Task">
+                            <i className="fa-solid fa-plus"></i>
+                        </div>
+                    )}
+
+                    <QuickAddModal
+                        isOpen={showQuickAdd}
+                        onClose={() => setShowQuickAdd(false)}
+                        onAddTask={(selectedDay, taskTitle, details) => doQuickAddTask(selectedDay, taskTitle, details)}
+                        defaultDay={viewMode === "daily" ? CONFIG.validDays[new Date().getDay() - 1] || "Monday" : "Monday"}
+                    />
+
+                    {showHelp && <HelpModal onClose={() => setShowHelp(false)} />}
+                </div>
+            );
+        };
+
+        /************************************************/
+        /* 9) WRAP APP WITH ERROR BOUNDARY              */
+        /************************************************/
+        ReactDOM.render(
+            <ErrorBoundary>
+                <App />
+            </ErrorBoundary>,
+            document.getElementById("root")
+        );
+    </script>
+</body>
+
+</html>
