@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Overall banner container: 800x100 */
+        .banner {
+            width: 800px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top section: logo/brand on left, curated text on right */
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* White background */
+            height: 70%;              /* ~70px tall */
+            padding: 0 10px;
+            border-bottom: 2px solid #E45B2F; /* Orange divider line */
+        }
+
+        /* Brand area (logo + text) */
+        .brand-area {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Placeholder logo box—replace with an actual <img> if you have a file */
+        .logo {
+            width: 40px;
+            height: 40px;
+            background-color: #ccc; /* Temporary gray background */
+            margin-right: 10px;
+        }
+
+        /* Main brand text */
+        .brand-text {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        /* Curated text on the right */
+        .curated-text {
+            text-align: right;
+            font-size: 12px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* Bottom section: headline area */
+        .bottom-section {
+            background-color: #F3F2EC; /* Light gray/beige background */
+            height: 30%;              /* ~30px tall */
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .headline {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            margin: 0; /* Remove default <h1>/<h2> spacing if using those tags */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- Top Section -->
+        <div class="top-section">
+            <div class="brand-area">
+                <!-- Replace this .logo div with an <img> tag if you have a logo file -->
+                <div class="logo"></div>
+                <div class="brand-text">
+                    Global Infrastructure Partners<br>
+                    <span style="font-size: 12px; font-weight: normal;">
+                        a part of BlackRock
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div class="headline">BGIF EMEA + Asia Weekly News</div>
+        </div>
+    </div>
+</body>
+</html>

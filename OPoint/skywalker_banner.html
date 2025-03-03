@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Base styling for the header container */
+  .skywalker-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Star effect in the background */
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.2) 150%);
+  }
+  
+  /* Logo icon styling */
+  .skywalker-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+  
+  .icon-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4fc3f7 0%, #2196f3 100%);
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-silhouette {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 40px;
+  }
+  
+  /* Brand name styling */
+  .skywalker-title {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .brand-name {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tagline {
+    color: #bbdefb;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Light beam effect */
+  .light-beam {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(90deg, 
+                                rgba(255, 255, 255, 0) 0%, 
+                                rgba(255, 255, 255, 0.1) 50%, 
+                                rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-20deg);
+    animation: beam 8s infinite;
+    opacity: 0.7;
+  }
+  
+  @keyframes beam {
+    0% { left: -150px; }
+    30% { left: 100%; }
+    100% { left: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="skywalker-header">
+  <div class="stars"></div>
+  <div class="light-beam"></div>
+  
+  <div class="skywalker-icon">
+    <div class="icon-circle">
+      <svg class="icon-silhouette" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L9 9H3L8 14L6 21L12 17L18 21L16 14L21 9H15L12 2Z" fill="white"/>
+      </svg>
+    </div>
+  </div>
+  
+  <div class="skywalker-title">
+    <h1 class="brand-name">SKYWALKER</h1>
+    <p class="tagline">Elevate Your Intelligence</p>
+  </div>
+</div>
+
+</body>
+</html>
