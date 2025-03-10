@@ -1,0 +1,6235 @@
+﻿<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+<Styles>
+<Style ss:ID="Default">
+<Alignment Horizontal="Left"/>
+</Style>
+<Style ss:ID="wraptext">
+<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+</Style>
+<Style ss:ID="headerstyle">
+<Font ss:Bold="1" />
+</Style>
+<Style ss:ID="Date">
+<NumberFormat ss:Format="dd-MMM-yyyy"/>
+</Style>
+<Style ss:ID="Number">
+<Alignment ss:Horizontal="Right"/>
+<NumberFormat ss:Format="Standard"/>
+</Style>
+<Style ss:ID="DefaultHyperlink">
+<Font ss:Color="#0000FF" ss:Underline="Single" />
+</Style>
+<Style ss:ID="DateHyperlink">
+<NumberFormat ss:Format="dd-MMM-yyyy"/>
+<Font ss:Color="#0000FF" ss:Underline="Single" />
+</Style>
+<Style ss:ID="NumberHyperlink">
+<Alignment ss:Horizontal="Right"/>
+<NumberFormat ss:Format="Standard"/>
+<Font ss:Color="#0000FF" ss:Underline="Single" />
+</Style>
+</Styles>
+<Worksheet ss:Name="All Funds">
+<Table>
+<Row>
+<Cell ss:StyleID="headerstyle" ss:MergeDown="1">
+<Data ss:Type="String">Ticker</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeDown="1">
+<Data ss:Type="String">APIR Code</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeDown="1">
+<Data ss:Type="String">Name</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeDown="1">
+<Data ss:Type="String">Share Class</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeDown="1">
+<Data ss:Type="String">ISIN</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeDown="1">
+<Data ss:Type="String">Domicile</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeDown="1">
+<Data ss:Type="String">Inception Date</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeAcross="4">
+<Data ss:Type="String">Average Annual</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeAcross="5">
+<Data ss:Type="String">Cumulative</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:MergeAcross="3">
+<Data ss:Type="String">NAV/Price</Data>
+</Cell>
+</Row>
+<Row> <Cell ss:StyleID="headerstyle" ss:Index="8">
+<Data ss:Type="String">1Y (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="9">
+<Data ss:Type="String">3Y (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="10">
+<Data ss:Type="String">5Y (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="11">
+<Data ss:Type="String">Incept (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="12">
+<Data ss:Type="String">Perf. as of</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="13">
+<Data ss:Type="String">YTD (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="14">
+<Data ss:Type="String">1Y (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="15">
+<Data ss:Type="String">3Y (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="16">
+<Data ss:Type="String">5Y (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="17">
+<Data ss:Type="String">Incept (%)</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="18">
+<Data ss:Type="String">Perf. as of</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="19">
+<Data ss:Type="String">NAV</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="20">
+<Data ss:Type="String">Buy Price</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="21">
+<Data ss:Type="String">Sell Price</Data>
+</Cell>
+<Cell ss:StyleID="headerstyle" ss:Index="22">
+<Data ss:Type="String">As of</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK0252AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global Listed Property Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D (Hedged)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK02528</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2020-12-11</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.712459</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.69535</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.324319</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.553861</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.712459</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-5.00031</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.796033</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.93686</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.936298</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ALTB</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares 15+ Year Australian Government Bond ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000334450</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-06-07</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.999002</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.288225</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">97.928997</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK5937AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Equity Signals Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK59379</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2018-04-05</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.947883</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.355</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.935807</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.695106</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.152582</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.947883</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">49.54279</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">91.999968</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">128.186045</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.307835</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.306527</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IAA</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Asia 50 ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IAA6</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2007-11-13</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">38.145766</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.301675</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.188736</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.743201</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.199765</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">38.145766</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">27.029772</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">35.01818</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">209.176948</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">120.363541</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK0009AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Multi-Asset Income Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK00092</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2015-10-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.178326</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.347666</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.959617</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.949393</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.61006</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.178326</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.209638</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.70033</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">43.581468</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.949449</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.949449</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IEM</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI Emerging Markets ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IEM3</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2003-04-07</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.218688</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.711121</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.927354</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.045593</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.742325</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.218688</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.809658</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.240954</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">444.378837</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">70.314611</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IOO</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global 100 ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IOO8</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2000-12-05</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">24.784345</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.833502</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.913238</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.908982</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.603269</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">24.784345</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">67.809555</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">127.935952</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">302.044365</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">155.152085</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ISO</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares S&amp;P/ASX Small Ordinaries ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000ISO9</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2010-12-06</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.2357</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.554707</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.999937</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.361471</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.563489</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.2357</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.737009</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">27.627774</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">60.092831</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.662092</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">EMXC</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI Emerging Markets ex China ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000334666</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-06-07</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-2.193049</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.627126</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">25.834652</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IXI</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global Consumer Staples ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IXI1</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2006-09-12</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.991046</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.676178</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.94187</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.57499</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.05676</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.991046</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.352127</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">46.537809</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">356.888544</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">101.133161</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHD</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares S&amp;P/ASX Dividend Opportunities ESG Screened ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IHD5</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2010-12-06</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.551604</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.26449</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.629054</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.483368</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.370842</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.551604</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">26.898971</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">44.426744</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">113.789043</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.129635</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IXJ</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global Healthcare ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IXJ9</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2001-11-13</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.554551</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.488846</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.133076</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.59851</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.891368</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.554551</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">34.882408</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">62.027546</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">343.123029</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">146.456583</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ILC</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares S&amp;P/ASX 20 ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000ILC9</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2010-12-06</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.567263</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.027982</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.126045</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.14512</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.295882</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.567263</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">33.201599</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">54.754072</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">204.811903</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">30.447637</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IZZ</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares China Large-Cap ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IZZ0</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2004-10-05</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">58.081693</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.813966</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.256695</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.296784</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.582665</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">58.081693</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">25.321351</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.276903</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">247.603558</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">58.224941</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IJH</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares S&amp;P Mid-Cap ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IJH2</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2000-05-22</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.649642</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.196219</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.495045</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.996482</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.124065</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.649642</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">41.232507</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">88.314825</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">744.870768</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">46.74576</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IJR</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares S&amp;P Small-Cap ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IJR1</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2000-05-22</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.980668</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.09225</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.250591</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.98573</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-3.398122</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.980668</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">26.294276</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">70.416496</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">742.808533</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">169.334338</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IEU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Europe ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IEU6</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2000-07-25</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.015532</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.368041</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.089061</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.903474</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.962307</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.015532</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">45.704151</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">61.704028</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">156.479993</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">94.003617</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IKO</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI South Korea ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IKO6</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2000-05-09</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-9.428683</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-2.541517</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.133837</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.99689</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.494484</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-9.428683</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-7.432414</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.134333</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">235.237085</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">91.284771</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IVE</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI EAFE ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IVE4</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2001-08-14</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.56177</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.934439</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.99401</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.59096</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.424801</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.56177</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">40.246227</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">53.820121</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">187.725862</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">130.982289</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IJP</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI Japan ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IJP5</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1996-03-12</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.793022</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.003686</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.634675</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.406465</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.598216</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.793022</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">33.113381</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">44.464459</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">99.135933</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">109.532298</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHCB</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core Global Corporate Bond (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000IHCB0</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2015-12-04</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.939212</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.244546</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.67487</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.172646</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.16889</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.939212</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.731845</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-3.329112</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.966821</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">92.488025</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHEB</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares J.P. Morgan USD Emerging Markets Bond (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000IHEB6</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2015-12-04</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.177098</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.929327</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.315782</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.164498</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.896037</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.177098</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.813971</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-6.408045</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.876994</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">76.223008</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHHY</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global High Yield Bond (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000IHHY1</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2015-12-04</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.481274</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.770376</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.95563</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.417339</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.902895</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.481274</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.742959</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.67793</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">49.086442</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">94.769887</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BILL</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core Cash ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000BILL3</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2017-06-02</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.58399</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.507589</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.139362</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.975597</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.734971</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.58399</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.896178</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.164393</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.339712</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">100.45664</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ISEC</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Enhanced Cash ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000ISEC1</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2017-06-02</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.743907</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.621918</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.266227</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.140144</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.76004</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.743907</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.264055</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.856483</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.79989</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">100.583735</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IGB</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Treasury ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IGB1</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2012-03-12</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.358394</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.495384</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.423516</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.441995</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.012</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.358394</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.478803</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-6.917804</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">36.730403</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">98.143249</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ILB</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Government Inflation ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000ILB1</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2012-03-12</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.441766</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.022145</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.313875</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.028699</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.460609</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.441766</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.06642</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.579258</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">47.239677</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">124.492976</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IAF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core Composite Bond ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IAF5</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2012-03-12</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.104025</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.211447</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.725387</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.889669</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.106639</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.104025</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.635682</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-3.574694</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">44.68403</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">101.890025</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK0012AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock High Conviction Australian Equity Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK00126</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2016-01-05</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.281004</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.553273</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.828776</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.435816</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.311107</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.281004</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.732574</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">20.667044</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">62.356393</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.020806</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.018254</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0079AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares All-Country Equity Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL00793</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2009-12-07</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.108256</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.026036</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.019072</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.828417</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.918126</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.108256</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">48.255931</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">84.399053</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">448.879022</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.022604</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.02139</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0108AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Australian Listed Property Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL01080</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2001-07-16</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.68513</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.282253</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.167118</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.039708</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.887197</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.68513</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.698563</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.647058</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">398.788685</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.986116</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.985623</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0105AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Australian Bond Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL01056</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2001-11-14</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.025465</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.174036</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.729801</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.257765</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.092945</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.025465</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.523016</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-3.59613</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">164.134662</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.936949</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.936481</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0044AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Hedged International Equity Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL00447</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2001-04-12</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.151418</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.258416</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.198204</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.092424</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.524059</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.151418</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">34.040257</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">85.865031</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">541.421315</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.676403</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.676132</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK2376AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Impact Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK23763</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2021-06-10</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.664807</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-5.709614</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-3.397334</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-08-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.671107</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.664807</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-16.169463</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-10.496489</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-08-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.904318</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.904318</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-09-13</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK0677AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Real Estate Securities Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK06776</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-07-24</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.877409</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.011737</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.520304</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.877409</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.192586</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.107022</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.107022</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK6302AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Core Equity Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK63025</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-07-24</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.226333</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.836439</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.742602</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.226333</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">26.518</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.224252</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.224252</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK5644AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Emerging Markets Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK56441</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-07-24</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.931831</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.75754</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.150415</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.931831</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.0795</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.083687</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.083687</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IESG</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core MSCI Australia ESG ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000150880</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2021-06-02</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.855032</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.8759</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.023439</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.738729</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.855032</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.650025</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">33.479072</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">29.93773</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IVV</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares S&amp;P 500 ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IVV8</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2000-05-15</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">23.873001</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.168378</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.433989</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.371633</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.978057</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">23.873001</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">65.007554</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">123.341317</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">483.181386</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">60.232232</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BAR0813AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Diversified ESG Growth Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BAR08135</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1997-01-24</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.08294</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.685108</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.710794</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.517057</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.713757</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.08294</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">24.872541</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">38.369944</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">670.216093</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.564315</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.562907</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BAR0814AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Advantage Australian Equity Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BAR08143</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1997-01-24</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.187531</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.163084</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.775185</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.301928</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.591901</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.187531</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">30.085051</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">52.282202</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1124.664066</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.553793</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.551462</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK9425AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Unconstrained Equity Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK94251</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-09-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.537584</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.583371</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.558533</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.537584</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.963</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.246394</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0109AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Advantage Hedged International Equity Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL01098</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2003-01-24</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.96107</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.523389</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.558754</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.341207</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.666356</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.96107</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">38.706838</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">88.843958</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">763.3635</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.951872</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.944759</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IVLU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI World ex Australia Value ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000319782</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-02-14</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.14315</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.375166</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.438166</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.14315</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.112835</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.590646</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ULTB</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares 20+ Year U.S. Treasury Bond (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000349730</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-09-03</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.052037</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-5.25154</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">93.589686</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK8833AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Listed Infrastructure Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK88337</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2021-02-11</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.9975</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">GLPR</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core FTSE Global Property Ex Australia (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000273229</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-05-16</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.408232</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.76135</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.072638</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.408232</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.18436</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">26.276235</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IMTM</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI World ex Australia Momentum ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000319758</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-02-14</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">22.547448</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">24.570332</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.710284</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">22.547448</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">25.715906</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">29.545098</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">PWA0015AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Australian Share Fund Plus</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class A</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60PWA00157</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1983-10-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.090433</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.362606</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.547779</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.30191</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.285985</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.090433</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.143772</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.043023</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3850.150744</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.807499</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.80298</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">PWA0013AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Balanced Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class A</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60PWA00132</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1992-04-30</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.550064</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.424237</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.954398</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.870445</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.688599</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.550064</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">27.461529</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">46.622866</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">786.118586</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.205429</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.203982</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IQLT</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI World ex Australia Quality ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000319766</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-02-14</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.346277</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.230504</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.999206</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.346277</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">20.107516</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.716117</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHQL</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI World ex Australia Quality (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000319741</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-02-20</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.152298</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.457069</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.24923</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.152298</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.844099</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">27.494584</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">GLIN</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core FTSE Global Infrastructure (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000272825</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-05-16</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.203836</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.574718</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.724291</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.203836</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.828504</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">26.732807</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK1918AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Balanced Multi-Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK19183</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2019-09-16</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.403189</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.395785</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.628868</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.37892</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.862283</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.403189</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">20.440699</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">31.496176</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.815706</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.060633</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.059784</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK3651AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Moderate Multi-Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK36518</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2019-09-16</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.778409</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.363522</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.626158</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.552464</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.753822</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.778409</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.670083</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">19.494241</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">20.814494</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.050641</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.049906</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK9560AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Growth Multi-Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK95605</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2019-09-16</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.415929</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.354078</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.703964</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.250612</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.859153</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.415929</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">27.214258</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">44.930048</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">46.10513</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.076443</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.075582</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">GLDN</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Physical Gold ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000292930</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-10-27</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">44.668208</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.181832</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.063579</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">44.668208</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">45.064904</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">36.6504</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">PWA0822AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Tactical Growth Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60PWA08226</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1992-09-30</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.565741</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.414116</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.151394</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.986814</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.692722</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.565741</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">27.425838</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">47.965551</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1107.168112</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.806142</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.803975</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IVHG</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI World ex Australia Value (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000319774</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-02-20</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.654122</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.534928</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.869021</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.654122</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.86766</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">27.513287</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK0001AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Multi Opportunity Absolute Return Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK00019</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2013-07-30</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-01-31</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-01-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.113027</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.11247</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2024-12-31</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK2127AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares ESG Australian Bond Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK21270</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2019-02-01</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.040556</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.22817</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.701496</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.934862</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.09761</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.040556</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.686072</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-3.458617</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.821205</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.974877</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.97439</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHOO</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global 100 (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000IHOO8</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2014-12-15</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.963012</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.109506</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.692009</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.494993</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.904137</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.963012</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">40.905295</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">107.260626</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">232.53905</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">181.735675</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHVV</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares S&amp;P 500 (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000IHVV8</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2014-12-15</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.913103</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.823761</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.939143</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.812284</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.37659</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.913103</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.461279</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">92.02808</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">212.508977</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">52.685566</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ICOR</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core Corporate Bond ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000088494</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2020-05-27</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.113554</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.430616</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.488771</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.220924</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.113554</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.470521</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.284985</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">95.651637</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK0003AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Fixed Income Global Opportunities Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK00035</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2014-10-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.367189</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.103358</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.629302</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.525915</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.850804</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.367189</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.443727</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.416335</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">29.404017</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.205468</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.205468</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IYLD</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Yield Plus ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000088502</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2020-05-27</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.029174</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.870676</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.807829</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.053494</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.029174</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.067291</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.083965</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">99.889437</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IBAL</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Balanced ESG ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000233702</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2022-08-15</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.86012</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.693294</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.316739</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.86012</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">23.570488</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.963756</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IUSG</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares U.S. Treasury Bond (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000267791</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2023-09-19</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.09897</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.395433</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.70112</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.09897</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.410477</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">102.18411</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IOZ</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core S&amp;P/ASX 200 ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU000000IOZ4</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2010-12-06</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.790858</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.146604</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.782024</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.186134</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.5959</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.790858</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">30.026143</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">52.330084</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">206.461399</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.247399</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0008AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global Bond Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL00082</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1997-10-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.826633</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.547473</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.913</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.704091</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.555179</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.826633</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.633442</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-4.482399</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">72.037062</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.826741</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.826245</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0034AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Australian Equity Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL00348</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1998-10-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.349396</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.680455</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.60361</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.481407</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.470041</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.349396</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.367281</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">51.084983</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">753.145563</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.553671</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.55305</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IGRO</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares High Growth ESG ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000233710</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2022-08-15</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.439096</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.721628</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.345528</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.439096</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">38.605144</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.477361</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BGL0106AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares International Equity Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BGL01064</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2001-12-12</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.266138</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.200379</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.927988</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.11024</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.343856</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.266138</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">56.899887</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">100.506761</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">392.692809</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.328731</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.328332</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BAR0811AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Diversified ESG Stable Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BAR08119</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1996-12-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.849858</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.208173</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.291795</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">5.710828</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.843512</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.849858</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.163232</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.578828</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">377.931</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.221125</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.22027</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">PWA0014AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Australian Share Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class A</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60PWA00140</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1988-05-31</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.088352</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.362873</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.469713</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.198366</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.285493</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.088352</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.144594</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.594955</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">399.63409</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.575656</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.571717</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BAR0817AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Advantage International Equity Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BAR08176</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1996-07-13</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">22.292562</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.465838</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.295652</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.492519</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.51876</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">22.292562</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">62.081985</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">103.734533</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">611.938057</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.088128</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.084578</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IWLD</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core MSCI World ex Australia ESG ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000IWLD6</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2016-04-22</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.666628</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.104398</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">15.438974</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.471479</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.175326</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">17.666628</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">56.511415</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">105.003982</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">230.976486</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">59.304143</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">IHWL</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Core MSCI World ex Australia ESG (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000IHWL7</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2016-04-22</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.494223</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.932848</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.35487</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">11.37618</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.308669</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.494223</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.856386</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">87.154778</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">159.640219</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">51.456974</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">MAL0018AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Allocation Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60MAL00181</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2005-07-04</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.927173</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.596712</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.813579</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.241555</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.105448</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.927173</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.433743</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">39.037626</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">295.725486</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.295404</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.291518</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">MAL0017AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Global Allocation Fund (Aust)</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class C</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60MAL00173</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2005-06-27</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.01939</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.626903</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.837302</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.949271</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.104354</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.01939</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.532861</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">39.192095</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">275.036686</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.291675</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.2878</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">PWA0001AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Equity Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class A</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60PWA00017</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">1983-11-30</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.08271</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.353113</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.525105</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.725481</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.285201</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.08271</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.114514</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">18.912741</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4499.219859</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.575494</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.571555</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">ITEK</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Future Tech Innovators ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000233744</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2022-08-15</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.416296</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.141483</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.81162</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.416296</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">16.337445</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">28.850696</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK4636AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares ESG Screened Global Bond Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK46368</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2019-08-01</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.637093</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.820718</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-1.060497</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-0.399034</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.572352</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.637093</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-2.442002</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-5.191204</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">-2.206578</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.878923</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.878396</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK1596AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock High Growth Multi-Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK15967</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2020-06-09</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.998731</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.788011</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.62283</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.786725</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.998731</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.331961</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">59.284343</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.254781</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.253652</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AUMF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Edge MSCI Australia Multifactor ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000AUMF0</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2016-10-11</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.392008</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.686563</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.846639</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.643769</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.364386</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.392008</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">31.965463</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">52.783031</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">100.41972</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">34.304596</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BLK6264AU</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">BlackRock Conservative Multi-Index Fund</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Class D</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU60BLK62647</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2020-06-09</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.312669</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">3.153041</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.949962</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.662095</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.312669</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.760506</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.342869</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.0227</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.022086</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">WDMF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares World Equity Factor ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000WDMF0</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2016-10-11</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.681263</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">14.445796</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">13.133641</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.851966</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.811893</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.681263</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">49.899274</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">85.33559</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">175.643278</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">47.325877</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">MVOL</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Edge MSCI Australia Minimum Volatility ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000MVOL7</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2016-10-11</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.670242</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.194781</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.056154</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">7.885559</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.703424</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">9.670242</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">26.654008</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">40.623589</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">88.987907</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">32.113487</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-07</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AESG</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares Global Aggregate Bond ESG (AUD Hedged) ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU0000227589</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2022-08-09</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.775348</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">0.91135</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">1.52936</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">4.775348</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">2.345543</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">97.261542</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">WVOL</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">iShares MSCI World ex Australia Minimum Volatility ETF</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String"> </Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">AU00000WVOL6</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">Australia</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2016-10-11</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.342601</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">12.101419</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">8.396983</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">10.119595</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">6.321615</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">21.342601</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">40.874807</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">49.653185</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">124.430174</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-02-28</Data>
+</Cell>
+<Cell ss:StyleID="Number">
+<Data ss:Type="Number">43.87043</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Default">
+<Data ss:Type="String">-</Data>
+</Cell>
+<Cell ss:StyleID="Date">
+<Data ss:Type="DateTime">2025-03-06</Data>
+</Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>
