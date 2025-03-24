@@ -186,7 +186,7 @@ class NewsletterGenerator:
     def generate_newsletter(
         self, df, output_path=None, preview_text='Your newsletter preview text here', 
         column_mapping=None, colors=None, banner_input=None, summary_html="", 
-        image_html="", content_width=800, mobile_friendly=True
+        image_html="", content_width=800, mobile_friendly=True, save_to_disk=True
     ):
         """
         Generate a newsletter from a DataFrame
@@ -202,6 +202,7 @@ class NewsletterGenerator:
             image_html: HTML content for image section
             content_width: Width of newsletter in pixels
             mobile_friendly: Whether to include mobile responsive styles
+            save_to_disk: Whether to save the generated HTML to disk (default: True)
             
         Returns:
             tuple: (newsletter_html, output_path)
@@ -236,8 +237,8 @@ class NewsletterGenerator:
             # Extract and resize the banner to match content width
             custom_banner_html, custom_banner_styles = extract_banner_from_html(banner_input, content_width)
             
-        # Create a temp output path if none is provided
-        if output_path is None:
+        # Create a temp output path if save_to_disk is True and no path is provided
+        if save_to_disk and output_path is None:
             temp_dir = "temp"
             os.makedirs(temp_dir, exist_ok=True)
             output_path = os.path.join(temp_dir, f"newsletter_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html")
@@ -292,8 +293,13 @@ class NewsletterGenerator:
         if not mobile_friendly:
             rendered_html = rendered_html.replace('@media only screen and (max-width:480px)', '@media only screen and (max-width:1px)')
         
-        # Write the final HTML to file
-        with open(output_path, 'w', encoding='utf-8') as file:
-            file.write(rendered_html)
+        # Write the final HTML to file only if save_to_disk is True
+        if save_to_disk and output_path:
+            # Ensure directory exists
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            
+            # Write the file
+            with open(output_path, 'w', encoding='utf-8') as file:
+                file.write(rendered_html)
             
         return rendered_html, output_path

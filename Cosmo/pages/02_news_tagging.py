@@ -41,6 +41,24 @@ else:
     # Use copy to avoid modifying the original
     df = st.session_state.selected_news_df.copy()
     
+    # Handle column mapping between news search and tagging pages
+    column_mappings = {
+        'title': 'header_text',           # Map title from search to header_text in tagging
+        'summary': 'summary_text',        # Map summary from search to summary_text in tagging
+        'source': 'source_name',          # Map source to source_name
+    }
+    
+    # Create any mapped columns that don't exist
+    for source_col, target_col in column_mappings.items():
+        if source_col in df.columns and target_col not in df.columns:
+            df[target_col] = df[source_col]
+    
+    # Create any missing columns needed by the tagging page
+    required_cols = ['countryname', 'body_text']
+    for col in required_cols:
+        if col not in df.columns:
+            df[col] = ""
+    
     # Add Theme and Subheader columns if they don't exist
     if 'Theme' not in df.columns:
         df['Theme'] = ""
@@ -63,7 +81,7 @@ else:
     
     with col3:
         # Count selected articles
-        selected_count = df['selected'].sum()
+        selected_count = df['selected'].sum() if 'selected' in df.columns else 0
         st.metric("Checked Articles", int(selected_count))
     
     # Tag Management Section - Now in main panel instead of sidebar
@@ -159,26 +177,53 @@ else:
     priority_cols = ['search_term', 'countryname', 'header_text', 'summary_text', 'body_text']
     display_cols = ['selected', 'Theme', 'Subheader']
     
-    # Add available priority columns
+    # Add available priority columns (only if they exist in the dataframe)
     for col in priority_cols:
         if col in df.columns:
             display_cols.append(col)
+    
+    # Ensure all display columns exist in the dataframe
+    for col in display_cols:
+        if col not in df.columns:
+            df[col] = ""
+            
+    # Make sure there's a "selected" column if it doesn't exist
+    if 'selected' not in df.columns:
+        df['selected'] = False
+    
+    # Create column config with fallbacks for missing columns
+    column_config = {
+        "selected": st.column_config.CheckboxColumn("Select", help="Check articles for batch editing"),
+        "Theme": st.column_config.TextColumn("Theme", help="Article themes (e.g., GenAI, Energy)", width="medium"),
+        "Subheader": st.column_config.TextColumn("Subheader", help="Article region (e.g., Global, AMERS)", width="medium")
+    }
+    
+    # Add column config for priority columns only if they exist
+    if 'search_term' in df.columns:
+        column_config["search_term"] = st.column_config.TextColumn("Company", help="Company name")
+    
+    if 'countryname' in df.columns:
+        column_config["countryname"] = st.column_config.TextColumn("Country", help="Country of publication")
+    
+    if 'header_text' in df.columns:
+        column_config["header_text"] = st.column_config.TextColumn("Headline", help="Article headline")
+    elif 'title' in df.columns and 'title' in display_cols:
+        column_config["title"] = st.column_config.TextColumn("Headline", help="Article headline")
+        
+    if 'summary_text' in df.columns:
+        column_config["summary_text"] = st.column_config.TextColumn("Summary", help="Article summary")
+    elif 'summary' in df.columns and 'summary' in display_cols:
+        column_config["summary"] = st.column_config.TextColumn("Summary", help="Article summary")
+        
+    if 'body_text' in df.columns:
+        column_config["body_text"] = st.column_config.TextColumn("Content", help="Article content")
     
     # Create the data editor for user interaction - ensure Theme and Subheader are editable
     edited_df = st.data_editor(
         df[display_cols],
         use_container_width=True,
         hide_index=True,
-        column_config={
-            "selected": st.column_config.CheckboxColumn("Select", help="Check articles for batch editing"),
-            "search_term": st.column_config.TextColumn("Company", help="Company name"),
-            "countryname": st.column_config.TextColumn("Country", help="Country of publication"),
-            "header_text": st.column_config.TextColumn("Headline", help="Article headline"),
-            "summary_text": st.column_config.TextColumn("Summary", help="Article summary"),
-            "body_text": st.column_config.TextColumn("Content", help="Article content"),
-            "Theme": st.column_config.TextColumn("Theme", help="Article themes (e.g., GenAI, Energy)", width="medium"),
-            "Subheader": st.column_config.TextColumn("Subheader", help="Article region (e.g., Global, AMERS)", width="medium")
-        },
+        column_config=column_config,
         num_rows="dynamic",
         key="analysis_data_editor_tagging",
         disabled=False  # Ensure nothing is disabled

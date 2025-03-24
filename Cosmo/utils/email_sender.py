@@ -2,10 +2,12 @@
 Email sending utilities for the Gravity app
 """
 import re
+import os
 import smtplib
 import logging
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
 
 class EmailSender:
     """
@@ -42,7 +44,7 @@ class EmailSender:
             
         return text.strip()
     
-    def send_html_email(self, from_email, to_emails, subject, html_content, cc_emails=None, bcc_emails=None):
+    def send_html_email(self, from_email, to_emails, subject, html_content, cc_emails=None, bcc_emails=None, attachments=None):
         """
         Send an HTML email via mail server
         
@@ -53,6 +55,7 @@ class EmailSender:
             html_content (str): HTML content as a string
             cc_emails (str or list): CC recipients - can be a string or list
             bcc_emails (str or list): BCC recipients - can be a string or list
+            attachments (list): Optional list of file paths to attach
             
         Returns:
             tuple: (success, message) - success is True/False, message is a status message
@@ -100,6 +103,36 @@ class EmailSender:
             # Attach HTML part
             msg_text_html = MIMEText(html_content, 'html')
             msg_alternative.attach(msg_text_html)
+            
+            # Add attachments if provided
+            if attachments:
+                for attachment_path in attachments:
+                    if os.path.exists(attachment_path):
+                        try:
+                            with open(attachment_path, 'rb') as f:
+                                # Determine the file type
+                                file_name = os.path.basename(attachment_path)
+                                file_extension = os.path.splitext(file_name)[1].lower()
+                                
+                                # Create appropriate MIME type based on extension
+                                if file_extension in ['.html', '.htm']:
+                                    attachment = MIMEApplication(f.read(), _subtype="html")
+                                elif file_extension in ['.pdf']:
+                                    attachment = MIMEApplication(f.read(), _subtype="pdf")
+                                elif file_extension in ['.txt']:
+                                    attachment = MIMEApplication(f.read(), _subtype="plain")
+                                else:
+                                    # Default: octet-stream for binary files
+                                    attachment = MIMEApplication(f.read(), _subtype="octet-stream")
+                                
+                                # Add header with filename
+                                attachment.add_header('Content-Disposition', 'attachment', filename=file_name)
+                                msg_root.attach(attachment)
+                        except Exception as e:
+                            logging.error(f"Error attaching file {attachment_path}: {e}")
+                            return False, f"Error attaching file {attachment_path}: {e}"
+                    else:
+                        logging.warning(f"Attachment file not found: {attachment_path}")
             
         except Exception as e:
             logging.error(f"Error processing HTML content: {e}")

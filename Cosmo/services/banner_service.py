@@ -95,6 +95,7 @@ COLOR_BANNER_TEMPLATES = {
 
 # Default banner texts
 DEFAULT_BANNER_TEXTS = {
+    # Existing values
     'corporate_top': 'BlackRock',
     'corporate_middle': 'BlackRock Daily News',
     'gips_brand': 'Global Infrastructure Partners',
@@ -105,7 +106,31 @@ DEFAULT_BANNER_TEXTS = {
     'modern_tagline': 'Market Analysis & Investment Strategy',
     'gradient_title': 'BlackRock Newsletter',
     'gradient_subtitle': 'Weekly Market Updates & Analysis',
-    'gradient_edition': 'March 2025 Edition'
+    'gradient_edition': 'March 2025 Edition',
+    
+    # New values for other banner types
+    'minimalist_title': 'Minimalist Newsletter',
+    'minimalist_subtitle': 'Clean design for modern communications',
+    'minimalist_date': 'March 2025',
+    
+    'split_brand': 'Split Design',
+    'split_tagline': 'Distinctive newsletters that stand out',
+    'split_title': 'Weekly Market Report',
+    'split_description': 'Analysis and insights for financial professionals',
+    
+    'bordered_title': 'Bordered Newsletter Design',
+    'bordered_subtitle': 'Elegant framing for your important communications',
+    
+    'geometric_title': 'Geometric Design',
+    'geometric_subtitle': 'Modern patterns for creative communications',
+    
+    'wave_title': 'Wave Design Newsletter',
+    'wave_subtitle': 'Flowing information with style',
+    'wave_date': 'March 2025',
+    
+    'boxed_title': 'Boxed Newsletter Design',
+    'boxed_subtitle': 'Structured content for professional communications',
+    'boxed_badge': 'EXCLUSIVE'
 }
 
 def load_banner_html(banner_type):
@@ -161,9 +186,7 @@ def get_modified_banner_html(banner_type, banner_text):
         middle_bar = soup.select_one('.middle-bar')
         if middle_bar:
             middle_bar.string = banner_text.get('corporate_middle', DEFAULT_BANNER_TEXTS['corporate_middle'])
-            
-        return str(soup)
-        
+    
     elif banner_type == "GIPS Infrastructure":
         # Update brand text
         brand_text_elem = soup.select_one('.brand-text')
@@ -187,9 +210,7 @@ def get_modified_banner_html(banner_type, banner_text):
         headline = soup.select_one('.headline')
         if headline:
             headline.string = banner_text.get('gips_headline', DEFAULT_BANNER_TEXTS['gips_headline'])
-            
-        return str(soup)
-        
+    
     elif banner_type == "Modern Design":
         # Update brand text
         brand_text = soup.select_one('.brand-text')
@@ -205,9 +226,7 @@ def get_modified_banner_html(banner_type, banner_text):
         tagline = soup.select_one('.tagline')
         if tagline:
             tagline.string = banner_text.get('modern_tagline', DEFAULT_BANNER_TEXTS['modern_tagline'])
-            
-        return str(soup)
-        
+    
     elif banner_type == "Gradient Style":
         # Update title
         title = soup.select_one('.title')
@@ -223,11 +242,100 @@ def get_modified_banner_html(banner_type, banner_text):
         right_content = soup.select_one('.right-content')
         if right_content:
             right_content.string = banner_text.get('gradient_edition', DEFAULT_BANNER_TEXTS['gradient_edition'])
-            
-        return str(soup)
     
-    # Return original template if banner type not found
-    return html_content
+    elif banner_type == "Minimalist":
+        # Update title
+        title = soup.select_one('.title')
+        if title:
+            title.string = banner_text.get('minimalist_title', DEFAULT_BANNER_TEXTS['minimalist_title'])
+        
+        # Update subtitle
+        subtitle = soup.select_one('.subtitle')
+        if subtitle:
+            subtitle.string = banner_text.get('minimalist_subtitle', DEFAULT_BANNER_TEXTS['minimalist_subtitle'])
+        
+        # Update date
+        date = soup.select_one('.date')
+        if date:
+            date.string = banner_text.get('minimalist_date', DEFAULT_BANNER_TEXTS['minimalist_date'])
+    
+    elif banner_type == "Split Design":
+        # Update brand
+        brand = soup.select_one('.brand')
+        if brand:
+            brand.string = banner_text.get('split_brand', DEFAULT_BANNER_TEXTS['split_brand'])
+        
+        # Update tagline
+        tagline = soup.select_one('.tagline')
+        if tagline:
+            tagline.string = banner_text.get('split_tagline', DEFAULT_BANNER_TEXTS['split_tagline'])
+        
+        # Update title
+        title = soup.select_one('.title')
+        if title:
+            title.string = banner_text.get('split_title', DEFAULT_BANNER_TEXTS['split_title'])
+        
+        # Update description
+        description = soup.select_one('.description')
+        if description:
+            description.string = banner_text.get('split_description', DEFAULT_BANNER_TEXTS['split_description'])
+    
+    elif banner_type == "Bordered":
+        # Update title
+        title = soup.select_one('.title')
+        if title:
+            title.string = banner_text.get('bordered_title', DEFAULT_BANNER_TEXTS['bordered_title'])
+        
+        # Update subtitle
+        subtitle = soup.select_one('.subtitle')
+        if subtitle:
+            subtitle.string = banner_text.get('bordered_subtitle', DEFAULT_BANNER_TEXTS['bordered_subtitle'])
+    
+    elif banner_type == "Geometric":
+        # Update title
+        title = soup.select_one('.title')
+        if title:
+            title.string = banner_text.get('geometric_title', DEFAULT_BANNER_TEXTS['geometric_title'])
+        
+        # Update subtitle
+        subtitle = soup.select_one('.subtitle')
+        if subtitle:
+            subtitle.string = banner_text.get('geometric_subtitle', DEFAULT_BANNER_TEXTS['geometric_subtitle'])
+    
+    elif banner_type == "Wave":
+        # Update title
+        title = soup.select_one('.title')
+        if title:
+            title.string = banner_text.get('wave_title', DEFAULT_BANNER_TEXTS['wave_title'])
+        
+        # Update subtitle
+        subtitle = soup.select_one('.subtitle')
+        if subtitle:
+            subtitle.string = banner_text.get('wave_subtitle', DEFAULT_BANNER_TEXTS['wave_subtitle'])
+        
+        # Update date
+        date = soup.select_one('.date')
+        if date:
+            date.string = banner_text.get('wave_date', DEFAULT_BANNER_TEXTS['wave_date'])
+    
+    elif banner_type == "Boxed":
+        # Update title
+        title = soup.select_one('.title')
+        if title:
+            title.string = banner_text.get('boxed_title', DEFAULT_BANNER_TEXTS['boxed_title'])
+        
+        # Update subtitle
+        subtitle = soup.select_one('.subtitle')
+        if subtitle:
+            subtitle.string = banner_text.get('boxed_subtitle', DEFAULT_BANNER_TEXTS['boxed_subtitle'])
+        
+        # Update badge
+        badge = soup.select_one('.badge')
+        if badge:
+            badge.string = banner_text.get('boxed_badge', DEFAULT_BANNER_TEXTS['boxed_badge'])
+    
+    # Return the modified HTML
+    return str(soup)
 
 def extract_banner_from_html(html_file_or_content, content_width=800):
     """

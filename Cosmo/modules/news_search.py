@@ -52,6 +52,176 @@ def search_news(companies, hours_back, initial_limit=500, use_proxy=False):
             status.update(label="❌ Search failed", state="error")
             return pd.DataFrame()
 
+def standardize_opoint_dates(df):
+    """
+    Standardize Opoint date formats to match Factiva format (2025-03-23)
+    
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        DataFrame with Opoint data
+        
+    Returns:
+    --------
+    pandas.DataFrame
+        DataFrame with standardized date formats
+    """
+    # Make a copy to avoid modifying the original
+    result_df = df.copy()
+    
+    # Handle local_time_text column if it exists (20250323T11:57:12+0100)
+    if 'local_time_text' in result_df.columns:
+        try:
+            # Parse the ISO format dates from Opoint
+            result_df['unified_date'] = pd.to_datetime(result_df['local_time_text'], errors='coerce')
+            
+            # Format to match Factiva's format (2025-03-23)
+            result_df['unified_date'] = result_df['unified_date'].dt.strftime('%Y-%m-%d')
+        except Exception as e:
+            st.warning(f"Error standardizing Opoint dates: {e}")
+            
+    # Handle datetime column if it exists (this is the parsed timestamp)
+    elif 'datetime' in result_df.columns:
+        try:
+            result_df['unified_date'] = result_df['datetime'].dt.strftime('%Y-%m-%d')
+        except Exception as e:
+            st.warning(f"Error standardizing Opoint datetime: {e}")
+    
+    return result_df
+
+def standardize_factiva_dates(df):
+    """
+    Standardize Factiva date formats
+    
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        DataFrame with Factiva data
+        
+    Returns:
+    --------
+    pandas.DataFrame
+        DataFrame with standardized date formats
+    """
+    # Make a copy to avoid modifying the original
+    result_df = df.copy()
+    
+    # Handle publication_date column if it exists
+    if 'publication_date' in result_df.columns:
+        try:
+            # Check if already in datetime format
+            if pd.api.types.is_datetime64_any_dtype(result_df['publication_date']):
+                result_df['unified_date'] = result_df['publication_date'].dt.strftime('%Y-%m-%d')
+            else:
+                # Parse and format the date
+                result_df['unified_date'] = pd.to_datetime(result_df['publication_date'], errors='coerce').dt.strftime('%Y-%m-%d')
+        except Exception as e:
+            st.warning(f"Error standardizing Factiva dates: {e}")
+    
+    return result_df
+
+def standardize_columns(df):
+    """
+    Standardize column names across different data sources
+    
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        DataFrame to standardize
+        
+    Returns:
+    --------
+    pandas.DataFrame
+        DataFrame with standardized columns
+    """
+    standardized_df = df.copy()
+    
+    # Create a mapping of standard columns to source-specific columns
+    column_mapping = {
+        # Title
+        'title': ['headline', 'header_text', 'unified_title', 'header', 'title_text', 'Title'],
+        # Source
+        'source': ['source_name', 'first_source_name'],
+        # Date
+        'date': ['publication_date', 'local_time_text', 'unified_date'],
+        # Summary
+        'summary': ['snippet', 'summary_text']
+    }
+    
+    # Add standard columns based on existing data
+    for std_col, source_cols in column_mapping.items():
+        # Check if standard column already exists
+        if std_col not in standardized_df.columns:
+            # Try each source column
+            for src_col in source_cols:
+                if src_col in df.columns:
+                    standardized_df[std_col] = df[src_col]
+                    break
+    
+    # Ensure dates are formatted consistently
+    if 'date' in standardized_df.columns:
+        try:
+            if pd.api.types.is_datetime64_any_dtype(standardized_df['date']):
+                standardized_df['date'] = standardized_df['date'].dt.strftime('%Y-%m-%d')
+        except:
+            pass
+    
+    # Add URL standardization
+    if 'url' not in standardized_df.columns:
+        # Try to use factiva_url or url_text
+        if 'factiva_url' in standardized_df.columns:
+            standardized_df['url'] = standardized_df['factiva_url']
+        elif 'url_text' in standardized_df.columns:
+            standardized_df['url'] = standardized_df['url_text']
+    
+    return standardized_df
+
+def perform_joint_search(factiva_df, opoint_df):
+    """
+    Combine results from Factiva and Opoint with proper column alignment
+    
+    Parameters:
+    -----------
+    factiva_df : pandas.DataFrame
+        DataFrame with Factiva search results
+    opoint_df : pandas.DataFrame
+        DataFrame with Opoint search results
+        
+    Returns:
+    --------
+    pandas.DataFrame
+        Combined DataFrame with standardized columns
+    """
+    # First standardize dates for each source
+    if not factiva_df.empty:
+        factiva_df = standardize_factiva_dates(factiva_df)
+    
+    if not opoint_df.empty:
+        opoint_df = standardize_opoint_dates(opoint_df)
+    
+    # Combine results
+    combined_df = pd.concat([factiva_df, opoint_df], ignore_index=True)
+    
+    if combined_df.empty:
+        return pd.DataFrame()
+    
+    # Standardize all columns
+    standardized_df = standardize_columns(combined_df)
+    
+    # Perform deduplication based on title
+    if 'title' in standardized_df.columns:
+        # Convert titles to lowercase for comparison
+        standardized_df['title_lower'] = standardized_df['title'].str.lower()
+        
+        # Drop duplicates based on lowercase title, keeping first occurrence
+        # (First occurrences will be from Factiva due to concat order)
+        standardized_df = standardized_df.drop_duplicates(subset='title_lower', keep='first')
+        
+        # Remove the temporary column
+        standardized_df = standardized_df.drop('title_lower', axis=1)
+    
+    return standardized_df
+
 def filter_news_data(df, filter_params):
     """
     Apply filters to the news data

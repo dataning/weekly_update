@@ -4,140 +4,79 @@ Sidebar component for the Gravity app
 import streamlit as st
 
 def render_sidebar():
-    """Render the sidebar with navigation and info"""
+    """Render the sidebar with navigation, user case info, and app details"""
     with st.sidebar:
-        # Add custom CSS for the sidebar brand
+        # Custom CSS for the user case box
         st.markdown("""
         <style>
-        /* Import a bold, fun font for the neon effect */
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
-
-        /* Neon Flicker Animation using black glow */
-        @keyframes neonFlicker {
-            0% {
-                text-shadow:
-                    0 0 5px #000000,
-                    0 0 10px #000000,
-                    0 0 20px #000000,
-                    0 0 40px #000000,
-                    0 0 80px #000000,
-                    0 0 90px #000000,
-                    0 0 100px #000000;
-            }
-            25% {
-                text-shadow:
-                    0 0 5px #000000,
-                    0 0 10px #000000,
-                    0 0 20px #000000,
-                    0 0 40px #000000,
-                    0 0 80px #000000,
-                    0 0 90px #000000,
-                    0 0 100px #000000;
-                opacity: 0.8;
-            }
-            30% {
-                text-shadow: none;
-                opacity: 0.7;
-            }
-            70% {
-                text-shadow:
-                    0 0 5px #000000,
-                    0 0 10px #000000,
-                    0 0 20px #000000,
-                    0 0 40px #000000,
-                    0 0 80px #000000,
-                    0 0 90px #000000,
-                    0 0 100px #000000;
-                opacity: 1;
-            }
-            100% {
-                text-shadow:
-                    0 0 5px #000000,
-                    0 0 10px #000000,
-                    0 0 20px #000000,
-                    0 0 40px #000000,
-                    0 0 80px #000000,
-                    0 0 90px #000000,
-                    0 0 100px #000000;
-            }
+        .user-case-box {
+            background-color: #1E3A8A;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #60A5FA;
         }
-
-        .gravity-sidebar-brand {
-            font-family: "Kanit", sans-serif;
-            font-weight: 700;
-            font-size: 40px;
-            color: #ffffff;
-            /* Black neon glow */
-            text-shadow:
-                0 0 5px #000000,
-                0 0 10px #000000,
-                0 0 20px #000000,
-                0 0 40px #000000,
-                0 0 80px #000000,
-                0 0 90px #000000,
-                0 0 100px #000000;
-            
-            /* Tilt the text slightly to mimic a billboard angle */
-            transform: rotate(-5deg);
-
-            /* Apply flicker animation */
-            animation: neonFlicker 2.5s infinite;
-
-            /* Center the text */
-            margin: 20px auto;
-            text-align: center;
-            display: block;
+        .case-title {
+            color: #60A5FA;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
-
-        /* Dark mode adjustments (optional) */
-        @media (prefers-color-scheme: dark) {
-            .gravity-sidebar-brand {
-                /* Increase brightness in dark mode, if desired */
-                opacity: 0.9;
-            }
+        .case-item {
+            color: white;
+            margin-bottom: 5px;
+        }
+        .case-highlight {
+            background-color: rgba(96, 165, 250, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #BFE0FF;
+            display: inline-block;
+            margin-top: 3px;
         }
         </style>
-        
-        <div class="gravity-sidebar-brand">Gravity</div>
         """, unsafe_allow_html=True)
         
+        # User case section with custom styling
+        st.markdown('<div class="user-case-box">', unsafe_allow_html=True)
+        st.markdown('<div class="case-title">Active User Cases</div>', unsafe_allow_html=True)
+        
+        user_case = st.session_state.get('current_user_case', {
+            'stakeholders': 'Corp Comms',
+            'industry': 'Corporate Affairs',
+            'focus_areas': ['BlackRock'],
+            'monitoring_since': 'March 26, 2025'
+        })
+        
+        st.markdown(f'<div class="case-item">User Case: <strong>{user_case["stakeholders"]}</strong></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="case-item">Monitoring: {user_case["industry"]}</div>', unsafe_allow_html=True)
+        
+        focus_areas_html = ""
+        for area in user_case['focus_areas']:
+            focus_areas_html += f'<div class="case-highlight">{area}</div> '
+        
+        st.markdown(f'<div class="case-item">Target:</div>{focus_areas_html}', unsafe_allow_html=True)
+        st.markdown(f'<div class="case-item">Since: {user_case["monitoring_since"]}</div>', unsafe_allow_html=True)
+                
         st.markdown("---")
         
         # Navigation links
         st.subheader("Navigation")
-        
         # Main features buttons
         if st.button("🏠 Home", use_container_width=True):
             st.switch_page("app.py")
-            
         if st.button("🔍 News Search", use_container_width=True):
-            st.switch_page("pages/01_news_search.py")
-        
+            st.switch_page("pages/01_News_Search.py")
         if st.button("🏷️ News Tagging", use_container_width=True):
-            st.switch_page("pages/02_news_tagging.py")
-        
-        if st.button("📧 Newsletter Generator", use_container_width=True):
-            st.switch_page("pages/03_newsletter.py")
-        
-        st.markdown("---")
-        
-        # Quick stats in sidebar
-        st.subheader("Platform Stats")
-        st.markdown("**Companies Tracked:** 5,000+")
-        st.markdown("**News Sources:** 25,000+")
-        st.markdown("**Daily Updates:** ~500,000")
+            st.switch_page("pages/02_News_Tagging.py")
+        if st.button("📰 Newsletter Generator", use_container_width=True):
+            st.switch_page("pages/03_Newsletter_Generation.py")
+        if st.button("📺 Video Feeds", use_container_width=True):
+            st.switch_page("pages/04_Video_Feeds.py")
+        if st.button("📱 Social Media", use_container_width=True):
+            st.switch_page("pages/05_Social_Media.py")
         
         st.markdown("---")
-        
-        # Add a simulated recent activity feed
-        st.subheader("Recent Activity")
-        activities = [
-            "Tesla news report generated",
-            "BlackRock news analysis completed",
-            "Microsoft newsletter sent",
-            "Apple news alert triggered",
-            "Custom dashboard updated"
-        ]
-        
-        for activity in activities:
-            st.markdown(f"• {activity}")
+        st.caption("Gravity v0.1 - Released on 25 March 2025")
+        st.caption("© 2025 Gravity ❤️ Made by PAG")
