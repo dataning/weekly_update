@@ -9,22 +9,18 @@ import os
 import glob
 from components.header import render_header
 from components.footer import render_footer
-
+import theme
 # Import access control functionality
 from services.access_control import (
     initialize_session_state, login_ui, admin_settings_ui,
     load_config, save_config
 )
 
-# Set page config
-st.set_page_config(
-    page_title="BlackRock Social Media Analysis",
-    page_icon="📊",
-    layout="wide"
-)
-
 # Initialize the session state for authentication
 initialize_session_state()
+
+theme.set_page_config()
+theme.apply_full_theme()
 
 # Render header
 render_header()

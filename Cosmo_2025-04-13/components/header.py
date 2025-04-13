@@ -16,11 +16,12 @@ def render_header():
             background: #000000;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            margin-bottom: 30px;
+            margin: 1px 2px 30px 0px; /* Increased top margin to create space below navigation */
             position: relative;
             overflow: hidden;
-            width: 100%;
+            width: calc(100% - 0px);
             height: 160px;
+            z-index: 690; /* Make sure it's below the navbar z-index but above content */
         }
         
         .stars {
@@ -37,7 +38,25 @@ def render_header():
                 radial-gradient(2px 2px at 50px 160px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
                 radial-gradient(2px 2px at 90px 40px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
                 radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
-                radial-gradient(2px 2px at 160px 120px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+                radial-gradient(2px 2px at 160px 120px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1.5px 1.5px at 200px 20px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 230px 50px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                radial-gradient(2px 2px at 270px 100px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1.5px 1.5px at 330px 60px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 350px 30px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+                radial-gradient(2px 2px at 400px 70px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1.5px 1.5px at 450px 120px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 500px 50px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+                radial-gradient(2px 2px at 550px 90px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 580px 40px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                radial-gradient(1.5px 1.5px at 650px 110px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 720px 55px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+                radial-gradient(2px 2px at 750px 85px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                radial-gradient(1.5px 1.5px at 110px 10px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 210px 140px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+                radial-gradient(1.5px 1.5px at 300px 130px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                radial-gradient(2px 2px at 380px 20px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 450px 150px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
         }
         
         .Gravity-icon {
@@ -90,10 +109,11 @@ def render_header():
         
         .tagline {
             color: #ffffff;
-            font-size: 18px;
-            font-weight: 400;
+            font-size: 30px; /* Increased from 18px to 26px */
+            font-weight: 600; /* Increased from 400 to 500 for better visibility */
             margin: 5px 0 0 0;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px; /* Slightly increased letter-spacing */
+            text-shadow: 0 1px 4px rgba(255, 255, 255, 0.2); /* Added subtle text shadow */
         }
         
         /* Light beam effect */
@@ -198,7 +218,7 @@ def render_header():
       </div>
       
       <div class="Gravity-title">
-        <h1 class="brand-name">Gravity</h1>
+        <!-- <h1 class="brand-name">Gravity</h1> -->
         <p class="tagline">To the Stars We Reach, With the News We Lead</p>
       </div>
     </div>

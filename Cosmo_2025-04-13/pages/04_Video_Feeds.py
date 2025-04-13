@@ -19,7 +19,7 @@ from io import BytesIO
 from components.header import render_header
 from components.sidebar import render_sidebar
 from components.footer import render_footer
-
+import theme
 # Import shared access control module (only keeping what's needed)
 from services.access_control import (
     initialize_session_state, login_ui, admin_settings_ui,
@@ -33,15 +33,11 @@ HIGHLIGHT_KEYWORDS = [
     "blackrock", "larry fink", "fink"
 ]
 
-# Set page configuration
-st.set_page_config(
-    page_title="Video Feeds Monitor",
-    page_icon="📊",
-    layout="wide"
-)
-
 # Initialize session state for authentication
 initialize_session_state()
+
+theme.set_page_config()
+theme.apply_full_theme()
 
 # Render header
 render_header()

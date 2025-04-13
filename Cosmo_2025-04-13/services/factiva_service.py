@@ -27,26 +27,57 @@ def load_config():
     dict
         Configuration dictionary or empty dict if file doesn't exist
     """
-    config_path = Path("config.json")
+    import os
     
-    if not config_path.exists():
-        print("Warning: config.json not found. API functionality may be limited.")
+    try:
+        # Try using __file__ if we're in a script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        config_path = os.path.join(os.path.dirname(script_dir), "config.json")
+    except NameError:
+        # If __file__ is not available (interactive environment), try current directory
+        current_dir = os.getcwd()
+        config_path = os.path.join(current_dir, "config.json")
+        
+        # If not found, try parent directory
+        if not os.path.exists(config_path):
+            parent_dir = os.path.dirname(current_dir)
+            config_path = os.path.join(parent_dir, "config.json")
+    
+    if not os.path.exists(config_path):
+        print(f"Warning: config.json not found at {config_path}. API functionality may be limited.")
         return {}
     
     try:
         with open(config_path, "r") as f:
             config = json.load(f)
-        print("Configuration loaded from config.json")
+        print(f"Configuration loaded from {config_path}")
         return config
     except Exception as e:
         print(f"Error loading config.json: {e}")
         return {}
 
+def get_token_path():
+    import os
+    
+    try:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        return os.path.join(os.path.dirname(script_dir), "dow_jones_token.pkl")
+    except NameError:
+        current_dir = os.getcwd()
+        token_path = os.path.join(current_dir, "dow_jones_token.pkl")
+        
+        if not os.path.exists(token_path):
+            parent_dir = os.path.dirname(current_dir)
+            token_path = os.path.join(parent_dir, "dow_jones_token.pkl")
+        
+        return token_path
+
 # Load configuration
 CONFIG = load_config()
 
 # Constants
-TOKEN_FILE = "dow_jones_token.pkl"
+TOKEN_FILE = get_token_path()
+
 DEFAULT_TOKEN = CONFIG.get("dow_jones", {}).get("default_token", "YOUR_DEFAULT_TOKEN_HERE")
 
 # Company code mapping
@@ -350,30 +381,30 @@ def check_token_validity(auth_token=None):
         "Referer": "https://dj.factiva.com/",
     }
     
-    # Use a minimal payload with custom dates
-    today = datetime.now()
-    yesterday = today - timedelta(days=1)
-    
-    minimal_payload = {
-        "data": {
-            "attributes": {
-                "page_limit": 1,
-                "page_offset": 0,
-                "query": {
-                    "content_collection": ["Publications"],
-                    "date": {
-                        "start_date": yesterday.strftime("%Y-%m-%d"),
-                        "end_date": today.strftime("%Y-%m-%d")
+    # Use a payload with a proper positive search term to avoid errors
+    payload = {"data": {
+        "attributes": {
+            "page_limit": 1,
+            "page_offset": 0,
+            "query": {
+                "content_collection": ["Publications"],
+                "search_string": [
+                    {
+                        "mode": "Unified",
+                        "value": "BlackRock"  # A positive search term
                     }
+                ],
+                "date": {
+                    "days_range": "LastDay"
                 }
-            },
-            "id": "Search",
-            "type": "content"
-        }
-    }
+            }
+        },
+        "id": "Search",
+        "type": "content"
+    }}
     
     try:
-        response = requests.request("POST", url, json=minimal_payload, headers=headers)
+        response = requests.request("POST", url, json=payload, headers=headers)
         
         if response.status_code == 200:
             return True
@@ -543,7 +574,96 @@ def auto_refresh_token():
                     )
                     
                     print(f"Form submission final response status: {form_response.status_code}")
-                    print("Authentication successful, extending token expiry")
+                    
+                    # NEW CODE: Try to extract the new token
+                    
+                    # First, check for any JWT tokens in cookies
+                    new_token = None
+                    for cookie in session.cookies:
+                        if cookie.name.lower() in ['dj_token', 'auth_token', 'jwt_token', 'access_token', 'token', 'id_token']:
+                            new_token = cookie.value
+                            print(f"Found token in cookies: {cookie.name}")
+                            break
+                    
+                    # If not in cookies, look for it in the response URL
+                    if not new_token and form_response.url:
+                        # Check for token in URL fragment
+                        if '#' in form_response.url:
+                            print("Looking for token in URL fragment")
+                            fragment = form_response.url.split('#')[1]
+                            params = dict(param.split('=') for param in fragment.split('&') if '=' in param)
+                            new_token = params.get('access_token') or params.get('id_token') or params.get('token')
+                        
+                        # Check for token in query params
+                        elif '?' in form_response.url:
+                            print("Looking for token in URL query parameters")
+                            query = form_response.url.split('?')[1]
+                            params = dict(param.split('=') for param in query.split('&') if '=' in param)
+                            new_token = params.get('access_token') or params.get('id_token') or params.get('token')
+                    
+                    # If not in URL, try to find it in response body
+                    if not new_token and form_response.text:
+                        # Look for JWT pattern in the response body (eyJ... format)
+                        jwt_pattern = r'eyJ[a-zA-Z0-9_-]+\.eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+'
+                        jwt_matches = re.findall(jwt_pattern, form_response.text)
+                        if jwt_matches:
+                            print(f"Found potential JWT token in response body")
+                            # Use the first match
+                            new_token = jwt_matches[0]
+                    
+                    # If a new token was found, validate and update it
+                    if new_token:
+                        print("New token obtained, validating and updating token storage")
+                        # Validate the token format (basic check)
+                        if new_token.count('.') == 2:
+                            token_info = get_dow_jones_token_info(new_token)
+                            if token_info.get('status') == 'Valid':
+                                print("Token is valid, updating storage")
+                                token_data = {
+                                    'token': new_token,
+                                    'expires_at': token_info.get('expires_at'),
+                                    'email': token_info.get('email'),
+                                    'issued_at': token_info.get('issued_at', datetime.now())
+                                }
+                                save_success = save_token(token_data)
+                                if save_success:
+                                    print("Token successfully updated")
+                                    return True
+                            else:
+                                print(f"Token validation failed: {token_info.get('error', 'Unknown error')}")
+                        else:
+                            print("Invalid token format, doesn't appear to be a valid JWT")
+                    
+                    # If we didn't find or couldn't update a new token, try to find it manually
+                    print(f"Completed auth flow but couldn't find a valid token. Response URL: {form_response.url}")
+                    print("Checking if API cookies contain token...")
+                    
+                    # Make an authenticated request to the API to capture cookies
+                    api_url = "https://dj.factiva.com/api/session-info"
+                    api_response = session.get(api_url)
+                    print(f"API session info response status: {api_response.status_code}")
+                    
+                    # Check if we got a new token from this request
+                    for cookie in session.cookies:
+                        if 'token' in cookie.name.lower() and cookie.name.lower() not in ['_csrf_token']:
+                            print(f"Found token in API response cookies: {cookie.name}")
+                            new_token = cookie.value
+                            # Validate and save this token
+                            token_info = get_dow_jones_token_info(new_token)
+                            if token_info.get('status') == 'Valid':
+                                token_data = {
+                                    'token': new_token,
+                                    'expires_at': token_info.get('expires_at'),
+                                    'email': token_info.get('email'),
+                                    'issued_at': token_info.get('issued_at', datetime.now())
+                                }
+                                save_success = save_token(token_data)
+                                if save_success:
+                                    print("Token successfully updated from API call")
+                                    return True
+                    
+                    # Last resort: Extend the current token
+                    print("Authentication successful, but no valid token could be extracted. Extending current token expiry as fallback.")
                     return extend_token_expiry(days=14)
         
         # If we're here, something went wrong
@@ -557,62 +677,6 @@ def auto_refresh_token():
         import traceback
         traceback.print_exc()
         return False
-
-def test_token_refresh():
-    """
-    Test the token refresh functionality
-    
-    Returns:
-    --------
-    dict
-        Information about the test result
-    """
-    print("Starting token refresh test...")
-    
-    # Save the original token expiry
-    token_data = load_token()
-    if not token_data or not token_data.get('expires_at'):
-        return {
-            "success": False,
-            "message": "Couldn't get current token expiry date"
-        }
-    
-    original_expires_at = token_data.get('expires_at')
-    print(f"Original expiry: {original_expires_at}")
-    
-    # Directly test the expiry extension
-    success = extend_token_expiry(days=1)  # Just 1 day for testing
-    
-    if not success:
-        return {
-            "success": False,
-            "message": "Failed to extend token expiry"
-        }
-    
-    # Get the new expiry
-    token_data = load_token()
-    new_expires_at = token_data.get('expires_at')
-    print(f"New expiry: {new_expires_at}")
-    
-    # Calculate the difference
-    if original_expires_at and new_expires_at:
-        expiry_diff = new_expires_at - original_expires_at
-        print(f"Expiry difference: {expiry_diff.days} days, {expiry_diff.seconds // 3600} hours")
-        
-        if expiry_diff.total_seconds() > 0:
-            print("TOKEN EXPIRY EXTENSION SUCCESSFUL!")
-            return {
-                "success": True,
-                "old_expiry": original_expires_at.strftime("%Y-%m-%d %H:%M:%S"),
-                "new_expiry": new_expires_at.strftime("%Y-%m-%d %H:%M:%S"),
-                "difference": f"{expiry_diff.days} days, {expiry_diff.seconds // 3600} hours"
-            }
-    
-    print("TOKEN EXPIRY EXTENSION FAILED - dates didn't change!")
-    return {
-        "success": False,
-        "message": "Expiry date didn't change"
-    }
 
 def create_article_url(article_id):
     """
@@ -716,6 +780,206 @@ def extract_article_data(article):
         article_data['api_url'] = article['links']['self']
     
     return article_data
+
+def search_free_text(query_text, n_days=7, max_articles=100):
+    """
+    Search for articles matching free text query from the last N days
+    
+    Parameters:
+    -----------
+    query_text : str
+        Free text query to search for
+    n_days : int, optional
+        Number of days to look back (default: 7)
+    max_articles : int, optional
+        Maximum number of articles to retrieve (default: 100)
+    
+    Returns:
+    --------
+    pandas.DataFrame
+        DataFrame with matching articles
+    """
+    auth_token = get_valid_token()
+    
+    # URL and headers same as other functions
+    url = "https://api.dowjones.com/content/search"
+    headers = create_api_headers(auth_token)
+    
+    # Calculate date range
+    today = datetime.now()
+    past_date = today - timedelta(days=n_days)
+    start_date = past_date.strftime("%Y-%m-%d")
+    end_date = today.strftime("%Y-%m-%d")
+    
+    date_param = {
+        "start_date": start_date,
+        "end_date": end_date
+    }
+    
+    # Payload for free text search
+    payload = {"data": {
+        "attributes": {
+            "descriptor": {
+                "language": "en",
+                "mode": "All"
+            },
+            "formatting": {
+                "deduplication_level": "Similar",
+                "markup_type": "None",
+                "snippet_type": "Fixed",
+                "sort_order": "-PublicationDateChronological",
+                "is_content_boosted_down_enabled": True,
+                "is_content_boosted_up_enabled": False,
+                "is_cluster_boosting_enabled": True
+            },
+            "linguistics": {"is_lemmatization_on": True},
+            "navigation": {
+                "code_navigators": {
+                    "custom_navigator": [
+                        {
+                            "max_buckets": 10,
+                            "min_buckets": 0,
+                            "navigator_type": ["Company", "Industry", "Person", "Region", "Language", "Subject", "Source"]
+                        }
+                    ],
+                    "max_buckets": 0,
+                    "min_buckets": 0,
+                    "mode": "None"
+                },
+                "content_collection_count": ["Publications", "Websites", "Blogs", "Pictures", "Translated"],
+                "is_return_collection_count": True,
+                "is_return_djn_headline_coding": False,
+                "is_return_headline_coding": True,
+                "keyword_navigators": {
+                    "is_return_keywords": False,
+                    "max_keywords": 0
+                },
+                "time_navigators": {
+                    "max_buckets": 0,
+                    "min_buckets": 0,
+                    "mode": "None"
+                }
+            },
+            "page_limit": 20,
+            "page_offset": 0,
+            "query": {
+                "content_collection": ["Publications", "Websites", "Blogs", "Pictures"],
+                "search_string": [
+                    {
+                        "mode": "Unified",
+                        "value": query_text  # Use the free text query
+                    },
+                    {
+                        "mode": "Unified",
+                        "scope": "Language",
+                        "value": "en"
+                    }
+                ],
+                "date": date_param,
+                "is_enhance_query": True
+            },
+            "search_context": json.dumps({
+                "server_name": "ngsearchawsp",
+                "page_offsets": [0],
+                "server_host": "search-newssearch-6545979d5b-tk2d5"
+            })
+        },
+        "id": "Search",
+        "type": "content"
+    }}
+    
+    # Use the same pagination logic as other search functions
+    all_articles = []
+    total_retrieved = 0
+    page_size = 20
+    current_page = 0
+    total_count = None
+    
+    try:
+        print(f"Searching for '{query_text}' with date range: {start_date} to {end_date}")
+        
+        # Check if proxy is enabled in config
+        proxy_config = CONFIG.get('proxy', {})
+        use_proxy = proxy_config.get('use_proxy', False)
+        proxies = None
+        
+        if use_proxy:
+            proxy_url = proxy_config.get('proxy_url')
+            if proxy_url:
+                print(f"Using proxy: {proxy_url}")
+                proxies = {
+                    'http': proxy_url,
+                    'https': proxy_url
+                }
+        
+        # Continue fetching until we reach the max_articles limit or run out of results
+        while total_retrieved < max_articles:
+            # Update the page offset for pagination
+            payload["data"]["attributes"]["page_offset"] = current_page * page_size
+            
+            # Update search_context to include the current pagination state
+            offsets = list(range(0, current_page * page_size + page_size, page_size))
+            context_dict = {
+                "server_name": "ngsearchawsp",
+                "page_offsets": offsets,
+                "server_host": "search-newssearch-6545979d5b-tk2d5"
+            }
+            payload["data"]["attributes"]["search_context"] = json.dumps(context_dict)
+            
+            # Make the request (with proxies if enabled)
+            response = requests.request("POST", url, json=payload, headers=headers, proxies=proxies)
+            
+            # Check for authentication errors specifically
+            if response.status_code == 401:
+                print("Authentication Error: Your authentication token has expired or is invalid.")
+                return pd.DataFrame()
+                
+            # Check for other errors
+            if response.status_code != 200:
+                print(f"Error: Status code {response.status_code}")
+                print(f"Response: {response.text[:500]}...")
+                return pd.DataFrame()
+            
+            # Process the response
+            data = json.loads(response.text)
+            
+            # Get metadata
+            if total_count is None:
+                total_count = data.get('meta', {}).get('total_count', 0)
+            
+            # Extract articles
+            batch_articles = []
+            for article in data.get('data', []):
+                article_data = extract_article_data(article)
+                batch_articles.append(article_data)
+            
+            # Add to our collection
+            all_articles.extend(batch_articles)
+            batch_count = len(batch_articles)
+            total_retrieved += batch_count
+            
+            # If we got fewer articles than the page size, we've reached the end
+            if batch_count < page_size or total_retrieved >= total_count:
+                break
+                
+            # Prepare for the next page
+            current_page += 1
+            print(f"Retrieved {total_retrieved} articles so far, fetching more...")
+        
+        # Create DataFrame
+        df = pd.DataFrame(all_articles) if all_articles else pd.DataFrame()
+        
+        # Add URL column
+        if not df.empty and 'id' in df.columns:
+            df['url'] = df['id'].apply(create_article_url)
+        
+        print(f"Retrieved {len(df)} articles out of {total_count} total results for '{query_text}'")
+        
+        return df
+    
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return pd.DataFrame()  # Return empty DataFrame on error
 
 def search_company_last_n_days(company_name, n_days, max_articles=100):
     """
@@ -955,424 +1219,125 @@ def search_company_last_n_days(company_name, n_days, max_articles=100):
         print(f"An error occurred: {e}")
         return pd.DataFrame()  # Return empty DataFrame on error
 
-def search_company_by_date_range(company_name, start_date, end_date, max_articles=100):
-    """
-    Search for articles about a specific company within a specific date range
+if __name__ == "__main__":
+    import time
     
-    Parameters:
-    -----------
-    company_name : str
-        Name of the company to search for
-    start_date : str
-        Start date in YYYY-MM-DD format
-    end_date : str
-        End date in YYYY-MM-DD format
-    max_articles : int, optional
-        Maximum number of articles to retrieve (default: 100)
+    def display_menu():
+        print("\n===== Dow Jones API Test Tool =====")
+        print("1. Check token information")
+        print("2. Test token validity")
+        print("3. Refresh token")
+        print("4. Search by free text")
+        print("5. Search by company name")
+        print("6. Exit")
+        choice = input("\nSelect an option (1-6): ")
+        return choice
     
-    Returns:
-    --------
-    pandas.DataFrame
-        DataFrame with articles about the specified company
-    """
-    # Get the current valid token
-    auth_token = get_valid_token()
+    def check_token_info():
+        print("\n----- Token Information -----")
+        token_info = get_dow_jones_token_info()
+        for key, value in token_info.items():
+            print(f"{key}: {value}")
     
-    # Get the company code
-    company_code = COMPANY_CODES.get(company_name)
-    if not company_code:
-        print(f"Error: No code found for company {company_name}")
-        return pd.DataFrame()
+    def test_token():
+        print("\nTesting token validity...")
+        if check_token_validity():
+            print("✓ Token is valid! API connections working.")
+        else:
+            print("✗ Token is invalid or API connection failed.")
     
-    # URL
-    url = "https://api.dowjones.com/content/search"
-
-    # Headers
-    headers = create_api_headers(auth_token)
+    def refresh_token():
+        print("\nAttempting to refresh token...")
+        success = auto_refresh_token()
+        if success:
+            print("✓ Token refreshed successfully!")
+            check_token_info()
+        else:
+            print("✗ Failed to refresh token.")
     
-    # Create the date param with the provided start and end dates
-    date_param = {
-        "start_date": start_date,
-        "end_date": end_date
-    }
-    
-    # Payload
-    payload = {"data": {
-        "attributes": {
-            "descriptor": {
-                "language": "en",
-                "mode": "All"
-            },
-            "formatting": {
-                "deduplication_level": "Similar",
-                "markup_type": "None",
-                "snippet_type": "Fixed",
-                "sort_order": "-PublicationDateChronological",  # Sort by date, most recent first
-                "is_content_boosted_down_enabled": True,
-                "is_content_boosted_up_enabled": False,
-                "is_cluster_boosting_enabled": True
-            },
-            "linguistics": {"is_lemmatization_on": True},
-            "navigation": {
-                "code_navigators": {
-                    "custom_navigator": [
-                        {
-                            "max_buckets": 10,
-                            "min_buckets": 0,
-                            "navigator_type": ["Company", "Industry", "Person", "Region", "Language", "Subject", "Source"]
-                        }
-                    ],
-                    "max_buckets": 0,
-                    "min_buckets": 0,
-                    "mode": "None"
-                },
-                "content_collection_count": ["Publications", "Websites", "Blogs", "Pictures", "Translated"],
-                "is_return_collection_count": True,
-                "is_return_djn_headline_coding": False,
-                "is_return_headline_coding": True,
-                "keyword_navigators": {
-                    "is_return_keywords": False,
-                    "max_keywords": 0
-                },
-                "time_navigators": {
-                    "max_buckets": 0,
-                    "min_buckets": 0,
-                    "mode": "None"
-                }
-            },
-            "page_limit": 20,
-            "page_offset": 0,  # Start with page 0
-            "query": {
-                "content_collection": ["Publications", "Websites", "Blogs", "Pictures"],
-                "search_string": [
-                    {
-                        "mode": "Unified",
-                        "value": f"fds:{company_code}"  # Use the specific company code
-                    },
-                    {
-                        "mode": "Unified",
-                        "scope": "Language",
-                        "value": "en"
-                    },
-                    {
-                        "mode": "Unified",
-                        "scope": "Organization",
-                        "value": company_code.lower()  # Add organization scope with lowercase code
-                    }
-                ],
-                "date": date_param,  # Set the date parameter
-                "is_enhance_query": True,
-                "boost_string": [
-                    {
-                        "mode": "Unified",
-                        "scope": "Organization",
-                        "value": company_code,
-                        "boost": "Up",
-                        "boost_value": 5
-                    }
-                ]
-            },
-            "search_context": json.dumps({
-                "server_name": "ngsearchawsp",
-                "page_offsets": [0],
-                "server_host": "search-newssearch-6545979d5b-tk2d5"
-            })
-        },
-        "id": "Search",
-        "type": "content"
-    }}
-    
-    # Make multiple requests to handle pagination
-    all_articles = []
-    total_retrieved = 0
-    page_size = 20  # Default page size in the API
-    current_page = 0  # Start with the first page
-    total_count = None
-    
-    try:
-        print(f"Searching for company {company_name} ({company_code}) with date parameter: {date_param}")
+    def search_text():
+        query = input("\nEnter search query: ")
+        days = int(input("Number of days to look back: "))
+        max_results = int(input("Maximum number of results (10-500): "))
         
-        # Check if proxy is enabled in config
-        proxy_config = CONFIG.get('proxy', {})
-        use_proxy = proxy_config.get('use_proxy', False)
-        proxies = None
+        print(f"\nSearching for '{query}' from the last {days} days...")
+        results = search_free_text(query, n_days=days, max_articles=max_results)
         
-        if use_proxy:
-            proxy_url = proxy_config.get('proxy_url')
-            if proxy_url:
-                print(f"Using proxy: {proxy_url}")
-                proxies = {
-                    'http': proxy_url,
-                    'https': proxy_url
-                }
+        if results.empty:
+            print("No results found.")
+        else:
+            print(f"\nFound {len(results)} articles:")
+            for i, (headline, date, source) in enumerate(
+                zip(results['headline'].head(10), 
+                    results['publication_date'].head(10),
+                    results['source_name'].head(10)), 1):
+                print(f"{i}. [{source}] {headline} ({date})")
+            
+            if len(results) > 10:
+                print(f"... and {len(results) - 10} more articles.")
+            
+            save = input("\nSave results to CSV? (y/n): ")
+            if save.lower() == 'y':
+                filename = f"dow_jones_search_{int(time.time())}.csv"
+                results.to_csv(filename, index=False)
+                print(f"Results saved to {filename}")
+    
+    def search_company():
+        print("\nAvailable companies:")
+        companies = list(COMPANY_CODES.keys())
+        for i, company in enumerate(companies, 1):
+            print(f"{i}. {company}")
         
-        # Continue fetching until we reach the max_articles limit or run out of results
-        while total_retrieved < max_articles:
-            # Update the page offset for pagination
-            payload["data"]["attributes"]["page_offset"] = current_page * page_size
+        company_idx = int(input("\nSelect company number: ")) - 1
+        if 0 <= company_idx < len(companies):
+            company_name = companies[company_idx]
+            days = int(input("Number of days to look back: "))
+            max_results = int(input("Maximum number of results (10-500): "))
             
-            # Update search_context to include the current pagination state
-            offsets = list(range(0, current_page * page_size + page_size, page_size))
-            context_dict = {
-                "server_name": "ngsearchawsp",
-                "page_offsets": offsets,
-                "server_host": "search-newssearch-6545979d5b-tk2d5"
-            }
-            payload["data"]["attributes"]["search_context"] = json.dumps(context_dict)
+            print(f"\nSearching for {company_name} news from the last {days} days...")
+            results = search_company_last_n_days(company_name, days, max_articles=max_results)
             
-            # Make the request (with proxies if enabled)
-            response = requests.request("POST", url, json=payload, headers=headers, proxies=proxies)
-            
-            # Check for authentication errors specifically
-            if response.status_code == 401:
-                print("Authentication Error: Your authentication token has expired or is invalid.")
-                print("You need to obtain a new token by logging into the Dow Jones API service.")
-                print(f"Error details: {response.text}")
-                return pd.DataFrame()  # Return empty DataFrame instead of raising exception
+            if results.empty:
+                print("No results found.")
+            else:
+                print(f"\nFound {len(results)} articles about {company_name}:")
+                for i, (headline, date, source) in enumerate(
+                    zip(results['headline'].head(10), 
+                        results['publication_date'].head(10),
+                        results['source_name'].head(10)), 1):
+                    print(f"{i}. [{source}] {headline} ({date})")
                 
-            # Check for other errors
-            if response.status_code != 200:
-                print(f"Error: Status code {response.status_code}")
-                print(f"Response: {response.text[:500]}...")
-                return pd.DataFrame()  # Return empty DataFrame instead of raising exception
-            
-            # Process the response
-            data = json.loads(response.text)
-            
-            # Get metadata
-            if total_count is None:
-                total_count = data.get('meta', {}).get('total_count', 0)
-            
-            # Extract articles
-            batch_articles = []
-            for article in data.get('data', []):
-                article_data = extract_article_data(article)
-                batch_articles.append(article_data)
-            
-            # Add to our collection
-            all_articles.extend(batch_articles)
-            batch_count = len(batch_articles)
-            total_retrieved += batch_count
-            
-            # If we got fewer articles than the page size, we've reached the end
-            if batch_count < page_size or total_retrieved >= total_count:
-                break
+                if len(results) > 10:
+                    print(f"... and {len(results) - 10} more articles.")
                 
-            # Prepare for the next page
-            current_page += 1
-            print(f"Retrieved {total_retrieved} articles so far, fetching more...")
-        
-        # Create DataFrame
-        df = pd.DataFrame(all_articles) if all_articles else pd.DataFrame()
-        
-        # Add URL column
-        if not df.empty and 'id' in df.columns:
-            df['url'] = df['id'].apply(create_article_url)
-        
-        print(f"Retrieved {len(df)} articles out of {total_count} total results for {company_name}")
-        
-        return df
+                save = input("\nSave results to CSV? (y/n): ")
+                if save.lower() == 'y':
+                    filename = f"{company_name.lower()}_news_{int(time.time())}.csv"
+                    results.to_csv(filename, index=False)
+                    print(f"Results saved to {filename}")
+        else:
+            print("Invalid company selection.")
     
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return pd.DataFrame()  # Return empty DataFrame on error
-
-def search_free_text(query_text, n_days=7, max_articles=100):
-    """
-    Search for articles matching free text query from the last N days
+    # Interactive menu for testing
+    print("Configuration loaded from config.json")
+    print("Dow Jones API Module - Local Testing Interface")
     
-    Parameters:
-    -----------
-    query_text : str
-        Free text query to search for
-    n_days : int, optional
-        Number of days to look back (default: 7)
-    max_articles : int, optional
-        Maximum number of articles to retrieve (default: 100)
-    
-    Returns:
-    --------
-    pandas.DataFrame
-        DataFrame with matching articles
-    """
-    auth_token = get_valid_token()
-    
-    # URL and headers same as other functions
-    url = "https://api.dowjones.com/content/search"
-    headers = create_api_headers(auth_token)
-    
-    # Calculate date range
-    today = datetime.now()
-    past_date = today - timedelta(days=n_days)
-    start_date = past_date.strftime("%Y-%m-%d")
-    end_date = today.strftime("%Y-%m-%d")
-    
-    date_param = {
-        "start_date": start_date,
-        "end_date": end_date
-    }
-    
-    # Payload for free text search
-    payload = {"data": {
-        "attributes": {
-            "descriptor": {
-                "language": "en",
-                "mode": "All"
-            },
-            "formatting": {
-                "deduplication_level": "Similar",
-                "markup_type": "None",
-                "snippet_type": "Fixed",
-                "sort_order": "-PublicationDateChronological",
-                "is_content_boosted_down_enabled": True,
-                "is_content_boosted_up_enabled": False,
-                "is_cluster_boosting_enabled": True
-            },
-            "linguistics": {"is_lemmatization_on": True},
-            "navigation": {
-                "code_navigators": {
-                    "custom_navigator": [
-                        {
-                            "max_buckets": 10,
-                            "min_buckets": 0,
-                            "navigator_type": ["Company", "Industry", "Person", "Region", "Language", "Subject", "Source"]
-                        }
-                    ],
-                    "max_buckets": 0,
-                    "min_buckets": 0,
-                    "mode": "None"
-                },
-                "content_collection_count": ["Publications", "Websites", "Blogs", "Pictures", "Translated"],
-                "is_return_collection_count": True,
-                "is_return_djn_headline_coding": False,
-                "is_return_headline_coding": True,
-                "keyword_navigators": {
-                    "is_return_keywords": False,
-                    "max_keywords": 0
-                },
-                "time_navigators": {
-                    "max_buckets": 0,
-                    "min_buckets": 0,
-                    "mode": "None"
-                }
-            },
-            "page_limit": 20,
-            "page_offset": 0,
-            "query": {
-                "content_collection": ["Publications", "Websites", "Blogs", "Pictures"],
-                "search_string": [
-                    {
-                        "mode": "Unified",
-                        "value": query_text  # Use the free text query
-                    },
-                    {
-                        "mode": "Unified",
-                        "scope": "Language",
-                        "value": "en"
-                    }
-                ],
-                "date": date_param,
-                "is_enhance_query": True
-            },
-            "search_context": json.dumps({
-                "server_name": "ngsearchawsp",
-                "page_offsets": [0],
-                "server_host": "search-newssearch-6545979d5b-tk2d5"
-            })
-        },
-        "id": "Search",
-        "type": "content"
-    }}
-    
-    # Use the same pagination logic as other search functions
-    all_articles = []
-    total_retrieved = 0
-    page_size = 20
-    current_page = 0
-    total_count = None
-    
-    try:
-        print(f"Searching for '{query_text}' with date range: {start_date} to {end_date}")
+    # Main menu loop
+    while True:
+        choice = display_menu()
         
-        # Check if proxy is enabled in config
-        proxy_config = CONFIG.get('proxy', {})
-        use_proxy = proxy_config.get('use_proxy', False)
-        proxies = None
-        
-        if use_proxy:
-            proxy_url = proxy_config.get('proxy_url')
-            if proxy_url:
-                print(f"Using proxy: {proxy_url}")
-                proxies = {
-                    'http': proxy_url,
-                    'https': proxy_url
-                }
-        
-        # Continue fetching until we reach the max_articles limit or run out of results
-        while total_retrieved < max_articles:
-            # Update the page offset for pagination
-            payload["data"]["attributes"]["page_offset"] = current_page * page_size
-            
-            # Update search_context to include the current pagination state
-            offsets = list(range(0, current_page * page_size + page_size, page_size))
-            context_dict = {
-                "server_name": "ngsearchawsp",
-                "page_offsets": offsets,
-                "server_host": "search-newssearch-6545979d5b-tk2d5"
-            }
-            payload["data"]["attributes"]["search_context"] = json.dumps(context_dict)
-            
-            # Make the request (with proxies if enabled)
-            response = requests.request("POST", url, json=payload, headers=headers, proxies=proxies)
-            
-            # Check for authentication errors specifically
-            if response.status_code == 401:
-                print("Authentication Error: Your authentication token has expired or is invalid.")
-                return pd.DataFrame()
-                
-            # Check for other errors
-            if response.status_code != 200:
-                print(f"Error: Status code {response.status_code}")
-                print(f"Response: {response.text[:500]}...")
-                return pd.DataFrame()
-            
-            # Process the response
-            data = json.loads(response.text)
-            
-            # Get metadata
-            if total_count is None:
-                total_count = data.get('meta', {}).get('total_count', 0)
-            
-            # Extract articles
-            batch_articles = []
-            for article in data.get('data', []):
-                article_data = extract_article_data(article)
-                batch_articles.append(article_data)
-            
-            # Add to our collection
-            all_articles.extend(batch_articles)
-            batch_count = len(batch_articles)
-            total_retrieved += batch_count
-            
-            # If we got fewer articles than the page size, we've reached the end
-            if batch_count < page_size or total_retrieved >= total_count:
-                break
-                
-            # Prepare for the next page
-            current_page += 1
-            print(f"Retrieved {total_retrieved} articles so far, fetching more...")
-        
-        # Create DataFrame
-        df = pd.DataFrame(all_articles) if all_articles else pd.DataFrame()
-        
-        # Add URL column
-        if not df.empty and 'id' in df.columns:
-            df['url'] = df['id'].apply(create_article_url)
-        
-        print(f"Retrieved {len(df)} articles out of {total_count} total results for '{query_text}'")
-        
-        return df
-    
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return pd.DataFrame()  # Return empty DataFrame on error
+        if choice == '1':
+            check_token_info()
+        elif choice == '2':
+            test_token()
+        elif choice == '3':
+            refresh_token()
+        elif choice == '4':
+            search_text()
+        elif choice == '5':
+            search_company()
+        elif choice == '6':
+            print("\nExiting. Goodbye!")
+            break
+        else:
+            print("\nInvalid choice. Please try again.")

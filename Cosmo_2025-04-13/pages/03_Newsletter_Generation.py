@@ -26,14 +26,10 @@ from services.banner_service import (
     DEFAULT_BANNER_TEXTS
 )
 from utils.email_sender import EmailSender
+import theme
 
-# Set page config
-st.set_page_config(
-    page_title="Newsletter Generator - Gravity",
-    page_icon="📧",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+theme.set_page_config()
+theme.apply_full_theme()
 
 # Initialize session state
 initialize_session_state()

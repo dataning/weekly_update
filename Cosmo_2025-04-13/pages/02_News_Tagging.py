@@ -9,17 +9,14 @@ from utils.session_state import initialize_session_state
 from components.header import render_header
 from components.sidebar import render_sidebar
 from components.footer import render_footer
-
-# Set page config
-st.set_page_config(
-    page_title="News Tagging - Gravity",
-    page_icon="🏷️",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+import theme
 
 # Initialize session state
 initialize_session_state()
+
+theme.set_page_config()
+theme.apply_full_theme()
+
 
 # Render header
 render_header()

@@ -16,6 +16,7 @@ from pathlib import Path
 from components.header import render_header
 from components.sidebar import render_sidebar
 from components.footer import render_footer
+import theme
 
 # Flag to control Opoint API availability - set to False to disable
 ENABLE_OPOINT = True
@@ -37,13 +38,8 @@ else:
     def search_news(*args, **kwargs):
         return pd.DataFrame()
 
-# Set page config
-st.set_page_config(
-    page_title="Unified News Search",
-    page_icon="📰",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+theme.set_page_config()
+theme.apply_full_theme()
 
 # Render header
 render_header()
@@ -539,79 +535,148 @@ def display_unified_results(df):
         if len(working_df) == len(display_df):
             working_df['article_id'] = display_df['article_id'].values
     
-    # Add additional filtering options
-    st.markdown("### Filters")
-    filter_col1, filter_col2 = st.columns(2)
+    # Initialize the filtered dataframe to start with all data
+    filtered_df = display_df.copy()
+    original_count = len(filtered_df)
     
-    # 1. Filter by search term in title/summary
-    with filter_col1:
-        # Check if search_term column exists
-        if 'search_term' in display_df.columns and len(display_df['search_term'].unique()) > 0:
-            search_term_filter = st.text_input(
-                "Filter articles containing specific term in title/summary:",
-                placeholder="Enter term to filter by...",
-                help="Shows only articles where this term appears in title or summary",
-                key="title_summary_filter"
-            )
-            
-            # Apply the filter if a term is entered
-            if search_term_filter:
-                title_summary_mask = pd.Series(False, index=display_df.index)
-                
-                # Check title column
-                if 'title' in display_df.columns:
-                    title_match = display_df['title'].astype(str).str.contains(search_term_filter, case=False, na=False)
-                    title_summary_mask = title_summary_mask | title_match
-                
-                # Check summary column
-                if 'summary' in display_df.columns:
-                    summary_match = display_df['summary'].astype(str).str.contains(search_term_filter, case=False, na=False)
-                    title_summary_mask = title_summary_mask | summary_match
-                
-                # Apply the mask
-                if title_summary_mask.any():
-                    display_df = display_df.loc[title_summary_mask]
-                    st.success(f"Found {len(display_df)} articles containing '{search_term_filter}' in title or summary")
-                else:
-                    st.warning(f"No articles found containing '{search_term_filter}' in title or summary")
-                    if st.button("Clear title/summary filter", key="clear_title_summary_filter"):
-                        st.experimental_rerun()
-                    return
+    # Add waterfall filtering options
+    st.markdown("### Waterfall Filtering")
+    st.info("Apply filters sequentially: first exclude sources, then filter by keywords, finally select preferred sources.")
     
-    # 2. Filter by source
-    with filter_col2:
+    # Initialize session state for tracking filters
+    if 'excluded_sources' not in st.session_state:
+        st.session_state.excluded_sources = []
+    if 'title_keywords' not in st.session_state:
+        st.session_state.title_keywords = []
+    if 'preferred_sources' not in st.session_state:
+        st.session_state.preferred_sources = []
+    
+    # Create expandable sections for each filtering step
+    with st.expander("Step 1: Exclude News Sources", expanded=True):
+        st.markdown("Select sources you want to **remove** from results:")
+        
         # Extract unique sources if the source column exists
-        if 'source' in display_df.columns and len(display_df) > 0:
+        if 'source' in filtered_df.columns and len(filtered_df) > 0:
             # Get all unique sources
-            all_sources = sorted(display_df['source'].unique().tolist())
+            all_sources = sorted(filtered_df['source'].unique().tolist())
             
             if len(all_sources) > 0:
-                # Create a multiselect filter for sources
-                selected_sources = st.multiselect(
-                    "Filter by source:",
+                # Create a multiselect filter for sources to exclude
+                excluded_sources = st.multiselect(
+                    "Select sources to exclude:",
                     options=all_sources,
-                    default=[],  # Start with no sources selected (show all)
-                    help="Select one or more sources to filter articles",
-                    key="source_filter"
+                    default=st.session_state.excluded_sources,
+                    help="Select one or more sources to remove from results",
+                    key="excluded_sources_filter"
                 )
                 
-                # Apply the source filter if sources are selected
-                if selected_sources:
-                    source_mask = display_df['source'].isin(selected_sources)
+                # Store in session state
+                st.session_state.excluded_sources = excluded_sources
+                
+                # Apply the exclusion filter
+                if excluded_sources:
+                    source_mask = ~filtered_df['source'].isin(excluded_sources)
                     if source_mask.any():
-                        display_df = display_df.loc[source_mask]
-                        st.success(f"Showing {len(display_df)} articles from selected sources")
+                        filtered_df = filtered_df.loc[source_mask]
+                        excluded_count = original_count - len(filtered_df)
+                        st.success(f"Excluded {excluded_count} articles from selected sources. {len(filtered_df)} articles remaining.")
                     else:
-                        st.warning("No articles found from selected sources")
-                        if st.button("Clear source filter", key="clear_source_filter"):
-                            st.experimental_rerun()
-                        return
+                        st.warning("All articles would be excluded by this filter!")
+                        # Reset to original to prevent empty results
+                        filtered_df = display_df.copy()
+                
+        # Show count after first filter
+        step1_count = len(filtered_df)
+        st.write(f"Articles remaining after Step 1: {step1_count}")
     
-    # Add a "Clear All Filters" button if any filters are applied
-    if ('search_term_filter' in locals() and search_term_filter) or ('selected_sources' in locals() and selected_sources):
-        if st.button("Clear All Filters", key="clear_all_filters"):
-            # Clear all filters and reload the page
-            st.experimental_rerun()
+    # Step 2: Filter by keywords in title
+    with st.expander("Step 2: Filter by Keywords in Title", expanded=True):
+        st.markdown("Enter keywords that should be present in article titles (comma-separated):")
+        
+        # Text input for keywords
+        keyword_input = st.text_input(
+            "Keywords to include in title:",
+            value=", ".join(st.session_state.title_keywords),
+            placeholder="BlackRock, etc.",
+            help="Articles will be shown only if title contains ANY of these keywords",
+            key="title_keywords_filter"
+        )
+        
+        # Process the keyword input
+        if keyword_input:
+            # Split by comma and clean up
+            keywords = [k.strip() for k in keyword_input.split(',') if k.strip()]
+            
+            # Store in session state
+            st.session_state.title_keywords = keywords
+            
+            if keywords and 'title' in filtered_df.columns:
+                title_mask = pd.Series(False, index=filtered_df.index)
+                
+                # Check for each keyword (OR logic between keywords)
+                for keyword in keywords:
+                    keyword_match = filtered_df['title'].astype(str).str.contains(keyword, case=False, na=False)
+                    title_mask = title_mask | keyword_match
+                
+                # Apply the keyword filter
+                if title_mask.any():
+                    filtered_df = filtered_df.loc[title_mask]
+                    keyword_filtered_count = step1_count - len(filtered_df)
+                    st.success(f"Filtered to {len(filtered_df)} articles containing at least one keyword.")
+                else:
+                    st.warning(f"No articles found containing any of these keywords: {', '.join(keywords)}")
+        
+        # Show count after second filter
+        step2_count = len(filtered_df)
+        st.write(f"Articles remaining after Step 2: {step2_count}")
+    
+    # Step 3: Filter by preferred sources
+    with st.expander("Step 3: Select Preferred Sources", expanded=True):
+        st.markdown("Select sources you want to **keep** (leave empty to keep all remaining sources):")
+        
+        # Get remaining sources after previous filters
+        remaining_sources = sorted(filtered_df['source'].unique().tolist())
+        
+        if remaining_sources:
+            # Create a multiselect filter for preferred sources
+            preferred_sources = st.multiselect(
+                "Select preferred sources:",
+                options=remaining_sources,
+                default=st.session_state.preferred_sources,
+                help="Select one or more sources to keep (empty = keep all)",
+                key="preferred_sources_filter"
+            )
+            
+            # Store in session state
+            st.session_state.preferred_sources = preferred_sources
+            
+            # Apply the preferred sources filter
+            if preferred_sources:
+                source_mask = filtered_df['source'].isin(preferred_sources)
+                if source_mask.any():
+                    filtered_df = filtered_df.loc[source_mask]
+                    preferred_filtered_count = step2_count - len(filtered_df)
+                    st.success(f"Kept {len(filtered_df)} articles from preferred sources.")
+                else:
+                    st.warning("No articles found from preferred sources!")
+        
+        # Show count after third filter
+        step3_count = len(filtered_df)
+        st.write(f"Articles remaining after Step 3: {step3_count}")
+    
+    # Add a "Reset All Filters" button
+    if st.button("Reset All Filters", key="reset_all_filters"):
+        # Clear all filters
+        st.session_state.excluded_sources = []
+        st.session_state.title_keywords = []
+        st.session_state.preferred_sources = []
+        # Reset to original data
+        filtered_df = display_df.copy()
+        st.success("All filters have been reset.")
+        st.experimental_rerun()
+    
+    # Show final filtered results count
+    st.markdown(f"### Filtered Results: {len(filtered_df)} articles")
     
     # Check for existing selections and initialize if needed
     if 'selected_article_ids' not in st.session_state:
@@ -623,14 +688,14 @@ def display_unified_results(df):
         for article_id in selected_in_df:
             st.session_state.selected_article_ids.add(article_id)
     
-    # Update the display dataframe's 'selected' column based on session state
-    if 'article_id' in display_df.columns:
-        display_df['selected'] = display_df['article_id'].apply(
+    # Update the filtered dataframe's 'selected' column based on session state
+    if 'article_id' in filtered_df.columns:
+        filtered_df['selected'] = filtered_df['article_id'].apply(
             lambda x: x in st.session_state.selected_article_ids
         )
     
     # Display the data using data_editor - hide article_id from view
-    if not display_df.empty:
+    if not filtered_df.empty:
         # Setup column configuration for data_editor
         column_config = {
             "selected": st.column_config.CheckboxColumn("Select"),
@@ -645,7 +710,7 @@ def display_unified_results(df):
         
         # Configure URL columns if they exist
         for url_col in ['url', 'factiva_url']:
-            if url_col in display_df.columns:
+            if url_col in filtered_df.columns:
                 column_config[url_col] = st.column_config.LinkColumn("URL")
         
         # Initialize selection state for callback
@@ -679,15 +744,15 @@ def display_unified_results(df):
             
             # Use st.data_editor with a custom key to force refresh and make selection more responsive
             edited_df = st.data_editor(
-                display_df,
+                filtered_df,
                 column_config=column_config,
                 use_container_width=True,
                 num_rows="fixed",
                 height=600,
-                disabled=[col for col in display_df.columns if col != "selected"],
+                disabled=[col for col in filtered_df.columns if col != "selected"],
                 hide_index=True,
                 key=f"news_data_editor_{selected_count}",
-                column_order=["selected"] + [col for col in display_df.columns if col != "selected" and col != "article_id"] + ["article_id"]
+                column_order=["selected"] + [col for col in filtered_df.columns if col != "selected" and col != "article_id"] + ["article_id"]
             )
             
             # Process selection changes immediately
@@ -778,7 +843,7 @@ def display_unified_results(df):
                     
                     # Navigate to the News Tagging page
                     st.switch_page("pages/02_news_tagging.py")
-        
+    
         # Display the filtered dataset if available
         if st.session_state.get('show_filtered', False):
             # Get the stored filtered dataset
@@ -842,8 +907,8 @@ def display_unified_results(df):
                 # Navigate to the News Tagging page
                 st.switch_page("pages/02_news_tagging.py")
     else:
-        st.info("No articles found matching your criteria.")
-        
+        st.info("No articles found matching your filter criteria. Try adjusting your filters.")
+                
 def display_token_management():
     """Handle token management UI and functionality for Dow Jones API"""
     with st.expander("🔑 Dow Jones API Token Management", expanded=False):
@@ -900,12 +965,12 @@ def display_token_management():
         return token_valid
 
 def main():
-    """Main application function with revamped UI"""
+    """Main application function with fully combined card layout UI"""
     # App header
-    st.markdown("<h1 style='color: #1E88E5; margin-bottom: 1rem;'>📰 Unified News Search</h1>", unsafe_allow_html=True)
-    st.markdown("<div style='background-color: #E3F2FD; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;'>"
-                "Search for news across multiple sources, then tag and organize for your newsletter."
-                "</div>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color: #000000; margin-bottom: 1rem;'>📰 News Search</h2>", unsafe_allow_html=True)
+    # st.markdown("<div style='background-color: #E3F2FD; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;'>"
+    #             "Search for news across multiple sources, then tag and organize for your newsletter."
+    #             "</div>", unsafe_allow_html=True)
     
     # Initialize session state variables
     if "search_results" not in st.session_state:
@@ -914,15 +979,15 @@ def main():
     if "show_filtered" not in st.session_state:
         st.session_state.show_filtered = False
     
-    # User authentication section at the top of the sidebar
+    # Token management section stays in the sidebar
     with st.sidebar:
-        st.header("Access Control")
+        st.header("Access & Token Management")
         
         # Get or initialize the access code in session state
         if 'access_code' not in st.session_state:
             st.session_state.access_code = ""
-            
-        # Access code input field
+        
+        # Access code input field (kept in sidebar for security/confidentiality)
         access_code = st.text_input(
             "Enter Factiva access code",
             type="password",
@@ -938,56 +1003,71 @@ def main():
             # Force a rerun to update available search options
             st.rerun()
         
-        # Show authorization status
+        # Determine if user is authorized for Factiva
         is_factiva_auth = is_authorized_for_factiva(access_code)
+        
+        # Show authorization status
         if access_code:
             if is_factiva_auth:
                 st.success("✅ Access granted to all search features.")
             else:
                 st.warning("⚠️ Invalid code. You only have access to Opoint search.")
         
-        # Search parameters section
-        st.header("Search Parameters")
-        
-        # Determine available search options based on authorization
-        search_options = []
-        
-        # Always add Opoint if enabled
-        if ENABLE_OPOINT:
-            search_options.append("Opoint")
-            
-        # Add Factiva and Joint Search if authorized
+        # Token management for Factiva if needed and authorized
         if is_factiva_auth:
-            search_options = ["Joint Search", "Factiva (Dow Jones)"] + search_options
-            default_index = 0  # Default to Joint Search
-        else:
-            default_index = 0  # Default to Opoint (which would be index 0 in this case)
-            
-        # Show message if no search options are available
-        if not search_options:
-            st.error("No search options available. Please contact administrator.")
-            return
-            
+            token_valid = display_token_management()
+    
+    # Determine available search options based on authorization
+    search_options = []
+    
+    # Always add Opoint if enabled
+    if ENABLE_OPOINT:
+        search_options.append("Opoint")
+        
+    # Add Factiva and Joint Search if authorized
+    if is_factiva_auth:
+        search_options = ["Joint Search", "Factiva (Dow Jones)"] + search_options
+        default_index = 0  # Default to Joint Search
+    else:
+        default_index = 0  # Default to Opoint (which would be index 0 in this case)
+        
+    # Show message if no search options are available
+    if not search_options:
+        st.error("No search options available. Please contact administrator.")
+        return
+        
+    # Create two columns inside the card
+    col1, col2 = st.columns([3, 2])
+    
+    with col1:
         # Search engine selection
         search_engine = st.radio(
-            "Search Engine",
+            "Search Engine:",
             search_options,
             index=default_index,
-            key="search_engine_radio"
+            key="search_engine_radio",
+            horizontal=True
         )
         
-        # Basic search parameters
-        st.subheader("Search Query")
+        # Search query input
         search_query = st.text_area(
-            "Enter search terms (one per line or comma-separated):",
-            placeholder="BlackRock\nArtificial Intelligence\nClimate Change",
+            "Search Terms (one per line or comma-separated):",
+            placeholder="BlackRock",
             help="Enter one keyword or phrase per line, or separate with commas",
-            height=100,
+            height=70,
             key="unified_search_query"
         )
-        
-        # Time range - default to 1 day
-        st.subheader("Time Range")
+
+        # Search button inside the card
+        search_button = st.button(
+            "🔍 Search News", 
+            type="primary", 
+            use_container_width=True,
+            key="unified_search_btn"
+        )
+
+    with col2:
+        # Time range
         days_back = st.slider(
             "Days to look back:",
             min_value=1,
@@ -997,52 +1077,25 @@ def main():
             key="unified_days_back_slider"
         )
         
-        # Advanced options in an expander
-        with st.expander("Advanced Options"):
-            max_articles = st.number_input(
-                "Maximum articles per search term:",
-                min_value=10,
-                max_value=1000,
-                value=500,
-                step=10,
-                key="unified_max_articles_input"
-            )
-            
-            use_proxy = st.checkbox("BLK N@twork", value=True, key="unified_use_proxy_checkbox")
-            
-            # if use_proxy:
-            #     st.info("Using proxy: http://webproxy.blackrock.com:8080")
-        
-        # Token management for Factiva if needed
-        if (search_engine == "Factiva (Dow Jones)" or search_engine == "Joint Search") and is_factiva_auth:
-            token_valid = display_token_management()
-        
-        # Search button
-        search_button = st.button(
-            "🔍 Search News", 
-            type="primary", 
-            use_container_width=True,
-            key="unified_search_btn"
+        # Max articles
+        max_articles = st.number_input(
+            "Maximum articles per search term:",
+            min_value=10,
+            max_value=1000,
+            value=500,
+            step=10,
+            key="unified_max_articles_input"
         )
         
-        # Add navigation to tagging page
-        st.markdown("---")
-        st.header("Navigation")
-        
-        # Check if we have selected articles
-        has_selected = False
-        if "selected_news_df" in st.session_state and st.session_state.selected_news_df is not None:
-            if not st.session_state.selected_news_df.empty:
-                has_selected = True
-        
-        # Show navigation buttons
-        if has_selected:
-            st.success(f"You have {len(st.session_state.selected_news_df)} articles selected")
-            if st.button("Go to News Tagging 🏷️", use_container_width=True):
-                st.switch_page("pages/02_news_tagging.py")
-        else:
-            st.info("Select articles to enable tagging.")
-            st.button("Go to News Tagging 🏷️", use_container_width=True, disabled=True)
+        # Network options
+        use_proxy = st.checkbox("Use BLK N@twork", value=True, key="unified_use_proxy_checkbox")
+    
+
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Horizontal rule to separate search from results
+    st.markdown("---")
     
     # Process search when button is clicked
     if search_button:
@@ -1116,15 +1169,15 @@ def main():
             st.info("No articles found matching your search criteria.")
     else:
         # Show empty state with guidance
-        st.info("Enter your search terms in the sidebar and click 'Search News' to begin.")
+        # st.info("Enter your search terms above and click 'Search News' to begin.")
         
         # Multi-step workflow explanation
-        st.markdown("## News Search to Newsletter Workflow")
+        # st.markdown("### News Search to Newsletter Workflow")
         step1, step2, step3 = st.columns(3)
         
         with step1:
             st.markdown("### 1. Search & Select")
-            st.markdown("- Enter search terms in sidebar")
+            st.markdown("- Enter search terms")
             st.markdown("- Browse search results")
             st.markdown("- Check boxes to select articles")
             st.markdown("- Click 'Tag Selected Articles'")
@@ -1145,6 +1198,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Render sidebar component
+render_sidebar()
 
 # Render footer component
 render_footer()

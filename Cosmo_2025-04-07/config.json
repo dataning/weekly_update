@@ -1,9 +1,0 @@
-{
-    "premier_access": {
-        "code_hash": "dc7163271155ffc36aa812f150076c486ff29a589d35731d8e1d09bcc2f7ebec",
-        "max_attempts": 5,
-        "lockout_minutes": 5,
-        "expiration_date": "2026-03-24T20:16:06.553862",
-        "last_updated": "2025-03-24T20:16:06.553884"
-    }
-}
