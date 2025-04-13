@@ -16,7 +16,7 @@ def render_header():
             background: #000000;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            margin: 1px 2px 30px 0px; /* Increased top margin to create space below navigation */
+            margin: 1px 2px 15px 0px; /* Reduced bottom margin from 30px to 15px */
             position: relative;
             overflow: hidden;
             width: calc(100% - 0px);

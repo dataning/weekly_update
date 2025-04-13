@@ -7,8 +7,6 @@ import time
 from datetime import datetime  # Add this import
 from utils.session_state import initialize_session_state
 from components.header import render_header
-from components.sidebar import render_sidebar
-from components.footer import render_footer
 import theme
 
 # Initialize session state
@@ -17,12 +15,11 @@ initialize_session_state()
 theme.set_page_config()
 theme.apply_full_theme()
 
-
 # Render header
 render_header()
 
 # Main page content
-st.title("🏷️ News Tagging")
+st.markdown("<h3 style='color: #000000; margin-bottom: 1rem;'>🏷️ News Tagging</h3>", unsafe_allow_html=True)
 st.write("Add themes and subheaders to categorize your selected news articles")
 
 # Check if we have selected news data in session state
@@ -266,7 +263,7 @@ else:
         )
 
 # Render sidebar component
-render_sidebar()
+theme.render_sidebar()
 
 # Render footer component
-render_footer()
+theme.render_footer()

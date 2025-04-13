@@ -5,12 +5,10 @@ A comprehensive platform for news monitoring, content analysis, and media distri
 import os
 import streamlit as st
 from components.header import render_header
-from components.sidebar import render_sidebar
-from components.footer import render_footer
+import theme
 from components.ui_helpers import create_info_banner, create_feature_card  # Add this line
 from utils.session_state import initialize_session_state
 # from utils.data_access import login
-import theme
 
 # Ensure required directories exist
 for directory in ["templates/banners", "static/data", "static/css", "temp"]:
@@ -90,7 +88,7 @@ else:
             st.switch_page("pages/05_Social_Media.py")
     
     # Render sidebar component
-    render_sidebar()
+    theme.render_sidebar()
     
     # Render footer component
-    render_footer()
+    theme.render_footer()

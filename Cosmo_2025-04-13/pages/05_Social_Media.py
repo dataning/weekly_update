@@ -8,7 +8,6 @@ from datetime import datetime
 import os
 import glob
 from components.header import render_header
-from components.footer import render_footer
 import theme
 # Import access control functionality
 from services.access_control import (
@@ -1396,5 +1395,8 @@ with tab5:
     else:
         st.warning("No social media data available to explore.")
 
+# Render sidebar component
+theme.render_sidebar()
+
 # Render footer component
-render_footer()
+theme.render_footer()

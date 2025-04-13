@@ -1,109 +1,144 @@
+"""
+Gravity Streamlit Application Framework
+======================================
+
+This module provides a comprehensive framework for building Streamlit applications
+with a Aladdin-style UI and consistent styling. It implements a custom navigation
+system, theming, and UI components that match the Gravity brand identity.
+
+The module handles:
+- Application configuration and theming
+- Navigation (navbar and sidebar)
+- Page management and detection
+- Custom UI components with consistent styling
+- Layout structuring
+
+Key components:
+- Theme management: Custom CSS and JavaScript for consistent styling
+- Navigation: Top navbar and collapsible sidebar
+- UI elements: Buttons, cards, banners, tables with Gravity styling
+- Utility functions: Page detection, app configuration
+"""
+
 import streamlit as st
 import os
 import re
+from datetime import datetime
 
-# Global variables for customization
-APP_NAME = "Gravity"  # Default name
-APP_EMOJI = "👨‍🚀"      # Default emoji
+# Global application configuration variables
+APP_NAME = "Gravity"  # Default app name 
+APP_EMOJI = "👨‍🚀"    # Default app emoji
 
 def set_app_name(name):
-    """Set a custom name for the app (replaces 'Gravity' in the header)"""
+    """
+    Set a custom name for the application.
+    
+    This name will be displayed in the navbar and other places throughout the UI.
+    
+    Args:
+        name (str): The new name for the application
+    
+    Returns:
+        None
+    """
     global APP_NAME
     APP_NAME = name
 
+
 def set_app_emoji(emoji):
-    """Set a custom emoji for the app (replaces the '✨' in page_icon)"""
+    """
+    Set a custom emoji for the application.
+    
+    This emoji will be used as the page icon and may appear in other UI elements.
+    
+    Args:
+        emoji (str): A single emoji character to use as the app icon
+    
+    Returns:
+        None
+    """
     global APP_EMOJI
     APP_EMOJI = emoji
+
 
 def get_streamlit_page_names(pages_dir='pages'):
     """
     Extract page names from Streamlit pages directory.
-    Converts filenames like '01_News_Search.py' to just 'News_Search'.
+    
+    This function scans the Streamlit pages directory and extracts page names
+    from filenames, removing the numeric prefix (e.g., 01_Page_Name.py → Page_Name).
+    
+    Args:
+        pages_dir (str): Path to the Streamlit pages directory. Defaults to 'pages'.
+    
+    Returns:
+        list: A sorted list of page names without numeric prefixes and file extensions
     """
-    # Check if directory exists
+    # Check if the pages directory exists
     if not os.path.exists(pages_dir):
-        print(f"Directory '{pages_dir}' not found.")
         return []
     
-    # Get all .py files
-    page_files = [f for f in os.listdir(pages_dir) if f.endswith('.py')]
-    page_files.sort()  # Sort to maintain order based on number prefix
+    # Get all Python files in the pages directory and sort them
+    page_files = sorted([f for f in os.listdir(pages_dir) if f.endswith('.py')])
+    page_names = []
+    pattern = r'^\d+_(.+)\.py$'  # Regex pattern to match numeric prefix and extract page name
     
     # Extract page names using regex
-    page_names = []
-    pattern = r'^\d+_(.+)\.py$'
-    
     for file in page_files:
         match = re.search(pattern, file)
         if match:
-            page_name = match.group(1)  # Get the part after number and underscore
-            page_names.append(page_name)
+            page_names.append(match.group(1))
     
     return page_names
 
+
 def set_page_config():
-    """Set the page configuration for all pages"""
-    global APP_EMOJI
+    """
+    Set the Streamlit page configuration.
+    
+    Configures the page title, icon, layout, and initial sidebar state
+    for consistent appearance across the application.
+    
+    Returns:
+        None
+    """
     st.set_page_config(
-        page_title="Gravity",
-        page_icon=APP_EMOJI,
-        layout="wide",
-        initial_sidebar_state="collapsed"  # Changed from "expanded" to "collapsed"
+        page_title="Gravity",  # Browser tab title
+        page_icon=APP_EMOJI,   # Browser tab icon
+        layout="wide",         # Use wide layout for better use of screen space
+        initial_sidebar_state="collapsed"  # Start with sidebar collapsed
     )
 
+
 def apply_theme():
-    """Apply custom theme and styling to the Gravity app"""
-    # Inject CSS and HTML with consistent font styling across the entire app
+    """
+    Apply custom CSS styling to the application.
+    
+    Injects custom CSS into the Streamlit app to override default styles
+    and create a consistent, branded appearance. Includes font settings,
+    colors, component styling, and layout adjustments.
+    
+    Returns:
+        None
+    """
+    # Inject custom CSS with Streamlit's markdown functionality
+    # The CSS includes:
+    # - Font imports (Roboto)
+    # - Global typography settings
+    # - Navigation components styling
+    # - Layout structure
+    # - Custom component styling
+    # - Brand-specific colors and design elements
     st.markdown("""
     <style>
-        /* Import Roboto font with all needed weights */
+        /* Import Roboto font */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-        /* Global font settings - apply to everything */
+        /* Global font settings */
         * {
             font-family: 'Roboto', sans-serif !important;
         }
         
-        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
-        p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del,
-        dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
-        tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label,
-        legend, table, caption, tbody, tfoot, thead, tr, th, td {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* Override Streamlit elements */
-        .stTextInput input, .stTextArea textarea, .stNumberInput input, 
-        .stDateInput input, .stTimeInput input, .stSelectbox, .stMultiselect,
-        [data-testid="stWidgetLabel"], .stAlert, [data-baseweb="select"] {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* Streamlit markdown text */
-        [data-testid="stMarkdownContainer"] p, 
-        [data-testid="stMarkdownContainer"] span, 
-        [data-testid="stMarkdownContainer"] li, 
-        [data-testid="stMarkdownContainer"] a, 
-        [data-testid="stMarkdownContainer"] h1, 
-        [data-testid="stMarkdownContainer"] h2, 
-        [data-testid="stMarkdownContainer"] h3, 
-        [data-testid="stMarkdownContainer"] h4, 
-        [data-testid="stMarkdownContainer"] h5, 
-        [data-testid="stMarkdownContainer"] h6 {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* Buttons text */
-        button, .stButton > button {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* All widgets */
-        [data-testid="stWidgetLabel"] p {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
         /* Hide default Streamlit elements */
         MainMenu {visibility: hidden;}
         header {visibility: hidden;}
@@ -115,46 +150,42 @@ def apply_theme():
             font-size: 0.8125rem;
             margin: 0;
             padding: 0;
-            background-color: #f5f6f8; /* Adding light gray background */
+            background-color: #f5f6f8;
         }
 
         a {
             text-decoration: none !important;
             color: #000000 !important;
-            font-family: 'Roboto', sans-serif !important;
         }
 
-        /* Custom sidebar toggle button */
+        /* Sidebar toggle button */
         .sidebar-toggle {
             position: fixed;
-            top: 23px;
-            right: 0px;
-            width: 33px;
-            height: 33px;
+            top: 24px;
+            right: -15px;
+            width: 32.5px;
+            height: 32.5px;
             background-color: #000000;
             color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            z-index: 1100; /* Increased z-index to appear above the logo */
-            font-weight: bold;
-            font-size: 18px;
-            font-family: 'Roboto', sans-serif !important;
+            z-index: 1100;
+            font-weight: normal;
+            font-size: 16px;
             border: none;
             transition: all 0.3s ease;
             border-radius: 4px;
+            padding-right: 4px;
         }
         
-        /* No A logo styling needed */
-        
-        /* Animated states for the toggle button */
         .sidebar-toggle.collapsed {
-            background-color: #000000; /* Keep it black */
+            background-color: #000000;
             left: 25px;
         }
 
-        /* Top navbar styles */
+        /* Top navbar */
         .app-header {
             position: fixed;
             top: 0;
@@ -163,28 +194,25 @@ def apply_theme():
             height: 70px;
             background-color: #ffffff;
             display: flex;
-            align-items: center; /* Center items vertically */
+            align-items: center;
             justify-content: flex-start;
             padding: 0 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
-        /* Gravity title styling - next to sidebar button */
         .app-title {
             position: relative;
             font-size: 20px;
             font-weight: 700;
             color: #000000;
-            font-family: 'Roboto', sans-serif !important;
-            margin-left: 50px; /* Positioned to the right of sidebar toggle */
-            margin-top: 20px; /* Remove top margin to allow center alignment */
+            margin-left: 50px;
+            margin-top: 20px;
             text-transform: uppercase;
             z-index: 1;
-            line-height: 32px; /* Match height of hamburger icon */
+            line-height: 32px;
         }
         
-        /* Aladdin title - centered */
         .app-name {
             position: absolute;
             left: 50%;
@@ -192,31 +220,18 @@ def apply_theme():
             font-size: 32px;
             font-weight: 800;
             color: #000000;
-            font-family: 'Roboto', sans-serif !important;
             z-index: 1;
             margin-left: 20px;
-            margin-top: 22px; /* Remove top margin to allow center alignment */
-            line-height: 60px; /* Center in header */
+            margin-top: 22px;
+            line-height: 60px;
         }
         
-        /* Trademark styling */
         .r-symbol {
             font-size: 8px;
             vertical-align: sub;
             margin-left: 2px;
             position: relative;
             bottom: 5px;
-        }
-
-        .app-name {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 32px;
-            font-weight: 800;
-            color: #000000;
-            font-family: 'Roboto', sans-serif !important;
-            z-index: 1;
         }
 
         .sub-navbar {
@@ -253,12 +268,11 @@ def apply_theme():
             color: #000000;
             text-decoration: none;
             position: relative;
-            font-family: 'Roboto', sans-serif !important;
         }
 
         .nav-item:hover {
             background-color: #f5f8ff;
-            border-bottom: 2px solid #0000f3; /* Using our specific blue */
+            border-bottom: 2px solid #0000f3;
         }
 
         .nav-item.active {
@@ -266,96 +280,22 @@ def apply_theme():
             font-weight: 500;
         }
 
-        .dropdown-arrow {
-            margin-left: 5px;
-            font-size: 10px;
-        }
-
-        .options-button {
-            background: none;
-            border: none;
-            color: #000000;
-            font-size: 14px;
-            font-family: 'Roboto', sans-serif !important;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            height: 40px;
-            padding: 0 15px;
-        }
-
-        .options-button:hover {
-            background-color: #f5f8ff;
-            border-bottom: 2px solid #0000f3; /* Using our specific blue */
-        }
-        
-        .top-right-buttons {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .icon-button {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            color: #666;
-            text-decoration: none;
-            cursor: pointer;
-            font-family: 'Roboto', sans-serif !important;
-        }
-        
-        .icon-button svg {
-            margin-right: 5px;
-        }
-
-        .search-box {
-            display: flex;
-            align-items: center;
-            border: 1px solid #c0c4ca;
-            border-radius: 4px;
-            padding: 0 8px;
-            height: 30px;
-            margin-left: 15px;
-        }
-
-        .search-input {
-            border: none;
-            background: none;
-            outline: none;
-            font-size: 14px;
-            width: 150px;
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        .search-icon {
-            color: #6d7581;
-        }
-
-        /* Main content area that will expand when sidebar collapses */
+        /* Main content area */
         .main-content {
-            margin-top: 110px; /* Adjusted to account for header height and navbar */
-            padding: 0 20px 20px 20px; /* Removed top padding since header has its own spacing */
-            background-color: #f5f6f8; /* Added background color */
-            font-family: 'Roboto', sans-serif !important;
-            transition: margin-left 0.3s ease, width 0.3s ease; /* Add transition to margin changes */
+            margin-top: 110px;
+            padding: 0 20px 20px 20px;
+            background-color: #f5f6f8;
+            transition: margin-left 0.3s ease, width 0.3s ease;
             position: relative;
             width: 100%;
         }
 
-        /* Override default Streamlit background as well */
         .stApp {
             background-color: #f5f6f8 !important;
-            font-family: 'Roboto', sans-serif !important;
         }
 
         .block-container {
             background-color: #f5f6f8 !important;
-            font-family: 'Roboto', sans-serif !important;
-            /* Adjust padding to work well with header */
             padding-top: 0 !important;
         }
 
@@ -363,26 +303,22 @@ def apply_theme():
         [data-testid="stSidebar"] {
             margin-top: 110px;
             background-color: white !important;
-            max-width: 300px !important; /* Make sure Streamlit's own styling doesn't override our width */
-            font-family: 'Roboto', sans-serif !important;
+            max-width: 300px !important;
             transition: transform 0.3s ease, width 0.3s ease;
-            position: fixed !important; /* Make sidebar positioned absolutely */
-            height: calc(100vh - 100px) !important; /* Full height minus header */
-            z-index: 999; /* High z-index to stay above content */
+            position: fixed !important;
+            height: calc(100vh - 100px) !important;
+            z-index: 999;
         }
 
-        /* When sidebar is expanded, push main content */
         .sidebar-expanded [data-testid="stSidebar"] {
             transform: translateX(0) !important;
         }
 
-        /* Main content adjustment when sidebar is visible */
         .sidebar-expanded .main-content {
-            margin-left: 300px !important; /* Match sidebar width */
+            margin-left: 300px !important;
             width: calc(100% - 300px) !important;
         }
 
-        /* When sidebar is collapsed, let main content take full width */
         .sidebar-collapsed [data-testid="stSidebar"] {
             transform: translateX(-100%) !important;
         }
@@ -392,27 +328,8 @@ def apply_theme():
             width: 100% !important;
         }
 
-        /* Hide the default Streamlit sidebar button */
         button[kind="headerButton"] {
             display: none !important;
-        }
-
-        .sidebar-content {
-            padding: 0;
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        .sidebar-section {
-            padding: 15px 0;
-            border-bottom: 1px solid #e6e6e6;
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        .sidebar-menu {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            font-family: 'Roboto', sans-serif !important;
         }
 
         .sidebar-menu-item {
@@ -421,7 +338,6 @@ def apply_theme():
             height: 40px;
             padding: 0 15px;
             font-size: 14px;
-            font-family: 'Roboto', sans-serif !important;
             font-weight: 400;
             color: #000000;
             text-decoration: none;
@@ -430,110 +346,24 @@ def apply_theme():
 
         .sidebar-menu-item:hover {
             background-color: #f5f8ff;
-            border-left: 2px solid #0000f3; /* Using our specific blue */
+            border-left: 2px solid #0000f3;
         }
 
         .sidebar-menu-item.active {
             background-color: #ffffff;
             font-weight: 500;
-            border-left: 2px solid #0000f3; /* Using our specific blue */
+            border-left: 2px solid #0000f3;
         }
 
-        .sidebar-searchbox {
-            background-color: #f1f2f4;
-            border-radius: 4px;
-            margin: 15px;
-            padding: 8px 12px;
-            color: #666;
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        .r-symbol {
-            font-size: 8px;
-            vertical-align: sub;
-            margin-left: 2px;
-            position: relative;
-            bottom: 5px;
-        }
-
-        /* Make main content match menu bar font style */
-        .main-content p, 
-        .main-content li,
-        .main-content button:not(.stButton button),
-        .main-content div,
-        .main-content span,
-        .main-content a,
-        .main-content label {
-            font-family: 'Roboto', sans-serif !important;
-            font-size: 14px !important;
-            color: #000000 !important;
-        }
-        
-        /* Exception for navigation buttons */
-        .stButton button {
-            font-family: 'Roboto', sans-serif !important;
-            font-size: 14px !important;
-        }
-
-        /* Style for headings to be consistent */
-        .main-content h1,
-        .main-content h2,
-        .main-content h3,
-        .main-content h4,
-        .main-content h5,
-        .main-content h6,
-        .main-content .stTitle,
-        [data-testid="stHeader"] {
-            font-family: 'Roboto', sans-serif !important;
-            color: #000000 !important;
-        }
-
-        .main-content h1 {
-            font-size: 24px !important;
-            font-weight: 500 !important;
-        }
-
-        .main-content h2,
-        .main-content h3 {
-            font-size: 18px !important;
-            font-weight: 500 !important;
-        }
-
-        /* Style for metrics */
-        [data-testid="stMetricValue"] {
-            font-family: 'Roboto', sans-serif !important;
-            font-size: 14px !important;
-        }
-
-        [data-testid="stMetricLabel"] {
-            font-family: 'Roboto', sans-serif !important;
-            font-size: 14px !important;
-        }
-
-        /* Bullet points styling */
-        .main-content ul {
-            margin-top: 0.5rem !important;
-            margin-bottom: 0.5rem !important;
-        }
-
-        .main-content ul li {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        .main-content ul li::marker {
-            color: #000000 !important;
-        }
-
-        /* Button styling to match blue outline/filled style */
+        /* Button styling */
         .stButton > button {
             height: 36px !important;
-            font-family: 'Roboto', sans-serif !important;
             font-size: 14px !important;
             font-weight: 500 !important;
             padding: 0 15px !important;
             background-color: #ffffff !important;
-            color: #0000f3 !important; /* Using our specific blue */
-            border: 1px solid #0000f3 !important; /* Using our specific blue */
+            color: #0000f3 !important;
+            border: 1px solid #0000f3 !important;
             border-radius: 4px !important;
             cursor: pointer !important;
             transition: all 0.2s !important;
@@ -544,52 +374,16 @@ def apply_theme():
         }
         
         .stButton > button:hover {
-            background-color: #0000f3 !important; /* Using our specific blue */
+            background-color: #0000f3 !important;
             color: #ffffff !important;
         }
 
-        /* Data editor and table styles */
-        [data-testid="stTable"], 
-        [data-testid="stDataFrame"] {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        [data-testid="stTable"] th, 
-        [data-testid="stTable"] td, 
-        [data-testid="stDataFrame"] th, 
-        [data-testid="stDataFrame"] td {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* Tabs text */
-        [data-testid="stTabs"] button {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* Radio buttons and checkboxes */
-        [data-testid="stRadio"] label, 
-        [data-testid="stCheckbox"] label {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* Input fields */
-        input, 
-        select, 
-        textarea, 
-        .stTextInput > div > div > input, 
-        .stTextArea > div > div > textarea,
-        .stSelectbox > div > div,
-        .stMultiselect > div > div {
-            font-family: 'Roboto', sans-serif !important;
-        }
-
-        /* Create a custom function for blue outline buttons */
+        /* Blue button style */
         .blue-button {
             background-color: #ffffff;
-            color: #0000f3; /* Using our specific blue */
-            border: 1px solid #0000f3; /* Using our specific blue */
+            color: #0000f3;
+            border: 1px solid #0000f3;
             border-radius: 4px;
-            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             font-weight: 500;
             padding: 8px 16px;
@@ -602,7 +396,7 @@ def apply_theme():
         }
         
         .blue-button:hover {
-            background-color: #0000f3; /* Using our specific blue */
+            background-color: #0000f3;
             color: #ffffff;
         }
         
@@ -614,24 +408,17 @@ def apply_theme():
 
         /* Blue collar specific styles */
         .blue-collar-section {
-            border-left: 4px solid #0000f3; /* Using our specific blue */
+            border-left: 4px solid #0000f3;
             padding-left: 15px;
         }
         
         .blue-collar-heading {
-            color: #0000f3 !important; /* Using our specific blue */
+            color: #0000f3 !important;
             font-weight: 600 !important;
         }
         
-        .blue-collar-highlight {
-            background-color: #0000f3; /* Using our specific blue without transparency */
-            color: white !important;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        
         .blue-collar-tag {
-            background-color: #0000f3; /* Using our specific blue */
+            background-color: #0000f3;
             color: white !important;
             padding: 3px 8px;
             border-radius: 12px;
@@ -641,62 +428,37 @@ def apply_theme():
         }
         
         .blue-collar-link {
-            color: #0000f3 !important; /* Using our specific blue */
+            color: #0000f3 !important;
             text-decoration: underline !important;
         }
         
-        /* For any blue collar related tables */
         .blue-collar-table th {
-            background-color: #0000f3 !important; /* Using our specific blue */
+            background-color: #0000f3 !important;
             color: white !important;
         }
         
         .blue-collar-table tr:hover {
-            background-color: rgba(0, 0, 243, 0.05) !important; /* Using our specific blue with transparency */
+            background-color: rgba(0, 0, 243, 0.05) !important;
         }
 
-        /* NEW STYLES FOR RADIO BUTTONS */
-        /* Target the radio button circles */
+        /* Radio buttons styling */
         [data-testid="stRadio"] > div > div > label > div:first-child {
-            background-color: #0000f3 !important; /* Change from red to blue */
+            background-color: #0000f3 !important;
             border-color: #0000f3 !important;
         }
         
-        /* Style for radio buttons when selected */
         [data-testid="stRadio"] input:checked + div {
             border-color: #0000f3 !important;
             box-shadow: 0 0 0 1px #0000f3 !important;
         }
         
-        /* NEW STYLES FOR SLIDERS */
-        /* Slider track */
+        /* Slider styling */
         [data-testid="stSlider"] .stSlider > div > div > div {
-            background-color: #0000f3 !important; /* Exact blue for track */
+            background-color: #0000f3 !important;
         }
         
-        /* Slider thumb */
         [data-testid="stSlider"] .stSlider > div > div > div > div {
-            background-color: #0000f3 !important; /* Blue for the thumb */
-        }
-        
-        /* Active part of the slider */
-        [data-testid="stSlider"] .stSlider > div > div > div:nth-child(1) {
             background-color: #0000f3 !important;
-        }
-        
-        /* Ensure the slider handle is blue */
-        [data-testid="stSlider"] .stThumbValue {
-            background-color: #0000f3 !important;
-        }
-        
-        /* Style for number input + and - buttons */
-        .stNumberInput button {
-            color: #0000f3 !important;
-            border-color: #0000f3 !important;
-        }
-        
-        .stNumberInput button:hover {
-            background-color: rgba(0, 0, 243, 0.1) !important;
         }
         
         /* Checkbox styling */
@@ -704,26 +466,74 @@ def apply_theme():
             background-color: #0000f3 !important;
             border-color: #0000f3 !important;
         }
+
+        /* Help Message Popup */
+        #help-message-container {
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            width: 350px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            z-index: 1000;
+            border: 1px solid #0000f3;
+            display: none;
+        }
+
+        #help-message-container h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #0000f3;
+        }
+
+        #help-message-container .help-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #666;
+            padding: 0 5px;
+        }
     </style>
     """, unsafe_allow_html=True)
 
+
 def render_navbar():
-    """Render the navigation bar at the top of the page with dynamically discovered pages"""
-    global APP_NAME
-    # Get page names from pages directory
+    """
+    Render the navigation bar at the top of the page.
+    
+    Creates and injects the application header, navigation links, and help button
+    into the Streamlit app. Also adds JavaScript for the help popup functionality.
+    
+    The navbar consists of:
+    - A top header bar with app title and logo
+    - A sub-navbar with navigation links to all pages
+    - A help button that triggers a popup with assistance information
+    
+    Returns:
+        None
+    """
+    # Get all available pages for navigation links
     pages = get_streamlit_page_names()
     
-    # Generate navigation links HTML - make sure we're building full HTML tags
+    # Build navigation links HTML
+    # Always include Home link, then add all pages except Help (handled separately)
     nav_links = '<a href="/" class="nav-item" target="_self">Home</a>'
-    
     for page_name in pages:
-        display_name = page_name.replace("_", " ")
-        nav_links += f'<a href="/{page_name}" class="nav-item" target="_self">{display_name}</a>'
+        if page_name.lower() != "help":  # Help is handled separately in the nav actions
+            display_name = page_name.replace("_", " ")  # Format page name for display
+            nav_links += f'<a href="/{page_name}" class="nav-item" target="_self">{display_name}</a>'
     
-    # HTML for header with the sidebar toggle and dynamic navigation
+    # Create the complete navbar HTML structure
     navbar_html = f"""
-    <!-- Custom sidebar toggle button with hamburger icon -->
-    <button class="sidebar-toggle collapsed" id="sidebar-toggle">></button>
+    <button class="sidebar-toggle collapsed" id="sidebar-toggle">A</button>
     
     <div class="app-header">
         <div class="app-title">{APP_NAME}</div>
@@ -733,6 +543,45 @@ def render_navbar():
         <div class="nav-items">
             {nav_links}
         </div>
+        <div class="nav-actions">
+            <a href="/Help" class="nav-item" id="help-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                Help
+            </a>
+        </div>
+    </div>
+    
+    <div id="help-message-container">
+        <button class="help-close-btn" id="help-close">×</button>
+        <h3>Gravity Help Center</h3>
+        
+        <div class="help-section">
+            <div class="help-section-title">Getting Started</div>
+            <p>Welcome to Gravity! Here's how to get started with our application:</p>
+            <ul>
+                <li>Use the sidebar on the left to navigate between different tools</li>
+                <li>Click on the navigation links above to access different pages</li>
+                <li>Search for specific content using the search box</li>
+            </ul>
+        </div>
+        
+        <div class="help-section">
+            <div class="help-section-title">Key Features</div>
+            <ul>
+                <li><strong>News Search:</strong> Find and analyze news articles</li>
+                <li><strong>Newsletter Generator:</strong> Create professional newsletters</li>
+                <li><strong>Content Analysis:</strong> Get insights from your content</li>
+            </ul>
+        </div>
+        
+        <div class="help-section">
+            <div class="help-section-title">Need More Help?</div>
+            <p>Contact our support team at <a href="mailto:support@gravity-app.com" style="color: #0000f3 !important; text-decoration: underline !important;">support@gravity-app.com</a></p>
+        </div>
     </div>
     
     <div class="main-content">
@@ -741,93 +590,114 @@ def render_navbar():
     """
     st.markdown(navbar_html, unsafe_allow_html=True)
     
+    # Add JavaScript for help button functionality
+    # This script:
+    # - Toggles the help popup when the help button is clicked
+    # - Closes the popup when the close button is clicked
+    # - Closes the popup when clicking outside of it
+    help_js = """
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const helpButton = document.querySelector('#help-button');
+        const helpContainer = document.querySelector('#help-message-container');
+        const closeButton = document.querySelector('#help-close');
+        
+        if (helpButton && helpContainer && closeButton) {
+            helpButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                helpContainer.style.display = helpContainer.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            closeButton.addEventListener('click', function() {
+                helpContainer.style.display = 'none';
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (helpContainer.style.display === 'block' && 
+                    !helpContainer.contains(e.target) && 
+                    e.target !== helpButton) {
+                    helpContainer.style.display = 'none';
+                }
+            });
+        }
+    });
+    </script>
+    """
+    st.markdown(help_js, unsafe_allow_html=True)
+    
+
 def render_sidebar_js():
-    """JavaScript to override Streamlit sidebar and handle page navigation with dynamic pages"""
-    # Get page names for sidebar links
+    """
+    Inject JavaScript to handle sidebar toggle and navigation.
+    
+    This function adds JavaScript code to:
+    - Replace the default Streamlit sidebar with a custom one
+    - Add toggle functionality for the sidebar (expand/collapse)
+    - Set up navigation links in the sidebar
+    - Highlight the active page
+    - Handle window resize events
+    
+    Returns:
+        None
+    """
+    # Get all available pages for sidebar navigation
     pages = get_streamlit_page_names()
     
-    # Generate sidebar links HTML
+    # Build the sidebar links HTML
     sidebar_links = '<a href="/" class="sidebar-menu-item" target="_self">Home</a>\n'
     for page_name in pages:
+        # Format page names for display (replace underscores with spaces)
         display_name = page_name.replace("_", " ")
         sidebar_links += f'<a href="/{page_name}" class="sidebar-menu-item" target="_self">{display_name}</a>\n'
     
+    # Create the complete JavaScript for sidebar functionality
     sidebar_js = f"""
     <script>
     document.addEventListener('DOMContentLoaded', function() {{
-        // Debug: Check if listener is attached
-        console.log("DOM Content Loaded - Setting up sidebar");
-        
-        // Function to find Streamlit sidebar with retry
+        // Find Streamlit sidebar with retry
         function findSidebar(attempts = 0, maxAttempts = 10) {{
             const sidebar = window.parent.document.querySelector('[data-testid="stSidebar"]');
-            
-            if (sidebar) {{
-                console.log("Sidebar found on attempt:", attempts);
-                return sidebar;
-            }} else if (attempts < maxAttempts) {{
-                console.log("Sidebar not found, retrying... (Attempt " + (attempts + 1) + "/" + maxAttempts + ")");
+            if (sidebar) return sidebar;
+            if (attempts < maxAttempts) {{
                 setTimeout(() => findSidebar(attempts + 1, maxAttempts), 300);
                 return null;
-            }} else {{
-                console.error("Failed to find sidebar after " + maxAttempts + " attempts");
-                return null;
             }}
+            return null;
         }}
         
-        // Function to find main container
+        // Find main container
         function findMainContainer(attempts = 0, maxAttempts = 10) {{
             const main = window.parent.document.querySelector('.main');
-            
-            if (main) {{
-                console.log("Main container found on attempt:", attempts);
-                return main;
-            }} else if (attempts < maxAttempts) {{
-                console.log("Main container not found, retrying... (Attempt " + (attempts + 1) + "/" + maxAttempts + ")");
+            if (main) return main;
+            if (attempts < maxAttempts) {{
                 setTimeout(() => findMainContainer(attempts + 1, maxAttempts), 300);
                 return null;
-            }} else {{
-                console.error("Failed to find main container after " + maxAttempts + " attempts");
-                return null;
             }}
+            return null;
         }}
         
-        // Find the sidebar with retry mechanism
-        const sidebarElement = findSidebar();
-        if (!sidebarElement) return;
-        
-        const sidebar = sidebarElement;
-        
-        // Find the main container
+        // Find elements
+        const sidebar = findSidebar();
+        if (!sidebar) return;
         const mainElement = findMainContainer();
         
-        // Add body classes to track sidebar state (initially collapsed)
+        // Initial state
         document.body.classList.add('sidebar-collapsed');
+        const sidebarWidth = '300px';
         
-        // Control the sidebar width here - change this value to adjust width
-        const sidebarWidth = '300px'; 
-        
-        // Add custom styling to sidebar
+        // Style sidebar
         sidebar.style.transition = 'transform 0.3s ease, width 0.3s ease';
         sidebar.style.width = sidebarWidth;
         sidebar.style.maxWidth = sidebarWidth;
         sidebar.style.position = 'fixed';
         sidebar.style.height = 'calc(100vh - 100px)';
         sidebar.style.zIndex = '999';
-        
-        // Set sidebar to be initially closed
         sidebar.style.transform = 'translateX(-100%)';
         
-        // Track sidebar state - set to collapsed by default
+        // Track sidebar state
         let sidebarExpanded = false;
-        
-        // Debug: log sidebar properties
-        console.log("Sidebar initial properties:", {{
-            width: sidebar.style.width,
-            transform: sidebar.style.transform,
-            transition: sidebar.style.transition
-        }});
 
+        // Create sidebar content
         const sidebarContent = document.createElement('div');
         sidebarContent.className = 'sidebar-content';
         sidebarContent.innerHTML = `
@@ -837,7 +707,7 @@ def render_sidebar_js():
             </div>
         `;
         
-        // Apply font styles after a delay
+        // Apply font styles
         setTimeout(function() {{
             const sidebarItems = document.querySelectorAll('.sidebar-menu-item');
             sidebarItems.forEach(item => {{
@@ -855,47 +725,27 @@ def render_sidebar_js():
             }}
         }}, 600);
 
+        // Replace sidebar content
         setTimeout(function() {{
             const streamlitSidebarContent = sidebar.querySelector('.block-container');
             if (streamlitSidebarContent) {{
-                // Debug: Log found content
-                console.log("Found sidebar content to replace");
                 streamlitSidebarContent.innerHTML = '';
                 streamlitSidebarContent.appendChild(sidebarContent);
-            }} else {{
-                console.error("Could not find .block-container inside sidebar");
             }}
             
-            // Set active state based on current page
             highlightActivePage();
-            
-            // Find and setup the toggle button
             setupToggleButton();
-            
-            // Setup navigation to use current tab
             setupNavigation();
         }}, 500);
         
-        // Highlight active page in navbar and sidebar
+        // Highlight active page
         function highlightActivePage() {{
             const currentPath = window.location.pathname;
             
             // Handle root path
             if (currentPath === '/' || currentPath === '') {{
-                document.querySelectorAll('.nav-item').forEach(item => {{
-                    if (item.getAttribute('href') === '/') {{
-                        item.classList.add('active');
-                    }} else {{
-                        item.classList.remove('active');
-                    }}
-                }});
-                
-                document.querySelectorAll('.sidebar-menu-item').forEach(item => {{
-                    if (item.getAttribute('href') === '/') {{
-                        item.classList.add('active');
-                    }} else {{
-                        item.classList.remove('active');
-                    }}
+                document.querySelectorAll('.nav-item, .sidebar-menu-item').forEach(item => {{
+                    item.classList.toggle('active', item.getAttribute('href') === '/');
                 }});
                 return;
             }}
@@ -903,47 +753,22 @@ def render_sidebar_js():
             // Handle other pages
             const pageName = currentPath.split('/').filter(Boolean).join('/');
             
-            document.querySelectorAll('.nav-item').forEach(item => {{
+            document.querySelectorAll('.nav-item, .sidebar-menu-item').forEach(item => {{
                 const href = item.getAttribute('href');
                 const itemPath = href.split('/').filter(Boolean).join('/');
-                
-                if (itemPath === pageName) {{
-                    item.classList.add('active');
-                }} else {{
-                    item.classList.remove('active');
-                }}
-            }});
-            
-            document.querySelectorAll('.sidebar-menu-item').forEach(item => {{
-                const href = item.getAttribute('href');
-                const itemPath = href.split('/').filter(Boolean).join('/');
-                
-                if (itemPath === pageName) {{
-                    item.classList.add('active');
-                }} else {{
-                    item.classList.remove('active');
-                }}
+                item.classList.toggle('active', itemPath === pageName);
             }});
         }}
         
-        // Set up the toggle button with animation
+        // Set up toggle button
         function setupToggleButton() {{
-            // Add event listener for the sidebar toggle button
             const toggleButton = document.querySelector('#sidebar-toggle');
-            if (!toggleButton) {{
-                console.error("Toggle button not found!");
-                return;
-            }}
+            if (!toggleButton) return;
             
-            console.log("Toggle button found and being set up");
-            
-            // Add collapsed class to toggle button initially
             toggleButton.classList.add('collapsed');
             toggleButton.innerText = '>';
             
             toggleButton.addEventListener('click', function() {{
-                console.log("Toggle button clicked, current state:", sidebarExpanded);
-                
                 if (sidebarExpanded) {{
                     // Close sidebar
                     sidebar.style.transform = 'translateX(-100%)';
@@ -951,105 +776,62 @@ def render_sidebar_js():
                     toggleButton.innerText = '>';
                     sidebarExpanded = false;
                     
-                    // Update body class for sidebar state
                     document.body.classList.remove('sidebar-expanded');
                     document.body.classList.add('sidebar-collapsed');
                     
-                    // Reset main content margin
                     const mainContentEl = document.querySelector('.main-content');
                     if (mainContentEl) {{
                         mainContentEl.style.marginLeft = '0';
                         mainContentEl.style.width = '100%';
                     }}
                     
-                    // Adjust Streamlit's main content container if available
                     if (mainElement) {{
                         mainElement.style.marginLeft = '0';
                         mainElement.style.width = '100%';
                     }}
-                    
-                    // Debug logging
-                    console.log("Sidebar closed: ", {{
-                        transform: sidebar.style.transform,
-                        expanded: sidebarExpanded
-                    }});
                 }} else {{
                     // Open sidebar
                     sidebar.style.transform = 'translateX(0%)';
                     toggleButton.classList.remove('collapsed');
-                    toggleButton.innerText = '×';  // Changed to X for close icon
+                    toggleButton.innerText = '×';
                     sidebarExpanded = true;
                     
-                    // Update body class for sidebar state
                     document.body.classList.remove('sidebar-collapsed');
                     document.body.classList.add('sidebar-expanded');
                     
-                    // Add main content margin to accommodate sidebar
                     const mainContentEl = document.querySelector('.main-content');
                     if (mainContentEl) {{
                         mainContentEl.style.marginLeft = sidebarWidth;
                         mainContentEl.style.width = `calc(100% - ${{sidebarWidth}})`;
                     }}
                     
-                    // Adjust Streamlit's main content container if available
                     if (mainElement) {{
                         mainElement.style.marginLeft = sidebarWidth;
                         mainElement.style.width = `calc(100% - ${{sidebarWidth}})`;
                     }}
-                    
-                    // Debug logging
-                    console.log("Sidebar opened: ", {{
-                        transform: sidebar.style.transform,
-                        expanded: sidebarExpanded
-                    }});
                 }}
                 
-                // Trigger window resize to help Streamlit recalculate layouts
                 window.dispatchEvent(new Event('resize'));
             }});
         }}
         
-        // Setup navigation to prevent opening in new tabs
+        // Setup navigation
         function setupNavigation() {{
-            // Get all navigation links from both navbar and sidebar
             const navLinks = document.querySelectorAll('.nav-item, .sidebar-menu-item');
             
             navLinks.forEach(link => {{
-                // Remove any target attributes that might be set elsewhere
                 link.removeAttribute('target');
-                // Add target="_self" explicitly 
                 link.setAttribute('target', '_self');
                 
                 link.addEventListener('click', function(e) {{
-                    e.preventDefault(); // Prevent the default link behavior
-                    
+                    e.preventDefault();
                     const href = this.getAttribute('href');
-                    // Navigate within the current tab, using parent to break out of iframe if needed
                     window.parent.location.href = href;
                 }});
             }});
-            
-            // Add direct click handlers to each link separately as a fallback
-            document.querySelectorAll('.nav-item').forEach(navItem => {{
-                navItem.onclick = function(e) {{
-                    e.preventDefault();
-                    const href = this.getAttribute('href');
-                    window.parent.location.href = href;
-                    return false;
-                }};
-            }});
-            
-            document.querySelectorAll('.sidebar-menu-item').forEach(sidebarItem => {{
-                sidebarItem.onclick = function(e) {{
-                    e.preventDefault();
-                    const href = this.getAttribute('href');
-                    window.parent.location.href = href;
-                    return false;
-                }};
-            }});
         }}
         
-        // Ensure sidebar toggle works by monitoring DOM mutations
+        // Observer for DOM changes
         const observer = new MutationObserver(function(mutations) {{
             const toggleButton = document.querySelector('#sidebar-toggle');
             if (toggleButton && !toggleButton.hasAttribute('data-listener-attached')) {{
@@ -1060,7 +842,7 @@ def render_sidebar_js():
         
         observer.observe(document.body, {{ childList: true, subtree: true }});
         
-        // Make sure to adjust layout on window resize
+        // Handle window resize
         window.addEventListener('resize', function() {{
             if (sidebarExpanded) {{
                 const mainContentEl = document.querySelector('.main-content');
@@ -1091,35 +873,129 @@ def render_sidebar_js():
     """
     st.markdown(sidebar_js, unsafe_allow_html=True)
 
+
+def render_sidebar():
+    """
+    Renders the application sidebar with navigation and tools.
+    
+    Creates a Streamlit sidebar with additional elements like spacing and
+    copyright information. The actual sidebar content is populated by the
+    JavaScript injected in render_sidebar_js().
+    
+    Returns:
+        None
+    """
+    with st.sidebar:
+        # Add some spacing at the top of the sidebar
+        st.markdown("<br>" * 5, unsafe_allow_html=True)
+        
+        # Add a separator line
+        st.markdown("---")
+        
+        # Add copyright notice at the bottom of the sidebar
+        st.caption(f"© {datetime.now().year} Gravity | All Rights Reserved")
+
+
+def render_footer():
+    """
+    Renders the application footer with copyright and links.
+    
+    Creates a footer section at the bottom of the app with:
+    - Copyright information
+    - Links to terms, privacy policy, and support
+    - Version information
+    
+    Returns:
+        None
+    """
+    # Add a horizontal rule to separate footer from content
+    st.markdown("<br><hr style='margin: 0; padding: 0; height: 1px; border: none; background-color: #e0e0e0;'>", unsafe_allow_html=True)
+    
+    # Create a container for the footer content
+    footer_container = st.container()
+    with footer_container:
+        # Use columns to layout footer elements
+        cols = st.columns([3, 1])  # 3:1 ratio for left and right sides
+        
+        # Left side - copyright and links
+        with cols[0]:
+            current_year = datetime.now().year
+            st.markdown(f"""
+            <div style='font-size: 0.8rem; color: #666; padding: 1rem 0;'>
+                © {current_year} Gravity | News Explorer & Newsletter Generator
+                • <a href="#" target="_blank">Terms of Service</a>
+                • <a href="#" target="_blank">Privacy Policy</a>
+                • <a href="#" target="_blank">Contact Support</a>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        # Right side - version info
+        with cols[1]:
+            st.markdown("""
+            <div style='font-size: 0.8rem; color: #666; padding: 1rem 0; text-align: right;'>
+                Version 1.0.0 ❤️ Made By PAG
+            </div>
+            """, unsafe_allow_html=True)
+
+
 def apply_full_theme():
-    """Apply the complete theme including CSS, navbar, and JavaScript"""
+    """
+    Apply the complete theme including CSS, navbar and JavaScript.
+    
+    This is a convenience function that calls all the necessary functions
+    to set up the complete UI framework:
+    1. Applies CSS styles
+    2. Renders the navigation bar
+    3. Sets up the sidebar with JavaScript
+    
+    Returns:
+        None
+    """
     apply_theme()
     render_navbar()
     render_sidebar_js()
 
-# UI component functions
+
+# UI Components
 
 def create_blue_button(text, icon="", key=None, url=None):
-    """Create a button styled like the blue outline/filled button"""
+    """
+    Create a button styled with the blue outline/filled style.
+    
+    Creates a custom button with the application's branding that can either:
+    - Navigate to a URL when clicked
+    - Submit a form with a hidden input (for Streamlit interaction)
+    
+    Args:
+        text (str): The text to display on the button
+        icon (str, optional): HTML/SVG icon to display before text. Defaults to "".
+        key (str, optional): Unique identifier for the button. Defaults to None.
+        url (str, optional): URL to navigate to when clicked. Defaults to None.
+    
+    Returns:
+        None: The button is inserted directly into the Streamlit app
+    """
+    # Set up different behaviors depending on whether URL is provided
     if url:
+        # For URL buttons, simply navigate to the URL on click
         onclick = f"window.location.href='{url}'"
     else:
-        # Use a unique key for the button interaction
+        # For form buttons, generate a unique ID if not provided
         button_id = key if key else f"btn_{text.replace(' ', '_').lower()}"
+        # Set up form submission handling with a hidden input to track clicks
         onclick = f"document.getElementById('{button_id}_clicked').value='true'; document.getElementById('{button_id}_form').submit();"
     
-    # Hidden form and input to track button clicks
-    form_html = ""
-    if not url:
-        form_html = f"""
-        <form id="{button_id}_form" method="post">
-            <input type="hidden" id="{button_id}_clicked" name="{button_id}_clicked" value="false">
-        </form>
-        """
+    # Create the form HTML (only for non-URL buttons)
+    form_html = "" if url else f"""
+    <form id="{button_id}_form" method="post">
+        <input type="hidden" id="{button_id}_clicked" name="{button_id}_clicked" value="false">
+    </form>
+    """
     
-    # Only add icon span if an icon is provided
+    # Handle icon insertion if provided
     icon_html = f'<span class="icon">{icon}</span> ' if icon else ''
     
+    # Combine all elements into the final button HTML
     button_html = f"""
     {form_html}
     <button class="blue-button" onclick="{onclick}">
@@ -1127,15 +1003,29 @@ def create_blue_button(text, icon="", key=None, url=None):
     </button>
     """
     
+    # Render the button using Streamlit's markdown
     return st.markdown(button_html, unsafe_allow_html=True)
 
+
 def create_info_banner(message):
-    """Create an information banner with a styled message"""
+    """
+    Create an information banner with a styled message.
+    
+    Creates a visually distinct banner to display important information,
+    styled according to the application's design language.
+    
+    Args:
+        message (str): The message text to display in the banner.
+    
+    Returns:
+        None: The banner is inserted directly into the Streamlit app
+    """
+    # Render an info banner with branded styling
     st.markdown(
         f"""
         <div style="
             background-color: #f0f7ff;
-            border-left: 5px solid #0000f3; /* Using our specific blue */
+            border-left: 5px solid #0000f3;
             padding: 15px;
             border-radius: 4px;
             margin-bottom: 20px;
@@ -1149,10 +1039,27 @@ def create_info_banner(message):
         unsafe_allow_html=True
     )
 
+
 def create_feature_card(icon, title, description, button_text, button_key):
-    """Create a feature card with icon, title, description and a button"""
-    # Card container with styling
+    """
+    Create a feature card with icon, title, description and a button.
+    
+    Creates a visually distinct card highlighting a feature of the application,
+    including an explanatory icon, title, description, and actionable button.
+    
+    Args:
+        icon (str): The emoji or icon to display at the top of the card
+        title (str): The title/heading of the feature card
+        description (str): The descriptive text explaining the feature
+        button_text (str): Text to display on the card's button
+        button_key (str): Unique identifier for the button
+    
+    Returns:
+        bool: True if the button is clicked, False otherwise
+    """
+    # Create a container for the entire card
     with st.container():
+        # Render the card content with styling
         st.markdown(
             f"""
             <div style="
@@ -1170,12 +1077,25 @@ def create_feature_card(icon, title, description, button_text, button_key):
             """, 
             unsafe_allow_html=True
         )
-        
-        # Button below the card with matching style to sidebar toggle
+        # Add the button at the bottom of the card and return its clicked state
         return st.button(button_text, key=button_key)
 
+
 def create_blue_collar_section(title, content):
-    """Create a styled section for blue collar related content"""
+    """
+    Create a styled section for blue collar related content.
+    
+    Creates a section with distinct styling for content related to blue collar themes,
+    with a colored left border and highlighted title.
+    
+    Args:
+        title (str): The title/heading for the section
+        content (str): HTML content to display in the section
+    
+    Returns:
+        None: The section is inserted directly into the Streamlit app
+    """
+    # Render a styled section with blue accents
     st.markdown(
         f"""
         <div class="blue-collar-section">
@@ -1186,16 +1106,41 @@ def create_blue_collar_section(title, content):
         unsafe_allow_html=True
     )
 
+
 def create_blue_collar_tag(text):
-    """Create a tag with the blue collar style"""
+    """
+    Create a tag with the blue collar style.
+    
+    Creates a small, pill-shaped tag with blue styling for categorization
+    or labeling elements.
+    
+    Args:
+        text (str): The text to display in the tag
+    
+    Returns:
+        str: HTML for the styled tag (to be used within other HTML content)
+    """
+    # Return HTML for a styled tag (does not render directly)
     return f'<span class="blue-collar-tag">{text}</span>'
 
+
 def create_blue_collar_table(df):
-    """Display a dataframe with blue collar styling"""
+    """
+    Display a dataframe with blue collar styling.
+    
+    Applies custom styling to a Pandas DataFrame to match the application's
+    blue collar theme, with colored headers and hover effects.
+    
+    Args:
+        df (pandas.DataFrame): The DataFrame to display
+    
+    Returns:
+        None: The table is inserted directly into the Streamlit app
+    """
+    # Add CSS for styling dataframes
     st.markdown(
         """
         <style>
-        /* Apply blue-collar-table class to the next table */
         .stDataFrame table {
             border-collapse: collapse;
             width: 100%;
@@ -1213,6 +1158,5 @@ def create_blue_collar_table(df):
         """,
         unsafe_allow_html=True
     )
-    
-    # Display the dataframe
+    # Display the dataframe with the applied styling
     st.dataframe(df)

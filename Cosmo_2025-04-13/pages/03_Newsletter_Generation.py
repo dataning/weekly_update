@@ -17,8 +17,6 @@ from bs4 import BeautifulSoup
 from utils.session_state import initialize_session_state, trigger_update
 from utils.data_processing import clean_dataframe, create_column_mapping
 from components.header import render_header
-from components.sidebar import render_sidebar
-from components.footer import render_footer
 from services.banner_service import (
     get_modified_banner_html, 
     COLOR_BANNER_TEMPLATES, 
@@ -28,9 +26,6 @@ from services.banner_service import (
 from utils.email_sender import EmailSender
 import theme
 
-theme.set_page_config()
-theme.apply_full_theme()
-
 # Initialize session state
 initialize_session_state()
 
@@ -38,6 +33,10 @@ initialize_session_state()
 os.makedirs("temp", exist_ok=True)
 os.makedirs("templates/banners", exist_ok=True)
 os.makedirs("static/images", exist_ok=True)
+
+
+theme.set_page_config()
+theme.apply_full_theme()
 
 # Render header
 render_header()
@@ -600,8 +599,8 @@ def save_newsletter_for_sending():
         return None
 
 # Main page content
-st.title("📧 Newsletter Generator")
-st.write("Create customized newsletters using your tagged articles or upload a CSV.")
+st.markdown("<h2 style='color: #000000; margin-bottom: 1rem;'>📧 Newsletter Generator</h2>", unsafe_allow_html=True)
+# st.write("Create customized newsletters using your tagged articles or upload a CSV.")
 
 has_tagged_data = (
     "tagged_news_df" in st.session_state 
@@ -1473,5 +1472,5 @@ with right_col:
             st.info("No newsletter generated yet.")
 
 # Render sidebar and footer
-render_sidebar()
-render_footer()
+theme.render_sidebar()
+theme.render_footer()

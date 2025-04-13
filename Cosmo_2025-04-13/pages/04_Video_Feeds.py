@@ -17,8 +17,6 @@ import os
 import glob
 from io import BytesIO
 from components.header import render_header
-from components.sidebar import render_sidebar
-from components.footer import render_footer
 import theme
 # Import shared access control module (only keeping what's needed)
 from services.access_control import (
@@ -899,4 +897,5 @@ if __name__ == "__main__":
     main()
 
 # Render footer component
-render_footer()
+theme.render_sidebar()
+theme.render_footer()

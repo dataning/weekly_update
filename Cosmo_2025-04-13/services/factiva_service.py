@@ -226,9 +226,35 @@ def get_valid_token():
             print("Token automatically refreshed!")
             # Load the newly refreshed token
             token_data = load_token()
+            
+            # Double-check that the token is now valid
+            token_info = get_dow_jones_token_info(token_data.get('token'))
+            if token_info.get('status') != 'Valid':
+                print("WARNING: Token is still expired after refresh!")
+                # Try using the token from cURL logs
+                try:
+                    direct_token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJEN0IwQTFERkJCNzlDRDFBQjM4NzNCMTcyODMyRjkxMENEQkRBREIiLCJ0eXAiOiJKV1QifQ.eyJwaWIiOnsiYWNjb3VudF9pZCI6IjlCTEEwMDQ2MDAiLCJhbGxvd19hdXRvX2xvZ2luIjoidHJ1ZSIsImFwYyI6IkZIIiwiY3RjIjoiRCIsIm1hc3Rlcl9hcHBfaWQiOiJaY01JZGlaajNmWDhtOU5JMWY4dGMxbDNDc0pFRGdjayIsInNlc3Npb25faWQiOiJwYnZpNFd3V19NRlJES09CWE1VMkRRWkJXSEU0VElNREdHSTRXQ01ERU1RWVRHWlJWTUpURE1NREZHTlNBIiwiZW1haWwiOiJKb2FubmEuWWF1QGJsYWNrcm9jay5jb20iLCJlaWQiOiJFNk9PMkhWQ1FIVlBFSExRMjdUNkJQTFNRQSJ9LCJpc3MiOiJodHRwczovL2FjY291bnRzLmRvd2pvbmVzLmNvbS9vYXV0aDIvdjIiLCJlbWFpbCI6IkpvYW5uYS5ZYXVAYmxhY2tyb2NrLmNvbSIsInN1YiI6ImIzMmMwMGIyLTI3Y2YtNGRkYi1hOGIyLTIxZDUzNDEwMGJjYyIsImF1ZCI6IlpjTUlkaVpqM2ZYOG05TkkxZjh0YzFsM0NzSkVEZ2NrIiwiYXpwIjoiWmNNSWRpWmozZlg4bTlOSTFmOHRjMWwzQ3NKRURnY2siLCJpYXQiOjE3NDQ1NTI4OTksImV4cCI6MTc0NDgxMjA5OX0.d4VJ7VKUmJ_MuNbbNFD9zdCf3zwl7mSTuyGoaXlziozA4sD9UrxRufNEEmAEquWpiuP6aWewLBcGx_BU9VZ-eGTzNlC3DaaAs7ESDdqoFQb1TNdLK0zZiJ5ID8Qxu525iA4rsDdbT6SQtI9PBrLpLBvE8tWl3Tk8BS4gwBuPaA4ka5uLiM95MFF7Uk6oTQ-j_nHCYxSPh4WlWYVLF6UpSQOhe_oM0xobx45nqy4AR-HHuKFnlM6wgLILzQEYFKsXpyMBCfsj_ViQKkFxjW9QRF37IFyru0TXayXgriRtasxg_CJk8oHf24fsLRCsfvzvON2odky_spW4K3PHYxRPMw"
+                    # Check if this hardcoded token is valid
+                    direct_token_info = get_dow_jones_token_info(direct_token)
+                    if direct_token_info.get('status') == 'Valid':
+                        return direct_token
+                except:
+                    pass
+            
             return token_data.get('token', DEFAULT_TOKEN)
         else:
             print("Auto-refresh failed. Please update token manually through the app.")
+            
+            # As a last resort, try to use the token from your cURL logs
+            try:
+                direct_token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJEN0IwQTFERkJCNzlDRDFBQjM4NzNCMTcyODMyRjkxMENEQkRBREIiLCJ0eXAiOiJKV1QifQ.eyJwaWIiOnsiYWNjb3VudF9pZCI6IjlCTEEwMDQ2MDAiLCJhbGxvd19hdXRvX2xvZ2luIjoidHJ1ZSIsImFwYyI6IkZIIiwiY3RjIjoiRCIsIm1hc3Rlcl9hcHBfaWQiOiJaY01JZGlaajNmWDhtOU5JMWY4dGMxbDNDc0pFRGdjayIsInNlc3Npb25faWQiOiJwYnZpNFd3V19NRlJES09CWE1VMkRRWkJXSEU0VElNREdHSTRXQ01ERU1RWVRHWlJWTUpURE1NREZHTlNBIiwiZW1haWwiOiJKb2FubmEuWWF1QGJsYWNrcm9jay5jb20iLCJlaWQiOiJFNk9PMkhWQ1FIVlBFSExRMjdUNkJQTFNRQSJ9LCJpc3MiOiJodHRwczovL2FjY291bnRzLmRvd2pvbmVzLmNvbS9vYXV0aDIvdjIiLCJlbWFpbCI6IkpvYW5uYS5ZYXVAYmxhY2tyb2NrLmNvbSIsInN1YiI6ImIzMmMwMGIyLTI3Y2YtNGRkYi1hOGIyLTIxZDUzNDEwMGJjYyIsImF1ZCI6IlpjTUlkaVpqM2ZYOG05TkkxZjh0YzFsM0NzSkVEZ2NrIiwiYXpwIjoiWmNNSWRpWmozZlg4bTlOSTFmOHRjMWwzQ3NKRURnY2siLCJpYXQiOjE3NDQ1NTI4OTksImV4cCI6MTc0NDgxMjA5OX0.d4VJ7VKUmJ_MuNbbNFD9zdCf3zwl7mSTuyGoaXlziozA4sD9UrxRufNEEmAEquWpiuP6aWewLBcGx_BU9VZ-eGTzNlC3DaaAs7ESDdqoFQb1TNdLK0zZiJ5ID8Qxu525iA4rsDdbT6SQtI9PBrLpLBvE8tWl3Tk8BS4gwBuPaA4ka5uLiM95MFF7Uk6oTQ-j_nHCYxSPh4WlWYVLF6UpSQOhe_oM0xobx45nqy4AR-HHuKFnlM6wgLILzQEYFKsXpyMBCfsj_ViQKkFxjW9QRF37IFyru0TXayXgriRtasxg_CJk8oHf24fsLRCsfvzvON2odky_spW4K3PHYxRPMw"
+                # Check if this hardcoded token is valid
+                direct_token_info = get_dow_jones_token_info(direct_token)
+                if direct_token_info.get('status') == 'Valid':
+                    return direct_token
+            except:
+                pass
+            
             return token_data.get('token', DEFAULT_TOKEN)
     
     # Token is valid
@@ -433,28 +459,24 @@ def auto_refresh_token():
     try:
         print("Attempting to automatically refresh token via Auth0...")
         
-        # Step 1: Create a session to maintain cookies and handle redirects
+        # Create a session to maintain cookies
         session = requests.Session()
         session.headers.update({
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:136.0) Gecko/20100101 Firefox/136.0",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-            "Accept-Language": "en-US,en;q=0.5"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:137.0) Gecko/20100101 Firefox/137.0",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-GB,en;q=0.5"
         })
         
-        # Check if proxy is enabled in config
+        # Handle proxy configuration
         proxy_config = CONFIG.get('proxy', {})
-        use_proxy = proxy_config.get('use_proxy', False)
+        if proxy_config.get('use_proxy', False) and proxy_config.get('proxy_url'):
+            session.proxies = {
+                'http': proxy_config.get('proxy_url'),
+                'https': proxy_config.get('proxy_url')
+            }
+            print(f"Using proxy: {proxy_config.get('proxy_url')}")
         
-        if use_proxy:
-            proxy_url = proxy_config.get('proxy_url')
-            if proxy_url:
-                print(f"Using proxy: {proxy_url}")
-                session.proxies = {
-                    'http': proxy_url,
-                    'https': proxy_url
-                }
-        
-        # Step 2: Access the login page to get CSRF token and cookies
+        # Step 1: Access the login page to get CSRF token
         auth0_login_url = "https://auth.accounts.dowjones.com/login-page"
         login_params = {
             "client_id": "zgQkNiR9DBqamZBqIi6D0NaIvzLKkh3q",
@@ -465,35 +487,25 @@ def auto_refresh_token():
             "protocol": "oauth2"
         }
         
-        # Get the login page
         login_page_response = session.get(auth0_login_url, params=login_params)
-        
-        if login_page_response.status_code != 200:
-            print(f"Failed to access login page: {login_page_response.status_code}")
-            return False
-        
         print(f"Login page accessed. Status: {login_page_response.status_code}")
         print(f"Cookies received: {session.cookies.get_dict()}")
-            
-        # Step 3: Get CSRF token from cookies
+        
+        # Step 2: Extract CSRF token and state parameter
         csrf_token = session.cookies.get('csrf')
-        if csrf_token:
-            print(f"CSRF token found in cookies: {csrf_token[:10]}...")
-        else:
+        if not csrf_token:
             print("No CSRF token found in cookies")
             return False
         
-        # Step 4: Get state parameter from the URL
+        print(f"CSRF token found: {csrf_token[:10]}...")
+        
         state_param = None
         if "state=" in login_page_response.url:
             state_param = login_page_response.url.split("state=")[1].split("&")[0]
-            print(f"State parameter from URL: {state_param[:10]}..." if state_param else "No state parameter found")
         
-        # Step 5: Submit login credentials
-        auth0_submit_url = "https://auth.accounts.dowjones.com/usernamepassword/login"
-        
-        # Get credentials
+        # Step 3: Submit login credentials
         username, password = get_credentials()
+        auth0_submit_url = "https://auth.accounts.dowjones.com/usernamepassword/login"
         
         login_data = {
             "client_id": "zgQkNiR9DBqamZBqIi6D0NaIvzLKkh3q",
@@ -508,15 +520,13 @@ def auto_refresh_token():
             "state": state_param
         }
         
-        # Set specific headers for the login request
         login_headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Origin": "https://auth.accounts.dowjones.com",
             "Referer": login_page_response.url
         }
         
-        # Submit login
-        print(f"Submitting login with CSRF token: {csrf_token[:10]}...")
+        print("Submitting login credentials...")
         login_response = session.post(
             auth0_submit_url,
             data=login_data,
@@ -524,160 +534,178 @@ def auto_refresh_token():
             allow_redirects=False
         )
         
-        print(f"Login response status: {login_response.status_code}")
-        
-        # Step 6: Handle the Auth0 form response
+        # Step 4: Handle the Auth0 form response and follow redirects manually
         if login_response.status_code == 200:
-            print("Auth0 returned a form-based response (expected behavior)")
-            
-            # Parse the HTML to extract form fields
             soup = BeautifulSoup(login_response.text, 'html.parser')
-            
-            # Find the form
             auth0_form = soup.find('form', {'name': 'hiddenform'})
             
             if auth0_form:
                 form_action_url = auth0_form.get('action')
-                print(f"Form action URL: {form_action_url}")
-                
-                # Extract input fields from the form
                 form_data = {}
                 for input_field in auth0_form.find_all('input'):
                     field_name = input_field.get('name')
                     field_value = input_field.get('value', '')
                     if field_name:
                         form_data[field_name] = field_value
-                        print(f"Form field: {field_name}={field_value[:20]}..." if len(field_value) > 20 else f"Form field: {field_name}={field_value}")
                 
-                # Make sure we have the token
-                if 'token' not in form_data:
-                    # Fallback to regex if BeautifulSoup didn't find it
-                    auth0_token_match = re.search(r'name="token" value="([^"]+)"', login_response.text)
-                    if auth0_token_match:
-                        form_data['token'] = auth0_token_match.group(1)
-                        print(f"Added token from regex: {form_data['token'][:20]}...")
+                print(f"Submitting form to {form_action_url}...")
+                form_response = session.post(
+                    form_action_url,
+                    data=form_data,
+                    headers={"Content-Type": "application/x-www-form-urlencoded"},
+                    allow_redirects=True
+                )
                 
-                if form_data and form_action_url:
-                    # Submit the form with ALL extracted fields
-                    form_headers = {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                        "Referer": auth0_submit_url,
-                        "Origin": "https://auth.accounts.dowjones.com"
-                    }
+                # Step 5: Now access the Factiva main page to get the actual token
+                factiva_url = "https://snapshot.factiva.com/du/Index?sa_from=GL"
+                print(f"Accessing Factiva main page to get token...")
+                factiva_response = session.get(factiva_url, allow_redirects=True)
+                
+                # Step 6: After login, access a protected endpoint to ensure all cookies are set
+                search_url = "https://snapshot.factiva.com/Search/SSResults"
+                search_data = {
+                    "xsrftoken": session.cookies.get('xsrftoken', ''),
+                    "searchModel": json.dumps({
+                        "searchFilter": {
+                            "dt": "LastDay"
+                        }
+                    })
+                }
+                
+                search_headers = {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Referer": "https://snapshot.factiva.com/Pages/Index"
+                }
+                
+                print("Accessing search page to finalize authentication...")
+                search_response = session.post(
+                    search_url,
+                    data=search_data,
+                    headers=search_headers
+                )
+                
+                # Step 7: Look for the token in cookies, especially the GSLogin cookie
+                gslogin_cookie = session.cookies.get('GSLogin')
+                if gslogin_cookie and "GL%5FI=" in gslogin_cookie:
+                    # Extract the JWT token part from the cookie
+                    token_parts = gslogin_cookie.split("GL%5FI=")[1].split("&")[0]
                     
-                    print(f"Submitting Auth0 form to: {form_action_url} with {len(form_data)} fields")
-                    form_response = session.post(
-                        form_action_url,
-                        data=form_data,
-                        headers=form_headers,
-                        allow_redirects=True  # Allow redirects to follow the chain
-                    )
+                    # URL-decode the token
+                    import urllib.parse
+                    jwt_token = urllib.parse.unquote(token_parts)
                     
-                    print(f"Form submission final response status: {form_response.status_code}")
+                    print(f"Found JWT token in GSLogin cookie!")
                     
-                    # NEW CODE: Try to extract the new token
-                    
-                    # First, check for any JWT tokens in cookies
-                    new_token = None
-                    for cookie in session.cookies:
-                        if cookie.name.lower() in ['dj_token', 'auth_token', 'jwt_token', 'access_token', 'token', 'id_token']:
-                            new_token = cookie.value
-                            print(f"Found token in cookies: {cookie.name}")
-                            break
-                    
-                    # If not in cookies, look for it in the response URL
-                    if not new_token and form_response.url:
-                        # Check for token in URL fragment
-                        if '#' in form_response.url:
-                            print("Looking for token in URL fragment")
-                            fragment = form_response.url.split('#')[1]
-                            params = dict(param.split('=') for param in fragment.split('&') if '=' in param)
-                            new_token = params.get('access_token') or params.get('id_token') or params.get('token')
+                    # Validate and save the token
+                    token_info = get_dow_jones_token_info(jwt_token)
+                    if token_info.get('status') == 'Valid':
+                        token_data = {
+                            'token': jwt_token,
+                            'expires_at': token_info.get('expires_at'),
+                            'email': token_info.get('email'),
+                            'issued_at': token_info.get('issued_at', datetime.now())
+                        }
                         
-                        # Check for token in query params
-                        elif '?' in form_response.url:
-                            print("Looking for token in URL query parameters")
-                            query = form_response.url.split('?')[1]
-                            params = dict(param.split('=') for param in query.split('&') if '=' in param)
-                            new_token = params.get('access_token') or params.get('id_token') or params.get('token')
-                    
-                    # If not in URL, try to find it in response body
-                    if not new_token and form_response.text:
-                        # Look for JWT pattern in the response body (eyJ... format)
-                        jwt_pattern = r'eyJ[a-zA-Z0-9_-]+\.eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+'
-                        jwt_matches = re.findall(jwt_pattern, form_response.text)
+                        if save_token(token_data):
+                            print("Token successfully saved!")
+                            return True
+                    else:
+                        print(f"Token validation failed: {token_info}")
+                
+                # Alternative: Look for authorization header in requests
+                for response in [factiva_response, search_response]:
+                    # Check if we received any token in response headers or embedded in the HTML
+                    jwt_pattern = r'Bearer\s+(eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)'
+                    if response.text:
+                        jwt_matches = re.findall(jwt_pattern, response.text)
                         if jwt_matches:
-                            print(f"Found potential JWT token in response body")
-                            # Use the first match
-                            new_token = jwt_matches[0]
-                    
-                    # If a new token was found, validate and update it
-                    if new_token:
-                        print("New token obtained, validating and updating token storage")
-                        # Validate the token format (basic check)
-                        if new_token.count('.') == 2:
-                            token_info = get_dow_jones_token_info(new_token)
+                            jwt_token = jwt_matches[0]
+                            print(f"Found JWT token in response body!")
+                            
+                            # Validate and save the token
+                            token_info = get_dow_jones_token_info(jwt_token)
                             if token_info.get('status') == 'Valid':
-                                print("Token is valid, updating storage")
                                 token_data = {
-                                    'token': new_token,
+                                    'token': jwt_token,
                                     'expires_at': token_info.get('expires_at'),
                                     'email': token_info.get('email'),
                                     'issued_at': token_info.get('issued_at', datetime.now())
                                 }
-                                save_success = save_token(token_data)
-                                if save_success:
-                                    print("Token successfully updated")
+                                
+                                if save_token(token_data):
+                                    print("Token successfully saved!")
                                     return True
-                            else:
-                                print(f"Token validation failed: {token_info.get('error', 'Unknown error')}")
-                        else:
-                            print("Invalid token format, doesn't appear to be a valid JWT")
-                    
-                    # If we didn't find or couldn't update a new token, try to find it manually
-                    print(f"Completed auth flow but couldn't find a valid token. Response URL: {form_response.url}")
-                    print("Checking if API cookies contain token...")
-                    
-                    # Make an authenticated request to the API to capture cookies
-                    api_url = "https://dj.factiva.com/api/session-info"
-                    api_response = session.get(api_url)
-                    print(f"API session info response status: {api_response.status_code}")
-                    
-                    # Check if we got a new token from this request
-                    for cookie in session.cookies:
-                        if 'token' in cookie.name.lower() and cookie.name.lower() not in ['_csrf_token']:
-                            print(f"Found token in API response cookies: {cookie.name}")
-                            new_token = cookie.value
-                            # Validate and save this token
-                            token_info = get_dow_jones_token_info(new_token)
-                            if token_info.get('status') == 'Valid':
-                                token_data = {
-                                    'token': new_token,
-                                    'expires_at': token_info.get('expires_at'),
-                                    'email': token_info.get('email'),
-                                    'issued_at': token_info.get('issued_at', datetime.now())
-                                }
-                                save_success = save_token(token_data)
-                                if save_success:
-                                    print("Token successfully updated from API call")
-                                    return True
-                    
-                    # Last resort: Extend the current token
-                    print("Authentication successful, but no valid token could be extracted. Extending current token expiry as fallback.")
-                    return extend_token_expiry(days=14)
-        
-        # If we're here, something went wrong
-        print("Authentication flow not completed successfully. Extending current token as fallback.")
-        
-        # Fallback to extending current token
-        return extend_token_expiry(days=7)
+                
+                # Try to find the token by making an API request that would receive it
+                api_url = "https://api.dowjones.com/content/search"
+                api_headers = {
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:137.0) Gecko/20100101 Firefox/137.0",
+                    "Accept": "application/vnd.dowjones.dna.content.v_1.0",
+                    "Origin": "https://snapshot.factiva.com",
+                    "Referer": "https://snapshot.factiva.com/"
+                }
+                
+                print("Making API request to see if token is in response...")
+                api_response = session.get(api_url, headers=api_headers)
+                
+                # Check for Authorization header in the request
+                if 'Authorization' in api_response.request.headers:
+                    auth_header = api_response.request.headers['Authorization']
+                    if auth_header.startswith('Bearer '):
+                        jwt_token = auth_header.split('Bearer ')[1]
+                        print(f"Found JWT token in Authorization header!")
+                        
+                        # Validate and save the token
+                        token_info = get_dow_jones_token_info(jwt_token)
+                        if token_info.get('status') == 'Valid':
+                            token_data = {
+                                'token': jwt_token,
+                                'expires_at': token_info.get('expires_at'),
+                                'email': token_info.get('email'),
+                                'issued_at': token_info.get('issued_at', datetime.now())
+                            }
+                            
+                            if save_token(token_data):
+                                print("Token successfully saved!")
+                                return True
+                
+        # If we couldn't get a new token through the web flow, 
+        # try to extract it from the GSLogin cookie value in your cURL logs
+        print("Looking for token in cURL logs...")
+        # This is a fallback that uses the token from your cURL logs
+        try:
+            # Using the working token from your example
+            token_from_logs = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJEN0IwQTFERkJCNzlDRDFBQjM4NzNCMTcyODMyRjkxMENEQkRBREIiLCJ0eXAiOiJKV1QifQ.eyJwaWIiOnsiYWNjb3VudF9pZCI6IjlCTEEwMDQ2MDAiLCJhbGxvd19hdXRvX2xvZ2luIjoidHJ1ZSIsImFwYyI6IkZIIiwiY3RjIjoiRCIsIm1hc3Rlcl9hcHBfaWQiOiJaY01JZGlaajNmWDhtOU5JMWY4dGMxbDNDc0pFRGdjayIsInNlc3Npb25faWQiOiJwYnZpNFd3V19NRlJES09CWE1VMkRRWkJXSEU0VElNREdHSTRXQ01ERU1RWVRHWlJWTUpURE1NREZHTlNBIiwiZW1haWwiOiJKb2FubmEuWWF1QGJsYWNrcm9jay5jb20iLCJlaWQiOiJFNk9PMkhWQ1FIVlBFSExRMjdUNkJQTFNRQSJ9LCJpc3MiOiJodHRwczovL2FjY291bnRzLmRvd2pvbmVzLmNvbS9vYXV0aDIvdjIiLCJlbWFpbCI6IkpvYW5uYS5ZYXVAYmxhY2tyb2NrLmNvbSIsInN1YiI6ImIzMmMwMGIyLTI3Y2YtNGRkYi1hOGIyLTIxZDUzNDEwMGJjYyIsImF1ZCI6IlpjTUlkaVpqM2ZYOG05TkkxZjh0YzFsM0NzSkVEZ2NrIiwiYXpwIjoiWmNNSWRpWmozZlg4bTlOSTFmOHRjMWwzQ3NKRURnY2siLCJpYXQiOjE3NDQ1NTI4OTksImV4cCI6MTc0NDgxMjA5OX0.d4VJ7VKUmJ_MuNbbNFD9zdCf3zwl7mSTuyGoaXlziozA4sD9UrxRufNEEmAEquWpiuP6aWewLBcGx_BU9VZ-eGTzNlC3DaaAs7ESDdqoFQb1TNdLK0zZiJ5ID8Qxu525iA4rsDdbT6SQtI9PBrLpLBvE8tWl3Tk8BS4gwBuPaA4ka5uLiM95MFF7Uk6oTQ-j_nHCYxSPh4WlWYVLF6UpSQOhe_oM0xobx45nqy4AR-HHuKFnlM6wgLILzQEYFKsXpyMBCfsj_ViQKkFxjW9QRF37IFyru0TXayXgriRtasxg_CJk8oHf24fsLRCsfvzvON2odky_spW4K3PHYxRPMw"
             
+            # Check if this token is still valid
+            token_info = get_dow_jones_token_info(token_from_logs)
+            
+            # If token is valid or can be validated, save it
+            if token_info.get('status') == 'Valid':
+                print("Token from logs is valid, saving it")
+                token_data = {
+                    'token': token_from_logs,
+                    'expires_at': token_info.get('expires_at'),
+                    'email': token_info.get('email'),
+                    'issued_at': token_info.get('issued_at', datetime.now())
+                }
+                
+                if save_token(token_data):
+                    print("Token successfully saved!")
+                    return True
+        except Exception as e:
+            print(f"Error using token from logs: {e}")
+        
+        # If all else fails, extend the current token
+        print("Could not obtain a new token. Extending current token as fallback.")
+        return extend_token_expiry(days=7)
+        
     except Exception as e:
-        print(f"Error during auto-refresh: {e}")
+        print(f"Error during token refresh: {e}")
         import traceback
         traceback.print_exc()
         return False
-
+        
 def create_article_url(article_id):
     """
     Create a URL for the article based on its ID
@@ -761,7 +789,7 @@ def extract_article_data(article):
     # Basic article information
     article_data = {
         'id': article.get('id'),
-        'source_name': article.get('meta', {}).get('source', {}).get('name'),
+        'source_name': article.get('meta', {}).get('source', {}).get('name', 'Unknown Source'),
         'headline': article.get('attributes', {}).get('headline', {}).get('main', {}).get('text', '').strip(),
         'publication_date': article.get('attributes', {}).get('publication_date'),
         'load_date': article.get('attributes', {}).get('load_date'),
@@ -775,11 +803,82 @@ def extract_article_data(article):
     else:
         article_data['snippet'] = None
     
+    # Extract language
+    language = article.get('meta', {}).get('language', {}).get('code')
+    if language:
+        article_data['language'] = language
+    
+    # Extract more metadata if available
+    metrics = article.get('meta', {}).get('metrics', {})
+    if metrics:
+        article_data['word_count'] = metrics.get('word_count')
+    
     # Add links if available
     if 'links' in article and 'self' in article['links']:
         article_data['api_url'] = article['links']['self']
     
     return article_data
+
+def check_parquet_support():
+    """Check if pyarrow or fastparquet is installed for parquet support"""
+    try:
+        import pyarrow
+        return True
+    except ImportError:
+        try:
+            import fastparquet
+            return True
+        except ImportError:
+            return False
+
+def save_results(df, base_name, default_format='parquet'):
+    """
+    Save DataFrame results to file with appropriate format
+    
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        The data to save
+    base_name : str
+        Base name for the file (without extension)
+    default_format : str, optional
+        Default format (parquet or csv)
+    """
+    if df.empty:
+        print("No data to save.")
+        return
+        
+    # Check if parquet is supported
+    parquet_supported = check_parquet_support()
+    if not parquet_supported and default_format == 'parquet':
+        print("WARNING: Parquet format not available. Please install pyarrow or fastparquet.")
+        print("Falling back to CSV format.")
+        default_format = 'csv'
+    
+    # Ask user for format preference
+    format_options = "p=Parquet, c=CSV" if parquet_supported else "c=CSV"
+    format_default = 'p' if default_format == 'parquet' and parquet_supported else 'c'
+    format_choice = input(f"Export format ({format_options}) [{format_default}]: ").lower() or format_default
+    
+    timestamp = int(time.time())
+    
+    if format_choice == 'c' or not parquet_supported:
+        # CSV format
+        filename = f"{base_name}_{timestamp}.csv"
+        df.to_csv(filename, index=False)
+        print(f"Results saved to {filename}")
+    else:
+        # Parquet format
+        filename = f"{base_name}_{timestamp}.parquet"
+        
+        # Prepare data for parquet (handle None values and ensure consistent types)
+        df_clean = df.copy()
+        for col in df_clean.select_dtypes(include=['object']):
+            df_clean[col] = df_clean[col].fillna('').astype('str')
+        
+        # Save to parquet
+        df_clean.to_parquet(filename, index=False)
+        print(f"Results saved to {filename}")
 
 def search_free_text(query_text, n_days=7, max_articles=100):
     """
@@ -984,6 +1083,7 @@ def search_free_text(query_text, n_days=7, max_articles=100):
 def search_company_last_n_days(company_name, n_days, max_articles=100):
     """
     Search for articles about a specific company from the last N days
+    using the exact request flow from the cURL logs
     
     Parameters:
     -----------
@@ -999,46 +1099,405 @@ def search_company_last_n_days(company_name, n_days, max_articles=100):
     pandas.DataFrame
         DataFrame with articles about the specified company
     """
-    # Get the current valid token
-    auth_token = get_valid_token()
-    
     # Get the company code
     company_code = COMPANY_CODES.get(company_name)
     if not company_code:
         print(f"Error: No code found for company {company_name}")
         return pd.DataFrame()
     
-    # URL - same as your working code
-    url = "https://api.dowjones.com/content/search"
-
-    # Headers
-    headers = create_api_headers(auth_token)
-    
-    # Calculate date range
-    today = datetime.now()
-    
-    if n_days == 1:
-        # Use "LastDay" predefined range
-        print(f"Using predefined range: LastDay")
-        date_param = {"days_range": "LastDay"}
-    else:
-        # Calculate custom date range
-        if n_days == 0:  # Just today
-            start_date = today.strftime("%Y-%m-%d")
-            end_date = today.strftime("%Y-%m-%d")
-            print(f"Using custom date range for today: {start_date}")
-        else:
-            past_date = today - timedelta(days=n_days)
-            start_date = past_date.strftime("%Y-%m-%d")
-            end_date = today.strftime("%Y-%m-%d")
-            print(f"Using custom date range from {start_date} to {end_date}")
-            
-        date_param = {
-            "start_date": start_date,
-            "end_date": end_date
+    try:
+        # Create a session with the required headers
+        session = requests.Session()
+        session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:137.0) Gecko/20100101 Firefox/137.0",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-GB,en;q=0.5",
+            "Accept-Encoding": "gzip, deflate, br, zstd"
+        })
+        
+        # Step 1: Start with login to get initial cookies
+        print("Starting authentication sequence...")
+        auth0_url = "https://auth.accounts.dowjones.com/login-page"
+        auth0_params = {
+            "client_id": "zgQkNiR9DBqamZBqIi6D0NaIvzLKkh3q",
+            "scope": "openid pib email",
+            "response_type": "code",
+            "redirect_uri": "https://global.factiva.com/factivalogin/callback.aspx",
+            "connection": "DJPIB",
+            "op": "localop",
+            "ui_locales": "en-us-x-global-0-0",
+            "protocol": "oauth2"
         }
+        
+        # Initial login page request
+        login_response = session.get(auth0_url, params=auth0_params)
+        print(f"Login page status: {login_response.status_code}")
+        
+        # Get CSRF token
+        csrf_token = session.cookies.get('csrf')
+        if not csrf_token:
+            print("Failed to get CSRF token")
+            return pd.DataFrame()
+        
+        print(f"Got CSRF token: {csrf_token[:10]}...")
+        
+        # Get credentials
+        username, password = get_credentials()
+        
+        # Submit credentials
+        auth0_submit_url = "https://auth.accounts.dowjones.com/usernamepassword/login"
+        
+        # Extract state parameter from the URL
+        state_param = None
+        if "state=" in login_response.url:
+            state_param = login_response.url.split("state=")[1].split("&")[0]
+        
+        login_data = {
+            "client_id": "zgQkNiR9DBqamZBqIi6D0NaIvzLKkh3q",
+            "redirect_uri": "https://global.factiva.com/factivalogin/callback.aspx",
+            "tenant": "dowjones",
+            "response_type": "code",
+            "scope": "openid pib email",
+            "username": username,
+            "password": password,
+            "_csrf": csrf_token,
+            "connection": "DJPIB",
+            "state": state_param
+        }
+        
+        login_headers = {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Origin": "https://auth.accounts.dowjones.com",
+            "Referer": login_response.url
+        }
+        
+        print("Submitting credentials...")
+        auth_response = session.post(
+            auth0_submit_url,
+            data=login_data,
+            headers=login_headers,
+            allow_redirects=False
+        )
+        
+        # Process the form response
+        if auth_response.status_code == 200:
+            soup = BeautifulSoup(auth_response.text, 'html.parser')
+            form = soup.find('form', {'name': 'hiddenform'})
+            
+            if form and form.get('action'):
+                form_url = form.get('action')
+                form_data = {}
+                
+                for input_tag in form.find_all('input'):
+                    name = input_tag.get('name')
+                    value = input_tag.get('value', '')
+                    if name:
+                        form_data[name] = value
+                
+                # Submit the form
+                print(f"Submitting form to: {form_url}")
+                form_response = session.post(
+                    form_url,
+                    data=form_data,
+                    headers={"Content-Type": "application/x-www-form-urlencoded"},
+                    allow_redirects=True
+                )
+                
+                print(f"Form submission response status: {form_response.status_code}")
+                print(f"Cookies after form submission: {list(session.cookies.keys())}")
+                
+                # Step 2: Now access the main factiva page
+                factiva_url = "https://snapshot.factiva.com/Pages/Index"
+                factiva_data = {
+                    "sa_from": "GL",
+                    "_XFORMSESSSTATE": "H4sIAAAAAAAEAKs2sKoOtVLSTynV98xLSa1Q0jGyqjaxUkrNU9IxtTLQsbRScvcBCSr5BSjpGFtFx%2BoYWBnU1tYCAPIGllo5AAAA",
+                    "xsrftoken": session.cookies.get('xsrftoken', '')
+                }
+                
+                print("Accessing main Factiva page...")
+                main_response = session.post(
+                    factiva_url,
+                    data=factiva_data,
+                    headers={
+                        "Content-Type": "application/x-www-form-urlencoded",
+                        "Origin": "https://snapshot.factiva.com",
+                        "Referer": "https://snapshot.factiva.com/du/Index?sa_from=GL"
+                    }
+                )
+                
+                print(f"Main page response status: {main_response.status_code}")
+                
+                # Step 3: Now make the search request, using the exact format from cURL logs
+                search_url = "https://snapshot.factiva.com/Search/SSResults"
+                
+                # Format date parameter based on n_days
+                date_param = "LastDay" if n_days == 1 else "Last3Months"  # Default to Last3Months for other values
+                
+                search_data = {
+                    "_XFORMSESSSTATE": "H4sIAAAAAAAEAKs2sKoOtVLSD0hMTy3W98xLSa1Q0jGyqjaxUkrNU9IxtTLQsbRScvcBCSr5BSjpGFtFx%2BoYWBnU1tYCAOjw8yE8AAAA",
+                    "_XFORMSTATE": "",
+                    "xsrftoken": session.cookies.get('xsrftoken', ''),
+                    "ins": "1",
+                    "napc": "NS",
+                    "searchModel": json.dumps({
+                        "pid": "",
+                        "pname": "",
+                        "ptype": "",
+                        "searchFilter": {
+                            "ft": "",
+                            "hch": "All",
+                            "dt": date_param,
+                            "ism": False,
+                            "frtr": 0,
+                            "nf": {
+                                "company": {
+                                    "include": [{
+                                        "code": company_code,
+                                        "desc": f"{company_name} Inc",
+                                        "codeType": "Company",
+                                        "source": "Autocomplete"
+                                    }]
+                                }
+                            },
+                            "sfc": {
+                                "code": company_code,
+                                "desc": f"{company_name} Inc",
+                                "codeType": "Company",
+                                "source": "Autocomplete"
+                            },
+                            "sl": {
+                                "slid": "All",
+                                "slds": "false",
+                                "sljson": "[]",
+                                "sln": "All Sources"
+                            }
+                        },
+                        "ReturnUrl": ""
+                    })
+                }
+                
+                search_headers = {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Origin": "https://snapshot.factiva.com",
+                    "Referer": "https://snapshot.factiva.com/Pages/Index",
+                    "Upgrade-Insecure-Requests": "1"
+                }
+                
+                print(f"Searching for {company_name} using {date_param} date range...")
+                search_response = session.post(search_url, data=search_data, headers=search_headers)
+                
+                print(f"Search response status: {search_response.status_code}")
+                
+                # Now check if we got any results - let's save the HTML for debugging
+                debug_file = f"{company_name.lower()}_search_debug.html"
+                with open(debug_file, "w", encoding="utf-8") as f:
+                    f.write(search_response.text)
+                print(f"Saved search response HTML to {debug_file} for debugging")
+                
+                # Parse the results
+                soup = BeautifulSoup(search_response.text, 'html.parser')
+                
+                # Check for error messages first
+                error_messages = soup.select('.errorMessage, .alert-error, .message-error')
+                if error_messages:
+                    for error in error_messages:
+                        print(f"Error from Factiva: {error.text.strip()}")
+                
+                # Find all article containers
+                article_containers = soup.select('#searchResults .listContainer, .searchResults .listContainer')
+                
+                if not article_containers:
+                    print("No article containers found in the response HTML.")
+                    print("Trying alternative HTML structures...")
+                    
+                    # Try alternative selectors
+                    article_containers = soup.select('.snippetContainer, .documentSnippet, .articleItem')
+                    
+                    if not article_containers:
+                        print("Still no article containers found.")
+                        
+                        # Last resort: Just print how many elements with 'article' or 'news' in class/id
+                        article_elements = soup.select('[class*=article], [class*=news], [id*=article], [id*=news]')
+                        print(f"Found {len(article_elements)} potential article elements using wider search")
+                        
+                        # Check if there's any no-results message
+                        no_results = soup.select('.noResults, .emptyResults, .no-results')
+                        if no_results:
+                            print(f"No results message found: {no_results[0].text.strip()}")
+                        
+                        # Let's try a different approach - make another request to get headlines
+                        print("Trying to get headlines through the editor's choice API...")
+                        editors_url = "https://snapshot.factiva.com/AJAX/GetEditorsChoiceHeadlines"
+                        editors_data = {
+                            "industryCodes": "iextrfu,ivicu,i764",
+                            "languages": "en,ja,ko,zhcn,zhtw",
+                            "_XFORMSESSSTATE": "H4sIAAAAAAAEAKs2sKoOtVLSD05NLErO0A8ODkotLs0pKVbSMbKqNrFSSs1T0jG1MtCxtFJy9wEJKvkFK%2BkYW0XH6hhYGdTW1gIA36wZL0EAAAA%3D",
+                            "_XFORMSTATE": "",
+                            "xsrftoken": session.cookies.get('xsrftoken', '')
+                        }
+                        
+                        editors_headers = {
+                            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                            "X-Requested-With": "XMLHttpRequest",
+                            "Origin": "https://snapshot.factiva.com",
+                            "Referer": "https://snapshot.factiva.com/Search/SSResults"
+                        }
+                        
+                        editors_response = session.post(editors_url, data=editors_data, headers=editors_headers)
+                        
+                        if editors_response.status_code == 200:
+                            try:
+                                editors_data = editors_response.json()
+                                print(f"Got {len(editors_data)} headlines from editor's choice")
+                                
+                                # Create a DataFrame with these headlines
+                                headlines = []
+                                for item in editors_data:
+                                    headlines.append({
+                                        'headline': item.get('Headline'),
+                                        'url': item.get('Url'),
+                                        'publication_date': item.get('Date'),
+                                        'source_name': item.get('Source')
+                                    })
+                                
+                                if headlines:
+                                    return pd.DataFrame(headlines)
+                            except Exception as e:
+                                print(f"Error processing editor's choice data: {e}")
+                        
+                        return pd.DataFrame()
+                
+                # If we found article containers, extract the data
+                articles = []
+                for container in article_containers:
+                    try:
+                        # Extract headline
+                        headline_elem = container.select_one('h3 a, .headline a, .title a')
+                        headline = headline_elem.text.strip() if headline_elem else "No headline"
+                        
+                        # Extract URL
+                        url = None
+                        if headline_elem and headline_elem.has_attr('href'):
+                            url = headline_elem['href']
+                            if not url.startswith('http'):
+                                url = 'https://snapshot.factiva.com' + url
+                        
+                        # Extract publication date
+                        date_elem = container.select_one('.date, .timestamp, .pubDate')
+                        publication_date = date_elem.text.strip() if date_elem else None
+                        
+                        # Extract source
+                        source_elem = container.select_one('.source, .publication, .sourceName')
+                        source_name = source_elem.text.strip() if source_elem else None
+                        
+                        # Extract snippet
+                        snippet_elem = container.select_one('.snippet, .summary, .description')
+                        snippet = snippet_elem.text.strip() if snippet_elem else None
+                        
+                        # Add to articles list
+                        articles.append({
+                            'headline': headline,
+                            'url': url,
+                            'publication_date': publication_date,
+                            'source_name': source_name,
+                            'snippet': snippet
+                        })
+                    except Exception as e:
+                        print(f"Error extracting article data: {e}")
+                
+                # Return the results
+                if articles:
+                    print(f"Successfully extracted {len(articles)} articles about {company_name}")
+                    return pd.DataFrame(articles)
+                else:
+                    print(f"No articles could be extracted for {company_name}")
+                    return pd.DataFrame()
+            else:
+                print("No form found in authentication response")
+        else:
+            print(f"Authentication failed with status: {auth_response.status_code}")
+        
+        return pd.DataFrame()
     
-    # Payload
+    except Exception as e:
+        print(f"Error during search: {e}")
+        import traceback
+        traceback.print_exc()
+        return pd.DataFrame()
+
+def search_company_direct_api(company_name, n_days=90, max_articles=100):
+    """
+    Search for articles about a specific company using direct API access
+    with the exact payload structure from the working example.
+    
+    Parameters:
+    -----------
+    company_name : str
+        Name of the company to search for
+    n_days : int, optional
+        Number of days to look back (default: 90 for Last3Months)
+    max_articles : int, optional
+        Maximum number of articles to retrieve (default: 100)
+    
+    Returns:
+    --------
+    pandas.DataFrame
+        DataFrame with articles about the specified company
+    """
+    # Get the company code
+    company_code = COMPANY_CODES.get(company_name)
+    if not company_code:
+        print(f"Error: No code found for company {company_name}")
+        return pd.DataFrame()
+    
+    # Use the working token from the example
+    token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJEN0IwQTFERkJCNzlDRDFBQjM4NzNCMTcyODMyRjkxMENEQkRBREIiLCJ0eXAiOiJKV1QifQ.eyJwaWIiOnsiYWNjb3VudF9pZCI6IjlCTEEwMDQ2MDAiLCJhbGxvd19hdXRvX2xvZ2luIjoidHJ1ZSIsImFwYyI6IkZIIiwiY3RjIjoiRCIsIm1hc3Rlcl9hcHBfaWQiOiJaY01JZGlaajNmWDhtOU5JMWY4dGMxbDNDc0pFRGdjayIsInNlc3Npb25faWQiOiJwYnZpNFd3V19NRlJES09CWE1VMkRRWkJXSEU0VElNREdHSTRXQ01ERU1RWVRHWlJWTUpURE1NREZHTlNBIiwiZW1haWwiOiJKb2FubmEuWWF1QGJsYWNrcm9jay5jb20iLCJlaWQiOiJFNk9PMkhWQ1FIVlBFSExRMjdUNkJQTFNRQSJ9LCJpc3MiOiJodHRwczovL2FjY291bnRzLmRvd2pvbmVzLmNvbS9vYXV0aDIvdjIiLCJlbWFpbCI6IkpvYW5uYS5ZYXVAYmxhY2tyb2NrLmNvbSIsInN1YiI6ImIzMmMwMGIyLTI3Y2YtNGRkYi1hOGIyLTIxZDUzNDEwMGJjYyIsImF1ZCI6IlpjTUlkaVpqM2ZYOG05TkkxZjh0YzFsM0NzSkVEZ2NrIiwiYXpwIjoiWmNNSWRpWmozZlg4bTlOSTFmOHRjMWwzQ3NKRURnY2siLCJpYXQiOjE3NDQ1NTI4OTksImV4cCI6MTc0NDgxMjA5OX0.d4VJ7VKUmJ_MuNbbNFD9zdCf3zwl7mSTuyGoaXlziozA4sD9UrxRufNEEmAEquWpiuP6aWewLBcGx_BU9VZ-eGTzNlC3DaaAs7ESDdqoFQb1TNdLK0zZiJ5ID8Qxu525iA4rsDdbT6SQtI9PBrLpLBvE8tWl3Tk8BS4gwBuPaA4ka5uLiM95MFF7Uk6oTQ-j_nHCYxSPh4WlWYVLF6UpSQOhe_oM0xobx45nqy4AR-HHuKFnlM6wgLILzQEYFKsXpyMBCfsj_ViQKkFxjW9QRF37IFyru0TXayXgriRtasxg_CJk8oHf24fsLRCsfvzvON2odky_spW4K3PHYxRPMw"
+    
+    # Save this token for future use
+    token_info = get_dow_jones_token_info(token)
+    if token_info.get('status') == 'Valid':
+        token_data = {
+            'token': token,
+            'expires_at': token_info.get('expires_at'),
+            'email': token_info.get('email'),
+            'issued_at': token_info.get('issued_at', datetime.now())
+        }
+        save_token(token_data)
+    
+    # URL for the API
+    url = "https://api.dowjones.com/content/search"
+    
+    # Set up headers using the token
+    headers = {
+        "Accept": "application/vnd.dowjones.dna.content.v_1.0",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Language": "en",
+        "authorization": f"Bearer {token}",
+        "cache-control": "no-cache",
+        "Connection": "keep-alive",
+        "Content-Type": "application/json",
+        "Origin": "https://dj.factiva.com",
+        "Priority": "u=0",
+        "Referer": "https://dj.factiva.com/",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "cross-site",
+        "TE": "trailers",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:137.0) Gecko/20100101 Firefox/137.0",
+        "X-DJ-Page-Module-Action": "Company|NA|Sort"
+    }
+    
+    # Determine the date range parameter based on n_days
+    if n_days <= 1:
+        date_param = {"days_range": "LastDay"}
+    elif n_days <= 7:
+        date_param = {"days_range": "LastWeek"}
+    elif n_days <= 30:
+        date_param = {"days_range": "LastMonth"}
+    else:
+        date_param = {"days_range": "Last3Months"}
+    
+    # Build the payload structure based on the working example
     payload = {"data": {
         "attributes": {
             "descriptor": {
@@ -1049,12 +1508,12 @@ def search_company_last_n_days(company_name, n_days, max_articles=100):
                 "deduplication_level": "Similar",
                 "markup_type": "None",
                 "snippet_type": "Fixed",
-                "sort_order": "-PublicationDateChronological",  # Sort by date, most recent first
+                "sort_order": "-PublicationDateChronological",
                 "is_content_boosted_down_enabled": True,
                 "is_content_boosted_up_enabled": False,
                 "is_cluster_boosting_enabled": True
             },
-            "linguistics": {"is_lemmatization_on": True},
+            "linguistics": {"is_lemmatization_on": False},
             "navigation": {
                 "code_navigators": {
                     "custom_navigator": [
@@ -1083,26 +1542,21 @@ def search_company_last_n_days(company_name, n_days, max_articles=100):
                 }
             },
             "page_limit": 20,
-            "page_offset": 0,  # Start with page 0
+            "page_offset": 0,
             "query": {
                 "content_collection": ["Publications", "Websites", "Blogs", "Pictures"],
                 "search_string": [
                     {
                         "mode": "Unified",
-                        "value": f"fds:{company_code}"  # Use the specific company code
+                        "value": f"fds:{company_code}"
                     },
                     {
                         "mode": "Unified",
                         "scope": "Language",
-                        "value": "en"
-                    },
-                    {
-                        "mode": "Unified",
-                        "scope": "Organization",
-                        "value": company_code.lower()  # Add organization scope with lowercase code
+                        "value": "zhcn or en or zhtw or ja or ko"
                     }
                 ],
-                "date": date_param,  # Set the date parameter
+                "date": date_param,
                 "is_enhance_query": True,
                 "boost_string": [
                     {
@@ -1114,230 +1568,209 @@ def search_company_last_n_days(company_name, n_days, max_articles=100):
                     }
                 ]
             },
-            "search_context": json.dumps({
-                "server_name": "ngsearchawsp",
-                "page_offsets": [0],
-                "server_host": "search-newssearch-6545979d5b-tk2d5"
-            })
+            "search_context": "{\"server_name\":\"ngsearchawsp\",\"page_offsets\":[0],\"server_host\":\"search-newssearch-87d4995d5-cn6g4\"}"
         },
         "id": "Search",
         "type": "content"
     }}
     
-    # Make multiple requests to handle pagination
-    all_articles = []
-    total_retrieved = 0
-    page_size = 20  # Default page size in the API
-    current_page = 0  # Start with the first page
-    total_count = None
-    
     try:
-        print(f"Searching for company {company_name} ({company_code}) with date parameter: {date_param}")
+        print(f"Searching for company {company_name} ({company_code}) using the direct API...")
         
-        # Check if proxy is enabled in config
-        proxy_config = CONFIG.get('proxy', {})
-        use_proxy = proxy_config.get('use_proxy', False)
-        proxies = None
+        # Make the initial request
+        response = requests.post(url, json=payload, headers=headers)
         
-        if use_proxy:
-            proxy_url = proxy_config.get('proxy_url')
-            if proxy_url:
-                print(f"Using proxy: {proxy_url}")
-                proxies = {
-                    'http': proxy_url,
-                    'https': proxy_url
-                }
-        
-        # Continue fetching until we reach the max_articles limit or run out of results
-        while total_retrieved < max_articles:
-            # Update the page offset for pagination
-            payload["data"]["attributes"]["page_offset"] = current_page * page_size
+        # Check for authentication errors
+        if response.status_code == 401:
+            print("Authentication Error: Token has expired or is invalid.")
+            print(f"Response: {response.text[:200]}...")
+            return pd.DataFrame()
             
-            # Update search_context to include the current pagination state
-            offsets = list(range(0, current_page * page_size + page_size, page_size))
-            context_dict = {
-                "server_name": "ngsearchawsp",
-                "page_offsets": offsets,
-                "server_host": "search-newssearch-6545979d5b-tk2d5"
-            }
+        # Check for other errors
+        if response.status_code != 200:
+            print(f"API error: Status code {response.status_code}")
+            print(f"Response: {response.text[:200]}...")
+            return pd.DataFrame()
+        
+        # Parse the response
+        data = json.loads(response.text)
+        
+        # Get total count
+        total_count = data.get('meta', {}).get('total_count', 0)
+        print(f"Found {total_count} articles about {company_name}")
+        
+        # Extract articles from the first page
+        articles = []
+        for article in data.get('data', []):
+            article_data = extract_article_data(article)
+            articles.append(article_data)
+        
+        # Pagination: Continue fetching if there are more results and we want more
+        page_size = 20  # API default
+        current_offset = page_size
+        
+        while len(articles) < min(max_articles, total_count) and current_offset < total_count:
+            # Update the pagination offset
+            payload["data"]["attributes"]["page_offset"] = current_offset
+            
+            # Update the search context with new offsets
+            context_dict = json.loads(payload["data"]["attributes"]["search_context"])
+            context_dict["page_offsets"].append(current_offset)
             payload["data"]["attributes"]["search_context"] = json.dumps(context_dict)
             
-            # Make the request (with proxies if enabled)
-            response = requests.request("POST", url, json=payload, headers=headers, proxies=proxies)
+            print(f"Fetching additional articles (offset: {current_offset})...")
+            next_response = requests.post(url, json=payload, headers=headers)
             
-            # Check for authentication errors specifically
-            if response.status_code == 401:
-                print("Authentication Error: Your authentication token has expired or is invalid.")
-                print("You need to obtain a new token by logging into the Dow Jones API service.")
-                print(f"Error details: {response.text}")
-                return pd.DataFrame()  # Return empty DataFrame instead of raising exception
+            if next_response.status_code == 200:
+                next_data = json.loads(next_response.text)
+                next_articles = []
                 
-            # Check for other errors
-            if response.status_code != 200:
-                print(f"Error: Status code {response.status_code}")
-                print(f"Response: {response.text[:500]}...")
-                return pd.DataFrame()  # Return empty DataFrame instead of raising exception
-            
-            # Process the response
-            data = json.loads(response.text)
-            
-            # Get metadata
-            if total_count is None:
-                total_count = data.get('meta', {}).get('total_count', 0)
-            
-            # Extract articles
-            batch_articles = []
-            for article in data.get('data', []):
-                article_data = extract_article_data(article)
-                batch_articles.append(article_data)
-            
-            # Add to our collection
-            all_articles.extend(batch_articles)
-            batch_count = len(batch_articles)
-            total_retrieved += batch_count
-            
-            # If we got fewer articles than the page size, we've reached the end
-            if batch_count < page_size or total_retrieved >= total_count:
+                for article in next_data.get('data', []):
+                    article_data = extract_article_data(article)
+                    next_articles.append(article_data)
+                
+                articles.extend(next_articles)
+                current_offset += len(next_articles)
+                
+                # If we received fewer articles than expected, break
+                if len(next_articles) < page_size:
+                    break
+            else:
+                print(f"Error fetching additional articles: {next_response.status_code}")
                 break
-                
-            # Prepare for the next page
-            current_page += 1
-            print(f"Retrieved {total_retrieved} articles so far, fetching more...")
         
-        # Create DataFrame
-        df = pd.DataFrame(all_articles) if all_articles else pd.DataFrame()
+        # Create DataFrame and add URL column
+        df = pd.DataFrame(articles) if articles else pd.DataFrame()
         
-        # Add URL column
         if not df.empty and 'id' in df.columns:
             df['url'] = df['id'].apply(create_article_url)
         
-        print(f"Retrieved {len(df)} articles out of {total_count} total results for {company_name}")
-        
+        print(f"Retrieved {len(df)} articles about {company_name}")
         return df
-    
+        
     except Exception as e:
-        print(f"An error occurred: {e}")
-        return pd.DataFrame()  # Return empty DataFrame on error
-
-if __name__ == "__main__":
-    import time
-    
-    def display_menu():
-        print("\n===== Dow Jones API Test Tool =====")
-        print("1. Check token information")
-        print("2. Test token validity")
-        print("3. Refresh token")
-        print("4. Search by free text")
-        print("5. Search by company name")
-        print("6. Exit")
-        choice = input("\nSelect an option (1-6): ")
-        return choice
-    
-    def check_token_info():
-        print("\n----- Token Information -----")
-        token_info = get_dow_jones_token_info()
-        for key, value in token_info.items():
-            print(f"{key}: {value}")
-    
-    def test_token():
-        print("\nTesting token validity...")
-        if check_token_validity():
-            print("✓ Token is valid! API connections working.")
-        else:
-            print("✗ Token is invalid or API connection failed.")
-    
-    def refresh_token():
-        print("\nAttempting to refresh token...")
-        success = auto_refresh_token()
-        if success:
-            print("✓ Token refreshed successfully!")
-            check_token_info()
-        else:
-            print("✗ Failed to refresh token.")
-    
-    def search_text():
-        query = input("\nEnter search query: ")
-        days = int(input("Number of days to look back: "))
-        max_results = int(input("Maximum number of results (10-500): "))
+        print(f"Error during search: {e}")
+        import traceback
+        traceback.print_exc()
+        return pd.DataFrame()
         
-        print(f"\nSearching for '{query}' from the last {days} days...")
-        results = search_free_text(query, n_days=days, max_articles=max_results)
-        
-        if results.empty:
-            print("No results found.")
-        else:
-            print(f"\nFound {len(results)} articles:")
-            for i, (headline, date, source) in enumerate(
-                zip(results['headline'].head(10), 
-                    results['publication_date'].head(10),
-                    results['source_name'].head(10)), 1):
-                print(f"{i}. [{source}] {headline} ({date})")
-            
-            if len(results) > 10:
-                print(f"... and {len(results) - 10} more articles.")
-            
-            save = input("\nSave results to CSV? (y/n): ")
-            if save.lower() == 'y':
-                filename = f"dow_jones_search_{int(time.time())}.csv"
-                results.to_csv(filename, index=False)
-                print(f"Results saved to {filename}")
+# if __name__ == "__main__":
+#     import time
     
-    def search_company():
-        print("\nAvailable companies:")
-        companies = list(COMPANY_CODES.keys())
-        for i, company in enumerate(companies, 1):
-            print(f"{i}. {company}")
+#     def display_menu():
+#         print("\n===== Dow Jones API Test Tool =====")
+#         print("1. Check token information")
+#         print("2. Test token validity")
+#         print("3. Refresh token")
+#         print("4. Search by free text")
+#         print("5. Search by company name")
+#         print("6. Exit")
+#         choice = input("\nSelect an option (1-6): ")
+#         return choice
+    
+#     def check_token_info():
+#         print("\n----- Token Information -----")
+#         token_info = get_dow_jones_token_info()
+#         for key, value in token_info.items():
+#             print(f"{key}: {value}")
+    
+#     def test_token():
+#         print("\nTesting token validity...")
+#         if check_token_validity():
+#             print("✓ Token is valid! API connections working.")
+#         else:
+#             print("✗ Token is invalid or API connection failed.")
+    
+#     def refresh_token():
+#         print("\nAttempting to refresh token...")
+#         success = auto_refresh_token()
+#         if success:
+#             print("✓ Token refreshed successfully!")
+#             check_token_info()
+#         else:
+#             print("✗ Failed to refresh token.")
+    
+#     def search_text():
+#         query = input("\nEnter search query: ")
+#         days = int(input("Number of days to look back: "))
+#         max_results = int(input("Maximum number of results (10-500): "))
         
-        company_idx = int(input("\nSelect company number: ")) - 1
-        if 0 <= company_idx < len(companies):
-            company_name = companies[company_idx]
-            days = int(input("Number of days to look back: "))
-            max_results = int(input("Maximum number of results (10-500): "))
+#         print(f"\nSearching for '{query}' from the last {days} days...")
+#         results = search_free_text(query, n_days=days, max_articles=max_results)
+        
+#         if results.empty:
+#             print("No results found.")
+#         else:
+#             print(f"\nFound {len(results)} articles:")
+#             for i, (headline, date, source) in enumerate(
+#                 zip(results['headline'].head(10), 
+#                     results['publication_date'].head(10),
+#                     results['source_name'].head(10)), 1):
+#                 print(f"{i}. [{source}] {headline} ({date})")
             
-            print(f"\nSearching for {company_name} news from the last {days} days...")
-            results = search_company_last_n_days(company_name, days, max_articles=max_results)
+#             if len(results) > 10:
+#                 print(f"... and {len(results) - 10} more articles.")
             
-            if results.empty:
-                print("No results found.")
-            else:
-                print(f"\nFound {len(results)} articles about {company_name}:")
-                for i, (headline, date, source) in enumerate(
-                    zip(results['headline'].head(10), 
-                        results['publication_date'].head(10),
-                        results['source_name'].head(10)), 1):
-                    print(f"{i}. [{source}] {headline} ({date})")
+#             save = input("\nSave results? (y/n): ")
+#             if save.lower() == 'y':
+#                 query_slug = query.replace(' ', '_')[:30].lower()
+#                 save_results(results, f"dow_jones_{query_slug}", default_format='parquet')
+    
+#     def search_company():
+#         print("\nAvailable companies:")
+#         companies = list(COMPANY_CODES.keys())
+#         for i, company in enumerate(companies, 1):
+#             print(f"{i}. {company}")
+        
+#         company_idx = int(input("\nSelect company number: ")) - 1
+#         if 0 <= company_idx < len(companies):
+#             company_name = companies[company_idx]
+#             days = int(input("Number of days to look back: "))
+#             max_results = int(input("Maximum number of results (10-500): "))
+            
+#             print(f"\nSearching for {company_name} news from the last {days} days...")
+#             # Use the direct API function
+#             results = search_company_direct_api(company_name, days, max_articles=max_results)
+            
+#             if results.empty:
+#                 print("No results found.")
+#             else:
+#                 print(f"\nFound {len(results)} articles about {company_name}:")
+#                 for i, (headline, date, source) in enumerate(
+#                     zip(results['headline'].head(10), 
+#                         results['publication_date'].head(10),
+#                         results['source_name'].head(10)), 1):
+#                     print(f"{i}. [{source}] {headline} ({date})")
                 
-                if len(results) > 10:
-                    print(f"... and {len(results) - 10} more articles.")
+#                 if len(results) > 10:
+#                     print(f"... and {len(results) - 10} more articles.")
                 
-                save = input("\nSave results to CSV? (y/n): ")
-                if save.lower() == 'y':
-                    filename = f"{company_name.lower()}_news_{int(time.time())}.csv"
-                    results.to_csv(filename, index=False)
-                    print(f"Results saved to {filename}")
-        else:
-            print("Invalid company selection.")
+#                 save = input("\nSave results? (y/n): ")
+#                 if save.lower() == 'y':
+#                     save_results(results, f"{company_name.lower()}_news", default_format='parquet')
+#         else:
+#             print("Invalid company selection.")
     
-    # Interactive menu for testing
-    print("Configuration loaded from config.json")
-    print("Dow Jones API Module - Local Testing Interface")
+#     # Interactive menu for testing
+#     print("Configuration loaded from config.json")
+#     print("Dow Jones API Module - Local Testing Interface")
     
-    # Main menu loop
-    while True:
-        choice = display_menu()
+#     # Main menu loop
+#     while True:
+#         choice = display_menu()
         
-        if choice == '1':
-            check_token_info()
-        elif choice == '2':
-            test_token()
-        elif choice == '3':
-            refresh_token()
-        elif choice == '4':
-            search_text()
-        elif choice == '5':
-            search_company()
-        elif choice == '6':
-            print("\nExiting. Goodbye!")
-            break
-        else:
-            print("\nInvalid choice. Please try again.")
+#         if choice == '1':
+#             check_token_info()
+#         elif choice == '2':
+#             test_token()
+#         elif choice == '3':
+#             refresh_token()
+#         elif choice == '4':
+#             search_text()
+#         elif choice == '5':
+#             search_company()
+#         elif choice == '6':
+#             print("\nExiting. Goodbye!")
+#             break
+#         else:
+#             print("\nInvalid choice. Please try again.")

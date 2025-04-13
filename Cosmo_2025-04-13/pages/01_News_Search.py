@@ -14,8 +14,6 @@ from datetime import datetime, timedelta
 import json
 from pathlib import Path
 from components.header import render_header
-from components.sidebar import render_sidebar
-from components.footer import render_footer
 import theme
 
 # Flag to control Opoint API availability - set to False to disable
@@ -50,29 +48,31 @@ def load_access_code():
     
     Returns:
     --------
-    str
-        The access code, or empty string if not found
+    tuple
+        (plain_code, hash_code) - Both values or empty strings if not found
     """
     config_path = Path("config.json")
     
     if not config_path.exists():
         print("Warning: config.json not found.")
-        return ""
+        return "", ""
     
     try:
         with open(config_path, "r") as f:
             config = json.load(f)
         
-        # Get access code from config
-        access_code = config.get("dow_jones", {}).get("factiva_access_code", "")
-        return access_code
+        # Try to get both plaintext code and hash code
+        plain_code = config.get("dow_jones", {}).get("factiva_access_code", "")
+        hash_code = config.get("premier_access", {}).get("code_hash", "")
+        
+        return plain_code, hash_code
     except Exception as e:
         print(f"Error loading config: {e}")
-        return ""
+        return "", ""
 
 def is_authorized_for_factiva(input_code):
     """
-    Check if the provided code matches the factiva access code
+    Check if the provided code matches the factiva access code using hash if available
     
     Parameters:
     -----------
@@ -87,14 +87,21 @@ def is_authorized_for_factiva(input_code):
     if not input_code:
         return False
         
-    # Load the correct access code from config
-    correct_code = load_access_code()
+    # Load both plain and hash codes
+    plain_code, hash_code = load_access_code()
     
-    if not correct_code:  # If no code is configured, no access
+    # If no codes found in config, no access
+    if not plain_code and not hash_code:
         return False
+    
+    # If we have a hash, use hash-based validation
+    if hash_code:
+        import hashlib
+        input_hash = hashlib.sha256(input_code.encode()).hexdigest()
+        return input_hash == hash_code
         
-    # Simple string comparison
-    return input_code.strip() == correct_code.strip()
+    # Otherwise fall back to plain code comparison
+    return input_code.strip() == plain_code.strip()
 
 def perform_factiva_search(search_terms, days_back, max_articles):
     """
@@ -1200,7 +1207,7 @@ if __name__ == "__main__":
     main()
 
 # Render sidebar component
-render_sidebar()
+theme.render_sidebar()
 
 # Render footer component
-render_footer()
+theme.render_footer()
