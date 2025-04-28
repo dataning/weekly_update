@@ -1,0 +1,6333 @@
+{
+ "instance": {
+  "azzurro_10k.htm": {
+   "axisCustom": 0,
+   "axisStandard": 4,
+   "baseTaxonomies": {
+    "http://fasb.org/us-gaap/2022": 127,
+    "http://xbrl.sec.gov/dei/2022": 33
+   },
+   "contextCount": 28,
+   "dts": {
+    "calculationLink": {
+     "local": [
+      "azzurro-20220930_cal.xml"
+     ]
+    },
+    "definitionLink": {
+     "local": [
+      "azzurro-20220930_def.xml"
+     ]
+    },
+    "inline": {
+     "local": [
+      "azzurro_10k.htm"
+     ]
+    },
+    "labelLink": {
+     "local": [
+      "azzurro-20220930_lab.xml"
+     ]
+    },
+    "presentationLink": {
+     "local": [
+      "azzurro-20220930_pre.xml"
+     ]
+    },
+    "schema": {
+     "local": [
+      "azzurro-20220930.xsd"
+     ],
+     "remote": [
+      "http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd",
+      "http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd",
+      "http://www.xbrl.org/2003/xl-2003-12-31.xsd",
+      "http://www.xbrl.org/2003/xlink-2003-12-31.xsd",
+      "http://www.xbrl.org/2005/xbrldt-2005.xsd",
+      "http://www.xbrl.org/2006/ref-2006-02-27.xsd",
+      "http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd",
+      "http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd",
+      "http://www.xbrl.org/lrr/arcrole/factExplanatory-2009-12-16.xsd",
+      "http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd",
+      "http://www.xbrl.org/lrr/role/net-2009-12-16.xsd",
+      "http://www.xbrl.org/lrr/role/reference-2009-12-16.xsd",
+      "https://www.xbrl.org/2020/extensible-enumerations-2.0.xsd",
+      "https://www.xbrl.org/dtr/type/2020-01-21/types.xsd",
+      "https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd",
+      "https://xbrl.fasb.org/srt/2022/elts/srt-roles-2022.xsd",
+      "https://xbrl.fasb.org/srt/2022/elts/srt-types-2022.xsd",
+      "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd",
+      "https://xbrl.fasb.org/us-gaap/2022/elts/us-roles-2022.xsd",
+      "https://xbrl.fasb.org/us-gaap/2022/elts/us-types-2022.xsd",
+      "https://xbrl.sec.gov/country/2022/country-2022.xsd",
+      "https://xbrl.sec.gov/currency/2022/currency-2022.xsd",
+      "https://xbrl.sec.gov/dei/2022/dei-2022.xsd",
+      "https://xbrl.sec.gov/exch/2022/exch-2022.xsd",
+      "https://xbrl.sec.gov/naics/2022/naics-2022.xsd",
+      "https://xbrl.sec.gov/sic/2022/sic-2022.xsd",
+      "https://xbrl.sec.gov/stpr/2022/stpr-2022.xsd"
+     ]
+    }
+   },
+   "elementCount": 128,
+   "entityCount": 1,
+   "hidden": {
+    "http://fasb.org/us-gaap/2022": 7,
+    "http://xbrl.sec.gov/dei/2022": 6,
+    "total": 13
+   },
+   "keyCustom": 4,
+   "keyStandard": 84,
+   "memberCustom": 2,
+   "memberStandard": 5,
+   "nsprefix": "azzurro",
+   "nsuri": "http://azzurro.com/20220930",
+   "report": {
+    "R1": {
+     "firstAnchor": {
+      "ancestors": [
+       "span",
+       "strong",
+       "p",
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "dei:EntityRegistrantName",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "document",
+     "isDefault": "true",
+     "longName": "000001 - Document - Cover",
+     "menuCat": "Cover",
+     "order": "1",
+     "role": "http://azzurro.com/role/Cover",
+     "shortName": "Cover",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "span",
+       "strong",
+       "p",
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "dei:EntityRegistrantName",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    },
+    "R10": {
+     "firstAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:StockholdersEquityNoteDisclosureTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000010 - Disclosure - CAPITAL STOCK",
+     "menuCat": "Notes",
+     "order": "10",
+     "role": "http://azzurro.com/role/CapitalStock",
+     "shortName": "CAPITAL STOCK",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:StockholdersEquityNoteDisclosureTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    },
+    "R11": {
+     "firstAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:RelatedPartyTransactionsDisclosureTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000011 - Disclosure - RELATED PARTY TRANSACTIONS",
+     "menuCat": "Notes",
+     "order": "11",
+     "role": "http://azzurro.com/role/RelatedPartyTransactions",
+     "shortName": "RELATED PARTY TRANSACTIONS",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:RelatedPartyTransactionsDisclosureTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    },
+    "R12": {
+     "firstAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:SubsequentEventsTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000012 - Disclosure - SUBSEQUENT EVENTS",
+     "menuCat": "Notes",
+     "order": "12",
+     "role": "http://azzurro.com/role/SubsequentEvents",
+     "shortName": "SUBSEQUENT EVENTS",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:SubsequentEventsTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    },
+    "R13": {
+     "firstAnchor": {
+      "ancestors": [
+       "us-gaap:SignificantAccountingPoliciesTextBlock",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:BasisOfAccountingPolicyPolicyTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000013 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)",
+     "menuCat": "Policies",
+     "order": "13",
+     "role": "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies",
+     "shortName": "SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)",
+     "subGroupType": "policies",
+     "uniqueAnchor": {
+      "ancestors": [
+       "us-gaap:SignificantAccountingPoliciesTextBlock",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:BasisOfAccountingPolicyPolicyTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    },
+    "R14": {
+     "firstAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:RetainedEarningsAccumulatedDeficit",
+      "reportCount": 1,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000014 - Disclosure - GOING CONCERN (Details Narrative)",
+     "menuCat": "Details",
+     "order": "14",
+     "role": "http://azzurro.com/role/GoingConcernDetailsNarrative",
+     "shortName": "GOING CONCERN (Details Narrative)",
+     "subGroupType": "details",
+     "uniqueAnchor": null
+    },
+    "R15": {
+     "firstAnchor": {
+      "ancestors": [
+       "p",
+       "us-gaap:CashAndCashEquivalentsPolicyTextBlock",
+       "us-gaap:SignificantAccountingPoliciesTextBlock",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:CashFDICInsuredAmount",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000015 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details Narrative)",
+     "menuCat": "Details",
+     "order": "15",
+     "role": "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesDetailsNarrative",
+     "shortName": "SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details Narrative)",
+     "subGroupType": "details",
+     "uniqueAnchor": {
+      "ancestors": [
+       "p",
+       "us-gaap:CashAndCashEquivalentsPolicyTextBlock",
+       "us-gaap:SignificantAccountingPoliciesTextBlock",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:CashFDICInsuredAmount",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     }
+    },
+    "R16": {
+     "firstAnchor": {
+      "ancestors": [
+       "p",
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:CommonStockSharesAuthorized",
+      "reportCount": 1,
+      "unitRef": "Shares",
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000016 - Disclosure - CAPITAL STOCK (Details Narrative)",
+     "menuCat": "Details",
+     "order": "16",
+     "role": "http://azzurro.com/role/CapitalStockDetailsNarrative",
+     "shortName": "CAPITAL STOCK (Details Narrative)",
+     "subGroupType": "details",
+     "uniqueAnchor": {
+      "ancestors": [
+       "p",
+       "us-gaap:StockholdersEquityNoteDisclosureTextBlock",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2020-09-30_azzurro_CommonStockOneMember",
+      "decimals": "0",
+      "lang": null,
+      "name": "azzurro:TotalProceedsamount",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     }
+    },
+    "R17": {
+     "firstAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:DueToRelatedPartiesCurrent",
+      "reportCount": 1,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000017 - Disclosure - RELATED PARTY TRANSACTIONS (Details Narrative)",
+     "menuCat": "Details",
+     "order": "17",
+     "role": "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative",
+     "shortName": "RELATED PARTY TRANSACTIONS (Details Narrative)",
+     "subGroupType": "details",
+     "uniqueAnchor": null
+    },
+    "R18": {
+     "firstAnchor": {
+      "ancestors": [
+       "p",
+       "us-gaap:RelatedPartyTransactionsDisclosureTextBlock",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30_srt_DirectorMember",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:DueToOfficersOrStockholdersCurrent",
+      "reportCount": 1,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000018 - Disclosure - SUBSEQUENT EVENTS (Details Narrative)",
+     "menuCat": "Details",
+     "order": "18",
+     "role": "http://azzurro.com/role/SubsequentEventsDetailsNarrative",
+     "shortName": "SUBSEQUENT EVENTS (Details Narrative)",
+     "subGroupType": "details",
+     "uniqueAnchor": {
+      "ancestors": [
+       "p",
+       "us-gaap:SubsequentEventsTextBlock",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-12-15_srt_DirectorMember_us-gaap_SubsequentEventMember",
+      "decimals": "0",
+      "lang": null,
+      "name": "us-gaap:DueToOfficersOrStockholdersCurrent",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     }
+    },
+    "R2": {
+     "firstAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     },
+     "groupType": "statement",
+     "isDefault": "false",
+     "longName": "000002 - Statement - BALANCE SHEETS",
+     "menuCat": "Statements",
+     "order": "2",
+     "role": "http://azzurro.com/role/BalanceSheets",
+     "shortName": "BALANCE SHEETS",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     }
+    },
+    "R3": {
+     "firstAnchor": {
+      "ancestors": [
+       "p",
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2022-09-30",
+      "decimals": "INF",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:CommonStockParOrStatedValuePerShare",
+      "reportCount": 1,
+      "unitRef": "USDPShares",
+      "xsiNil": "false"
+     },
+     "groupType": "statement",
+     "isDefault": "false",
+     "longName": "000003 - Statement - BALANCE SHEETS (Parenthetical)",
+     "menuCat": "Statements",
+     "order": "3",
+     "role": "http://azzurro.com/role/BalanceSheetsParenthetical",
+     "shortName": "BALANCE SHEETS (Parenthetical)",
+     "subGroupType": "parenthetical",
+     "uniqueAnchor": null
+    },
+    "R4": {
+     "firstAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     },
+     "groupType": "statement",
+     "isDefault": "false",
+     "longName": "000004 - Statement - STATEMENTS OF OPERATIONS (AUDITED)",
+     "menuCat": "Statements",
+     "order": "4",
+     "role": "http://azzurro.com/role/StatementsOfOperationsAudited",
+     "shortName": "STATEMENTS OF OPERATIONS (AUDITED)",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     }
+    },
+    "R5": {
+     "firstAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2020-09-30_us-gaap_CommonStockMember",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:SharesIssued",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "Shares",
+      "xsiNil": "false"
+     },
+     "groupType": "statement",
+     "isDefault": "false",
+     "longName": "000005 - Statement - STATEMENT OF STOCKHOLDERS EQUITY (AUDITED)",
+     "menuCat": "Statements",
+     "order": "5",
+     "role": "http://azzurro.com/role/StatementOfStockholdersEquityAudited",
+     "shortName": "STATEMENT OF STOCKHOLDERS EQUITY (AUDITED)",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "AsOf2020-09-30_us-gaap_CommonStockMember",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:SharesIssued",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "Shares",
+      "xsiNil": "false"
+     }
+    },
+    "R6": {
+     "firstAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:ProfitLoss",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     },
+     "groupType": "statement",
+     "isDefault": "false",
+     "longName": "000006 - Statement - STATEMENTS OF CASH FLOWS (AUDITED)",
+     "menuCat": "Statements",
+     "order": "6",
+     "role": "http://azzurro.com/role/StatementsOfCashFlowsAudited",
+     "shortName": "STATEMENTS OF CASH FLOWS (AUDITED)",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "td",
+       "tr",
+       "tbody",
+       "table",
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": "0",
+      "first": true,
+      "lang": null,
+      "name": "us-gaap:ProfitLoss",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": "USD",
+      "xsiNil": "false"
+     }
+    },
+    "R7": {
+     "firstAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000007 - Disclosure - ORGANIZATION AND BUSINESS",
+     "menuCat": "Notes",
+     "order": "7",
+     "role": "http://azzurro.com/role/OrganizationAndBusiness",
+     "shortName": "ORGANIZATION AND BUSINESS",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    },
+    "R8": {
+     "firstAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:SubstantialDoubtAboutGoingConcernTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000008 - Disclosure - GOING CONCERN",
+     "menuCat": "Notes",
+     "order": "8",
+     "role": "http://azzurro.com/role/GoingConcern",
+     "shortName": "GOING CONCERN",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:SubstantialDoubtAboutGoingConcernTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    },
+    "R9": {
+     "firstAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:SignificantAccountingPoliciesTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     },
+     "groupType": "disclosure",
+     "isDefault": "false",
+     "longName": "000009 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES",
+     "menuCat": "Notes",
+     "order": "9",
+     "role": "http://azzurro.com/role/SummaryOfSignificantAccountingPolicies",
+     "shortName": "SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES",
+     "subGroupType": "",
+     "uniqueAnchor": {
+      "ancestors": [
+       "body",
+       "html"
+      ],
+      "baseRef": "azzurro_10k.htm",
+      "contextRef": "From2021-10-01to2022-09-30",
+      "decimals": null,
+      "first": true,
+      "lang": "en-US",
+      "name": "us-gaap:SignificantAccountingPoliciesTextBlock",
+      "reportCount": 1,
+      "unique": true,
+      "unitRef": null,
+      "xsiNil": "false"
+     }
+    }
+   },
+   "segmentCount": 7,
+   "tag": {
+    "azzurro_CashPaidForAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Cash paid for:"
+       }
+      }
+     },
+     "localname": "CashPaidForAbstract",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "azzurro_CommonStockOneMember": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Common Stock 1 [Member]"
+       }
+      }
+     },
+     "localname": "CommonStockOneMember",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "azzurro_CommonStocksMember": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Common Stocks"
+       }
+      }
+     },
+     "localname": "CommonStocksMember",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "azzurro_EarningsPerShareBasicsAndDiluted": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Basic and Diluted"
+       }
+      }
+     },
+     "localname": "EarningsPerShareBasicsAndDiluted",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "perShareItemType"
+    },
+    "azzurro_EarningsPerSharesBasicAndDilutedAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Income (loss) per common share:"
+       }
+      }
+     },
+     "localname": "EarningsPerSharesBasicAndDilutedAbstract",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "azzurro_TotalProceedsShare": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Total proceeds, share"
+       }
+      }
+     },
+     "localname": "TotalProceedsShare",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "azzurro_TotalProceedsamount": {
+     "auth_ref": [],
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Total proceeds"
+       }
+      }
+     },
+     "localname": "TotalProceedsamount",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "azzurro_WeightedAverageNumberOfShareOutstandingBasicsAndDiluted": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "[Basic and Diluted]",
+        "verboseLabel": "Basic and Diluted"
+       }
+      }
+     },
+     "localname": "WeightedAverageNumberOfShareOutstandingBasicsAndDiluted",
+     "nsuri": "http://azzurro.com/20220930",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "dei_AmendmentFlag": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Boolean flag that is true when the XBRL content amends previously-filed or accepted submission.",
+        "label": "Amendment Flag"
+       }
+      }
+     },
+     "localname": "AmendmentFlag",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "booleanItemType"
+    },
+    "dei_AuditorFirmId": {
+     "auth_ref": [
+      "r215",
+      "r216",
+      "r217"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "PCAOB issued Audit Firm Identifier",
+        "label": "Auditor Firm Id"
+       }
+      }
+     },
+     "localname": "AuditorFirmId",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "nonemptySequenceNumberItemType"
+    },
+    "dei_AuditorLocation": {
+     "auth_ref": [
+      "r215",
+      "r216",
+      "r217"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Auditor Location"
+       }
+      }
+     },
+     "localname": "AuditorLocation",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "internationalNameItemType"
+    },
+    "dei_AuditorName": {
+     "auth_ref": [
+      "r215",
+      "r216",
+      "r217"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Auditor Name"
+       }
+      }
+     },
+     "localname": "AuditorName",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "internationalNameItemType"
+    },
+    "dei_CityAreaCode": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Area code of city",
+        "label": "City Area Code"
+       }
+      }
+     },
+     "localname": "CityAreaCode",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "normalizedStringItemType"
+    },
+    "dei_CoverAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Cover page.",
+        "label": "Cover [Abstract]"
+       }
+      }
+     },
+     "localname": "CoverAbstract",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "xbrltype": "stringItemType"
+    },
+    "dei_CurrentFiscalYearEndDate": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "End date of current fiscal year in the format --MM-DD.",
+        "label": "Current Fiscal Year End Date"
+       }
+      }
+     },
+     "localname": "CurrentFiscalYearEndDate",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "gMonthDayItemType"
+    },
+    "dei_DocumentAnnualReport": {
+     "auth_ref": [
+      "r215",
+      "r216",
+      "r217"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Boolean flag that is true only for a form used as an annual report.",
+        "label": "Document Annual Report"
+       }
+      }
+     },
+     "localname": "DocumentAnnualReport",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "booleanItemType"
+    },
+    "dei_DocumentFiscalPeriodFocus": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Fiscal period values are FY, Q1, Q2, and Q3.  1st, 2nd and 3rd quarter 10-Q or 10-QT statements have value Q1, Q2, and Q3 respectively, with 10-K, 10-KT or other fiscal year statements having FY.",
+        "label": "Document Fiscal Period Focus"
+       }
+      }
+     },
+     "localname": "DocumentFiscalPeriodFocus",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "fiscalPeriodItemType"
+    },
+    "dei_DocumentFiscalYearFocus": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "This is focus fiscal year of the document report in YYYY format. For a 2006 annual report, which may also provide financial information from prior periods, fiscal 2006 should be given as the fiscal year focus. Example: 2006.",
+        "label": "Document Fiscal Year Focus"
+       }
+      }
+     },
+     "localname": "DocumentFiscalYearFocus",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "gYearItemType"
+    },
+    "dei_DocumentPeriodEndDate": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "For the EDGAR submission types of Form 8-K: the date of the report, the date of the earliest event reported; for the EDGAR submission types of Form N-1A: the filing date; for all other submission types: the end of the reporting or transition period.  The format of the date is YYYY-MM-DD.",
+        "label": "Document Period End Date"
+       }
+      }
+     },
+     "localname": "DocumentPeriodEndDate",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "dateItemType"
+    },
+    "dei_DocumentTransitionReport": {
+     "auth_ref": [
+      "r218"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Boolean flag that is true only for a form used as a transition report.",
+        "label": "Document Transition Report"
+       }
+      }
+     },
+     "localname": "DocumentTransitionReport",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "booleanItemType"
+    },
+    "dei_DocumentType": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The type of document being provided (such as 10-K, 10-Q, 485BPOS, etc). The document type is limited to the same value as the supporting SEC submission type, or the word 'Other'.",
+        "label": "Document Type"
+       }
+      }
+     },
+     "localname": "DocumentType",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "submissionTypeItemType"
+    },
+    "dei_EntityAddressAddressLine1": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Address Line 1 such as Attn, Building Name, Street Name",
+        "label": "Entity Address Address Line 1"
+       }
+      }
+     },
+     "localname": "EntityAddressAddressLine1",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "normalizedStringItemType"
+    },
+    "dei_EntityAddressAddressLine2": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Address Line 2 such as Street or Suite number",
+        "label": "Entity Address Address Line 2"
+       }
+      }
+     },
+     "localname": "EntityAddressAddressLine2",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "normalizedStringItemType"
+    },
+    "dei_EntityAddressCityOrTown": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Name of the City or Town",
+        "label": "Entity Address City Or Town"
+       }
+      }
+     },
+     "localname": "EntityAddressCityOrTown",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "normalizedStringItemType"
+    },
+    "dei_EntityAddressCountry": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "ISO 3166-1 alpha-2 country code.",
+        "label": "Entity Address Country"
+       }
+      }
+     },
+     "localname": "EntityAddressCountry",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "countryCodeItemType"
+    },
+    "dei_EntityAddressPostalZipCode": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Code for the postal or zip code",
+        "label": "Entity Address Postal Zip Code"
+       }
+      }
+     },
+     "localname": "EntityAddressPostalZipCode",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "normalizedStringItemType"
+    },
+    "dei_EntityCentralIndexKey": {
+     "auth_ref": [
+      "r214"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "A unique 10-digit SEC-issued value to identify entities that have filed disclosures with the SEC. It is commonly abbreviated as CIK.",
+        "label": "Entity Central Index Key"
+       }
+      }
+     },
+     "localname": "EntityCentralIndexKey",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "centralIndexKeyItemType"
+    },
+    "dei_EntityCommonStockSharesOutstanding": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicate number of shares or other units outstanding of each of registrant's classes of capital or common stock or other ownership interests, if and as stated on cover of related periodic report. Where multiple classes or units exist define each class/interest by adding class of stock items such as Common Class A [Member], Common Class B [Member] or Partnership Interest [Member] onto the Instrument [Domain] of the Entity Listings, Instrument.",
+        "label": "Entity Common Stock Shares Outstanding"
+       }
+      }
+     },
+     "localname": "EntityCommonStockSharesOutstanding",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "dei_EntityCurrentReportingStatus": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicate 'Yes' or 'No' whether registrants (1) have filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that registrants were required to file such reports), and (2) have been subject to such filing requirements for the past 90 days. This information should be based on the registrant's current or most recent filing containing the related disclosure.",
+        "label": "Entity Current Reporting Status"
+       }
+      }
+     },
+     "localname": "EntityCurrentReportingStatus",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "yesNoItemType"
+    },
+    "dei_EntityEmergingGrowthCompany": {
+     "auth_ref": [
+      "r214"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicate if registrant meets the emerging growth company criteria.",
+        "label": "Entity Emerging Growth Company"
+       }
+      }
+     },
+     "localname": "EntityEmergingGrowthCompany",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "booleanItemType"
+    },
+    "dei_EntityExTransitionPeriod": {
+     "auth_ref": [
+      "r220"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicate if an emerging growth company has elected not to use the extended transition period for complying with any new or revised financial accounting standards.",
+        "label": "Entity Ex Transition Period"
+       }
+      }
+     },
+     "localname": "EntityExTransitionPeriod",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "booleanItemType"
+    },
+    "dei_EntityFileNumber": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Commission file number. The field allows up to 17 characters. The prefix may contain 1-3 digits, the sequence number may contain 1-8 digits, the optional suffix may contain 1-4 characters, and the fields are separated with a hyphen.",
+        "label": "Entity File Number"
+       }
+      }
+     },
+     "localname": "EntityFileNumber",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "fileNumberItemType"
+    },
+    "dei_EntityFilerCategory": {
+     "auth_ref": [
+      "r214"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicate whether the registrant is one of the following: Large Accelerated Filer, Accelerated Filer, Non-accelerated Filer. Definitions of these categories are stated in Rule 12b-2 of the Exchange Act. This information should be based on the registrant's current or most recent filing containing the related disclosure.",
+        "label": "Entity Filer Category"
+       }
+      }
+     },
+     "localname": "EntityFilerCategory",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "filerCategoryItemType"
+    },
+    "dei_EntityIncorporationStateCountryCode": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Two-character EDGAR code representing the state or country of incorporation.",
+        "label": "Entity Incorporation State Country Code"
+       }
+      }
+     },
+     "localname": "EntityIncorporationStateCountryCode",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "edgarStateCountryItemType"
+    },
+    "dei_EntityPublicFloat": {
+     "auth_ref": [],
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The aggregate market value of the voting and non-voting common equity held by non-affiliates computed by reference to the price at which the common equity was last sold, or the average bid and asked price of such common equity, as of the last business day of the registrant's most recently completed second fiscal quarter.",
+        "label": "Entity Public Float"
+       }
+      }
+     },
+     "localname": "EntityPublicFloat",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "dei_EntityRegistrantName": {
+     "auth_ref": [
+      "r214"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The exact name of the entity filing the report as specified in its charter, which is required by forms filed with the SEC.",
+        "label": "Entity Registrant Name"
+       }
+      }
+     },
+     "localname": "EntityRegistrantName",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "normalizedStringItemType"
+    },
+    "dei_EntityShellCompany": {
+     "auth_ref": [
+      "r214"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Boolean flag that is true when the registrant is a shell company as defined in Rule 12b-2 of the Exchange Act.",
+        "label": "Entity Shell Company"
+       }
+      }
+     },
+     "localname": "EntityShellCompany",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "booleanItemType"
+    },
+    "dei_EntitySmallBusiness": {
+     "auth_ref": [
+      "r214"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicates that the company is a Smaller Reporting Company (SRC).",
+        "label": "Entity Small Business"
+       }
+      }
+     },
+     "localname": "EntitySmallBusiness",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "booleanItemType"
+    },
+    "dei_EntityTaxIdentificationNumber": {
+     "auth_ref": [
+      "r214"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The Tax Identification Number (TIN), also known as an Employer Identification Number (EIN), is a unique 9-digit value assigned by the IRS.",
+        "label": "Entity Tax Identification Number"
+       }
+      }
+     },
+     "localname": "EntityTaxIdentificationNumber",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "employerIdItemType"
+    },
+    "dei_EntityVoluntaryFilers": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicate 'Yes' or 'No' if the registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act.",
+        "label": "Entity Voluntary Filers"
+       }
+      }
+     },
+     "localname": "EntityVoluntaryFilers",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "yesNoItemType"
+    },
+    "dei_EntityWellKnownSeasonedIssuer": {
+     "auth_ref": [
+      "r219"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Indicate 'Yes' or 'No' if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Is used on Form Type: 10-K, 10-Q, 8-K, 20-F, 6-K, 10-K/A, 10-Q/A, 20-F/A, 6-K/A, N-CSR, N-Q, N-1A.",
+        "label": "Entity Well Known Seasoned Issuer"
+       }
+      }
+     },
+     "localname": "EntityWellKnownSeasonedIssuer",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "yesNoItemType"
+    },
+    "dei_LocalPhoneNumber": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Local phone number for entity.",
+        "label": "Local Phone Number"
+       }
+      }
+     },
+     "localname": "LocalPhoneNumber",
+     "nsuri": "http://xbrl.sec.gov/dei/2022",
+     "presentation": [
+      "http://azzurro.com/role/Cover"
+     ],
+     "xbrltype": "normalizedStringItemType"
+    },
+    "srt_DirectorMember": {
+     "auth_ref": [
+      "r231"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Sole Officer and Director [Member]",
+        "verboseLabel": "Sole Officer and Director [Member]"
+       }
+      }
+     },
+     "localname": "DirectorMember",
+     "nsuri": "http://fasb.org/srt/2022",
+     "presentation": [
+      "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative",
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_AccountingPoliciesAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES"
+       }
+      }
+     },
+     "localname": "AccountingPoliciesAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_AccountsPayableCurrent": {
+     "auth_ref": [
+      "r10",
+      "r213"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 5.0,
+       "parentTag": "us-gaap_LiabilitiesCurrent",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Carrying value as of the balance sheet date of liabilities incurred (and for which invoices have typically been received) and payable to vendors for goods and services received that are used in an entity's business. Used to reflect the current portion of the liabilities (due within one year or within the normal operating cycle if longer).",
+        "label": "Accounts payable"
+       }
+      }
+     },
+     "localname": "AccountsPayableCurrent",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_AdditionalPaidInCapital": {
+     "auth_ref": [
+      "r5",
+      "r213"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 9.0,
+       "parentTag": "us-gaap_StockholdersEquity",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of excess of issue price over par or stated value of stock and from other transaction involving stock or stockholder. Includes, but is not limited to, additional paid-in capital (APIC) for common and preferred stock.",
+        "label": "Additional Paid-In-Capital"
+       }
+      }
+     },
+     "localname": "AdditionalPaidInCapital",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_AdditionalPaidInCapitalMember": {
+     "auth_ref": [
+      "r143",
+      "r144",
+      "r145",
+      "r227",
+      "r228",
+      "r229",
+      "r235"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Excess of issue price over par or stated value of the entity's capital stock and amounts received from other transactions involving the entity's stock or stockholders.",
+        "label": "Additional Paid-In Capital"
+       }
+      }
+     },
+     "localname": "AdditionalPaidInCapitalMember",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_Assets": {
+     "auth_ref": [
+      "r44",
+      "r49",
+      "r60",
+      "r75",
+      "r102",
+      "r104",
+      "r106",
+      "r108",
+      "r110",
+      "r111",
+      "r113",
+      "r114",
+      "r115",
+      "r116",
+      "r117",
+      "r119",
+      "r120",
+      "r160",
+      "r164",
+      "r169",
+      "r213",
+      "r233",
+      "r234",
+      "r238"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": null,
+       "parentTag": null,
+       "root": true,
+       "weight": null
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Sum of the carrying amounts as of the balance sheet date of all assets that are recognized. Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events.",
+        "label": "[Assets]",
+        "totalLabel": "Total Assets"
+       }
+      }
+     },
+     "localname": "Assets",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_AssetsAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "ASSETS"
+       }
+      }
+     },
+     "localname": "AssetsAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_AssetsCurrent": {
+     "auth_ref": [
+      "r57",
+      "r64",
+      "r75",
+      "r108",
+      "r110",
+      "r111",
+      "r113",
+      "r114",
+      "r115",
+      "r116",
+      "r117",
+      "r119",
+      "r120",
+      "r160",
+      "r164",
+      "r169",
+      "r213",
+      "r233",
+      "r234",
+      "r238"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 3.0,
+       "parentTag": "us-gaap_Assets",
+       "weight": 1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Sum of the carrying amounts as of the balance sheet date of all assets that are expected to be realized in cash, sold, or consumed within one year (or the normal operating cycle, if longer). Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events.",
+        "label": "[Assets, Current]",
+        "totalLabel": "Total current assets"
+       }
+      }
+     },
+     "localname": "AssetsCurrent",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_AssetsCurrentAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Current Assets"
+       }
+      }
+     },
+     "localname": "AssetsCurrentAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_BasisOfAccountingPolicyPolicyTextBlock": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy for basis of accounting, or basis of presentation, used to prepare the financial statements (for example, US Generally Accepted Accounting Principles, Other Comprehensive Basis of Accounting, IFRS).",
+        "label": "Basis of Presentation"
+       }
+      }
+     },
+     "localname": "BasisOfAccountingPolicyPolicyTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_CashAndCashEquivalentsAtCarryingValue": {
+     "auth_ref": [
+      "r24",
+      "r59",
+      "r208"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 2.0,
+       "parentTag": "us-gaap_AssetsCurrent",
+       "weight": 1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of currency on hand as well as demand deposits with banks or financial institutions. Includes other kinds of accounts that have the general characteristics of demand deposits. Also includes short-term, highly liquid investments that are both readily convertible to known amounts of cash and so near their maturity that they present insignificant risk of changes in value because of changes in interest rates. Excludes cash and cash equivalents within disposal group and discontinued operation.",
+        "label": "Cash &amp; cash equivalents"
+       }
+      }
+     },
+     "localname": "CashAndCashEquivalentsAtCarryingValue",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_CashAndCashEquivalentsPolicyTextBlock": {
+     "auth_ref": [
+      "r25"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy for cash and cash equivalents, including the policy for determining which items are treated as cash equivalents. Other information that may be disclosed includes (1) the nature of any restrictions on the entity's use of its cash and cash equivalents, (2) whether the entity's cash and cash equivalents are insured or expose the entity to credit risk, (3) the classification of any negative balance accounts (overdrafts), and (4) the carrying basis of cash equivalents (for example, at cost) and whether the carrying amount of cash equivalents approximates fair value.",
+        "label": "Cash and Cash Equivalents"
+       }
+      }
+     },
+     "localname": "CashAndCashEquivalentsPolicyTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents": {
+     "auth_ref": [
+      "r19",
+      "r24",
+      "r27"
+     ],
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of cash and cash equivalents, and cash and cash equivalents restricted to withdrawal or usage. Excludes amount for disposal group and discontinued operations. Cash includes, but is not limited to, currency on hand, demand deposits with banks or financial institutions, and other accounts with general characteristics of demand deposits. Cash equivalents include, but are not limited to, short-term, highly liquid investments that are both readily convertible to known amounts of cash and so near their maturity that they present insignificant risk of changes in value because of changes in interest rates.",
+        "label": "[Cash, Cash Equivalents, Restricted Cash, and Restricted Cash Equivalents]",
+        "periodEndLabel": "Cash and equivalents at end of the year/ period",
+        "periodStartLabel": "Cash and equivalents at beginning of the period"
+       }
+      }
+     },
+     "localname": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect": {
+     "auth_ref": [
+      "r19",
+      "r41"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited": {
+       "order": null,
+       "parentTag": null,
+       "root": true,
+       "weight": null
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of increase (decrease) in cash, cash equivalents, and cash and cash equivalents restricted to withdrawal or usage; including effect from exchange rate change. Cash includes, but is not limited to, currency on hand, demand deposits with banks or financial institutions, and other accounts with general characteristics of demand deposits. Cash equivalents include, but are not limited to, short-term, highly liquid investments that are both readily convertible to known amounts of cash and so near their maturity that they present insignificant risk of changes in value because of changes in interest rates.",
+        "label": "[Cash, Cash Equivalents, Restricted Cash, and Restricted Cash Equivalents, Period Increase (Decrease), Including Exchange Rate Effect]",
+        "totalLabel": "Net decrease in cash and equivalents"
+       }
+      }
+     },
+     "localname": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_CashFDICInsuredAmount": {
+     "auth_ref": [],
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The amount of cash deposited in financial institutions as of the balance sheet date that is insured by the Federal Deposit Insurance Corporation.",
+        "label": "Cash, Fdic Insured Amount"
+       }
+      }
+     },
+     "localname": "CashFDICInsuredAmount",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesDetailsNarrative"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_ClassOfStockDomain": {
+     "auth_ref": [
+      "r61",
+      "r62",
+      "r63",
+      "r75",
+      "r89",
+      "r90",
+      "r92",
+      "r93",
+      "r95",
+      "r96",
+      "r108",
+      "r110",
+      "r113",
+      "r114",
+      "r115",
+      "r119",
+      "r120",
+      "r121",
+      "r122",
+      "r124",
+      "r128",
+      "r134",
+      "r169",
+      "r207",
+      "r221",
+      "r224",
+      "r230"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Share of stock differentiated by the voting rights the holder receives. Examples include, but are not limited to, common stock, redeemable preferred stock, nonredeemable preferred stock, and convertible stock."
+       }
+      }
+     },
+     "localname": "ClassOfStockDomain",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_CommonStockMember": {
+     "auth_ref": [
+      "r227",
+      "r228",
+      "r235"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Stock that is subordinate to all other stock of the issuer.",
+        "label": "Common Stock"
+       }
+      }
+     },
+     "localname": "CommonStockMember",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_CommonStockParOrStatedValuePerShare": {
+     "auth_ref": [
+      "r4"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Face amount or stated value per share of common stock.",
+        "label": "Common Stock, Par Value",
+        "verboseLabel": "Common Stock, Par Value"
+       }
+      }
+     },
+     "localname": "CommonStockParOrStatedValuePerShare",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheetsParenthetical",
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "perShareItemType"
+    },
+    "us-gaap_CommonStockSharesAuthorized": {
+     "auth_ref": [
+      "r4"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The maximum number of common shares permitted to be issued by an entity's charter and bylaws.",
+        "label": "Common Stock, Shares Authorized",
+        "verboseLabel": "Common Stock, Shares Authorized"
+       }
+      }
+     },
+     "localname": "CommonStockSharesAuthorized",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheetsParenthetical",
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "us-gaap_CommonStockSharesIssued": {
+     "auth_ref": [
+      "r4"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Total number of common shares of an entity that have been sold or granted to shareholders (includes common shares that were issued, repurchased and remain in the treasury). These shares represent capital invested by the firm's shareholders and owners, and may be all or only a portion of the number of shares authorized. Shares issued include shares outstanding and shares held in the treasury.",
+        "label": "Common Stock, Shares Issued",
+        "verboseLabel": "Common Stock, Shares Issued"
+       }
+      }
+     },
+     "localname": "CommonStockSharesIssued",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheetsParenthetical",
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "us-gaap_CommonStockSharesOutstanding": {
+     "auth_ref": [
+      "r4",
+      "r35"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Number of shares of common stock outstanding. Common stock represent the ownership interest in a corporation.",
+        "label": "Common Stock, Shares Outstanding",
+        "verboseLabel": "Common Stock, Shares Outstanding"
+       }
+      }
+     },
+     "localname": "CommonStockSharesOutstanding",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheetsParenthetical",
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "us-gaap_CommonStockValue": {
+     "auth_ref": [
+      "r4",
+      "r213"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 8.0,
+       "parentTag": "us-gaap_StockholdersEquity",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Aggregate par or stated value of issued nonredeemable common stock (or common stock redeemable solely at the option of the issuer). This item includes treasury stock repurchased by the entity. Note: elements for number of nonredeemable common shares, par value and other disclosure concepts are in another section within stockholders' equity.",
+        "label": "Common stock, $0.001 par value, 75,000,000 shares authorized: 4,058,167 shares issued and outstanding"
+       }
+      }
+     },
+     "localname": "CommonStockValue",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_DueToOfficersOrStockholdersCurrent": {
+     "auth_ref": [
+      "r2",
+      "r42",
+      "r48",
+      "r54"
+     ],
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amounts due to recorded owners or owners with a beneficial interest of more than 10 percent of the voting interests or officers of the company. Used to reflect the current portion of the liabilities (due within one year or within the normal operating cycle if longer).",
+        "label": "[Due to Officers or Stockholders, Current]",
+        "terseLabel": "Loans From Related Parties",
+        "verboseLabel": "Loans From Related Parties"
+       }
+      }
+     },
+     "localname": "DueToOfficersOrStockholdersCurrent",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative",
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_DueToRelatedPartiesCurrent": {
+     "auth_ref": [
+      "r10",
+      "r112",
+      "r113",
+      "r114",
+      "r118",
+      "r119",
+      "r120",
+      "r181",
+      "r226"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 4.0,
+       "parentTag": "us-gaap_LiabilitiesCurrent",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Carrying amount as of the balance sheet date of obligations due all related parties. For classified balance sheets, represents the current portion of such liabilities (due within one year or within the normal operating cycle if longer).",
+        "label": "Loans from related parties",
+        "verboseLabel": "Loans From Related Parties"
+       }
+      }
+     },
+     "localname": "DueToRelatedPartiesCurrent",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets",
+      "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_EarningsPerSharePolicyTextBlock": {
+     "auth_ref": [
+      "r29",
+      "r30"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy for computing basic and diluted earnings or loss per share for each class of common stock and participating security. Addresses all significant policy factors, including any antidilutive items that have been excluded from the computation and takes into account stock dividends, splits and reverse splits that occur after the balance sheet date of the latest reporting period but before the issuance of the financial statements.",
+        "label": "Basic and Diluted Net Loss Per Share"
+       }
+      }
+     },
+     "localname": "EarningsPerSharePolicyTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_EquityAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "CAPITAL STOCK"
+       }
+      }
+     },
+     "localname": "EquityAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_EquityComponentDomain": {
+     "auth_ref": [
+      "r35",
+      "r55",
+      "r68",
+      "r69",
+      "r70",
+      "r77",
+      "r78",
+      "r79",
+      "r81",
+      "r86",
+      "r88",
+      "r94",
+      "r109",
+      "r135",
+      "r143",
+      "r144",
+      "r145",
+      "r155",
+      "r156",
+      "r167",
+      "r170",
+      "r171",
+      "r172",
+      "r173",
+      "r174",
+      "r175",
+      "r177",
+      "r202",
+      "r203",
+      "r204"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Components of equity are the parts of the total Equity balance including that which is allocated to common, preferred, treasury stock, retained earnings, etc."
+       }
+      }
+     },
+     "localname": "EquityComponentDomain",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_FairValueOfFinancialInstrumentsPolicy": {
+     "auth_ref": [
+      "r39",
+      "r40"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy for determining the fair value of financial instruments.",
+        "label": "Fair Value of Financial Instruments"
+       }
+      }
+     },
+     "localname": "FairValueOfFinancialInstrumentsPolicy",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": {
+     "auth_ref": [
+      "r14",
+      "r43",
+      "r46",
+      "r53",
+      "r102",
+      "r103",
+      "r105",
+      "r107",
+      "r200",
+      "r210"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfOperationsAudited": {
+       "order": 4.0,
+       "parentTag": "us-gaap_NetIncomeLoss",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of income (loss) from continuing operations, including income (loss) from equity method investments, before deduction of income tax expense (benefit), and income (loss) attributable to noncontrolling interest.",
+        "label": "[Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest]",
+        "totalLabel": "Loss before provision for income taxes"
+       }
+      }
+     },
+     "localname": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_IncomeStatementAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "STATEMENTS OF OPERATIONS (AUDITED)"
+       }
+      }
+     },
+     "localname": "IncomeStatementAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_IncomeTaxExpenseBenefit": {
+     "auth_ref": [
+      "r76",
+      "r87",
+      "r88",
+      "r101",
+      "r150",
+      "r157",
+      "r158",
+      "r201"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfOperationsAudited": {
+       "order": 5.0,
+       "parentTag": "us-gaap_NetIncomeLoss",
+       "weight": -1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of current income tax expense (benefit) and deferred income tax expense (benefit) pertaining to continuing operations.",
+        "label": "Provision for income taxes"
+       }
+      }
+     },
+     "localname": "IncomeTaxExpenseBenefit",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_IncomeTaxPolicyTextBlock": {
+     "auth_ref": [
+      "r67",
+      "r148",
+      "r149",
+      "r151",
+      "r152",
+      "r153",
+      "r154"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy for income taxes, which may include its accounting policies for recognizing and measuring deferred tax assets and liabilities and related valuation allowances, recognizing investment tax credits, operating loss carryforwards, tax credit carryforwards, and other carryforwards, methodologies for determining its effective income tax rate and the characterization of interest and penalties in the financial statements.",
+        "label": "Income Taxes"
+       }
+      }
+     },
+     "localname": "IncomeTaxPolicyTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_IncomeTaxesPaid": {
+     "auth_ref": [
+      "r20",
+      "r26"
+     ],
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The amount of cash paid during the current period to foreign, federal, state, and local authorities as taxes on income.",
+        "label": "Taxes"
+       }
+      }
+     },
+     "localname": "IncomeTaxesPaid",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_IncreaseDecreaseInAccountsPayable": {
+     "auth_ref": [
+      "r22"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited": {
+       "order": 2.0,
+       "parentTag": "us-gaap_NetCashProvidedByUsedInOperatingActivities",
+       "weight": 1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The increase (decrease) during the reporting period in the aggregate amount of liabilities incurred (and for which invoices have typically been received) and payable to vendors for goods and services received that are used in an entity's business.",
+        "label": "[Increase (Decrease) in Accounts Payable]",
+        "verboseLabel": "Accounts payable"
+       }
+      }
+     },
+     "localname": "IncreaseDecreaseInAccountsPayable",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_InterestPaid": {
+     "auth_ref": [
+      "r223"
+     ],
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of cash paid for interest, including, but not limited to, capitalized interest and payment to settle zero-coupon bond attributable to accreted interest of debt discount and debt instrument with insignificant coupon interest rate in relation to effective interest rate of borrowing attributable to accreted interest of debt discount; classified as operating and investing activities.",
+        "label": "Interest"
+       }
+      }
+     },
+     "localname": "InterestPaid",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_Liabilities": {
+     "auth_ref": [
+      "r11",
+      "r75",
+      "r108",
+      "r110",
+      "r111",
+      "r113",
+      "r114",
+      "r115",
+      "r116",
+      "r117",
+      "r119",
+      "r120",
+      "r161",
+      "r164",
+      "r165",
+      "r169",
+      "r209",
+      "r233",
+      "r238",
+      "r239"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 11.0,
+       "parentTag": "us-gaap_LiabilitiesAndStockholdersEquity",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Sum of the carrying amounts as of the balance sheet date of all liabilities that are recognized. Liabilities are probable future sacrifices of economic benefits arising from present obligations of an entity to transfer assets or provide services to other entities in the future.",
+        "label": "[Liabilities]",
+        "totalLabel": "Total Liabilities"
+       }
+      }
+     },
+     "localname": "Liabilities",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_LiabilitiesAndStockholdersEquity": {
+     "auth_ref": [
+      "r9",
+      "r45",
+      "r51",
+      "r213",
+      "r225",
+      "r232",
+      "r236"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": null,
+       "parentTag": null,
+       "root": true,
+       "weight": null
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of liabilities and equity items, including the portion of equity attributable to noncontrolling interests, if any.",
+        "label": "[Liabilities and Equity]",
+        "totalLabel": "Total Liabilities and Stockholders' equity"
+       }
+      }
+     },
+     "localname": "LiabilitiesAndStockholdersEquity",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_LiabilitiesAndStockholdersEquityAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "LIABILITIES AND STOCKHOLDERS' EQUITY"
+       }
+      }
+     },
+     "localname": "LiabilitiesAndStockholdersEquityAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_LiabilitiesCurrent": {
+     "auth_ref": [
+      "r12",
+      "r58",
+      "r75",
+      "r108",
+      "r110",
+      "r111",
+      "r113",
+      "r114",
+      "r115",
+      "r116",
+      "r117",
+      "r119",
+      "r120",
+      "r161",
+      "r164",
+      "r165",
+      "r169",
+      "r213",
+      "r233",
+      "r238",
+      "r239"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 6.0,
+       "parentTag": "us-gaap_Liabilities",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Total obligations incurred as part of normal operations that are expected to be paid during the following twelve months or within one business cycle, if longer.",
+        "label": "[Liabilities, Current]",
+        "totalLabel": "Total current liabilities"
+       }
+      }
+     },
+     "localname": "LiabilitiesCurrent",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_LiabilitiesCurrentAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Current Liabilities"
+       }
+      }
+     },
+     "localname": "LiabilitiesCurrentAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_NetCashProvidedByUsedInFinancingActivities": {
+     "auth_ref": [
+      "r72"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited": {
+       "order": 7.0,
+       "parentTag": "us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+       "weight": 1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of cash inflow (outflow) from financing activities, including discontinued operations. Financing activity cash flows include obtaining resources from owners and providing them with a return on, and a return of, their investment; borrowing money and repaying amounts borrowed, or settling the obligation; and obtaining and paying for other resources obtained from creditors on long-term credit.",
+        "label": "[Net Cash Provided by (Used in) Financing Activities]",
+        "totalLabel": "Net cash provided by financing activities"
+       }
+      }
+     },
+     "localname": "NetCashProvidedByUsedInFinancingActivities",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "CASH FLOWS FROM FINANCING ACTIVITIES"
+       }
+      }
+     },
+     "localname": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_NetCashProvidedByUsedInOperatingActivities": {
+     "auth_ref": [
+      "r19",
+      "r21",
+      "r23"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited": {
+       "order": 6.0,
+       "parentTag": "us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+       "weight": 1.0
+      }
+     },
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Amount of cash inflow (outflow) from operating activities, including discontinued operations. Operating activity cash flows include transactions, adjustments, and changes in value not defined as investing or financing activities.",
+        "label": "[Net Cash Provided by (Used in) Operating Activities]",
+        "totalLabel": "Net cash provided by operating activities"
+       }
+      }
+     },
+     "localname": "NetCashProvidedByUsedInOperatingActivities",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "CASH FLOWS FROM OPERATING ACTIVITIES"
+       }
+      }
+     },
+     "localname": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_NetIncomeLoss": {
+     "auth_ref": [
+      "r15",
+      "r23",
+      "r47",
+      "r52",
+      "r56",
+      "r65",
+      "r66",
+      "r70",
+      "r75",
+      "r80",
+      "r82",
+      "r83",
+      "r84",
+      "r85",
+      "r87",
+      "r88",
+      "r91",
+      "r102",
+      "r103",
+      "r105",
+      "r107",
+      "r108",
+      "r110",
+      "r111",
+      "r113",
+      "r114",
+      "r115",
+      "r116",
+      "r117",
+      "r119",
+      "r120",
+      "r168",
+      "r169",
+      "r210",
+      "r233"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfOperationsAudited": {
+       "order": null,
+       "parentTag": null,
+       "root": true,
+       "weight": null
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The portion of profit or loss for the period, net of income taxes, which is attributable to the parent.",
+        "label": "[Net Income (Loss) Attributable to Parent]",
+        "totalLabel": "Net income (loss)",
+        "verboseLabel": "Net income (loss)"
+       }
+      }
+     },
+     "localname": "NetIncomeLoss",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited",
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_NewAccountingPronouncementsPolicyPolicyTextBlock": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy pertaining to new accounting pronouncements that may impact the entity's financial reporting. Includes, but is not limited to, quantification of the expected or actual impact.",
+        "label": "New Accounting Pronouncements"
+       }
+      }
+     },
+     "localname": "NewAccountingPronouncementsPolicyPolicyTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_OperatingExpensesAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "OPERATING EXPENSES"
+       }
+      }
+     },
+     "localname": "OperatingExpensesAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_OperatingIncomeLoss": {
+     "auth_ref": [
+      "r102",
+      "r103",
+      "r105",
+      "r107",
+      "r210"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfOperationsAudited": {
+       "order": 3.0,
+       "parentTag": "us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The net result for the period of deducting operating expenses from operating revenues.",
+        "label": "[Operating Income (Loss)]",
+        "totalLabel": "Net loss from operations"
+       }
+      }
+     },
+     "localname": "OperatingIncomeLoss",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_OrganizationConsolidationAndPresentationOfFinancialStatementsAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "ORGANIZATION AND BUSINESS"
+       }
+      }
+     },
+     "localname": "OrganizationConsolidationAndPresentationOfFinancialStatementsAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock": {
+     "auth_ref": [
+      "r1",
+      "r38"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The entire disclosure for organization, consolidation and basis of presentation of financial statements disclosure.",
+        "label": "NOTE 1 - ORGANIZATION AND BUSINESS"
+       }
+      }
+     },
+     "localname": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/OrganizationAndBusiness"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_ProceedsFromIssuanceOfCommonStock": {
+     "auth_ref": [
+      "r17"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited": {
+       "order": 5.0,
+       "parentTag": "us-gaap_NetCashProvidedByUsedInFinancingActivities",
+       "weight": 1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The cash inflow from the additional capital contribution to the entity.",
+        "label": "Proceeds from issuance of common shares"
+       }
+      }
+     },
+     "localname": "ProceedsFromIssuanceOfCommonStock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_ProceedsFromRelatedPartyDebt": {
+     "auth_ref": [
+      "r18"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited": {
+       "order": 4.0,
+       "parentTag": "us-gaap_NetCashProvidedByUsedInFinancingActivities",
+       "weight": 1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The cash inflow from a long-term borrowing made from related parties where one party can exercise control or significant influence over another party; including affiliates, owners or officers and their immediate families, pension trusts, and so forth. Alternate caption: Proceeds from Advances from Affiliates.",
+        "label": "Proceeds of loan from shareholder"
+       }
+      }
+     },
+     "localname": "ProceedsFromRelatedPartyDebt",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_ProfitLoss": {
+     "auth_ref": [
+      "r56",
+      "r65",
+      "r66",
+      "r71",
+      "r75",
+      "r80",
+      "r87",
+      "r88",
+      "r102",
+      "r103",
+      "r105",
+      "r107",
+      "r108",
+      "r110",
+      "r111",
+      "r113",
+      "r114",
+      "r115",
+      "r116",
+      "r117",
+      "r119",
+      "r120",
+      "r159",
+      "r162",
+      "r163",
+      "r168",
+      "r169",
+      "r200",
+      "r210",
+      "r211",
+      "r212",
+      "r222",
+      "r233"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited": {
+       "order": 3.0,
+       "parentTag": "us-gaap_NetCashProvidedByUsedInOperatingActivities",
+       "weight": -1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The consolidated profit or loss for the period, net of income taxes, including the portion attributable to the noncontrolling interest.",
+        "label": "[Net Income (Loss), Including Portion Attributable to Noncontrolling Interest]",
+        "negatedLabel": "Net loss"
+       }
+      }
+     },
+     "localname": "ProfitLoss",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_RelatedPartyDomain": {
+     "auth_ref": [
+      "r136",
+      "r180",
+      "r181"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Related parties include affiliates; other entities for which investments are accounted for by the equity method by the entity; trusts for benefit of employees; and principal owners, management, and members of immediate families. It also may include other parties with which the entity may control or can significantly influence the management or operating policies of the other to an extent that one of the transacting parties might be prevented from fully pursuing its own separate interests."
+       }
+      }
+     },
+     "localname": "RelatedPartyDomain",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative",
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_RelatedPartyTransactionsAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "RELATED PARTY TRANSACTIONS"
+       }
+      }
+     },
+     "localname": "RelatedPartyTransactionsAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_RelatedPartyTransactionsByRelatedPartyAxis": {
+     "auth_ref": [
+      "r136",
+      "r180",
+      "r188",
+      "r189",
+      "r190",
+      "r191",
+      "r192",
+      "r193",
+      "r194",
+      "r195",
+      "r196",
+      "r197",
+      "r198",
+      "r199",
+      "r237"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Information by type of related party. Related parties include, but not limited to, affiliates; other entities for which investments are accounted for by the equity method by the entity; trusts for benefit of employees; and principal owners, management, and members of immediate families. It also may include other parties with which the entity may control or can significantly influence the management or operating policies of the other to an extent that one of the transacting parties might be prevented from fully pursuing its own separate interests.",
+        "label": "Related Party [Axis]"
+       }
+      }
+     },
+     "localname": "RelatedPartyTransactionsByRelatedPartyAxis",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative",
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_RelatedPartyTransactionsDisclosureTextBlock": {
+     "auth_ref": [
+      "r178",
+      "r179",
+      "r181",
+      "r182",
+      "r183"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The entire disclosure for related party transactions. Examples of related party transactions include transactions between (a) a parent company and its subsidiary; (b) subsidiaries of a common parent; (c) and entity and its principal owners; and (d) affiliates.",
+        "label": "NOTE 5 - RELATED PARTY TRANSACTIONS"
+       }
+      }
+     },
+     "localname": "RelatedPartyTransactionsDisclosureTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/RelatedPartyTransactions"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_RetainedEarningsAccumulatedDeficit": {
+     "auth_ref": [
+      "r6",
+      "r36",
+      "r50",
+      "r205",
+      "r206",
+      "r213"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 7.0,
+       "parentTag": "us-gaap_StockholdersEquity",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The cumulative amount of the reporting entity's undistributed earnings or deficit.",
+        "label": "[Retained Earnings (Accumulated Deficit)]",
+        "terseLabel": "Accumulated Loss",
+        "verboseLabel": "Accumulated Deficit"
+       }
+      }
+     },
+     "localname": "RetainedEarningsAccumulatedDeficit",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets",
+      "http://azzurro.com/role/GoingConcernDetailsNarrative"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_RetainedEarningsMember": {
+     "auth_ref": [
+      "r55",
+      "r77",
+      "r78",
+      "r79",
+      "r81",
+      "r86",
+      "r88",
+      "r109",
+      "r143",
+      "r144",
+      "r145",
+      "r155",
+      "r156",
+      "r167",
+      "r202",
+      "r204"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The cumulative amount of the reporting entity's undistributed earnings or deficit.",
+        "label": "Retained Earnings [Member]",
+        "verboseLabel": "Accumulated Deficit"
+       }
+      }
+     },
+     "localname": "RetainedEarningsMember",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_RisksAndUncertaintiesAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "GOING CONCERN"
+       }
+      }
+     },
+     "localname": "RisksAndUncertaintiesAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_SellingGeneralAndAdministrativeExpense": {
+     "auth_ref": [
+      "r16"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/StatementsOfOperationsAudited": {
+       "order": 2.0,
+       "parentTag": "us-gaap_OperatingIncomeLoss",
+       "weight": -1.0
+      }
+     },
+     "crdr": "debit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The aggregate total costs related to selling a firm's product and services, as well as all other general and administrative expenses. Direct selling expenses (for example, credit, warranty, and advertising) are expenses that can be directly linked to the sale of specific products. Indirect selling expenses are expenses that cannot be directly linked to the sale of specific products, for example telephone expenses, Internet, and postal charges. General and administrative expenses include salaries of non-sales personnel, rent, utilities, communication, etc.",
+        "label": "General and administrative expenses"
+       }
+      }
+     },
+     "localname": "SellingGeneralAndAdministrativeExpense",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_ShareBasedCompensationOptionAndIncentivePlansPolicy": {
+     "auth_ref": [
+      "r137",
+      "r138",
+      "r139",
+      "r140",
+      "r141",
+      "r142",
+      "r146",
+      "r147"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy for award under share-based payment arrangement. Includes, but is not limited to, methodology and assumption used in measuring cost.",
+        "label": "Stock-Based Compensation"
+       }
+      }
+     },
+     "localname": "ShareBasedCompensationOptionAndIncentivePlansPolicy",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_SharesIssued": {
+     "auth_ref": [
+      "r35"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Number of shares of stock issued as of the balance sheet date, including shares that had been issued and were previously outstanding but which are now held in the treasury.",
+        "label": "[Shares, Issued]",
+        "periodEndLabel": "Balance, shares",
+        "periodStartLabel": "Balance, shares"
+       }
+      }
+     },
+     "localname": "SharesIssued",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "us-gaap_SharesIssuedPricePerShare": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Per share or per unit amount of equity securities issued.",
+        "label": "Shares Issued, Price Per Share"
+       }
+      }
+     },
+     "localname": "SharesIssuedPricePerShare",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "perShareItemType"
+    },
+    "us-gaap_SignificantAccountingPoliciesTextBlock": {
+     "auth_ref": [
+      "r28",
+      "r73"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The entire disclosure for all significant accounting policies of the reporting entity.",
+        "label": "NOTE 3 - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES"
+       }
+      }
+     },
+     "localname": "SignificantAccountingPoliciesTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_StatementClassOfStockAxis": {
+     "auth_ref": [
+      "r61",
+      "r62",
+      "r63",
+      "r75",
+      "r89",
+      "r90",
+      "r92",
+      "r93",
+      "r95",
+      "r96",
+      "r108",
+      "r110",
+      "r113",
+      "r114",
+      "r115",
+      "r119",
+      "r120",
+      "r121",
+      "r122",
+      "r124",
+      "r128",
+      "r134",
+      "r169",
+      "r207",
+      "r221",
+      "r224",
+      "r230"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Information by the different classes of stock of the entity.",
+        "label": "Statement Class Of Stock Axis"
+       }
+      }
+     },
+     "localname": "StatementClassOfStockAxis",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StatementEquityComponentsAxis": {
+     "auth_ref": [
+      "r13",
+      "r35",
+      "r55",
+      "r68",
+      "r69",
+      "r70",
+      "r77",
+      "r78",
+      "r79",
+      "r81",
+      "r86",
+      "r88",
+      "r94",
+      "r109",
+      "r135",
+      "r143",
+      "r144",
+      "r145",
+      "r155",
+      "r156",
+      "r167",
+      "r170",
+      "r171",
+      "r172",
+      "r173",
+      "r174",
+      "r175",
+      "r177",
+      "r202",
+      "r203",
+      "r204"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Information by component of equity.",
+        "label": "Statement Equity Components [Axis]"
+       }
+      }
+     },
+     "localname": "StatementEquityComponentsAxis",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StatementLineItems": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Line items represent financial concepts included in a table. These concepts are used to disclose reportable information associated with domain members defined in one or many axes to the table.",
+        "label": "Statement [Line Items]"
+       }
+      }
+     },
+     "localname": "StatementLineItems",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative",
+      "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative",
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited",
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StatementOfCashFlowsAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "STATEMENTS OF CASH FLOWS (AUDITED)"
+       }
+      }
+     },
+     "localname": "StatementOfCashFlowsAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StatementOfFinancialPositionAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "BALANCE SHEETS"
+       }
+      }
+     },
+     "localname": "StatementOfFinancialPositionAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StatementOfStockholdersEquityAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "STATEMENT OF STOCKHOLDERS EQUITY (AUDITED)"
+       }
+      }
+     },
+     "localname": "StatementOfStockholdersEquityAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StatementTable": {
+     "auth_ref": [
+      "r77",
+      "r78",
+      "r79",
+      "r94",
+      "r187"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Schedule reflecting a Statement of Income, Statement of Cash Flows, Statement of Financial Position, Statement of Shareholders' Equity and Other Comprehensive Income, or other statement as needed.",
+        "label": "Statement [Table]"
+       }
+      }
+     },
+     "localname": "StatementTable",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStockDetailsNarrative",
+      "http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative",
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited",
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StockIssuedDuringPeriodSharesNewIssues": {
+     "auth_ref": [
+      "r3",
+      "r4",
+      "r35",
+      "r36"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Number of new stock issued during the period.",
+        "label": "Shares issued at $0.03, shares"
+       }
+      }
+     },
+     "localname": "StockIssuedDuringPeriodSharesNewIssues",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "sharesItemType"
+    },
+    "us-gaap_StockIssuedDuringPeriodValueNewIssues": {
+     "auth_ref": [
+      "r3",
+      "r4",
+      "r35",
+      "r36"
+     ],
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Equity impact of the value of new stock issued during the period. Includes shares issued in an initial public offering or a secondary public offering.",
+        "label": "Shares issued at $0.03, amount"
+       }
+      }
+     },
+     "localname": "StockIssuedDuringPeriodValueNewIssues",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_StockholdersEquity": {
+     "auth_ref": [
+      "r4",
+      "r7",
+      "r8",
+      "r34",
+      "r213",
+      "r225",
+      "r232",
+      "r236"
+     ],
+     "calculation": {
+      "http://azzurro.com/role/BalanceSheets": {
+       "order": 10.0,
+       "parentTag": "us-gaap_LiabilitiesAndStockholdersEquity",
+       "weight": 1.0
+      }
+     },
+     "crdr": "credit",
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Total of all stockholders' equity (deficit) items, net of receivables from officers, directors, owners, and affiliates of the entity which are attributable to the parent. The amount of the economic entity's stockholders' equity attributable to the parent excludes the amount of stockholders' equity which is allocable to that ownership interest in subsidiary equity which is not attributable to the parent (noncontrolling interest, minority interest). This excludes temporary equity and is sometimes called permanent equity.",
+        "label": "[Stockholders' Equity Attributable to Parent]",
+        "periodEndLabel": "Balance, amount",
+        "periodStartLabel": "Balance, amount",
+        "totalLabel": "Total Stockholders' equity"
+       }
+      }
+     },
+     "localname": "StockholdersEquity",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets",
+      "http://azzurro.com/role/StatementOfStockholdersEquityAudited"
+     ],
+     "xbrltype": "monetaryItemType"
+    },
+    "us-gaap_StockholdersEquityAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Stockholders' Equity"
+       }
+      }
+     },
+     "localname": "StockholdersEquityAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/BalanceSheets"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_StockholdersEquityNoteDisclosureTextBlock": {
+     "auth_ref": [
+      "r37",
+      "r74",
+      "r122",
+      "r123",
+      "r124",
+      "r125",
+      "r126",
+      "r127",
+      "r128",
+      "r129",
+      "r130",
+      "r131",
+      "r132",
+      "r133",
+      "r135",
+      "r166"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The entire disclosure for shareholders' equity comprised of portions attributable to the parent entity and noncontrolling interest, including other comprehensive income. Includes, but is not limited to, balances of common stock, preferred stock, additional paid-in capital, other capital and retained earnings, accumulated balance for each classification of other comprehensive income and amount of comprehensive income.",
+        "label": "NOTE 4 - CAPITAL STOCK"
+       }
+      }
+     },
+     "localname": "StockholdersEquityNoteDisclosureTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/CapitalStock"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_SubsequentEventMember": {
+     "auth_ref": [
+      "r176",
+      "r185"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Identifies event that occurred after the balance sheet date but before financial statements are issued or available to be issued.",
+        "label": "Subsequent Event [Member]"
+       }
+      }
+     },
+     "localname": "SubsequentEventMember",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_SubsequentEventTypeAxis": {
+     "auth_ref": [
+      "r176",
+      "r185"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Information by event that occurred after the balance sheet date but before financial statements are issued or available to be issued.",
+        "label": "Subsequent Event Type [Axis]"
+       }
+      }
+     },
+     "localname": "SubsequentEventTypeAxis",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_SubsequentEventTypeDomain": {
+     "auth_ref": [
+      "r176",
+      "r185"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Event that occurred after the balance sheet date but before financial statements are issued or available to be issued."
+       }
+      }
+     },
+     "localname": "SubsequentEventTypeDomain",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SubsequentEventsDetailsNarrative"
+     ],
+     "xbrltype": "domainItemType"
+    },
+    "us-gaap_SubsequentEventsAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "SUBSEQUENT EVENTS"
+       }
+      }
+     },
+     "localname": "SubsequentEventsAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_SubsequentEventsTextBlock": {
+     "auth_ref": [
+      "r184",
+      "r186"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The entire disclosure for significant events or transactions that occurred after the balance sheet date through the date the financial statements were issued or the date the financial statements were available to be issued. Examples include: the sale of a capital stock issue, purchase of a business, settlement of litigation, catastrophic loss, significant foreign exchange rate changes, loans to insiders or affiliates, and transactions not in the ordinary course of business.",
+        "label": "NOTE 6. SUBSEQUENT EVENTS"
+       }
+      }
+     },
+     "localname": "SubsequentEventsTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SubsequentEvents"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_SubstantialDoubtAboutGoingConcernTextBlock": {
+     "auth_ref": [
+      "r0"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "The entire disclosure when substantial doubt is raised about the ability to continue as a going concern. Includes, but is not limited to, principal conditions or events that raised substantial doubt about the ability to continue as a going concern, management's evaluation of the significance of those conditions or events in relation to the ability to meet its obligations, and management's plans that alleviated or are intended to mitigate the conditions or events that raise substantial doubt about the ability to continue as a going concern.",
+        "label": "NOTE 2 - GOING CONCERN"
+       }
+      }
+     },
+     "localname": "SubstantialDoubtAboutGoingConcernTextBlock",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/GoingConcern"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_SupplementalCashFlowInformationAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Supplemental cash flow information:"
+       }
+      }
+     },
+     "localname": "SupplementalCashFlowInformationAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfCashFlowsAudited"
+     ],
+     "xbrltype": "stringItemType"
+    },
+    "us-gaap_UseOfEstimates": {
+     "auth_ref": [
+      "r31",
+      "r32",
+      "r33",
+      "r97",
+      "r98",
+      "r99",
+      "r100"
+     ],
+     "lang": {
+      "en-us": {
+       "role": {
+        "documentation": "Disclosure of accounting policy for the use of estimates in the preparation of financial statements in conformity with generally accepted accounting principles.",
+        "label": "Use of Estimates"
+       }
+      }
+     },
+     "localname": "UseOfEstimates",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies"
+     ],
+     "xbrltype": "textBlockItemType"
+    },
+    "us-gaap_WeightedAverageNumberOfSharesOutstandingAbstract": {
+     "auth_ref": [],
+     "lang": {
+      "en-us": {
+       "role": {
+        "label": "Weighted Average Number of Common Shares Outstanding:"
+       }
+      }
+     },
+     "localname": "WeightedAverageNumberOfSharesOutstandingAbstract",
+     "nsuri": "http://fasb.org/us-gaap/2022",
+     "presentation": [
+      "http://azzurro.com/role/StatementsOfOperationsAudited"
+     ],
+     "xbrltype": "stringItemType"
+    }
+   },
+   "unitCount": 3
+  }
+ },
+ "std_ref": {
+  "r0": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "SubTopic": "40",
+   "Topic": "205",
+   "URI": "https://asc.fasb.org/subtopic&trid=51888271",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r1": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "Topic": "205",
+   "URI": "https://asc.fasb.org/topic&trid=2122149",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r10": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02.19(a))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r100": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "12",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "275",
+   "URI": "https://asc.fasb.org/extlink&oid=99393423&loc=d3e6191-108592",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r101": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "22",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(h)",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8736-108599",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r102": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "22",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8736-108599",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r103": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "30",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8906-108599",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r104": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "30",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8906-108599",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r105": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "32",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8933-108599",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r106": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "32",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(d)",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8933-108599",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r107": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "32",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8933-108599",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r108": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "323",
+   "URI": "https://asc.fasb.org/extlink&oid=114001798&loc=d3e33918-111571",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r109": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "4",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(d)",
+   "Topic": "326",
+   "URI": "https://asc.fasb.org/extlink&oid=122640432&loc=SL121648383-210437",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r11": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02.19-26)",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r110": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-01(a)(4)(i))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442526-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r111": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-01(a)(4)(iii)(A))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442526-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r112": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-01(a)(4)(iii)(B))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442526-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r113": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-01(a)(4)(iv))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442526-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r114": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-01(a)(5))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442526-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r115": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1B",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-02(a)(4)(i))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442552-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r116": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1B",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-02(a)(4)(iii)(A))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442552-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r117": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1B",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-02(a)(4)(iii)(B))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442552-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r118": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1B",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-02(a)(4)(iii)(C))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442552-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r119": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1B",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-02(a)(4)(iv))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442552-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r12": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02.21)",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r120": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1B",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-02(a)(5))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442552-122756",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r121": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "13",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496158-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r122": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "13",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496158-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r123": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "13",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(g)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496158-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r124": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "13",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(h)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496158-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r125": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "13",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(i)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496158-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r126": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "13",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496158-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r127": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "14",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496171-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r128": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "14",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496171-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r129": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "14",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496171-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r13": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02.29-31)",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r130": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "16",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496180-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r131": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "18",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496189-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r132": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "18",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496189-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r133": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "18",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(d)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=SL123496189-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r134": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=d3e21463-112644",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r135": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.3-04)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=120397183&loc=d3e187085-122770",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r136": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "20",
+   "Subparagraph": "(n)",
+   "Topic": "715",
+   "URI": "https://asc.fasb.org/extlink&oid=123447040&loc=d3e1928-114920",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r137": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128089324&loc=d3e5070-113901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r138": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)(1)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128089324&loc=d3e5070-113901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r139": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)(2)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128089324&loc=d3e5070-113901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r14": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-03(10))",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=126953954&loc=SL114868664-224227",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r140": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)(2)(i)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128089324&loc=d3e5070-113901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r141": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)(2)(ii)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128089324&loc=d3e5070-113901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r142": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)(2)(v)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128089324&loc=d3e5070-113901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r143": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "15",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(e)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128097895&loc=SL121327923-165333",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r144": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "15",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(f)(1)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128097895&loc=SL121327923-165333",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r145": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "15",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(f)(2)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=128097895&loc=SL121327923-165333",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r146": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SAB Topic 14.D.2.Q6)",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/extlink&oid=122041274&loc=d3e301413-122809",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r147": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "Topic": "718",
+   "URI": "https://asc.fasb.org/topic&trid=2228938",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r148": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "25",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=123427490&loc=d3e32247-109318",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r149": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "28",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=123427490&loc=d3e32280-109318",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r15": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-03(20))",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=126953954&loc=SL114868664-224227",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r150": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "10",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=121826272&loc=d3e32672-109319",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r151": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "17",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=121826272&loc=d3e32809-109319",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r152": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "19",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=121826272&loc=d3e32840-109319",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r153": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "20",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=121826272&loc=d3e32847-109319",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r154": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "9",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=121826272&loc=d3e32639-109319",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r155": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "8",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(d)(2)",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=126983759&loc=SL121830611-158277",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r156": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "8",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(d)(3)",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=126983759&loc=SL121830611-158277",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r157": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SAB TOPIC 6.I.7)",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=122134291&loc=d3e330036-122817",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r158": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "20",
+   "Subparagraph": "(a)",
+   "Topic": "740",
+   "URI": "https://asc.fasb.org/extlink&oid=123586238&loc=d3e38679-109324",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r159": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "19",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=126929396&loc=SL4569616-111683",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r16": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-03.4)",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=126953954&loc=SL114868664-224227",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r160": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "25",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=116870748&loc=SL6758485-165988",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r161": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "25",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=116870748&loc=SL6758485-165988",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r162": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)(1)",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=109239629&loc=SL4573702-111684",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r163": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)(1)",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=109239629&loc=SL4573702-111684",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r164": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(bb)",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=123419778&loc=d3e5710-111685",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r165": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=123419778&loc=d3e5710-111685",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r166": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "6",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "40",
+   "Subparagraph": "(a)",
+   "Topic": "815",
+   "URI": "https://asc.fasb.org/extlink&oid=126731327&loc=SL126733271-114008",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r167": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(e)(3)",
+   "Topic": "815",
+   "URI": "https://asc.fasb.org/extlink&oid=126732423&loc=SL123482106-238011",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r168": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(f)",
+   "Topic": "815",
+   "URI": "https://asc.fasb.org/extlink&oid=126732423&loc=SL123482106-238011",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r169": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "28",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)",
+   "Topic": "825",
+   "URI": "https://asc.fasb.org/extlink&oid=123596393&loc=d3e14064-108612",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r17": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "14",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3255-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r170": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "17",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "30",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=118261656&loc=d3e32136-110900",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r171": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "20",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "30",
+   "Subparagraph": "(a)",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=118261656&loc=d3e32211-110900",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r172": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "20",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "30",
+   "Subparagraph": "(b)",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=118261656&loc=d3e32211-110900",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r173": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "20",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "30",
+   "Subparagraph": "(c)",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=118261656&loc=d3e32211-110900",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r174": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "20",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "30",
+   "Subparagraph": "(d)",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=118261656&loc=d3e32211-110900",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r175": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "30",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=6450520&loc=d3e32583-110901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r176": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "30",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=6450520&loc=d3e32618-110901",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r177": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(a)(3)(iii)(03)",
+   "Topic": "848",
+   "URI": "https://asc.fasb.org/extlink&oid=125980421&loc=SL125981372-237846",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r178": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/extlink&oid=6457730&loc=d3e39549-107864",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r179": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/extlink&oid=6457730&loc=d3e39549-107864",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r18": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "14",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3255-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r180": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/extlink&oid=6457730&loc=d3e39549-107864",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r181": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(d)",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/extlink&oid=6457730&loc=d3e39549-107864",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r182": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "6",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/extlink&oid=6457730&loc=d3e39691-107864",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r183": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/topic&trid=2122745",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r184": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "855",
+   "URI": "https://asc.fasb.org/extlink&oid=6842918&loc=SL6314017-165662",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r185": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "855",
+   "URI": "https://asc.fasb.org/extlink&oid=6842918&loc=SL6314017-165662",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r186": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "Topic": "855",
+   "URI": "https://asc.fasb.org/topic&trid=2122774",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r187": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SAB Topic 11.L)",
+   "Topic": "924",
+   "URI": "https://asc.fasb.org/extlink&oid=6472922&loc=d3e499488-122856",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r188": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "15",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(a)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e61929-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r189": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "15",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(b)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e61929-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r19": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "24",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3521-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r190": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "20",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(a)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e62059-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r191": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "20",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(b)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e62059-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r192": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "28",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(a)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e62395-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r193": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "28",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(b)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e62395-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r194": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "33",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(a)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e62479-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r195": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "33",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(b)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e62479-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r196": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "35A",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(a)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=SL6807758-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r197": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "35A",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(b)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=SL6807758-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r198": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "8",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(c)(1)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e61872-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r199": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "8",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "235",
+   "Subparagraph": "(c)(2)",
+   "Topic": "932",
+   "URI": "https://asc.fasb.org/extlink&oid=126939881&loc=d3e61872-109447",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r2": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(19)(a)(5))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r20": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "25",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(f)",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3536-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r200": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "235",
+   "Subparagraph": "(SX 210.9-05(b)(2))",
+   "Topic": "942",
+   "URI": "https://asc.fasb.org/extlink&oid=120399901&loc=d3e537907-122884",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r201": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "220",
+   "Subparagraph": "(SX 210.7-04(9))",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=120400993&loc=SL114874131-224263",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r202": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(e)",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=124501264&loc=SL117420844-207641",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r203": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(f)(1)",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=124501264&loc=SL117420844-207641",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r204": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(f)(2)",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=124501264&loc=SL117420844-207641",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r205": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(g)(2)(i)",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=124501264&loc=SL117420844-207641",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r206": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(h)(2)",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=124501264&loc=SL117420844-207641",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r207": {
+   "Name": "Regulation S-K (SK)",
+   "Number": "229",
+   "Paragraph": "(a)",
+   "Publisher": "SEC",
+   "Section": "1402",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r208": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=124098289&loc=d3e6676-107765",
+   "role": "http://www.xbrl.org/2003/role/exampleRef"
+  },
+  "r209": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "30",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(d)",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8906-108599",
+   "role": "http://www.xbrl.org/2003/role/exampleRef"
+  },
+  "r21": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "25",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3536-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r210": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "31",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "280",
+   "URI": "https://asc.fasb.org/extlink&oid=126901519&loc=d3e8924-108599",
+   "role": "http://www.xbrl.org/2003/role/exampleRef"
+  },
+  "r211": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "4J",
+   "Publisher": "FASB",
+   "Section": "55",
+   "SubTopic": "10",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=120409616&loc=SL4591551-111686",
+   "role": "http://www.xbrl.org/2003/role/exampleRef"
+  },
+  "r212": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "4K",
+   "Publisher": "FASB",
+   "Section": "55",
+   "SubTopic": "10",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/extlink&oid=120409616&loc=SL4591552-111686",
+   "role": "http://www.xbrl.org/2003/role/exampleRef"
+  },
+  "r213": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "10",
+   "Publisher": "FASB",
+   "Section": "55",
+   "SubTopic": "10",
+   "Topic": "852",
+   "URI": "https://asc.fasb.org/extlink&oid=84165509&loc=d3e56426-112766",
+   "role": "http://www.xbrl.org/2003/role/exampleRef"
+  },
+  "r214": {
+   "Name": "Exchange Act",
+   "Number": "240",
+   "Publisher": "SEC",
+   "Section": "12",
+   "Subsection": "b-2",
+   "role": "http://www.xbrl.org/2003/role/presentationRef"
+  },
+  "r215": {
+   "Name": "Form 10-K",
+   "Number": "249",
+   "Publisher": "SEC",
+   "Section": "310",
+   "role": "http://www.xbrl.org/2003/role/presentationRef"
+  },
+  "r216": {
+   "Name": "Form 20-F",
+   "Number": "249",
+   "Publisher": "SEC",
+   "Section": "220",
+   "Subsection": "f",
+   "role": "http://www.xbrl.org/2003/role/presentationRef"
+  },
+  "r217": {
+   "Name": "Form 40-F",
+   "Number": "249",
+   "Publisher": "SEC",
+   "Section": "240",
+   "Subsection": "f",
+   "role": "http://www.xbrl.org/2003/role/presentationRef"
+  },
+  "r218": {
+   "Name": "Forms 10-K, 10-Q, 20-F",
+   "Number": "240",
+   "Publisher": "SEC",
+   "Section": "13",
+   "Subsection": "a-1",
+   "role": "http://www.xbrl.org/2003/role/presentationRef"
+  },
+  "r219": {
+   "Name": "Securities Act",
+   "Number": "230",
+   "Publisher": "SEC",
+   "Section": "405",
+   "role": "http://www.xbrl.org/2003/role/presentationRef"
+  },
+  "r22": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "28",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3602-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r220": {
+   "Name": "Securities Act",
+   "Number": "7A",
+   "Publisher": "SEC",
+   "Section": "B",
+   "Subsection": "2",
+   "role": "http://www.xbrl.org/2003/role/presentationRef"
+  },
+  "r221": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "272",
+   "URI": "https://asc.fasb.org/extlink&oid=125520817&loc=d3e70229-108054",
+   "role": "http://www.xbrl.org/2003/role/recommendedDisclosureRef"
+  },
+  "r222": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "6",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=124431353&loc=SL124452729-227067",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r223": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126999549&loc=d3e4297-108586",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r224": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.4-08(d))",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/extlink&oid=120395691&loc=d3e23780-122690",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r225": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.4-08(g)(1)(ii))",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/extlink&oid=120395691&loc=d3e23780-122690",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r226": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.4-08(k)(1))",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/extlink&oid=120395691&loc=d3e23780-122690",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r227": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "23",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124436220&loc=d3e21914-107793",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r228": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "24",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124436220&loc=d3e21930-107793",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r229": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "5",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124436220&loc=d3e21711-107793",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r23": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "28",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3602-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r230": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "55",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=126958026&loc=d3e2626-109256",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r231": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "13",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "310",
+   "URI": "https://asc.fasb.org/extlink&oid=124259787&loc=d3e4647-111522",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r232": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "323",
+   "URI": "https://asc.fasb.org/extlink&oid=114001798&loc=d3e33918-111571",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r233": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-01(a)(4)(ii))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442526-122756",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r234": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.13-01(a)(4)(iii))",
+   "Topic": "470",
+   "URI": "https://asc.fasb.org/extlink&oid=126975872&loc=SL124442526-122756",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r235": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "40",
+   "Subparagraph": "(e)(3)",
+   "Topic": "815",
+   "URI": "https://asc.fasb.org/extlink&oid=126732423&loc=SL123482106-238011",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r236": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "28",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(f)",
+   "Topic": "825",
+   "URI": "https://asc.fasb.org/extlink&oid=123596393&loc=d3e14064-108612",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r237": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/extlink&oid=6457730&loc=d3e39603-107864",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r238": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "7",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "852",
+   "URI": "https://asc.fasb.org/extlink&oid=124433192&loc=SL2890621-112765",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r239": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "7",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "852",
+   "URI": "https://asc.fasb.org/extlink&oid=124433192&loc=SL2890621-112765",
+   "role": "http://www.xbrl.org/2009/role/commonPracticeRef"
+  },
+  "r24": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "4",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3044-108585",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r25": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126999549&loc=d3e4273-108586",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r26": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126999549&loc=d3e4297-108586",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r27": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "8",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126999549&loc=SL98516268-108586",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r28": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/topic&trid=2122369",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r29": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=124432515&loc=d3e3550-109257",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r3": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(28))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r30": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=124432515&loc=d3e3630-109257",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r31": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "4",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "275",
+   "URI": "https://asc.fasb.org/extlink&oid=99393423&loc=d3e6061-108592",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r32": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "8",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "275",
+   "URI": "https://asc.fasb.org/extlink&oid=99393423&loc=d3e6132-108592",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r33": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "9",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "275",
+   "URI": "https://asc.fasb.org/extlink&oid=99393423&loc=d3e6143-108592",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r34": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SAB Topic 4.E)",
+   "Topic": "310",
+   "URI": "https://asc.fasb.org/extlink&oid=122038336&loc=d3e74512-122707",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r35": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=126973232&loc=d3e21463-112644",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r36": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.3-04)",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/extlink&oid=120397183&loc=d3e187085-122770",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r37": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "Topic": "505",
+   "URI": "https://asc.fasb.org/topic&trid=2208762",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r38": {
+   "Name": "Accounting Standards Codification",
+   "Publisher": "FASB",
+   "Topic": "810",
+   "URI": "https://asc.fasb.org/topic&trid=2197479",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r39": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "60",
+   "SubTopic": "10",
+   "Topic": "820",
+   "URI": "https://asc.fasb.org/extlink&oid=7493716&loc=d3e21868-110260",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r4": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(29))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r40": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "825",
+   "URI": "https://asc.fasb.org/extlink&oid=123594938&loc=d3e13279-108611",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r41": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "230",
+   "Topic": "830",
+   "URI": "https://asc.fasb.org/extlink&oid=123444420&loc=d3e33268-110906",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r42": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(d)",
+   "Topic": "850",
+   "URI": "https://asc.fasb.org/extlink&oid=6457730&loc=d3e39549-107864",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r43": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "25",
+   "SubTopic": "20",
+   "Topic": "940",
+   "URI": "https://asc.fasb.org/extlink&oid=126941158&loc=d3e41242-110953",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r44": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "210",
+   "Subparagraph": "(SX 210.9-03(11))",
+   "Topic": "942",
+   "URI": "https://asc.fasb.org/extlink&oid=126897435&loc=d3e534808-122878",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r45": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "210",
+   "Subparagraph": "(SX 210.9-03(23))",
+   "Topic": "942",
+   "URI": "https://asc.fasb.org/extlink&oid=126897435&loc=d3e534808-122878",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r46": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "220",
+   "Subparagraph": "(SX 210.9-04(15))",
+   "Topic": "942",
+   "URI": "https://asc.fasb.org/extlink&oid=120399700&loc=SL114874048-224260",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r47": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "220",
+   "Subparagraph": "(SX 210.9-04(22))",
+   "Topic": "942",
+   "URI": "https://asc.fasb.org/extlink&oid=120399700&loc=SL114874048-224260",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r48": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "210",
+   "Subparagraph": "(SX 210.7-03(17))",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=126734703&loc=d3e572229-122910",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r49": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "210",
+   "Subparagraph": "(SX 210.7-03(a)(12))",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=126734703&loc=d3e572229-122910",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r5": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(30)(a)(1))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r50": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "210",
+   "Subparagraph": "(SX 210.7-03(a)(23)(a)(4))",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=126734703&loc=d3e572229-122910",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r51": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "210",
+   "Subparagraph": "(SX 210.7-03(a)(25))",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=126734703&loc=d3e572229-122910",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r52": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "220",
+   "Subparagraph": "(SX 210.7-04(18))",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=120400993&loc=SL114874131-224263",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r53": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "220",
+   "Subparagraph": "(SX 210.7-04(8))",
+   "Topic": "944",
+   "URI": "https://asc.fasb.org/extlink&oid=120400993&loc=SL114874131-224263",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r54": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "210",
+   "Subparagraph": "(SX 210.6-04(12))",
+   "Topic": "946",
+   "URI": "https://asc.fasb.org/extlink&oid=120401414&loc=d3e603758-122996",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r55": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "6",
+   "Publisher": "FASB",
+   "Section": "65",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "105",
+   "URI": "https://asc.fasb.org/extlink&oid=126987489&loc=SL124442142-165695",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r56": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "7",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "20",
+   "Topic": "205",
+   "URI": "https://asc.fasb.org/extlink&oid=109222650&loc=SL51721683-107760",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r57": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=124098289&loc=d3e6676-107765",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r58": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "5",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=124098289&loc=d3e6904-107765",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r59": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(1))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r6": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(30)(a)(3))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r60": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(18))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r61": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(27)(b))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r62": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(28))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r63": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(29))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r64": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(9))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r65": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1A",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=126968391&loc=SL7669619-108580",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r66": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1B",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=126968391&loc=SL7669625-108580",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r67": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=124431353&loc=SL116659661-227067",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r68": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "4",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=124431353&loc=SL124442407-227067",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r69": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "5",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=124431353&loc=SL124442411-227067",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r7": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(30))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r70": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "6",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "220",
+   "URI": "https://asc.fasb.org/extlink&oid=124431353&loc=SL124452729-227067",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r71": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3000-108585",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r72": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "24",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "230",
+   "URI": "https://asc.fasb.org/extlink&oid=126954810&loc=d3e3521-108585",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r73": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/extlink&oid=126899994&loc=d3e18726-107790",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r74": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.4-08(e)(1))",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/extlink&oid=120395691&loc=d3e23780-122690",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r75": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.4-08(g)(1)(ii))",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/extlink&oid=120395691&loc=d3e23780-122690",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r76": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.4-08(h))",
+   "Topic": "235",
+   "URI": "https://asc.fasb.org/extlink&oid=120395691&loc=d3e23780-122690",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r77": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "23",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124436220&loc=d3e21914-107793",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r78": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "24",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124436220&loc=d3e21930-107793",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r79": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "5",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124436220&loc=d3e21711-107793",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r8": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(31))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r80": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)(2)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22499-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r81": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)(3)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22499-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r82": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "11",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22694-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r83": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "11",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22694-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r84": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22583-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r85": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "4",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22595-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r86": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "7",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22644-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r87": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "8",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22658-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r88": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "9",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "250",
+   "URI": "https://asc.fasb.org/extlink&oid=124431687&loc=d3e22663-107794",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r89": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "2",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=126958026&loc=d3e1252-109256",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r9": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "S99",
+   "SubTopic": "10",
+   "Subparagraph": "(SX 210.5-02(32))",
+   "Topic": "210",
+   "URI": "https://asc.fasb.org/extlink&oid=120391452&loc=d3e13212-122682",
+   "role": "http://fasb.org/us-gaap/role/ref/legacyRef"
+  },
+  "r90": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=126958026&loc=d3e1278-109256",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r91": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "60B",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=126958026&loc=SL5780133-109256",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r92": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "60B",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Subparagraph": "(d)",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=126958026&loc=SL5780133-109256",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r93": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(a)",
+   "Topic": "260",
+   "URI": "https://asc.fasb.org/extlink&oid=124432515&loc=d3e3550-109257",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r94": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "45",
+   "SubTopic": "10",
+   "Topic": "272",
+   "URI": "https://asc.fasb.org/extlink&oid=125520817&loc=d3e70191-108054",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r95": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "272",
+   "URI": "https://asc.fasb.org/extlink&oid=6373374&loc=d3e70434-108055",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r96": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "3",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "272",
+   "URI": "https://asc.fasb.org/extlink&oid=6373374&loc=d3e70478-108055",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r97": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(b)",
+   "Topic": "275",
+   "URI": "https://asc.fasb.org/extlink&oid=99393423&loc=d3e5967-108592",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r98": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "1",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Subparagraph": "(c)",
+   "Topic": "275",
+   "URI": "https://asc.fasb.org/extlink&oid=99393423&loc=d3e5967-108592",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  },
+  "r99": {
+   "Name": "Accounting Standards Codification",
+   "Paragraph": "11",
+   "Publisher": "FASB",
+   "Section": "50",
+   "SubTopic": "10",
+   "Topic": "275",
+   "URI": "https://asc.fasb.org/extlink&oid=99393423&loc=d3e6161-108592",
+   "role": "http://www.xbrl.org/2003/role/disclosureRef"
+  }
+ },
+ "version": "2.2"
+}

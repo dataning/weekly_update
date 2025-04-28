@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="us-ascii" standalone="yes"?>
+<!--XBRL Document Created with XBRLMaster-->
+<!--Version: 2.3.08-->
+<!--Based on XBRL 2.1-->
+<!--Date of creation: 01/03/2023-->
+<!--Software architectural design and coding: A'c Dharmapremananda Avt.-->
+<!--Copyright (c) 2023 I-NET Business Solutions, Inc. All Rights Reserved.-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://fision.com/role/Cover" xlink:href="fssn-20211231.xsd#Cover" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/ConsolidatedBalanceSheet" xlink:href="fssn-20211231.xsd#ConsolidatedBalanceSheet" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/ConsolidatedBalanceSheetParenthetical" xlink:href="fssn-20211231.xsd#ConsolidatedBalanceSheetParenthetical" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/ConsolidatedStatementsOfOperations" xlink:href="fssn-20211231.xsd#ConsolidatedStatementsOfOperations" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/ConsolidatedStatementsOfStockholdersDeficit" xlink:href="fssn-20211231.xsd#ConsolidatedStatementsOfStockholdersDeficit" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/ConsolidatedStatementsOfCashFlows" xlink:href="fssn-20211231.xsd#ConsolidatedStatementsOfCashFlows" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPolicies" xlink:href="fssn-20211231.xsd#OrganizationAndSignificantAccountingPolicies" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/GoingConcern" xlink:href="fssn-20211231.xsd#GoingConcern" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/FairValue" xlink:href="fssn-20211231.xsd#FairValue" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AccountsReceivable" xlink:href="fssn-20211231.xsd#AccountsReceivable" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/NotesReceivable" xlink:href="fssn-20211231.xsd#NotesReceivable" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/PropertyAndEquipment" xlink:href="fssn-20211231.xsd#PropertyAndEquipment" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IntangibleAssetsAndGoodwill" xlink:href="fssn-20211231.xsd#IntangibleAssetsAndGoodwill" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/NotesPayable" xlink:href="fssn-20211231.xsd#NotesPayable" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/StockholdersDeficit" xlink:href="fssn-20211231.xsd#StockholdersDeficit" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/RelatedPartyTransactions" xlink:href="fssn-20211231.xsd#RelatedPartyTransactions" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/ACQUISITIONS" xlink:href="fssn-20211231.xsd#ACQUISITIONS" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/CommitmentsContingencies" xlink:href="fssn-20211231.xsd#CommitmentsContingencies" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/LEASES" xlink:href="fssn-20211231.xsd#LEASES" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IncomeTaxes" xlink:href="fssn-20211231.xsd#IncomeTaxes" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/WARRANTS" xlink:href="fssn-20211231.xsd#WARRANTS" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/CONCENTRATIONS" xlink:href="fssn-20211231.xsd#CONCENTRATIONS" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/Covid19LoanAndLoanForgiveness" xlink:href="fssn-20211231.xsd#Covid19LoanAndLoanForgiveness" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/SubsequentEvents" xlink:href="fssn-20211231.xsd#SubsequentEvents" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesPolicies" xlink:href="fssn-20211231.xsd#OrganizationAndSignificantAccountingPoliciesPolicies" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesTables" xlink:href="fssn-20211231.xsd#OrganizationAndSignificantAccountingPoliciesTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/FairValueTables" xlink:href="fssn-20211231.xsd#FairValueTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AccountsReceivableTables" xlink:href="fssn-20211231.xsd#AccountsReceivableTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/NotesReceivableTables" xlink:href="fssn-20211231.xsd#NotesReceivableTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/PropertyAndEquipmentTables" xlink:href="fssn-20211231.xsd#PropertyAndEquipmentTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IntangibleAssetsAndGoodwillTables" xlink:href="fssn-20211231.xsd#IntangibleAssetsAndGoodwillTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AcquisitionsTables" xlink:href="fssn-20211231.xsd#AcquisitionsTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IncomeTaxesTables" xlink:href="fssn-20211231.xsd#IncomeTaxesTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/WarrantsTables" xlink:href="fssn-20211231.xsd#WarrantsTables" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails" xlink:href="fssn-20211231.xsd#OrganizationAndSignificantAccountingPoliciesDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails1" xlink:href="fssn-20211231.xsd#OrganizationAndSignificantAccountingPoliciesDetails1" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails2" xlink:href="fssn-20211231.xsd#OrganizationAndSignificantAccountingPoliciesDetails2" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetailsNarrative" xlink:href="fssn-20211231.xsd#OrganizationAndSignificantAccountingPoliciesDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/GoingConcernDetailsNarrative" xlink:href="fssn-20211231.xsd#GoingConcernDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/FairValueDetails" xlink:href="fssn-20211231.xsd#FairValueDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/FairValueDetails1" xlink:href="fssn-20211231.xsd#FairValueDetails1" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/FairValueDetails2" xlink:href="fssn-20211231.xsd#FairValueDetails2" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/FairValueDetailsNarrative" xlink:href="fssn-20211231.xsd#FairValueDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AccountsReceivableDetails" xlink:href="fssn-20211231.xsd#AccountsReceivableDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/NotesReceivableDetails" xlink:href="fssn-20211231.xsd#NotesReceivableDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/NotesReceivableDetailsNarrative" xlink:href="fssn-20211231.xsd#NotesReceivableDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/PropertyAndEquipmentDetails" xlink:href="fssn-20211231.xsd#PropertyAndEquipmentDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/PropertyAndEquipmentDetailsNarrative" xlink:href="fssn-20211231.xsd#PropertyAndEquipmentDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IntangibleAssetsAndGoodwillDetails" xlink:href="fssn-20211231.xsd#IntangibleAssetsAndGoodwillDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IntangibleAssetsAndGoodwillDetails1" xlink:href="fssn-20211231.xsd#IntangibleAssetsAndGoodwillDetails1" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IntangibleAssetsAndGoodwilllDetails2" xlink:href="fssn-20211231.xsd#IntangibleAssetsAndGoodwilllDetails2" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IntangibleAssetsAndGoodwilllDetailsNarrative" xlink:href="fssn-20211231.xsd#IntangibleAssetsAndGoodwilllDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/NotesPayableDetailsNarrative" xlink:href="fssn-20211231.xsd#NotesPayableDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/StockholdersDeficitDetailsNarrative" xlink:href="fssn-20211231.xsd#StockholdersDeficitDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/RelatedPartyTransactionsDetailsNarrative" xlink:href="fssn-20211231.xsd#RelatedPartyTransactionsDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AcquisitionsDetails" xlink:href="fssn-20211231.xsd#AcquisitionsDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AcquisitionsDetails1" xlink:href="fssn-20211231.xsd#AcquisitionsDetails1" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AcquisitionsDetails2" xlink:href="fssn-20211231.xsd#AcquisitionsDetails2" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/AcquisitionsDetailsNarrative" xlink:href="fssn-20211231.xsd#AcquisitionsDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/CommitmentsAndContigenciesDetailsNarrative" xlink:href="fssn-20211231.xsd#CommitmentsAndContigenciesDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IncomeTaxesDetails" xlink:href="fssn-20211231.xsd#IncomeTaxesDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/IncomeTaxesDetailsNarrative" xlink:href="fssn-20211231.xsd#IncomeTaxesDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/WarrantsDetails" xlink:href="fssn-20211231.xsd#WarrantsDetails" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/ConcentrationsDetailsNarrative" xlink:href="fssn-20211231.xsd#ConcentrationsDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/Covid19LoanAndLoanForgivenessDetailsNarrative" xlink:href="fssn-20211231.xsd#Covid19LoanAndLoanForgivenessDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://fision.com/role/SubsequentEventsDetailsNarrative" xlink:href="fssn-20211231.xsd#SubsequentEventsDetailsNarrative" xlink:type="simple" />
+  <link:arcroleRef xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension" arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" />
+  <link:arcroleRef xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain" arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" />
+  <link:arcroleRef xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member" arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" />
+  <link:arcroleRef xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all" arcroleURI="http://xbrl.org/int/dim/arcrole/all" />
+  <link:arcroleRef xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#notAll" arcroleURI="http://xbrl.org/int/dim/arcrole/notAll" />
+  <link:arcroleRef xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default" arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/Cover" xlink:title="00000001 - Document - Cover Page Information">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_CoverAbstract" xlink:label="loc_deiCover" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/ConsolidatedBalanceSheet" xlink:title="000002 - Statement - CONSOLIDATED BALANCE SHEET" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/ConsolidatedBalanceSheetParenthetical" xlink:title="000003 - Statement - CONSOLIDATED BALANCE SHEET (Parenthetical)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/ConsolidatedStatementsOfOperations" xlink:title="000004 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/ConsolidatedStatementsOfStockholdersDeficit" xlink:title="000005 - Statement - CONSOLIDATED STATEMENTS OF STOCKHOLDERS DEFICIT">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementEquityComponentsAxis" xlink:label="loc_us-gaapStatementEquityComponentsAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapStatementEquityComponentsAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_EquityComponentDomain" xlink:label="loc_us-gaapEquityComponentDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapStatementEquityComponentsAxis" xlink:to="loc_us-gaapEquityComponentDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_EquityComponentDomain" xlink:label="loc_us-gaapEquityComponentDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapStatementEquityComponentsAxis" xlink:to="loc_us-gaapEquityComponentDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockMember" xlink:label="loc_us-gaapCommonStockMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapEquityComponentDomain" xlink:to="loc_us-gaapCommonStockMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AdditionalPaidInCapitalMember" xlink:label="loc_us-gaapAdditionalPaidInCapitalMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapEquityComponentDomain" xlink:to="loc_us-gaapAdditionalPaidInCapitalMember" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RetainedEarningsMember" xlink:label="loc_us-gaapRetainedEarningsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapEquityComponentDomain" xlink:to="loc_us-gaapRetainedEarningsMember" order="23" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharesIssued" xlink:label="loc_us-gaapSharesIssued" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSharesIssued" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockholdersEquity" xlink:label="loc_us-gaapStockholdersEquity" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockholdersEquity" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesNewIssues" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesNewIssues" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesNewIssues" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodValueNewIssues" xlink:label="loc_us-gaapStockIssuedDuringPeriodValueNewIssues" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodValueNewIssues" order="4" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_StockIssuedForTrueUpPenaltySharesShares" xlink:label="loc_fssnStockIssuedForTrueUpPenaltySharesShares" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnStockIssuedForTrueUpPenaltySharesShares" order="5" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_StockIssuedForTrueUpPenaltySharesAmount" xlink:label="loc_fssnStockIssuedForTrueUpPenaltySharesAmount" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnStockIssuedForTrueUpPenaltySharesAmount" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesIssuedForServices" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesIssuedForServices" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesIssuedForServices" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodValueIssuedForServices" xlink:label="loc_us-gaapStockIssuedDuringPeriodValueIssuedForServices" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodValueIssuedForServices" order="8" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_WarrantsOptionsGrantedForServices" xlink:label="loc_fssnWarrantsOptionsGrantedForServices" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnWarrantsOptionsGrantedForServices" order="9" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesConversionOfConvertibleSecurities" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesConversionOfConvertibleSecurities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesConversionOfConvertibleSecurities" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodValueConversionOfConvertibleSecurities" xlink:label="loc_us-gaapStockIssuedDuringPeriodValueConversionOfConvertibleSecurities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodValueConversionOfConvertibleSecurities" order="11" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetIncomeLoss" xlink:label="loc_us-gaapNetIncomeLoss" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapNetIncomeLoss" order="12" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesStockOptionsExercised" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesStockOptionsExercised" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesStockOptionsExercised" order="13" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_WarrantsExercisedAmount" xlink:label="loc_fssnWarrantsExercisedAmount" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnWarrantsExercisedAmount" order="14" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/ConsolidatedStatementsOfCashFlows" xlink:title="000006 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/OrganizationAndSignificantAccountingPolicies" xlink:title="000007 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/GoingConcern" xlink:title="000008 - Disclosure - GOING CONCERN" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/FairValue" xlink:title="000009 - Disclosure - FAIR VALUE" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AccountsReceivable" xlink:title="000010 - Disclosure - ACCOUNTS RECEIVABLE" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/NotesReceivable" xlink:title="000011 - Disclosure - NOTES RECEIVABLE" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/PropertyAndEquipment" xlink:title="000012 - Disclosure - PROPERTY AND EQUIPMENT" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IntangibleAssetsAndGoodwill" xlink:title="000013 - Disclosure - INTANGIBLE ASSETS AND GOODWILL" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/NotesPayable" xlink:title="000014 - Disclosure - NOTES PAYABLE" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/StockholdersDeficit" xlink:title="000015 - Disclosure - STOCKHOLDERS DEFICIT" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/RelatedPartyTransactions" xlink:title="000016 - Disclosure - RELATED PARTY TRANSACTIONS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/ACQUISITIONS" xlink:title="000017 - Disclosure - ACQUISITIONS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/CommitmentsContingencies" xlink:title="000018 - Disclosure - COMMITMENTS CONTINGENCIES" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/LEASES" xlink:title="000019 - Disclosure - LEASES" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IncomeTaxes" xlink:title="000020 - Disclosure - INCOME TAXES" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/WARRANTS" xlink:title="000021 - Disclosure - WARRANTS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/CONCENTRATIONS" xlink:title="000022 - Disclosure - CONCENTRATIONS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/Covid19LoanAndLoanForgiveness" xlink:title="000023 - Disclosure - COVID-19 LOAN and LOAN FORGIVENESS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/SubsequentEvents" xlink:title="000024 - Disclosure - SUBSEQUENT EVENTS" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesPolicies" xlink:title="000025 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Policies)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesTables" xlink:title="000026 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/FairValueTables" xlink:title="000027 - Disclosure - FAIR VALUE (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AccountsReceivableTables" xlink:title="000028 - Disclosure - ACCOUNTS RECEIVABLE (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/NotesReceivableTables" xlink:title="000029 - Disclosure - NOTES RECEIVABLE (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/PropertyAndEquipmentTables" xlink:title="000030 - Disclosure - PROPERTY AND EQUIPMENT (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IntangibleAssetsAndGoodwillTables" xlink:title="000031 - Disclosure - INTANGIBLE ASSETS AND GOODWILL (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AcquisitionsTables" xlink:title="000032 - Disclosure - ACQUISITIONS (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IncomeTaxesTables" xlink:title="000033 - Disclosure - INCOME TAXES (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/WarrantsTables" xlink:title="000034 - Disclosure - WARRANTS (Tables)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails" xlink:title="000035 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentByTypeAxis" xlink:label="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentTypeDomain" xlink:label="loc_us-gaapPropertyPlantAndEquipmentTypeDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" xlink:to="loc_us-gaapPropertyPlantAndEquipmentTypeDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentTypeDomain" xlink:label="loc_us-gaapPropertyPlantAndEquipmentTypeDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" xlink:to="loc_us-gaapPropertyPlantAndEquipmentTypeDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FurnitureAndFixturesMember" xlink:label="loc_us-gaapFurnitureAndFixturesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapPropertyPlantAndEquipmentTypeDomain" xlink:to="loc_us-gaapFurnitureAndFixturesMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ComputerAndOfficeEquipmentMember" xlink:label="loc_fssnComputerAndOfficeEquipmentMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapPropertyPlantAndEquipmentTypeDomain" xlink:to="loc_fssnComputerAndOfficeEquipmentMember" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentUsefulLife" xlink:label="loc_us-gaapPropertyPlantAndEquipmentUsefulLife" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapPropertyPlantAndEquipmentUsefulLife" order="1" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails1" xlink:title="000036 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details 1)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails2" xlink:title="000037 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details 2)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetailsNarrative" xlink:title="000038 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details Narrative)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/GoingConcernDetailsNarrative" xlink:title="000039 - Disclosure - GOING CONCERN (Details Narrative)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/FairValueDetails" xlink:title="000040 - Disclosure - FAIR VALUE (Details)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FairValueByFairValueHierarchyLevelAxis" xlink:label="loc_us-gaapFairValueByFairValueHierarchyLevelAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapFairValueByFairValueHierarchyLevelAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FairValueMeasurementsFairValueHierarchyDomain" xlink:label="loc_us-gaapFairValueMeasurementsFairValueHierarchyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapFairValueByFairValueHierarchyLevelAxis" xlink:to="loc_us-gaapFairValueMeasurementsFairValueHierarchyDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FairValueMeasurementsFairValueHierarchyDomain" xlink:label="loc_us-gaapFairValueMeasurementsFairValueHierarchyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapFairValueByFairValueHierarchyLevelAxis" xlink:to="loc_us-gaapFairValueMeasurementsFairValueHierarchyDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FairValueInputsLevel1Member" xlink:label="loc_us-gaapFairValueInputsLevel1Member" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFairValueMeasurementsFairValueHierarchyDomain" xlink:to="loc_us-gaapFairValueInputsLevel1Member" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FairValueInputsLevel2Member" xlink:label="loc_us-gaapFairValueInputsLevel2Member" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFairValueMeasurementsFairValueHierarchyDomain" xlink:to="loc_us-gaapFairValueInputsLevel2Member" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FairValueInputsLevel3Member" xlink:label="loc_us-gaapFairValueInputsLevel3Member" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFairValueMeasurementsFairValueHierarchyDomain" xlink:to="loc_us-gaapFairValueInputsLevel3Member" order="23" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DerivativeLiabilities" xlink:label="loc_us-gaapDerivativeLiabilities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDerivativeLiabilities" order="1" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/FairValueDetails1" xlink:title="000041 - Disclosure - FAIR VALUE (Details 1)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/FairValueDetails2" xlink:title="000042 - Disclosure - FAIR VALUE (Details 2)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_RangeAxis" xlink:label="loc_srtRangeAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_srtRangeAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_RangeMember" xlink:label="loc_srtRangeMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_srtRangeAxis" xlink:to="loc_srtRangeMember" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_RangeMember" xlink:label="loc_srtRangeMember_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_srtRangeAxis" xlink:to="loc_srtRangeMember_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_MinimumMember" xlink:label="loc_srtMinimumMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_srtRangeMember" xlink:to="loc_srtMinimumMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_MaximumMember" xlink:label="loc_srtMaximumMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_srtRangeMember" xlink:to="loc_srtMaximumMember" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedVolatilityRate" xlink:label="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedVolatilityRate" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedVolatilityRate" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharebasedCompensationArrangementBySharebasedPaymentAwardFairValueAssumptionsExpectedTerm1" xlink:label="loc_us-gaapSharebasedCompensationArrangementBySharebasedPaymentAwardFairValueAssumptionsExpectedTerm1" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSharebasedCompensationArrangementBySharebasedPaymentAwardFairValueAssumptionsExpectedTerm1" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedDividendRate" xlink:label="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedDividendRate" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedDividendRate" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRateMinimum" xlink:label="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRateMinimum" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRateMinimum" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExercisePrice" xlink:label="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExercisePrice" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExercisePrice" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRateMaximum" xlink:label="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRateMaximum" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRateMaximum" order="6" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/FairValueDetailsNarrative" xlink:title="000043 - Disclosure - FAIR VALUE (Details Narrative)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AccountsReceivableDetails" xlink:title="000044 - Disclosure - ACCOUNTS RECEIVABLE (Details)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/NotesReceivableDetails" xlink:title="000045 - Disclosure - NOTES RECEIVABLE (Details)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/NotesReceivableDetailsNarrative" xlink:title="000046 - Disclosure - NOTES RECEIVABLE (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LongtermDebtTypeAxis" xlink:label="loc_us-gaapLongtermDebtTypeAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapLongtermDebtTypeAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LongtermDebtTypeDomain" xlink:label="loc_us-gaapLongtermDebtTypeDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapLongtermDebtTypeAxis" xlink:to="loc_us-gaapLongtermDebtTypeDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LongtermDebtTypeDomain" xlink:label="loc_us-gaapLongtermDebtTypeDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapLongtermDebtTypeAxis" xlink:to="loc_us-gaapLongtermDebtTypeDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain" order="50" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain_10" order="60" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionAxis" xlink:label="loc_us-gaapRelatedPartyTransactionAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionAxis" order="60" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionDomain" xlink:label="loc_us-gaapRelatedPartyTransactionDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionAxis" xlink:to="loc_us-gaapRelatedPartyTransactionDomain" order="70" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionDomain" xlink:label="loc_us-gaapRelatedPartyTransactionDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionAxis" xlink:to="loc_us-gaapRelatedPartyTransactionDomain_10" order="80" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateAxis" xlink:label="loc_us-gaapAwardDateAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapAwardDateAxis" order="80" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain" order="90" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain_10" order="100" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_BridgeLoansMember" xlink:label="loc_fssnBridgeLoansMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapLongtermDebtTypeDomain" xlink:to="loc_fssnBridgeLoansMember" order="81" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ContinuityLogicMember" xlink:label="loc_fssnContinuityLogicMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnContinuityLogicMember" order="82" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ContinuityLogicLLCMember" xlink:label="loc_fssnContinuityLogicLLCMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyTransactionDomain" xlink:to="loc_fssnContinuityLogicLLCMember" order="83" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_DuringAugustTwoThousandNinteenMember" xlink:label="loc_fssnDuringAugustTwoThousandNinteenMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnDuringAugustTwoThousandNinteenMember" order="84" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CapitalMarketSolutionsMember" xlink:label="loc_fssnCapitalMarketSolutionsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyTransactionDomain" xlink:to="loc_fssnCapitalMarketSolutionsMember" order="85" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncomeTaxReconciliationTaxSettlementsOther" xlink:label="loc_us-gaapIncomeTaxReconciliationTaxSettlementsOther" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapIncomeTaxReconciliationTaxSettlementsOther" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DepositLiabilitiesAccruedInterest" xlink:label="loc_us-gaapDepositLiabilitiesAccruedInterest" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDepositLiabilitiesAccruedInterest" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncomeTaxExaminationLiabilityRefundAdjustmentFromSettlementWithTaxingAuthority" xlink:label="loc_us-gaapIncomeTaxExaminationLiabilityRefundAdjustmentFromSettlementWithTaxingAuthority" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapIncomeTaxExaminationLiabilityRefundAdjustmentFromSettlementWithTaxingAuthority" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_WriteOffOfDeferredDebtIssuanceCost" xlink:label="loc_us-gaapWriteOffOfDeferredDebtIssuanceCost" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapWriteOffOfDeferredDebtIssuanceCost" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentInterestRateStatedPercentage" xlink:label="loc_us-gaapDebtInstrumentInterestRateStatedPercentage" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentInterestRateStatedPercentage" order="5" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_SecuredLoanBalance" xlink:label="loc_fssnSecuredLoanBalance" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnSecuredLoanBalance" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentInterestRateDuringPeriod" xlink:label="loc_us-gaapDebtInstrumentInterestRateDuringPeriod" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentInterestRateDuringPeriod" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NotesAndLoansReceivableNetCurrent" xlink:label="loc_us-gaapNotesAndLoansReceivableNetCurrent" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapNotesAndLoansReceivableNetCurrent" order="8" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentMaturityDate" xlink:label="loc_us-gaapDebtInstrumentMaturityDate" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentMaturityDate" order="9" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ProceedsFromInsuranceSettlementInvestingActivities" xlink:label="loc_us-gaapProceedsFromInsuranceSettlementInvestingActivities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapProceedsFromInsuranceSettlementInvestingActivities" order="10" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_OtherSurgeryCenterExpenses" xlink:label="loc_fssnOtherSurgeryCenterExpenses" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnOtherSurgeryCenterExpenses" order="11" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AllowanceForDoubtfulNotesReceivable" xlink:label="loc_fssnAllowanceForDoubtfulNotesReceivable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnAllowanceForDoubtfulNotesReceivable" order="12" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/PropertyAndEquipmentDetails" xlink:title="000047 - Disclosure - PROPERTY AND EQUIPMENT (Details)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CollateralAxis" xlink:label="loc_us-gaapCollateralAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapCollateralAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CollateralDomain" xlink:label="loc_us-gaapCollateralDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapCollateralAxis" xlink:to="loc_us-gaapCollateralDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CollateralDomain" xlink:label="loc_us-gaapCollateralDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapCollateralAxis" xlink:to="loc_us-gaapCollateralDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentByTypeAxis" xlink:label="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentTypeDomain" xlink:label="loc_us-gaapPropertyPlantAndEquipmentTypeDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" xlink:to="loc_us-gaapPropertyPlantAndEquipmentTypeDomain" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentTypeDomain" xlink:label="loc_us-gaapPropertyPlantAndEquipmentTypeDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapPropertyPlantAndEquipmentByTypeAxis" xlink:to="loc_us-gaapPropertyPlantAndEquipmentTypeDomain_10" order="50" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_ProductOrServiceAxis" xlink:label="loc_srtProductOrServiceAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_srtProductOrServiceAxis" order="50" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_ProductsAndServicesDomain" xlink:label="loc_srtProductsAndServicesDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_srtProductOrServiceAxis" xlink:to="loc_srtProductsAndServicesDomain" order="60" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_ProductsAndServicesDomain" xlink:label="loc_srtProductsAndServicesDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_srtProductOrServiceAxis" xlink:to="loc_srtProductsAndServicesDomain_10" order="70" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FurnitureAndFixturesMember" xlink:label="loc_us-gaapFurnitureAndFixturesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapPropertyPlantAndEquipmentTypeDomain" xlink:to="loc_us-gaapFurnitureAndFixturesMember" order="51" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_EquipmentMember" xlink:label="loc_us-gaapEquipmentMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapCollateralDomain" xlink:to="loc_us-gaapEquipmentMember" order="52" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConstructionInProcessMember" xlink:label="loc_fssnConstructionInProcessMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_srtProductsAndServicesDomain" xlink:to="loc_fssnConstructionInProcessMember" order="53" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment" xlink:label="loc_us-gaapAccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapAccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentNet" xlink:label="loc_us-gaapPropertyPlantAndEquipmentNet" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapPropertyPlantAndEquipmentNet" order="2" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/PropertyAndEquipmentDetailsNarrative" xlink:title="000048 - Disclosure - PROPERTY AND EQUIPMENT (Details Narrative )" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IntangibleAssetsAndGoodwillDetails" xlink:title="000049 - Disclosure - INTANGIBLE ASSETS AND GOODWILL (Details)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsByMajorClassAxis" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IndefiniteLivedIntangibleAssetsByMajorClassAxis" xlink:label="loc_us-gaapIndefiniteLivedIntangibleAssetsByMajorClassAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapIndefiniteLivedIntangibleAssetsByMajorClassAxis" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IndefiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:label="loc_us-gaapIndefiniteLivedIntangibleAssetsMajorClassNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapIndefiniteLivedIntangibleAssetsByMajorClassAxis" xlink:to="loc_us-gaapIndefiniteLivedIntangibleAssetsMajorClassNameDomain" order="50" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IndefiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:label="loc_us-gaapIndefiniteLivedIntangibleAssetsMajorClassNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapIndefiniteLivedIntangibleAssetsByMajorClassAxis" xlink:to="loc_us-gaapIndefiniteLivedIntangibleAssetsMajorClassNameDomain_10" order="60" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_DevelopedTechnologyMember" xlink:label="loc_fssnDevelopedTechnologyMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnDevelopedTechnologyMember" order="41" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_PermitsMember" xlink:label="loc_fssnPermitsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnPermitsMember" order="42" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_WebsiteMember" xlink:label="loc_fssnWebsiteMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnWebsiteMember" order="43" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_PartnerAgreementMember" xlink:label="loc_fssnPartnerAgreementMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnPartnerAgreementMember" order="44" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_TradeNameMember" xlink:label="loc_fssnTradeNameMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapIndefiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnTradeNameMember" order="45" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CapitalizedComputerSoftwareNetAbstract" xlink:label="loc_us-gaapCapitalizedComputerSoftwareNetAbstract" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapCapitalizedComputerSoftwareNetAbstract" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IntangibleAssetsNetIncludingGoodwill" xlink:label="loc_us-gaapIntangibleAssetsNetIncludingGoodwill" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapIntangibleAssetsNetIncludingGoodwill" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CapitalizedComputerSoftwareGross" xlink:label="loc_us-gaapCapitalizedComputerSoftwareGross" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapCapitalizedComputerSoftwareGross" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CapitalizedComputerSoftwareAccumulatedAmortization" xlink:label="loc_us-gaapCapitalizedComputerSoftwareAccumulatedAmortization" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapCapitalizedComputerSoftwareAccumulatedAmortization" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IntangibleAssetsNetExcludingGoodwill" xlink:label="loc_us-gaapIntangibleAssetsNetExcludingGoodwill" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapIntangibleAssetsNetExcludingGoodwill" order="5" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IntangibleAssetsAndGoodwillDetails1" xlink:title="000050 - Disclosure - INTANGIBLE ASSETS AND GOODWILL (Details 1)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IntangibleAssetsAndGoodwilllDetails2" xlink:title="000051 - Disclosure - INTANGIBLE ASSETS AND GOODWILLL (Details 2)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AmortizationExpensePerUnitOfProductionByCostCenterAxis" xlink:label="loc_us-gaapAmortizationExpensePerUnitOfProductionByCostCenterAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapAmortizationExpensePerUnitOfProductionByCostCenterAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CostCenterForOilAndGasDisclosuresDomain" xlink:label="loc_us-gaapCostCenterForOilAndGasDisclosuresDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapAmortizationExpensePerUnitOfProductionByCostCenterAxis" xlink:to="loc_us-gaapCostCenterForOilAndGasDisclosuresDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CostCenterForOilAndGasDisclosuresDomain" xlink:label="loc_us-gaapCostCenterForOilAndGasDisclosuresDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapAmortizationExpensePerUnitOfProductionByCostCenterAxis" xlink:to="loc_us-gaapCostCenterForOilAndGasDisclosuresDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AmortizationMember" xlink:label="loc_fssnAmortizationMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapCostCenterForOilAndGasDisclosuresDomain" xlink:to="loc_fssnAmortizationMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsAccumulatedAmortization" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAccumulatedAmortization" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAccumulatedAmortization" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearTwo" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearTwo" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearThree" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearThree" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearThree" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearFour" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFour" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFour" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsAmortizationExpenseYearFive" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFive" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsAmortizationExpenseYearFive" order="6" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IntangibleAssetsAndGoodwilllDetailsNarrative" xlink:title="000052 - Disclosure - INTANGIBLE ASSETS AND GOODWILLL (Details Narrative)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/NotesPayableDetailsNarrative" xlink:title="000053 - Disclosure - NOTES PAYABLE (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShortTermDebtTypeAxis" xlink:label="loc_us-gaapShortTermDebtTypeAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapShortTermDebtTypeAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShortTermDebtTypeDomain" xlink:label="loc_us-gaapShortTermDebtTypeDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapShortTermDebtTypeAxis" xlink:to="loc_us-gaapShortTermDebtTypeDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShortTermDebtTypeDomain" xlink:label="loc_us-gaapShortTermDebtTypeDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapShortTermDebtTypeAxis" xlink:to="loc_us-gaapShortTermDebtTypeDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateAxis" xlink:label="loc_us-gaapAwardDateAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapAwardDateAxis" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain_10" order="50" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameAxis" xlink:label="loc_us-gaapPlanNameAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapPlanNameAxis" order="50" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameDomain" xlink:label="loc_us-gaapPlanNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapPlanNameAxis" xlink:to="loc_us-gaapPlanNameDomain" order="60" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameDomain" xlink:label="loc_us-gaapPlanNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapPlanNameAxis" xlink:to="loc_us-gaapPlanNameDomain_10" order="70" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" order="60" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain" order="70" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain_10" order="80" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConvertibleAndNonConvertibleNotesPayableMember" xlink:label="loc_fssnConvertibleAndNonConvertibleNotesPayableMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapShortTermDebtTypeDomain" xlink:to="loc_fssnConvertibleAndNonConvertibleNotesPayableMember" order="61" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_RelatedPartyNotesMember" xlink:label="loc_fssnRelatedPartyNotesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapShortTermDebtTypeDomain" xlink:to="loc_fssnRelatedPartyNotesMember" order="62" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_NonConvertibleNotesPayableMember" xlink:label="loc_fssnNonConvertibleNotesPayableMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapShortTermDebtTypeDomain" xlink:to="loc_fssnNonConvertibleNotesPayableMember" order="63" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AprilTwentyTwentyMember" xlink:label="loc_fssnAprilTwentyTwentyMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnAprilTwentyTwentyMember" order="64" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_SmallBusinessAdministrationMember" xlink:label="loc_fssnSmallBusinessAdministrationMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapPlanNameDomain" xlink:to="loc_fssnSmallBusinessAdministrationMember" order="65" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_LongtermloanMember" xlink:label="loc_fssnLongtermloanMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapShortTermDebtTypeDomain" xlink:to="loc_fssnLongtermloanMember" order="66" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_PayrollProtectionProgramMember" xlink:label="loc_fssnPayrollProtectionProgramMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnPayrollProtectionProgramMember" order="67" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_DuringJulyAugustTwentyTwentyMember" xlink:label="loc_fssnDuringJulyAugustTwentyTwentyMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnDuringJulyAugustTwentyTwentyMember" order="68" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConvertibleNotesMember" xlink:label="loc_fssnConvertibleNotesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapShortTermDebtTypeDomain" xlink:to="loc_fssnConvertibleNotesMember" order="69" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AccreditedInvestorsMember" xlink:label="loc_fssnAccreditedInvestorsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnAccreditedInvestorsMember" order="70" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_DuringJulyTwentyTwentyMember" xlink:label="loc_fssnDuringJulyTwentyTwentyMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnDuringJulyTwentyTwentyMember" order="71" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_GarryLowenthalMember" xlink:label="loc_fssnGarryLowenthalMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnGarryLowenthalMember" order="72" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_FebruaryTwentyTwentyMember" xlink:label="loc_fssnFebruaryTwentyTwentyMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnFebruaryTwentyTwentyMember" order="73" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_PowerUpLendingGroupMember" xlink:label="loc_fssnPowerUpLendingGroupMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnPowerUpLendingGroupMember" order="74" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_TotalLoanForgiveness" xlink:label="loc_fssnTotalLoanForgiveness" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnTotalLoanForgiveness" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertibleDebtNoncurrent" xlink:label="loc_us-gaapConvertibleDebtNoncurrent" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertibleDebtNoncurrent" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LoansPayable" xlink:label="loc_us-gaapLoansPayable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLoansPayable" order="3" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ShortTermNonRelatedPartyNotes" xlink:label="loc_fssnShortTermNonRelatedPartyNotes" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnShortTermNonRelatedPartyNotes" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertibleLongTermNotesPayable" xlink:label="loc_us-gaapConvertibleLongTermNotesPayable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertibleLongTermNotesPayable" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SaleOfStockConsiderationReceivedOnTransaction" xlink:label="loc_us-gaapSaleOfStockConsiderationReceivedOnTransaction" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSaleOfStockConsiderationReceivedOnTransaction" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharesIssuedPricePerShare" xlink:label="loc_us-gaapSharesIssuedPricePerShare" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSharesIssuedPricePerShare" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertiblePreferredStockSharesIssuedUponConversion" xlink:label="loc_us-gaapConvertiblePreferredStockSharesIssuedUponConversion" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertiblePreferredStockSharesIssuedUponConversion" order="8" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LossContingencyDamagesPaidValue" xlink:label="loc_us-gaapLossContingencyDamagesPaidValue" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLossContingencyDamagesPaidValue" order="9" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ProceedsFromInsuranceSettlementInvestingActivities" xlink:label="loc_us-gaapProceedsFromInsuranceSettlementInvestingActivities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapProceedsFromInsuranceSettlementInvestingActivities" order="10" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CommonStockPerShare" xlink:label="loc_fssnCommonStockPerShare" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnCommonStockPerShare" order="11" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NotesPayable" xlink:label="loc_us-gaapNotesPayable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapNotesPayable" order="12" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentUnamortizedDiscount" xlink:label="loc_us-gaapDebtInstrumentUnamortizedDiscount" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentUnamortizedDiscount" order="13" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_InterestPayableCurrent" xlink:label="loc_us-gaapInterestPayableCurrent" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapInterestPayableCurrent" order="14" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentInterestRateStatedPercentage" xlink:label="loc_us-gaapDebtInstrumentInterestRateStatedPercentage" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentInterestRateStatedPercentage" order="15" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtConversionDescription" xlink:label="loc_us-gaapDebtConversionDescription" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtConversionDescription" order="16" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_DevelopmentAndTechnologyConsulting" xlink:label="loc_fssnDevelopmentAndTechnologyConsulting" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnDevelopmentAndTechnologyConsulting" order="17" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConversionOfStockDescription" xlink:label="loc_us-gaapConversionOfStockDescription" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConversionOfStockDescription" order="18" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertibleDebt" xlink:label="loc_us-gaapConvertibleDebt" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertibleDebt" order="19" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConversionDescription" xlink:label="loc_fssnConversionDescription" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnConversionDescription" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentInterestRateDuringPeriod" xlink:label="loc_us-gaapDebtInstrumentInterestRateDuringPeriod" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentInterestRateDuringPeriod" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LongTermDebt" xlink:label="loc_us-gaapLongTermDebt" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLongTermDebt" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LineOfCreditFacilityCommitmentFeePercentage" xlink:label="loc_us-gaapLineOfCreditFacilityCommitmentFeePercentage" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLineOfCreditFacilityCommitmentFeePercentage" order="23" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertibleNotesPayable" xlink:label="loc_us-gaapConvertibleNotesPayable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertibleNotesPayable" order="24" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentMaturityDate" xlink:label="loc_us-gaapDebtInstrumentMaturityDate" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentMaturityDate" order="25" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertibleSubordinatedDebt" xlink:label="loc_us-gaapConvertibleSubordinatedDebt" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertibleSubordinatedDebt" order="26" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtConversionOriginalDebtInterestRateOfDebt" xlink:label="loc_us-gaapDebtConversionOriginalDebtInterestRateOfDebt" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtConversionOriginalDebtInterestRateOfDebt" order="27" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LineOfCreditFacilityExpirationDate1" xlink:label="loc_us-gaapLineOfCreditFacilityExpirationDate1" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLineOfCreditFacilityExpirationDate1" order="28" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_TotalNotes" xlink:label="loc_fssnTotalNotes" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnTotalNotes" order="29" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/StockholdersDeficitDetailsNarrative" xlink:title="000054 - Disclosure - STOCKHOLDERS DEFICIT (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionAxis" xlink:label="loc_us-gaapRelatedPartyTransactionAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionAxis" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionDomain" xlink:label="loc_us-gaapRelatedPartyTransactionDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionAxis" xlink:to="loc_us-gaapRelatedPartyTransactionDomain" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionDomain" xlink:label="loc_us-gaapRelatedPartyTransactionDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionAxis" xlink:to="loc_us-gaapRelatedPartyTransactionDomain_10" order="30" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsidiarySaleOfStockAxis" xlink:label="loc_us-gaapSubsidiarySaleOfStockAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapSubsidiarySaleOfStockAxis" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SaleOfStockNameOfTransactionDomain" xlink:label="loc_us-gaapSaleOfStockNameOfTransactionDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapSubsidiarySaleOfStockAxis" xlink:to="loc_us-gaapSaleOfStockNameOfTransactionDomain" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SaleOfStockNameOfTransactionDomain" xlink:label="loc_us-gaapSaleOfStockNameOfTransactionDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapSubsidiarySaleOfStockAxis" xlink:to="loc_us-gaapSaleOfStockNameOfTransactionDomain_10" order="50" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain" order="50" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain_10" order="60" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateAxis" xlink:label="loc_us-gaapAwardDateAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapAwardDateAxis" order="50" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain" order="60" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain_10" order="70" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ClassOfWarrantOrRightAxis" xlink:label="loc_us-gaapClassOfWarrantOrRightAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapClassOfWarrantOrRightAxis" order="70" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ClassOfWarrantOrRightDomain" xlink:label="loc_us-gaapClassOfWarrantOrRightDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapClassOfWarrantOrRightAxis" xlink:to="loc_us-gaapClassOfWarrantOrRightDomain" order="80" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ClassOfWarrantOrRightDomain" xlink:label="loc_us-gaapClassOfWarrantOrRightDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapClassOfWarrantOrRightAxis" xlink:to="loc_us-gaapClassOfWarrantOrRightDomain_10" order="90" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentAxis" xlink:label="loc_us-gaapDebtInstrumentAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapDebtInstrumentAxis" order="90" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentNameDomain" xlink:label="loc_us-gaapDebtInstrumentNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapDebtInstrumentAxis" xlink:to="loc_us-gaapDebtInstrumentNameDomain" order="100" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentNameDomain" xlink:label="loc_us-gaapDebtInstrumentNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapDebtInstrumentAxis" xlink:to="loc_us-gaapDebtInstrumentNameDomain_10" order="110" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameAxis" xlink:label="loc_us-gaapPlanNameAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapPlanNameAxis" order="100" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameDomain" xlink:label="loc_us-gaapPlanNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapPlanNameAxis" xlink:to="loc_us-gaapPlanNameDomain" order="110" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameDomain" xlink:label="loc_us-gaapPlanNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapPlanNameAxis" xlink:to="loc_us-gaapPlanNameDomain_10" order="120" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_FourDirectorMember" xlink:label="loc_fssnFourDirectorMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyTransactionDomain" xlink:to="loc_fssnFourDirectorMember" order="101" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_JohnBodeMember" xlink:label="loc_fssnJohnBodeMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapSaleOfStockNameOfTransactionDomain" xlink:to="loc_fssnJohnBodeMember" order="102" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_MichaelBrownrMember" xlink:label="loc_fssnMichaelBrownrMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyTransactionDomain" xlink:to="loc_fssnMichaelBrownrMember" order="103" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_WilliamGerhauserMember" xlink:label="loc_fssnWilliamGerhauserMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapSaleOfStockNameOfTransactionDomain" xlink:to="loc_fssnWilliamGerhauserMember" order="104" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_GregNagelMember" xlink:label="loc_fssnGregNagelMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnGregNagelMember" order="105" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AprilTwoZeroTwoOneMember" xlink:label="loc_fssnAprilTwoZeroTwoOneMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnAprilTwoZeroTwoOneMember" order="106" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ExerciseOfWarrantsMember" xlink:label="loc_fssnExerciseOfWarrantsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapClassOfWarrantOrRightDomain" xlink:to="loc_fssnExerciseOfWarrantsMember" order="107" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CapitalMarketSolutionsLlcMember" xlink:label="loc_fssnCapitalMarketSolutionsLlcMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapDebtInstrumentNameDomain" xlink:to="loc_fssnCapitalMarketSolutionsLlcMember" order="108" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_JoshuaCarmonaMember" xlink:label="loc_fssnJoshuaCarmonaMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnJoshuaCarmonaMember" order="109" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_IgnitionCapitalMember" xlink:label="loc_fssnIgnitionCapitalMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapDebtInstrumentNameDomain" xlink:to="loc_fssnIgnitionCapitalMember" order="110" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_MGAHoldingsMember" xlink:label="loc_fssnMGAHoldingsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnMGAHoldingsMember" order="111" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AccreditedInvestorsMember" xlink:label="loc_fssnAccreditedInvestorsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyTransactionDomain" xlink:to="loc_fssnAccreditedInvestorsMember" order="112" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_TrueupandpenaltysharesMember" xlink:label="loc_fssnTrueupandpenaltysharesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapPlanNameDomain" xlink:to="loc_fssnTrueupandpenaltysharesMember" order="113" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PreferredStockSharesAuthorized" xlink:label="loc_us-gaapPreferredStockSharesAuthorized" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapPreferredStockSharesAuthorized" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesAuthorized" xlink:label="loc_us-gaapCommonStockSharesAuthorized" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapCommonStockSharesAuthorized" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesOutstanding" xlink:label="loc_us-gaapCommonStockSharesOutstanding" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapCommonStockSharesOutstanding" order="3" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CommittedSharesThroughDebtConversionFeaturesAndWarrants" xlink:label="loc_fssnCommittedSharesThroughDebtConversionFeaturesAndWarrants" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnCommittedSharesThroughDebtConversionFeaturesAndWarrants" order="4" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CommitmentsSharesOutOfTheMoneyWarrants" xlink:label="loc_fssnCommitmentsSharesOutOfTheMoneyWarrants" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnCommitmentsSharesOutOfTheMoneyWarrants" order="5" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CommonStockSharesCommitted" xlink:label="loc_fssnCommonStockSharesCommitted" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnCommonStockSharesCommitted" order="6" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_RestrictedCommonSharesIssued" xlink:label="loc_fssnRestrictedCommonSharesIssued" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnRestrictedCommonSharesIssued" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodValueRestrictedStockAwardGross" xlink:label="loc_us-gaapStockIssuedDuringPeriodValueRestrictedStockAwardGross" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodValueRestrictedStockAwardGross" order="8" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtConversionConvertedInstrumentSharesIssued1" xlink:label="loc_us-gaapDebtConversionConvertedInstrumentSharesIssued1" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtConversionConvertedInstrumentSharesIssued1" order="9" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtConversionConvertedInstrumentAmount1" xlink:label="loc_us-gaapDebtConversionConvertedInstrumentAmount1" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtConversionConvertedInstrumentAmount1" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharePrice" xlink:label="loc_us-gaapSharePrice" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSharePrice" order="11" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConversionOfOutstandingNotesPayableAmount" xlink:label="loc_fssnConversionOfOutstandingNotesPayableAmount" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnConversionOfOutstandingNotesPayableAmount" order="12" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConversionOfOutstandingNotesPayableShares" xlink:label="loc_fssnConversionOfOutstandingNotesPayableShares" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnConversionOfOutstandingNotesPayableShares" order="13" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConversionPricePerShare" xlink:label="loc_fssnConversionPricePerShare" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnConversionPricePerShare" order="14" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ClassOfWarrantOrRightExercisePriceOfWarrantsOrRights1" xlink:label="loc_us-gaapClassOfWarrantOrRightExercisePriceOfWarrantsOrRights1" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapClassOfWarrantOrRightExercisePriceOfWarrantsOrRights1" order="15" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodValueConversionOfConvertibleSecurities" xlink:label="loc_us-gaapStockIssuedDuringPeriodValueConversionOfConvertibleSecurities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodValueConversionOfConvertibleSecurities" order="16" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesConversionOfConvertibleSecurities" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesConversionOfConvertibleSecurities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesConversionOfConvertibleSecurities" order="17" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CashproceedsFromAccreditedInvestor" xlink:label="loc_fssnCashproceedsFromAccreditedInvestor" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnCashproceedsFromAccreditedInvestor" order="18" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AdditionalCommonSharesExercisableissued" xlink:label="loc_fssnAdditionalCommonSharesExercisableissued" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnAdditionalCommonSharesExercisableissued" order="19" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConversionOfNotesPayableOfNonRelatedPartyamount" xlink:label="loc_fssnConversionOfNotesPayableOfNonRelatedPartyamount" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnConversionOfNotesPayableOfNonRelatedPartyamount" order="20" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConversionOfNotesPayableOfNonRelatedPartyShares" xlink:label="loc_fssnConversionOfNotesPayableOfNonRelatedPartyShares" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnConversionOfNotesPayableOfNonRelatedPartyShares" order="21" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ConversionPricepershare" xlink:label="loc_fssnConversionPricepershare" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnConversionPricepershare" order="22" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_TrueUpAndPenaltySharesIssuedDescription" xlink:label="loc_fssnTrueUpAndPenaltySharesIssuedDescription" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnTrueUpAndPenaltySharesIssuedDescription" order="23" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/RelatedPartyTransactionsDetailsNarrative" xlink:title="000055 - Disclosure - RELATED PARTY TRANSACTIONS (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain_10" order="30" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionAxis" xlink:label="loc_us-gaapRelatedPartyTransactionAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionDomain" xlink:label="loc_us-gaapRelatedPartyTransactionDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionAxis" xlink:to="loc_us-gaapRelatedPartyTransactionDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionDomain" xlink:label="loc_us-gaapRelatedPartyTransactionDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionAxis" xlink:to="loc_us-gaapRelatedPartyTransactionDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentAxis" xlink:label="loc_us-gaapDebtInstrumentAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapDebtInstrumentAxis" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentNameDomain" xlink:label="loc_us-gaapDebtInstrumentNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapDebtInstrumentAxis" xlink:to="loc_us-gaapDebtInstrumentNameDomain" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentNameDomain" xlink:label="loc_us-gaapDebtInstrumentNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapDebtInstrumentAxis" xlink:to="loc_us-gaapDebtInstrumentNameDomain_10" order="50" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CMSMember" xlink:label="loc_fssnCMSMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnCMSMember" order="31" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_MGAHoldingMember" xlink:label="loc_fssnMGAHoldingMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnMGAHoldingMember" order="32" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_IgnitionCapitalLLCMember" xlink:label="loc_fssnIgnitionCapitalLLCMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnIgnitionCapitalLLCMember" order="33" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_NoteholdersMember" xlink:label="loc_fssnNoteholdersMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyTransactionDomain" xlink:to="loc_fssnNoteholdersMember" order="34" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CapitalMarketSolutionsLlcMember" xlink:label="loc_fssnCapitalMarketSolutionsLlcMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapDebtInstrumentNameDomain" xlink:to="loc_fssnCapitalMarketSolutionsLlcMember" order="35" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_DirectorsMember" xlink:label="loc_fssnDirectorsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyTransactionDomain" xlink:to="loc_fssnDirectorsMember" order="36" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertibleNotesPayable" xlink:label="loc_us-gaapConvertibleNotesPayable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertibleNotesPayable" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesRestrictedStockAwardGross" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesRestrictedStockAwardGross" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesRestrictedStockAwardGross" order="2" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AcquisitionsDetails" xlink:title="000056 - Disclosure - ACQUISITIONS (Details)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareRepurchaseProgramAxis" xlink:label="loc_us-gaapShareRepurchaseProgramAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapShareRepurchaseProgramAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareRepurchaseProgramDomain" xlink:label="loc_us-gaapShareRepurchaseProgramDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapShareRepurchaseProgramAxis" xlink:to="loc_us-gaapShareRepurchaseProgramDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareRepurchaseProgramDomain" xlink:label="loc_us-gaapShareRepurchaseProgramDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapShareRepurchaseProgramAxis" xlink:to="loc_us-gaapShareRepurchaseProgramDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AggregatePurchasePriceMember" xlink:label="loc_fssnAggregatePurchasePriceMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapShareRepurchaseProgramDomain" xlink:to="loc_fssnAggregatePurchasePriceMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_FairValueConvertibleNoteWithConversionIntoCommonStock" xlink:label="loc_fssnFairValueConvertibleNoteWithConversionIntoCommonStock" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnFairValueConvertibleNoteWithConversionIntoCommonStock" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OtherAdditionalCapital" xlink:label="loc_us-gaapOtherAdditionalCapital" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapOtherAdditionalCapital" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_BusinessCombinationContingentConsiderationLiability" xlink:label="loc_us-gaapBusinessCombinationContingentConsiderationLiability" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapBusinessCombinationContingentConsiderationLiability" order="3" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_TotalaggregatePurchasePrice" xlink:label="loc_fssnTotalaggregatePurchasePrice" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnTotalaggregatePurchasePrice" order="4" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AcquisitionsDetails1" xlink:title="000057 - Disclosure - ACQUISITIONS (Details 1)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AirlineDestinationsAxis" xlink:label="loc_us-gaapAirlineDestinationsAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapAirlineDestinationsAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AirlineDestinationDomain" xlink:label="loc_us-gaapAirlineDestinationDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapAirlineDestinationsAxis" xlink:to="loc_us-gaapAirlineDestinationDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AirlineDestinationDomain" xlink:label="loc_us-gaapAirlineDestinationDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapAirlineDestinationsAxis" xlink:to="loc_us-gaapAirlineDestinationDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsByMajorClassAxis" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsByMajorClassAxis" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain_10" order="50" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_EstimatedFairValuesMember" xlink:label="loc_fssnEstimatedFairValuesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAirlineDestinationDomain" xlink:to="loc_fssnEstimatedFairValuesMember" order="31" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_IntangibleAssetsMember" xlink:label="loc_fssnIntangibleAssetsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnIntangibleAssetsMember" order="32" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_IntangibleAssetsPermitsMember" xlink:label="loc_fssnIntangibleAssetsPermitsMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnIntangibleAssetsPermitsMember" order="33" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_IntangibleAssetsWebsitesMember" xlink:label="loc_fssnIntangibleAssetsWebsitesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnIntangibleAssetsWebsitesMember" order="34" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_IntangibleAssetsPartnerAgreementMember" xlink:label="loc_fssnIntangibleAssetsPartnerAgreementMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnIntangibleAssetsPartnerAgreementMember" order="35" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_IntangibleAssetsTradeNamesMember" xlink:label="loc_fssnIntangibleAssetsTradeNamesMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapFiniteLivedIntangibleAssetsMajorClassNameDomain" xlink:to="loc_fssnIntangibleAssetsTradeNamesMember" order="36" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CashAcquiredInExcessOfPayments" xlink:label="loc_fssnCashAcquiredInExcessOfPayments" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnCashAcquiredInExcessOfPayments" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccountsReceivableRelatedParties" xlink:label="loc_us-gaapAccountsReceivableRelatedParties" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapAccountsReceivableRelatedParties" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Goodwill" xlink:label="loc_us-gaapGoodwill" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapGoodwill" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Assets" xlink:label="loc_us-gaapAssets" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapAssets" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent" xlink:label="loc_us-gaapAccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapAccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LoansPayable" xlink:label="loc_us-gaapLoansPayable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLoansPayable" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Liabilities" xlink:label="loc_us-gaapLiabilities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLiabilities" order="7" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_EstimatedFairValuesTotal" xlink:label="loc_fssnEstimatedFairValuesTotal" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnEstimatedFairValuesTotal" order="8" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FiniteLivedIntangibleAssetsNet" xlink:label="loc_us-gaapFiniteLivedIntangibleAssetsNet" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapFiniteLivedIntangibleAssetsNet" order="9" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AcquisitionsDetails2" xlink:title="000058 - Disclosure - ACQUISITIONS (Details 2)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NonrecurringAdjustmentAxis" xlink:label="loc_us-gaapNonrecurringAdjustmentAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapNonrecurringAdjustmentAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NonrecurringAdjustmentDomain" xlink:label="loc_us-gaapNonrecurringAdjustmentDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapNonrecurringAdjustmentAxis" xlink:to="loc_us-gaapNonrecurringAdjustmentDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NonrecurringAdjustmentDomain" xlink:label="loc_us-gaapNonrecurringAdjustmentDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapNonrecurringAdjustmentAxis" xlink:to="loc_us-gaapNonrecurringAdjustmentDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ProFormaCombinedMember" xlink:label="loc_fssnProFormaCombinedMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapNonrecurringAdjustmentDomain" xlink:to="loc_fssnProFormaCombinedMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Revenues" xlink:label="loc_us-gaapRevenues" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapRevenues" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CostOfGoodsAndServicesSold" xlink:label="loc_us-gaapCostOfGoodsAndServicesSold" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapCostOfGoodsAndServicesSold" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_GrossProfit" xlink:label="loc_us-gaapGrossProfit" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapGrossProfit" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SellingAndMarketingExpense" xlink:label="loc_us-gaapSellingAndMarketingExpense" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSellingAndMarketingExpense" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ResearchAndDevelopmentExpense" xlink:label="loc_us-gaapResearchAndDevelopmentExpense" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapResearchAndDevelopmentExpense" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_GeneralAndAdministrativeExpense" xlink:label="loc_us-gaapGeneralAndAdministrativeExpense" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapGeneralAndAdministrativeExpense" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OperatingExpenses" xlink:label="loc_us-gaapOperatingExpenses" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapOperatingExpenses" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OperatingIncomeLoss" xlink:label="loc_us-gaapOperatingIncomeLoss" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapOperatingIncomeLoss" order="8" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OtherIncome" xlink:label="loc_us-gaapOtherIncome" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapOtherIncome" order="9" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetIncomeLoss" xlink:label="loc_us-gaapNetIncomeLoss" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapNetIncomeLoss" order="10" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/AcquisitionsDetailsNarrative" xlink:title="000059 - Disclosure - ACQUISITIONS (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain_10" order="30" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementClassOfStockAxis" xlink:label="loc_us-gaapStatementClassOfStockAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapStatementClassOfStockAxis" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ClassOfStockDomain" xlink:label="loc_us-gaapClassOfStockDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapStatementClassOfStockAxis" xlink:to="loc_us-gaapClassOfStockDomain" order="40" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ClassOfStockDomain" xlink:label="loc_us-gaapClassOfStockDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapStatementClassOfStockAxis" xlink:to="loc_us-gaapClassOfStockDomain_10" order="50" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_JoshuaCarmonaMember" xlink:label="loc_fssnJoshuaCarmonaMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnJoshuaCarmonaMember" order="31" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_PsaFisionCorporationMember" xlink:label="loc_fssnPsaFisionCorporationMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnPsaFisionCorporationMember" order="32" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_SeniorSecuredPromissoryNoteMember" xlink:label="loc_fssnSeniorSecuredPromissoryNoteMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapClassOfStockDomain" xlink:to="loc_fssnSeniorSecuredPromissoryNoteMember" order="33" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SaleOfStockPercentageOfOwnershipAfterTransaction" xlink:label="loc_us-gaapSaleOfStockPercentageOfOwnershipAfterTransaction" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSaleOfStockPercentageOfOwnershipAfterTransaction" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Revenues" xlink:label="loc_us-gaapRevenues" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapRevenues" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertiblePreferredStockSharesIssuedUponConversion" xlink:label="loc_us-gaapConvertiblePreferredStockSharesIssuedUponConversion" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertiblePreferredStockSharesIssuedUponConversion" order="3" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CompensationServicesDescription" xlink:label="loc_fssnCompensationServicesDescription" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnCompensationServicesDescription" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SaleOfStockConsiderationReceivedOnTransaction" xlink:label="loc_us-gaapSaleOfStockConsiderationReceivedOnTransaction" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSaleOfStockConsiderationReceivedOnTransaction" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockParOrStatedValuePerShare" xlink:label="loc_us-gaapCommonStockParOrStatedValuePerShare" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapCommonStockParOrStatedValuePerShare" order="6" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/CommitmentsAndContigenciesDetailsNarrative" xlink:title="000060 - Disclosure - COMMITMENTS AND CONTIGENCIES (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateAxis" xlink:label="loc_us-gaapAwardDateAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapAwardDateAxis" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain_10" order="30" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_InTwoZeroOneNineMember" xlink:label="loc_fssnInTwoZeroOneNineMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnInTwoZeroOneNineMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_CapitalMarketSolutionsLLCMember" xlink:label="loc_fssnCapitalMarketSolutionsLLCMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnCapitalMarketSolutionsLLCMember" order="22" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ScoreinccomMember" xlink:label="loc_fssnScoreinccomMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnScoreinccomMember" order="23" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodValueOther" xlink:label="loc_us-gaapStockIssuedDuringPeriodValueOther" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodValueOther" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharesIssuedPricePerShare" xlink:label="loc_us-gaapSharesIssuedPricePerShare" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapSharesIssuedPricePerShare" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ProceedsFromInsuranceSettlementInvestingActivities" xlink:label="loc_us-gaapProceedsFromInsuranceSettlementInvestingActivities" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapProceedsFromInsuranceSettlementInvestingActivities" order="3" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IncomeTaxesDetails" xlink:title="000061 - Disclosure - INCOME TAXES (Details)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/IncomeTaxesDetailsNarrative" xlink:title="000062 - Disclosure - INCOME TAXES (Details Narrative)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/WarrantsDetails" xlink:title="000063 - Disclosure - WARRANTS (Details)" />
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/ConcentrationsDetailsNarrative" xlink:title="000064 - Disclosure - CONCENTRATIONS (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis" xlink:to="loc_us-gaapRelatedPartyDomain_10" order="30" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_ThreeCustomersMember" xlink:label="loc_fssnThreeCustomersMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnThreeCustomersMember" order="11" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_TwoCustomersMember" xlink:label="loc_fssnTwoCustomersMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnTwoCustomersMember" order="12" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_OneCustomersMember" xlink:label="loc_fssnOneCustomersMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapRelatedPartyDomain" xlink:to="loc_fssnOneCustomersMember" order="13" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_RevenuePercentage" xlink:label="loc_fssnRevenuePercentage" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_fssnRevenuePercentage" order="1" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/Covid19LoanAndLoanForgivenessDetailsNarrative" xlink:title="000065 - Disclosure - COVID19 LOAN and LOAN FORGIVENESS (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateAxis" xlink:label="loc_us-gaapAwardDateAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapAwardDateAxis" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AwardDateDomain" xlink:label="loc_us-gaapAwardDateDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapAwardDateAxis" xlink:to="loc_us-gaapAwardDateDomain_10" order="30" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameAxis" xlink:label="loc_us-gaapPlanNameAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapPlanNameAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameDomain" xlink:label="loc_us-gaapPlanNameDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapPlanNameAxis" xlink:to="loc_us-gaapPlanNameDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PlanNameDomain" xlink:label="loc_us-gaapPlanNameDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapPlanNameAxis" xlink:to="loc_us-gaapPlanNameDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_AprilTwoThousandTwentyMember" xlink:label="loc_fssnAprilTwoThousandTwentyMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapAwardDateDomain" xlink:to="loc_fssnAprilTwoThousandTwentyMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="fssn-20211231.xsd#fssn_PayrollProtectionProgramPPPMember" xlink:label="loc_fssnPayrollProtectionProgramPPPMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapPlanNameDomain" xlink:to="loc_fssnPayrollProtectionProgramPPPMember" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LongTermDebt" xlink:label="loc_us-gaapLongTermDebt" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapLongTermDebt" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtConversionOriginalDebtInterestRateOfDebt" xlink:label="loc_us-gaapDebtConversionOriginalDebtInterestRateOfDebt" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtConversionOriginalDebtInterestRateOfDebt" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentDecreaseForgiveness" xlink:label="loc_us-gaapDebtInstrumentDecreaseForgiveness" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentDecreaseForgiveness" order="3" />
+  </link:definitionLink>
+  <link:definitionLink xlink:type="extended" xlink:role="http://fision.com/role/SubsequentEventsDetailsNarrative" xlink:title="000066 - Disclosure - SUBSEQUENT EVENTS (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStatementTable" order="2000" xbrldt:contextElement="segment" xbrldt:closed="true" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventTypeAxis" xlink:label="loc_us-gaapSubsequentEventTypeAxis" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_us-gaapStatementTable" xlink:to="loc_us-gaapSubsequentEventTypeAxis" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventTypeDomain" xlink:label="loc_us-gaapSubsequentEventTypeDomain" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_us-gaapSubsequentEventTypeAxis" xlink:to="loc_us-gaapSubsequentEventTypeDomain" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventTypeDomain" xlink:label="loc_us-gaapSubsequentEventTypeDomain_10" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_us-gaapSubsequentEventTypeAxis" xlink:to="loc_us-gaapSubsequentEventTypeDomain_10" order="40" xbrldt:contextElement="segment" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventMember" xlink:label="loc_us-gaapSubsequentEventMember" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapSubsequentEventTypeDomain" xlink:to="loc_us-gaapSubsequentEventMember" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesNewIssues" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesNewIssues" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesNewIssues" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AdditionalPaidInCapital" xlink:label="loc_us-gaapAdditionalPaidInCapital" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapAdditionalPaidInCapital" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ConvertibleNotesPayable" xlink:label="loc_us-gaapConvertibleNotesPayable" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapConvertibleNotesPayable" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DebtInstrumentConvertibleConversionPrice1" xlink:label="loc_us-gaapDebtInstrumentConvertibleConversionPrice1" />
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_us-gaapStatementLineItems" xlink:to="loc_us-gaapDebtInstrumentConvertibleConversionPrice1" order="4" />
+  </link:definitionLink>
+</link:linkbase>

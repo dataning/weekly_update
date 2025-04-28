@@ -1,0 +1,224 @@
+---
+title: "Presidential Approval Ratings (1969-2021)"
+format: 
+  html:
+    theme: cosmo
+---
+
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.chart-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.chart-years {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+</style>
+```
+
+```{ojs}
+// Import Plot
+Plot = require("@observablehq/plot")
+
+// Data
+presidents = [
+  {
+    name: "Donald Trump",
+    years: "2017-2021",
+    data: [
+      { month: 0, approval: 45, disapproval: 41 },
+      { month: 12, approval: 38, disapproval: 42 },
+      { month: 24, approval: 40, disapproval: 43 },
+      { month: 36, approval: 42, disapproval: 44 },
+      { month: 48, approval: 39, disapproval: 45 }
+    ]
+  },
+  {
+    name: "Barack Obama",
+    years: "2009-17",
+    data: [
+      { month: 0, approval: 65, disapproval: 35 },
+      { month: 12, approval: 47, disapproval: 45 },
+      { month: 24, approval: 45, disapproval: 47 },
+      { month: 36, approval: 48, disapproval: 46 },
+      { month: 48, approval: 50, disapproval: 45 }
+    ]
+  },
+  {
+    name: "George W. Bush",
+    years: "2001-09",
+    data: [
+      { month: 0, approval: 50, disapproval: 40 },
+      { month: 12, approval: 80, disapproval: 35 },
+      { month: 24, approval: 65, disapproval: 40 },
+      { month: 36, approval: 45, disapproval: 42 },
+      { month: 48, approval: 48, disapproval: 45 }
+    ]
+  },
+  {
+    name: "Bill Clinton",
+    years: "1993-2001",
+    data: [
+      { month: 0, approval: 55, disapproval: 40 },
+      { month: 12, approval: 45, disapproval: 42 },
+      { month: 24, approval: 47, disapproval: 40 },
+      { month: 36, approval: 52, disapproval: 38 },
+      { month: 48, approval: 55, disapproval: 35 }
+    ]
+  },
+  {
+    name: "George H.W. Bush",
+    years: "1989-93",
+    data: [
+      { month: 0, approval: 58, disapproval: 35 },
+      { month: 12, approval: 70, disapproval: 38 },
+      { month: 24, approval: 75, disapproval: 40 },
+      { month: 36, approval: 45, disapproval: 42 },
+      { month: 48, approval: 35, disapproval: 45 }
+    ]
+  },
+  {
+    name: "Ronald Reagan",
+    years: "1981-89",
+    data: [
+      { month: 0, approval: 55, disapproval: 40 },
+      { month: 12, approval: 48, disapproval: 42 },
+      { month: 24, approval: 42, disapproval: 45 },
+      { month: 36, approval: 48, disapproval: 40 },
+      { month: 48, approval: 52, disapproval: 38 }
+    ]
+  },
+  {
+    name: "Jimmy Carter",
+    years: "1977-81",
+    data: [
+      { month: 0, approval: 65, disapproval: 50 },
+      { month: 12, approval: 50, disapproval: 45 },
+      { month: 24, approval: 45, disapproval: 42 },
+      { month: 36, approval: 40, disapproval: 45 },
+      { month: 48, approval: 35, disapproval: 40 }
+    ]
+  },
+  {
+    name: "Gerald Ford",
+    years: "1974-77",
+    data: [
+      { month: 0, approval: 60, disapproval: 50 },
+      { month: 12, approval: 45, disapproval: 42 },
+      { month: 24, approval: 42, disapproval: 40 },
+      { month: 36, approval: 40, disapproval: 38 }
+    ]
+  },
+  {
+    name: "Richard Nixon",
+    years: "1969-74",
+    data: [
+      { month: 0, approval: 58, disapproval: 45 },
+      { month: 12, approval: 52, disapproval: 42 },
+      { month: 24, approval: 50, disapproval: 40 },
+      { month: 36, approval: 48, disapproval: 38 },
+      { month: 48, approval: 55, disapproval: 35 }
+    ]
+  }
+]
+
+// Transform data for plotting
+chart = (data, title, years) => Plot.plot({
+  style: {
+    fontSize: 10,
+    fontFamily: "system-ui"
+  },
+  y: {
+    grid: true,
+    domain: [30, 85],
+    label: "Rating (%)",
+    tickFormat: d => d + "%"
+  },
+  x: {
+    grid: true,
+    domain: [0, 48],
+    label: "Years in Office",
+    tickFormat: d => (d/12).toFixed(0)
+  },
+  marks: [
+    Plot.line(data, {
+      x: "month",
+      y: "approval",
+      stroke: "black",
+      strokeWidth: 2
+    }),
+    Plot.line(data, {
+      x: "month",
+      y: "disapproval",
+      stroke: "#4CAF50",
+      strokeWidth: 2
+    }),
+    Plot.dot(data, {
+      x: "month",
+      y: "approval",
+      stroke: "black",
+      title: d => `Approval: ${d.approval}%`
+    }),
+    Plot.dot(data, {
+      x: "month",
+      y: "disapproval",
+      stroke: "#4CAF50",
+      title: d => `Disapproval: ${d.disapproval}%`
+    }),
+    Plot.ruleY([0])
+  ],
+  width: 280,
+  height: 160,
+  marginTop: 10,
+  marginRight: 30,
+  marginBottom: 30,
+  marginLeft: 40
+})
+
+viewof container = html`
+  <div>
+    <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <div style="width: 20px; height: 2px; background: black;"></div>
+        <span>Approval</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <div style="width: 20px; height: 2px; background: #4CAF50;"></div>
+        <span>Disapproval</span>
+      </div>
+    </div>
+    <div class="grid-container">
+      ${presidents.map(president => {
+        return html`<div class="chart-card">
+          <div class="chart-title">
+            ${president.name} 
+            <span class="chart-years">${president.years}</span>
+          </div>
+          <div style="height: 200px;">
+            ${chart(president.data, president.name, president.years)}
+          </div>
+        </div>`
+      })}
+    </div>
+  </div>
+`
+```

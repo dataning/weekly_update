@@ -1,0 +1,747 @@
+[
+  {
+    "id": "Technology",
+    "name": "Technology",
+    "custom": {
+      "fullName": "Technology"
+    }
+  },
+  {
+    "id": "Financial",
+    "name": "Financial",
+    "custom": {
+      "fullName": "Financial"
+    }
+  },
+  {
+    "id": "Consumer Cyclical",
+    "name": "Consumer Cyclical",
+    "custom": {
+      "fullName": "Consumer Cyclical"
+    }
+  },
+  {
+    "id": "Communication Services",
+    "name": "Communication Services",
+    "custom": {
+      "fullName": "Communication Services"
+    }
+  },
+  {
+    "id": "Healthcare",
+    "name": "Healthcare",
+    "custom": {
+      "fullName": "Healthcare"
+    }
+  },
+  {
+    "id": "Consumer Defensive",
+    "name": "Consumer Defensive",
+    "custom": {
+      "fullName": "Consumer Defensive"
+    }
+  },
+  {
+    "id": "Industrials",
+    "name": "Industrials",
+    "custom": {
+      "fullName": "Industrials"
+    }
+  },
+  {
+    "id": "Real Estate",
+    "name": "Real Estate",
+    "custom": {
+      "fullName": "Real Estate"
+    }
+  },
+  {
+    "id": "Energy",
+    "name": "Energy",
+    "custom": {
+      "fullName": "Energy"
+    }
+  },
+  {
+    "id": "Utilities",
+    "name": "Utilities",
+    "custom": {
+      "fullName": "Utilities"
+    }
+  },
+  {
+    "id": "Basic Materials",
+    "name": "Basic Materials",
+    "custom": {
+      "fullName": "Basic Materials"
+    }
+  },
+  {
+    "id": "IT Consulting & Other Services",
+    "name": "IT Consulting & Other Services",
+    "parent": "Technology",
+    "custom": {
+      "fullName": "IT Consulting & Other Services"
+    }
+  },
+  {
+    "id": "Application Software",
+    "name": "Application Software",
+    "parent": "Technology",
+    "custom": {
+      "fullName": "Application Software"
+    }
+  },
+  {
+    "id": "Semiconductors",
+    "name": "Semiconductors",
+    "parent": "Technology",
+    "custom": {
+      "fullName": "Semiconductors"
+    }
+  },
+  {
+    "id": "Life & Health Insurance",
+    "name": "Life & Health Insurance",
+    "parent": "Financial",
+    "custom": {
+      "fullName": "Life & Health Insurance"
+    }
+  },
+  {
+    "id": "Specialty Chemicals",
+    "name": "Specialty Chemicals",
+    "parent": "Basic Materials",
+    "custom": {
+      "fullName": "Specialty Chemicals"
+    }
+  },
+  {
+    "id": "Electric Utilities",
+    "name": "Electric Utilities",
+    "parent": "Utilities",
+    "custom": {
+      "fullName": "Electric Utilities"
+    }
+  },
+  {
+    "id": "Interactive Media & Services",
+    "name": "Interactive Media & Services",
+    "parent": "Communication Services",
+    "custom": {
+      "fullName": "Interactive Media & Services"
+    }
+  },
+  {
+    "id": "Broadline Retail",
+    "name": "Broadline Retail",
+    "parent": "Consumer Cyclical",
+    "custom": {
+      "fullName": "Broadline Retail"
+    }
+  },
+  {
+    "id": "Regional Banks",
+    "name": "Regional Banks",
+    "parent": "Financial",
+    "custom": {
+      "fullName": "Regional Banks"
+    }
+  },
+  {
+    "id": "Systems Software",
+    "name": "Systems Software",
+    "parent": "Technology",
+    "custom": {
+      "fullName": "Systems Software"
+    }
+  },
+  {
+    "id": "Pharmaceuticals",
+    "name": "Pharmaceuticals",
+    "parent": "Healthcare",
+    "custom": {
+      "fullName": "Pharmaceuticals"
+    }
+  },
+  {
+    "id": "Oil & Gas Exploration & Production",
+    "name": "Oil & Gas Exploration & Production",
+    "parent": "Energy",
+    "custom": {
+      "fullName": "Oil & Gas Exploration & Production"
+    }
+  },
+  {
+    "name": "IT 0",
+    "id": "IT 0",
+    "value": 49500000000.0,
+    "parent": "IT Consulting & Other Services",
+    "colorValue": -2.8826677295749237,
+    "custom": {
+      "fullName": "IT Consulting & Other Services Company 0",
+      "performance": "-2.88%"
+    }
+  },
+  {
+    "name": "IT 1",
+    "id": "IT 1",
+    "value": 41300000000.0,
+    "parent": "IT Consulting & Other Services",
+    "colorValue": -5.612173703361394,
+    "custom": {
+      "fullName": "IT Consulting & Other Services Company 1",
+      "performance": "-5.61%"
+    }
+  },
+  {
+    "name": "IT 2",
+    "id": "IT 2",
+    "value": 19000000000.0,
+    "parent": "IT Consulting & Other Services",
+    "colorValue": -12.5044187764807,
+    "custom": {
+      "fullName": "IT Consulting & Other Services Company 2",
+      "performance": "-12.50%"
+    }
+  },
+  {
+    "name": "IT 3",
+    "id": "IT 3",
+    "value": 90600000000.0,
+    "parent": "IT Consulting & Other Services",
+    "colorValue": 3.3646619992528066,
+    "custom": {
+      "fullName": "IT Consulting & Other Services Company 3",
+      "performance": "+3.36%"
+    }
+  },
+  {
+    "name": "IT 4",
+    "id": "IT 4",
+    "value": 75500000000.0,
+    "parent": "IT Consulting & Other Services",
+    "colorValue": 6.2353373455164105,
+    "custom": {
+      "fullName": "IT Consulting & Other Services Company 4",
+      "performance": "+6.24%"
+    }
+  },
+  {
+    "name": "APP0",
+    "id": "APP0",
+    "value": 72100000000.0,
+    "parent": "Application Software",
+    "colorValue": -10.846862059526831,
+    "custom": {
+      "fullName": "Application Software Company 0",
+      "performance": "-10.85%"
+    }
+  },
+  {
+    "name": "APP1",
+    "id": "APP1",
+    "value": 87700000000.0,
+    "parent": "Application Software",
+    "colorValue": -8.286410153661391,
+    "custom": {
+      "fullName": "Application Software Company 1",
+      "performance": "-8.29%"
+    }
+  },
+  {
+    "name": "APP2",
+    "id": "APP2",
+    "value": 49500000000.0,
+    "parent": "Application Software",
+    "colorValue": 3.0195323342179954,
+    "custom": {
+      "fullName": "Application Software Company 2",
+      "performance": "+3.02%"
+    }
+  },
+  {
+    "name": "APP3",
+    "id": "APP3",
+    "value": 35400000000.0,
+    "parent": "Application Software",
+    "colorValue": -1.6922290293099937,
+    "custom": {
+      "fullName": "Application Software Company 3",
+      "performance": "-1.69%"
+    }
+  },
+  {
+    "name": "APP4",
+    "id": "APP4",
+    "value": 79500000000.0,
+    "parent": "Application Software",
+    "colorValue": -2.8849253844570213,
+    "custom": {
+      "fullName": "Application Software Company 4",
+      "performance": "-2.88%"
+    }
+  },
+  {
+    "name": "SEM0",
+    "id": "SEM0",
+    "value": 27800000000.0,
+    "parent": "Semiconductors",
+    "colorValue": -9.881403614227752,
+    "custom": {
+      "fullName": "Semiconductors Company 0",
+      "performance": "-9.88%"
+    }
+  },
+  {
+    "name": "SEM1",
+    "id": "SEM1",
+    "value": 11200000000.0,
+    "parent": "Semiconductors",
+    "colorValue": -9.040721603523604,
+    "custom": {
+      "fullName": "Semiconductors Company 1",
+      "performance": "-9.04%"
+    }
+  },
+  {
+    "name": "SEM2",
+    "id": "SEM2",
+    "value": 23900000000.0,
+    "parent": "Semiconductors",
+    "colorValue": -9.448792840253082,
+    "custom": {
+      "fullName": "Semiconductors Company 2",
+      "performance": "-9.45%"
+    }
+  },
+  {
+    "name": "SEM3",
+    "id": "SEM3",
+    "value": 66200000000.0,
+    "parent": "Semiconductors",
+    "colorValue": -5.313165809246498,
+    "custom": {
+      "fullName": "Semiconductors Company 3",
+      "performance": "-5.31%"
+    }
+  },
+  {
+    "name": "SEM4",
+    "id": "SEM4",
+    "value": 19400000000.0,
+    "parent": "Semiconductors",
+    "colorValue": 7.267393523750438,
+    "custom": {
+      "fullName": "Semiconductors Company 4",
+      "performance": "+7.27%"
+    }
+  },
+  {
+    "name": "LIF0",
+    "id": "LIF0",
+    "value": 98800000000.0,
+    "parent": "Life & Health Insurance",
+    "colorValue": -10.388718375259261,
+    "custom": {
+      "fullName": "Life & Health Insurance Company 0",
+      "performance": "-10.39%"
+    }
+  },
+  {
+    "name": "LIF1",
+    "id": "LIF1",
+    "value": 66700000000.0,
+    "parent": "Life & Health Insurance",
+    "colorValue": 4.745790559686897,
+    "custom": {
+      "fullName": "Life & Health Insurance Company 1",
+      "performance": "+4.75%"
+    }
+  },
+  {
+    "name": "LIF2",
+    "id": "LIF2",
+    "value": 37800000000.0,
+    "parent": "Life & Health Insurance",
+    "colorValue": 9.39777716560124,
+    "custom": {
+      "fullName": "Life & Health Insurance Company 2",
+      "performance": "+9.40%"
+    }
+  },
+  {
+    "name": "LIF3",
+    "id": "LIF3",
+    "value": 48200000000.0,
+    "parent": "Life & Health Insurance",
+    "colorValue": 13.255346840192356,
+    "custom": {
+      "fullName": "Life & Health Insurance Company 3",
+      "performance": "+13.26%"
+    }
+  },
+  {
+    "name": "LIF4",
+    "id": "LIF4",
+    "value": 47400000000.0,
+    "parent": "Life & Health Insurance",
+    "colorValue": -8.864087307455847,
+    "custom": {
+      "fullName": "Life & Health Insurance Company 4",
+      "performance": "-8.86%"
+    }
+  },
+  {
+    "name": "SPE0",
+    "id": "SPE0",
+    "value": 79200000000.0,
+    "parent": "Specialty Chemicals",
+    "colorValue": 1.5650906431092533,
+    "custom": {
+      "fullName": "Specialty Chemicals Company 0",
+      "performance": "+1.57%"
+    }
+  },
+  {
+    "name": "SPE1",
+    "id": "SPE1",
+    "value": 64100000000.0,
+    "parent": "Specialty Chemicals",
+    "colorValue": -13.857184142799037,
+    "custom": {
+      "fullName": "Specialty Chemicals Company 1",
+      "performance": "-13.86%"
+    }
+  },
+  {
+    "name": "SPE2",
+    "id": "SPE2",
+    "value": 25100000000.0,
+    "parent": "Specialty Chemicals",
+    "colorValue": 3.706095347872827,
+    "custom": {
+      "fullName": "Specialty Chemicals Company 2",
+      "performance": "+3.71%"
+    }
+  },
+  {
+    "name": "ELE0",
+    "id": "ELE0",
+    "value": 14400000000.0,
+    "parent": "Electric Utilities",
+    "colorValue": -14.78615834966903,
+    "custom": {
+      "fullName": "Electric Utilities Company 0",
+      "performance": "-14.79%"
+    }
+  },
+  {
+    "name": "ELE1",
+    "id": "ELE1",
+    "value": 75800000000.0,
+    "parent": "Electric Utilities",
+    "colorValue": 10.367043443683515,
+    "custom": {
+      "fullName": "Electric Utilities Company 1",
+      "performance": "+10.37%"
+    }
+  },
+  {
+    "name": "ELE2",
+    "id": "ELE2",
+    "value": 82900000000.0,
+    "parent": "Electric Utilities",
+    "colorValue": 8.389665181057078,
+    "custom": {
+      "fullName": "Electric Utilities Company 2",
+      "performance": "+8.39%"
+    }
+  },
+  {
+    "name": "INT0",
+    "id": "INT0",
+    "value": 43100000000.0,
+    "parent": "Interactive Media & Services",
+    "colorValue": -4.953065795779384,
+    "custom": {
+      "fullName": "Interactive Media & Services Company 0",
+      "performance": "-4.95%"
+    }
+  },
+  {
+    "name": "INT1",
+    "id": "INT1",
+    "value": 62900000000.0,
+    "parent": "Interactive Media & Services",
+    "colorValue": 6.933718384763373,
+    "custom": {
+      "fullName": "Interactive Media & Services Company 1",
+      "performance": "+6.93%"
+    }
+  },
+  {
+    "name": "INT2",
+    "id": "INT2",
+    "value": 77300000000.0,
+    "parent": "Interactive Media & Services",
+    "colorValue": -3.428431806077986,
+    "custom": {
+      "fullName": "Interactive Media & Services Company 2",
+      "performance": "-3.43%"
+    }
+  },
+  {
+    "name": "INT3",
+    "id": "INT3",
+    "value": 65200000000.0,
+    "parent": "Interactive Media & Services",
+    "colorValue": 1.113438084315456,
+    "custom": {
+      "fullName": "Interactive Media & Services Company 3",
+      "performance": "+1.11%"
+    }
+  },
+  {
+    "name": "BRO0",
+    "id": "BRO0",
+    "value": 63900000000.0,
+    "parent": "Broadline Retail",
+    "colorValue": -8.34029003950046,
+    "custom": {
+      "fullName": "Broadline Retail Company 0",
+      "performance": "-8.34%"
+    }
+  },
+  {
+    "name": "BRO1",
+    "id": "BRO1",
+    "value": 76600000000.0,
+    "parent": "Broadline Retail",
+    "colorValue": 3.182970838628267,
+    "custom": {
+      "fullName": "Broadline Retail Company 1",
+      "performance": "+3.18%"
+    }
+  },
+  {
+    "name": "BRO2",
+    "id": "BRO2",
+    "value": 24000000000.0,
+    "parent": "Broadline Retail",
+    "colorValue": 9.486422940441777,
+    "custom": {
+      "fullName": "Broadline Retail Company 2",
+      "performance": "+9.49%"
+    }
+  },
+  {
+    "name": "BRO3",
+    "id": "BRO3",
+    "value": 38600000000.0,
+    "parent": "Broadline Retail",
+    "colorValue": 3.5321446900659526,
+    "custom": {
+      "fullName": "Broadline Retail Company 3",
+      "performance": "+3.53%"
+    }
+  },
+  {
+    "name": "BRO4",
+    "id": "BRO4",
+    "value": 14700000000.0,
+    "parent": "Broadline Retail",
+    "colorValue": -12.792340488386172,
+    "custom": {
+      "fullName": "Broadline Retail Company 4",
+      "performance": "-12.79%"
+    }
+  },
+  {
+    "name": "REG0",
+    "id": "REG0",
+    "value": 81800000000.0,
+    "parent": "Regional Banks",
+    "colorValue": -5.348779103168911,
+    "custom": {
+      "fullName": "Regional Banks Company 0",
+      "performance": "-5.35%"
+    }
+  },
+  {
+    "name": "REG1",
+    "id": "REG1",
+    "value": 52900000000.0,
+    "parent": "Regional Banks",
+    "colorValue": -13.34766186292083,
+    "custom": {
+      "fullName": "Regional Banks Company 1",
+      "performance": "-13.35%"
+    }
+  },
+  {
+    "name": "REG2",
+    "id": "REG2",
+    "value": 10600000000.0,
+    "parent": "Regional Banks",
+    "colorValue": 0.33021138538031986,
+    "custom": {
+      "fullName": "Regional Banks Company 2",
+      "performance": "+0.33%"
+    }
+  },
+  {
+    "name": "REG3",
+    "id": "REG3",
+    "value": 62400000000.0,
+    "parent": "Regional Banks",
+    "colorValue": -6.205486900465206,
+    "custom": {
+      "fullName": "Regional Banks Company 3",
+      "performance": "-6.21%"
+    }
+  },
+  {
+    "name": "SYS0",
+    "id": "SYS0",
+    "value": 38400000000.0,
+    "parent": "Systems Software",
+    "colorValue": -5.747237999343429,
+    "custom": {
+      "fullName": "Systems Software Company 0",
+      "performance": "-5.75%"
+    }
+  },
+  {
+    "name": "SYS1",
+    "id": "SYS1",
+    "value": 43000000000.0,
+    "parent": "Systems Software",
+    "colorValue": 0.7357542589406137,
+    "custom": {
+      "fullName": "Systems Software Company 1",
+      "performance": "+0.74%"
+    }
+  },
+  {
+    "name": "SYS2",
+    "id": "SYS2",
+    "value": 39000000000.0,
+    "parent": "Systems Software",
+    "colorValue": 0.6444174900199804,
+    "custom": {
+      "fullName": "Systems Software Company 2",
+      "performance": "+0.64%"
+    }
+  },
+  {
+    "name": "SYS3",
+    "id": "SYS3",
+    "value": 89700000000.0,
+    "parent": "Systems Software",
+    "colorValue": -0.8891248828277991,
+    "custom": {
+      "fullName": "Systems Software Company 3",
+      "performance": "-0.89%"
+    }
+  },
+  {
+    "name": "SYS4",
+    "id": "SYS4",
+    "value": 58200000000.0,
+    "parent": "Systems Software",
+    "colorValue": 1.5018630607231527,
+    "custom": {
+      "fullName": "Systems Software Company 4",
+      "performance": "+1.50%"
+    }
+  },
+  {
+    "name": "PHA0",
+    "id": "PHA0",
+    "value": 37500000000.0,
+    "parent": "Pharmaceuticals",
+    "colorValue": -11.017253053025083,
+    "custom": {
+      "fullName": "Pharmaceuticals Company 0",
+      "performance": "-11.02%"
+    }
+  },
+  {
+    "name": "PHA1",
+    "id": "PHA1",
+    "value": 57000000000.0,
+    "parent": "Pharmaceuticals",
+    "colorValue": 14.974251610766801,
+    "custom": {
+      "fullName": "Pharmaceuticals Company 1",
+      "performance": "+14.97%"
+    }
+  },
+  {
+    "name": "PHA2",
+    "id": "PHA2",
+    "value": 50900000000.0,
+    "parent": "Pharmaceuticals",
+    "colorValue": 14.146226347200491,
+    "custom": {
+      "fullName": "Pharmaceuticals Company 2",
+      "performance": "+14.15%"
+    }
+  },
+  {
+    "name": "PHA3",
+    "id": "PHA3",
+    "value": 94400000000.0,
+    "parent": "Pharmaceuticals",
+    "colorValue": -3.2122713061906607,
+    "custom": {
+      "fullName": "Pharmaceuticals Company 3",
+      "performance": "-3.21%"
+    }
+  },
+  {
+    "name": "PHA4",
+    "id": "PHA4",
+    "value": 58400000000.0,
+    "parent": "Pharmaceuticals",
+    "colorValue": 14.631760589014915,
+    "custom": {
+      "fullName": "Pharmaceuticals Company 4",
+      "performance": "+14.63%"
+    }
+  },
+  {
+    "name": "OIL0",
+    "id": "OIL0",
+    "value": 59600000000.0,
+    "parent": "Oil & Gas Exploration & Production",
+    "colorValue": 2.5101562574067593,
+    "custom": {
+      "fullName": "Oil & Gas Exploration & Production Company 0",
+      "performance": "+2.51%"
+    }
+  },
+  {
+    "name": "OIL1",
+    "id": "OIL1",
+    "value": 65800000000.0,
+    "parent": "Oil & Gas Exploration & Production",
+    "colorValue": -10.561058010759355,
+    "custom": {
+      "fullName": "Oil & Gas Exploration & Production Company 1",
+      "performance": "-10.56%"
+    }
+  },
+  {
+    "name": "OIL2",
+    "id": "OIL2",
+    "value": 45600000000.0,
+    "parent": "Oil & Gas Exploration & Production",
+    "colorValue": 4.724484897262161,
+    "custom": {
+      "fullName": "Oil & Gas Exploration & Production Company 2",
+      "performance": "+4.72%"
+    }
+  }
+]

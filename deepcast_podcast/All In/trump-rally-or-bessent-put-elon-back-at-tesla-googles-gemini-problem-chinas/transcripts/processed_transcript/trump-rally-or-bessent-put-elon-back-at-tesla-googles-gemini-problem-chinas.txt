@@ -1,0 +1,489 @@
+Jason Calacanis: Okay, welcome back to the all in podcast. Jcal is not here this week. He is off in Detroit at the Knicks game. Congrats to the Knicks. Here's a photo of our boy jcal hanging out with. Who's that? Ben Stiller, man.
+
+David Sacks: What happened to Ben Stiller?
+
+Chamath Palihapitiya: That looks like Chalamet right next to him.
+
+David Friedberg: Timothy, is that Chalamet? Chalame.
+
+David Sacks: You know, Ben Stiller was once referred to as the Jewish Tom Cruise, but he has not held up like Tom Cruise. I gotta say that he should have joined the Scientology. Keep it up. You gotta represent for us a little better. Let your winners ride Rain Man.
+
+Jason Calacanis: David Sass.
+
+David Sacks: And instead we open source it to the fans and they've just gone crazy with it.
+
+Jason Calacanis: Love you, Queen of Quinoa.
+
+Chamath Palihapitiya: I'm going all in.
+
+Jason Calacanis: Sitting in this week is our boy Andrew Ross Sorkin, journalist, author, extraordinaire. Andrew, welcome to the show.
+
+Chamath Palihapitiya: Longtime listener, first time caller. Thank you for having me, Andrew.
+
+Jason Calacanis: I'm going to do just a couple of quick plugs and I'm going to give it over to the pro to do his work. Take us through the docket today. I think this is going to be really fun.
+
+David Friedberg: The world's greatest moderator.
+
+Jason Calacanis: The world's greatest moderator is here today.
+
+David Sacks: Fighting words, shots fired.
+
+Chamath Palihapitiya: We'll see. We'll see. Hold your tongue. You can tell me when it's over.
+
+Jason Calacanis: Before we kick it off, I just want to give a quick plug, the all in Summit. If you haven't seen the video, check it out on YouTube and Twitter. Going into our fourth year, the 2024 recap, we'll kind of give you a set of highlights from last year. It's September 7th through 9th in LA trying to have the world's most important conversations. Andrew, I know it probably competes with one or two of your conferences, but let me just tell you, this one's way better. We're going to be blowing it out this year with parties all in.comsummit to apply to join us at the summit this year. Awesome. Andrew, thanks for being here. We're excited to have you.
+
+Chamath Palihapitiya: Okay, boys, here we go. I'm curious, I want to get your take on all this stuff because I'm fascinated by what's going on in these markets this week. Let's start on the markets because we got a rally. The question I think behind the rally is is this best input is this? Jay Powell is in the job. He's got a put on this thing. I don't know what you think is going on. We're up 3 to 7% for the week. There's been a she loves me, she loves me not situation with what Trump's been saying about China and whether there's a deal or not a deal. China's saying nobody's talking. He says everybody's talking. What do you guys think is really happening? And then we got to get into Alphabet, we got Tesla, got a lot of earnings here. That's also moving this around.
+
+David Friedberg: I think that the most important piece of financial logic that we have to break is this idea that there is always a put. The put is this weird thing, just for the folks that don't understand it, is that when the market goes down, somebody can belly ache and cry and somebody in the government will say, okay, we'll buy your shitty securities at your bad prices. So that's what the put is. So typically what's happened is you can cry to the White House and they'll call the Federal Reserve and they will buy it. That's the Fed put. And in some very rare cases, when things get really calamitous, like in 2008, treasury will set up a program and start to buy things. That's what was called TARP back in the gfc. So the question is, is there a put here? I mean, my honest answer is no. And the simple reason is, if you look at where we are, the stock market's back to where we were in May or August of last year. And if you had said that we would have upended 50 years of economic policy and the markets would only be off 500 or 600 basis points, I would have been shocked. So there's no reason for a put. Maybe the more interesting question is, who's asking for the put? The ones that have suffered from the volatility. And a lot of those are the active market traders. So if you trace the feedback, who has been the most negative? Ackman's been negative. Ken Griffin recently turned negative. And that probably comes from the fact that they're not monetizing the volume the way that they used to monetize the volume more than the market has speared down to such a degree that the world is coming to an end, because it isn't.
+
+Chamath Palihapitiya: Okay, stacks.
+
+David Sacks: Can I build on that, please? There was a tweet two weeks ago when all this started by Nick Carter that I retweeted because I thought it was really interesting, which was, if you think a market sell off delegitimizes Trump's presidency, you're going to give him unconditional credit when it rallies Right. Because those are the rules now. And that's exactly what's happened, is that the market has rallied. Like you said, it's up 7% this week. But the media doesn't want to give Trump any credit for it. So it's kind of created this narrative of a Besson put in other words, Besson is entirely responsible for it. Look, Scott is a very smart man. He understands markets. He understands the bond markets, and he is a reassuring voice to those markets. And I think he's doing a great job. But I think part of what's going on with this Besn put narrative is that no one ever wants to give Trump or his administration as a whole credit. So what they do on any particular week is valorize a particular member of the administration that they can then say, well, this is the person who's really responsible for this, not Trump, because I don't want to give Trump that credit. Next week, they'll be tearing Scott down and there'll be some other member of the administration they'll be trying to valorize to basically prevent the administration as a whole from getting credit for doing something good. So, again, I think Scott's doing a great job. I think he's doing a great job making these deals, and he's saying a lot of correct and reassuring things to the markets. But I think if the media is going to tear Trump down every time the market goes down, you have to give him credit when the market goes back up. And I think there's just a general reluctance to do that.
+
+Chamath Palihapitiya: Where do you land, Dave?
+
+Jason Calacanis: I think that there is. Is he crazy enough to let it all fall apart Signal that kind of got wiped out this week. That's really what it was. It was the fact that everyone realized that Besant Trump are not going to let trade come to a standstill. They're not going to let the whole global economy grind to a halt, that they're going to have to do something. And I think that the read is that they're making the indications that they're going to get deals done, which means that their intention is to make sure that the market doesn't tank. That the. And more important, roughly three weeks ago.
+
+David Sacks: Roughly three weeks ago, when we started talking about this, I think I made the point, Chamath made the point that part of the art of the deal here, so to speak, is an opening salvo, which is bold. And some people would say maybe it's too extreme, but it's basically an opening bid to shift the conversation completely.
+
+Jason Calacanis: Yeah.
+
+David Sacks: That would create Tremendous leverage to get deals done. And isn't that exactly what's happened? Isn't that the way it's played out?
+
+Jason Calacanis: Yeah, I remember there was a guy from Harvard who used to teach a class on negotiation. He put out all these videos and what he always said is, like, set your anchor point as far away as you possibly can if you want to get maximal leverage in a negotiation. I don't know what's farther away than 145% tariff. So it's clearly, you know, a point for, as SAC said, for negotiating to a deal that seems like one that would have been impossible or implausible if you started from a 0% tariff beginning point in negotiating and there was some percentage of the market or some probability that people were assigning to the fact that this administration could be crazy enough to tank the global economy by leaving tariffs really high and letting this kind of run. And I think that that's kind of being taken out of the market.
+
+Chamath Palihapitiya: Right. But now that it's out of the market, that means that the leverage, there's less leverage. There's less leverage in the conversation. And if the goal is to.
+
+David Friedberg: That's not true. That you're saying a critical thing. And that is true.
+
+Chamath Palihapitiya: Well, hold on. If the goal is to effectively pressure China, which I think is the ultimate goal, I think as the bond market has spoken and as Trump invests in the administration has said, okay, we understand where the floor is here, what we got to do. I assume if you're Mark Carney, if you're the eu, name your place, India, Japan, you say, I'll make a deal with you. But, you know, if you thought you were. If you thought I was giving you the world before. No, no, no, no, no. You need me as much as I need you. And you sat. You seemingly need me even more now.
+
+David Friedberg: So the part where I agree with you is that last part. Like, I think too many times you look at the stock market and think that that's reflective of what's actually happening, and it's not the stock market. I think the best way to think about it is it's an estimation of what the future would look like at a rate of return. You're superimposing a view on reality. So what is actual reality right now is if the United States was running negative $2 billion a day of trade deficits, Right. If our current account balance was -2 billion on March 31, the day before Liberation Day, the real question is, what is that number mathematically after April 1st? Right. Because you're ratcheting it up, tariffs. Okay. And you're implementing a scheme that should take that negative 2 billion that's going out the door out of America shores. It would have flipped it positive. How positive, we don't know. But I'm sure that the government knows and I'm sure the White House knows what that number is. That's important fact number one. And then separately, the country that matters the most on the other side of that, who was very positive. Right. Let's say China was plus 3 or 4 billion a day. Where did they go to? And I suspect that it's probably break even or possibly even negative. So if you think about what the new reality is today, April 25th, as we tape the show, we've gone from minus 2 to maybe plus 1. And China's gone from plus 4 billion a day to maybe 0 or minus 1. And I think that's what instills the leverage that is required to get the deal done. Then we can all debate whether the forward PE of the S&P should be 16 times or 22 times. I don't think that that matters. But the actual cash flows have materially changed.
+
+Chamath Palihapitiya: By the way, I think long term America's got leverage here. Everybody wants to invest, is ultimately going to want to invest in America, including China. There's no question that we have the advantage on a long term basis. The question is, do we have the patience?
+
+David Friedberg: Well, if you go from negative two.
+
+Chamath Palihapitiya: To plus, given our democracy, given our bond market, given everything that goes on, we're such an add society.
+
+David Friedberg: Okay, then what I would say, Andrew, I think that that's a very good point. What I would say to that is then we need to communicate better. It needs to be a single point that's repeated by everybody in the cabinet. And what they should probably focus on is, hey guys, we just flipped cash flow. We went from negative cash flow to positive cash flow. Here are the actual numbers. And don't deviate from that because then I think Americans would say, hey, this thing is working. Let's let it play out to your point.
+
+Chamath Palihapitiya: Hey, Sachs, here's my question for you. So we hear, you know, the President say he's talking to President Xi. We hear Scott Bestin say that he's in talks with China or that the talks are going to begin. And then you hear China say, no, no, no, we're not talking. There's no talks happening. We're, we don't know what you're talking about. Stop saying these things. What are we all supposed to believe?
+
+David Sacks: Well, look, first of all, let me just say that when I'm on this show and I'm not talking about AI or crypto, I'm just a civilian, right? So I'm not a spokesman for the administration on anything but the two issues that I work on. So I don't want to come across as someone who has special knowledge because I'm not part of the trade conversation. So I can't answer your question directly, but what I would say is that with respect to the China relationship, I think what's happened over the past few weeks has been a very important stress test, and it's basically flagged some serious weaknesses or dependencies that have evolved in this relationship over the past few decades. I flagged this in a previous episode that we did with Larry Summers, where I said that 25 years ago is a huge mistake to walk China into the wto. And I think that just to build on that thought, one of the problems with walking them into the WTO is that they got what's called developing nation status. So you can either be a developing nation or a developed nation in the framework of the WTO. And maybe there was something legitimate to that. In 1978, when Deng Xiaoping began his reforms, the average Chinese person was making $2 a day. By the year 2000, it was much more questionable. And it certainly makes no sense in the year 2025, and still to this day, China gets developing nation status. Now, what is the benefit to China of that? Well, they have a whole different set of rules. They're allowed to have tariffs. They're allowed to subsidize their industries. They have all sorts of different timetables for doing things. They're allowed to do things that the US Simply can't do. Now, how have they leveraged that? They have identified strategically certain industries that are choke points in the global supply chain, and they have taken them over. And the best example of this is rare earths. So there was some good stories in the New York Times about this over the past couple of weeks, which I think were largely accurate. China identified this as a critical industry. And the rare earths, the ore itself is distributed all over the world. I mean, China has some advantages there, but they're not huge. It's the processing of the rare earths that's very expensive, very complicated, and they decide to dominate that industry. And they're responsible today for over 90% of the processing of rare earths. And then the next step in the supply chain is that those rare earths get cast into rare earth magnets which are a critical component in pretty much every electric motor. And so they're a critical component of the automotive industry, but not just cars, lots of different products. And I think China makes something like over 90% of the cast rare earth magnets. Well, by the way, this issue still has not been resolved. China has now cut off the United States. And so as part of this trade negotiation, we're going to have to resolve that issue. And I trust that it will be. I mean, what you've heard from the President and the treasury sector over the past week is that they're, they've indicated a desire to engage in bilateral negotiations with China and to essentially deescalate this trade war. But I think it's been very useful, again as a stress test to reveal our critical dependencies on China that we've exposed. We never should have let this happen. Just from a national security standpoint. We worshiped at the altar of this free trade God to the point where we became dependent on China for these critical components in our supply chain. I think that was a catastrophic mistake and I think that it's exposed these dependencies we've created on a nation that is not our ally and that we can't count on them. It's a country of concern. So I ultimately think that we're going to need to learn from this experience and very rapidly make some major corrections here.
+
+Jason Calacanis: Andrew, let me just highlight what I think is one oft not talked about point about the discussions that are underway. There's a lot of conversations about tariffs and about trade deficits, but very little about regulatory parity. And I think that this is really critical for these trade negotiations to actually resolve to a positive outcome for American businesses and American enterprises. Because there is not parity in how American businesses can do their work overseas relative to how foreign companies can do work in the US So if you're a Indian company and you want to sell something in the US you set up an llc, you set up a bank account, you set up a store, take a lease and you sell your product. There is not a lot of hoops and challenges to that business operating in the United States. I'll tell you a story. In 2005, 2006, Monsanto, which was a seed company that doesn't exist anymore, launched in India cottonseed seed for cotton farmers that basically had a trait in it that would prevent worms from eating the cotton. And so Indian farmers were paying 450 rupees an acre for cottonseed before Monsanto basically put this cottonseed the yields went through the roof. The farmers made 5000 rupees per acre of incremental profit, and they charged 1500 or 1400 rupees per acre for the seed. So it's more expensive seed, but it had a 5,000 profit improvement. And it took off, took the whole market. 90% of farmers bought the seed, not because they had to, but because it was better. And what ended up happening was the Indian government stepped in and said, you got to lower prices. You got to go back to the price of 450, because that's what's fair for farmers. And the farmers were like, we're doing great. We don't need to have this kind of price control. But the government put it price control in and ultimately sued the company, went to court and stole their ip, and they left the country. And this was a company that had invested well over a billion dollars in developing and launching this product. The same is true, by the way, in pharmaceutical companies, in software companies, in hardware companies. If you want to go do business in China today, you have to set up a 51% JV where some local company owns 51% of your equity and your IP. The stories around the world, I think, start to paint the picture of why American businesses find it so hard to develop international markets and sell into those countries when in the US we make it so easy for companies based in foreign countries to come and sell in America. And that's a big part of where the trade imbalances arise from. It's not just because Vietnamese people can't afford expensive American goods. It's because it's so much more regulatory, difficult to do work in these countries. They can come in and take your ip. And so I think that this is like a really important part of the trade discussions and negotiations that a lot of people miss, that American businesses will see massive revenue growth and massive market adoption in if we can get regulatory parity in some of these key trade deals.
+
+Chamath Palihapitiya: Let me ask you a different question. Chamath raised the issue of Ken Griffin, who made some comments this week about the brand that is America and effectively said there was sort of a Sell America situation going on. And my question about the brand that is America is whether you think after these tariff, whatever deals get done, that you can put the toothpaste back in the tube, that you can get the trust back, that there's not gonna still be some kind of toothpaste on the rim of the tube that you can't stick back. It gets all nasty and crusty, right? That, to me, is a fundamental question. I want to read to you what Ken had to say. I think Ken was probably a bit of a reluctant Trumper the second term, but nonetheless, he's been outspoken on a couple of things. He says, if you think of your behavior as a consumer, how many times do you buy a product with a brand on it because you trust that brand? In the financial markets, no brand compares to the brand of US Treasuries. The strength of the US Dollar, the strength creditworthiness of US Treasuries. No brand comes close. We put that brand at risk. What say you?
+
+David Sacks: Well, look, I think there's a fundamental question here about whether you think there's a problem with the status quo or not. Ken Griffin is one of the biggest winners in our economy under the current status quo. And I don't think he sees a big problem that needs to get fixed. But I think like we just talked about, I think there are some big problems. I mean, Freeberg just laid out the way in which trade with China is nonreciprocal. Like our companies cannot participate in their markets the same way that they can participate in ours. But it's worse than that. Like I talked about, these WTO rules gave China the opportunity to strategically annihilate our core industries that are critical in the supply chain. And there's one other piece of this which I think is really important, which is the race to the bottom. I mean, if you're an American company and you are still producing in America and your competitor is able to go to China and undercut you, obviously you have to do the same thing, because, I mean, those are just the rules of the game. And so we've had this race to the bottom where if you're an American company operating under these rules, you have no choice. It's worse but to export your manufacturing, your supply chains. So we've had these rules that again, under the status quo, I would say they're not free trade, it's unfair trade. It has all these perverse consequences, is bad for middle America and this manufacturing belt of the country, and it's created massive strategic dependencies on an American adversary.
+
+David Friedberg: I'll say three things. Let me just say three things quickly. Number one, I think Ken is massively long pax America. I mean, he's built a $42 billion empire. He owns a billion dollars of American real estate. So I don't see him investing in Ecuador anytime soon relative to the opportunity set in the United States. And I think that's what speaks to the second point, which is investing is always a relative exercise. On Wednesday, I had a meeting with a Brazilian multi deca billionaire, very, very, very successful guy. And we were talking about the tariffs and the investing posture. And he's like, there's still no other country other than America that I can really put my money to work in that makes any sense. And I kind of pushed him. What about China? What about India? And in all of these markets, there are, as Freeberg mentioned, vagaries in China. There's different problems in India, there's different problems in these other markets. Europe is roughly uninvestable. So the more generalized answer is on a relative basis, the United States is still the shining beacon on a hill. There is no investable alternative for scaled capital except the US the last thing I want to say is just to build on what SAC said. Andrew. The thing that we keep forgetting is when economic leverage spills over to political leverage, what happens to the United States? And specifically what happened this week was on the rare earth side. Not only did China constrain rare earths into the supply chain, what they then did was tell South Korea what they could do with the rare earths that they gave them. And now all of a sudden you have this geopolitical spillover where it's not just a country constraining supply, it's a country now dictating the political and trade practices of another country. So let me ask you a question. How do you think America is in the best position to make its own decisions? For example, let's say that there's a China Taiwan situation and we need to decide one way or the other. And I'm not saying which way is right or wrong, but for the purposes of this, the thought exercise is China and Taiwan get into some spat, we have to take a side, and China says we're going to constrain all the pharmaceutical APIs into the supply chain, we're going to constrain all the battery cathode into the supply chain, and we're going to constrain all of the rare earths to anyone who doesn't take our side. Now, how is America in a position to actually decide for ourselves what is in our best interests if that's looming over us? And I think that this is the big problem, that this has exposed, this rush to globalism, the race to the bottom has actually created a level of dependence that doesn't allow you to do what's in your best interest.
+
+Chamath Palihapitiya: So real quick, I agree with you in so many ways. I think the question that I have is not in what the ultimate goal is. It's how you get there. And is there a way to do this with a velvet glove, if you will? And maybe there's no way to do it in a better way?
+
+David Friedberg: No. But what is to say this isn't the velvet glove, it's that the stock market is down 6%. Like it's not down 60%.
+
+David Sacks: But this is what I think is so interesting, Andrew, is the way that Trump has already shifted the conversation. Because the truth of the matter is that before Liberation Day on April 2, which is three weeks ago, no one was talking about the unfair trade practices. No one was talking about the dependencies on rare earths. No one was talking about the race to the bottom. And Trump has shifted the conversation 100%. When Jared Kushner was on the show, he talked about how the Trumpian approach is controversy elevates message. And we said at the beginning that by having this Liberation Day, by planting this flag in the ground, Trump was creating leverage to then have these negotiations. And he completely shifted the conversation. Now, where I will agree with you is that the administration has to stick the landing here. Right, Bessen. And it's not just Bessen. Also, Lutnick, these are all smart, talented people. They do have to then negotiate these deals, and we have to basically stick the landing. But I think the fact that you're saying that you don't disagree with where Trump is trying to get to, but it's mostly just tactical, is a huge gift in the conversation.
+
+Chamath Palihapitiya: It may raise the issue the way you're describing, but at some level, it's also undermining a semblance of trust. I just want to relay two stories. One is, you know, I've been talking to a whole number of multinational CEOs who do business in China. I'm talking about the McDonald's of the world, the Starbucks of the world, the Nikes of the world. And so many of them now talk about not just how consumers aren't going necessarily in their stores the way they used to, but really about the American dream, the American brand. And they talk about the idea that if you were a young kid and you got a job at Starbucks, you used to go home to your family in China and say, and your family go, wow, that's amazing. They're not doing that right now. So many of these companies are even trying to re establish how they market and advertise their companies, almost as if they're a local business, not an American brand. And I don't know what that ultimately means. But I also was talking to a Chinese CEO who made a. I thought it just a fascinating comment to me, which was, you know, we're cool with the US Being the leader. We were always cool with that. We're okay with that.
+
+David Friedberg: Love it.
+
+Chamath Palihapitiya: But we're okay with. Gets a lot more complicated when you have to be the winner. And I think that's an interesting sort of construct, this idea that we're first and we have to win. And I know we're telling. Trump is telling citizens in the US that we're going to win, but he's also telling the world that. And I think that's a. I think.
+
+David Friedberg: That Chinese CEO should have written that memo to Xi Jinping and seeing if he agreed, because I think he would say, no, we are the winner. Look, you got to remember in 2003, three years after China was admitted to the WTO, Hu Jintao became premier, he had this incredible speech. And in it, what he said is, There are these 10 boxes, and I've written inside these 10 boxes all the critical industries that in 25 to 30 years from now will dictate supremacy in the world. We are going to create national champions, he said, in those 10 areas. And what's interesting about Xi, despite the ideological differences to Hu, he followed through with it. This is a group of people, so we can say what the CEOs are going to say. But at the end of the day, the CEO of China Inc. Is one man, and he and his C suite have been pretty resolute, which is even when he inherited a political ideology that he didn't completely agree with, he followed through with it, which is, these guys in these 10 areas now own the critical inputs that make the world go around. And I think it's pretty reasonable to do a risk assessment to say, well, how do you stand up to that and actually have your own point of view if you don't have your own method of having access to those things? I think that is the most important question. Everything else about brand and all of this other stuff, I think comes after this question. This is the critical question, because if they can tell you what to think, that is not winning.
+
+David Sacks: Yeah, I would just add to that that you hear this criticism of Trump a lot, which is that, okay, he's right on the issue or his instincts are correct, but there should be a nicer way of doing it. And I guess I would give that story more credence if the people making that criticism had actually been advocating for a change in the status quo prior to Trump. And they weren't. I mean, we had this bipartisan globalist consensus that pretty much all trade practices with China, no matter how unfair they got, was basically good for the United States. And no one was really doing anything about it until President Trump made it this issue and made the unfair trade practices conspicuous. So if somebody else had been willing to take that on, then I maybe would give credence to this idea that there's some non Trumpian way of doing this. But I just don't think that's the way our political system works. I think that the way our political system works is that you have to completely shift the conversation first to create a new consensus and then you work out the deals. And that process can be a little bit disruptive.
+
+Chamath Palihapitiya: Okay, one tiny follow up. So I don't know if you guys saw the news this morning. A report out that Apple is going to move its manufacturing of iPhones that are exported to the US or imported here in the US but they're going to manufacture all that stuff in India, not in China anymore. So they're going to move all the manufacturing to India.
+
+David Friedberg: See you in 20. See you in 2035.
+
+Chamath Palihapitiya: They say they can do it supposedly in 18 months by the end of 26, but you say no way.
+
+David Sacks: But I think this is geopolitically smart.
+
+David Friedberg: Yeah, they should do it. But I'm just saying that's a. It's very smart. It's not going to get done in 18 months.
+
+David Sacks: I don't know how long it's going to take. But look, I think one of the big lessons here over the past 25 years is that you have security first. Security has to be worked out first. Then you have trade. If you build your whole supply chain and all your trading relationships with countries that are fundamentally adversarial to your interests, and we can get into that part of the US China relationship. But I think most people would say that we're in some version of a new cold war with China. Obviously, you're gonna have to revise your trade relationships because again, we can't be dependent on an adversary for core components that then go into our military, for example. So security always has to come first. Then you work out trade. And I think that India is fundamentally extremely aligned with us on security because they view their biggest potential threat and adversary as being China. And that is basically the way that the US Sees the world as well. And so I do think that the US India relationship is just very aligned. And I think therefore, the investments that get made and the trade relationships that get forged, will be very stable over the next couple of decades. Whereas if you make a big investment in a country that could be your adversary, you should expect that that relationship could get disrupted.
+
+Jason Calacanis: I don't think the Apple deal is from a standstill. My understanding is Foxconn and others have been working with Apple to actually stand up manufacturing capacity in India for some time now. And I do believe that they probably have one or two model runs already active in the country. So I don't think that this is necessarily from a standstill. Let's go recruit the people, figure out the processes, find the builders, stand up the facilities, that there's probably a model system already running that's now about replication and scale up, which is why they have confidence in the state stated goal. It's not often that Tim Cook will stand up and say, I'm going to do something in 18 months and then be delayed by years. He's not Elon. He's going to come out, he's going to be very clear. He's always been very clear. So. And my understanding is this has been thought about for some time. Andrew, I think you've been to a lot of conferences where for three years now, you've been hearing people banging the table saying, get everything out of China as quickly as you can. Tim Cook's heard that message. He's been thoughtful about it. He's been planning for this day. I don't think he wanted to be declarative about this until the day came. Well, the day's here.
+
+Chamath Palihapitiya: And how do we feel that it's gone to India? It's not coming to America. I think we knew it wasn't coming to America.
+
+David Friedberg: Well, India has one massive advantage over China, which is that it has one fifth the labor cost of China, which has 1/5 the labor cost of America. So India is a natural place for a lot of this next generation labor to end up. Plus they have a very educated workforce. Plus they have a young workforce. In many ways, you could say that it's China circa 2003. I mean, you have to remember, right, like China from 2006, I think, to like 2012, their GDP grew at like 10% a year. I mean, couldn't you imagine what that must have been like when a country that big is growing that fast? So India's going to have that moment over the next 20 or 30 years. The only reason I scoffed at what.
+
+Jason Calacanis: You said, would you invest in India? Would you?
+
+David Friedberg: I have a large rare earth mine in India. Yeah. It's one of the largest supplies of rare earths outside the United States. We negotiated that deal with the pmo and they gave us a great deal to compete with the Chinese. Our specialty chemicals processing is on the ground there. And then the idea is then to import all of that specialty chemical into the United States and then do all the.
+
+Jason Calacanis: I like the macro. There's something about China where there's a lot of accounting fraud still and you can't really trust a lot of the numbers. But if that all gets cleaned up, the macro is all right. It's exactly where it should be for.
+
+David Friedberg: You mean India?
+
+Jason Calacanis: India? Yeah. Yeah.
+
+David Sacks: I mean, I, I just think the structure, the, the structural realities just make it a good place to invest. Cause I just think that India and the US are going to be very aligned for, for a long time.
+
+David Friedberg: Agreed.
+
+David Sacks: Again, their main security threat is China, and our main security threat is China. And that's just not going to change for probably the entire 21st century.
+
+David Friedberg: A couple weeks ago, Sachs and I sat down with the Indian ambassador and it's very clear they're fundamentally aligned with the United States. And I think exactly what Sachs said is true. Everybody knows who needs to cooperate in order to have a reset of global trade policy and political leverage. So I don't know. I'm pretty pro India, it's a very difficult place to invest. I agree with you, Sorkin. I've never made money there. I tried my hand at tech investing. Over a decade, I maybe have returned 50 cents on the dollar. Why?
+
+Jason Calacanis: What's wrong? What's the macro reason?
+
+David Friedberg: The market was far too immature. My mental model was about how American success looked like. And when I tried to impose that on the Indian market, it all just blew up. So a lot of the Indian entrepreneurs, how they raised money was not from Indian VCs, it was from American VCs. And you can't tell an American VC, an idea that just makes no sense to you because your frame of reference is the United States. So what turned out to work was a couple of very large bets that were copies of American businesses. So, like the Indian Amazon worked, the Indian PayPal kind of worked, the Indian doordash kind of worked, but everything else didn't work. So then why?
+
+Jason Calacanis: Because is it the consumer market's not there or the capital markets aren't there?
+
+David Friedberg: No, because we have these mental biases that will never allow us to believe the way that they would construct the business would work. So, for example, they're like, hey, here's a business where we're going to buy food from the Local farmer. Then we're going to put it in a warehouse, then we're going to drive it around on rickshaws and deliver it to people. And you think, well, this business can never work. Well, actually, that business turned out to be a ginormous success. Nobody in the United States would have ever funded that. Now what happened four years ago though was after a bunch of meetings, I pivoted to these other areas because when you talk to the Ambanis and when you talk to the Adanis, they're like, dude, stop beating your head against this wall. Like build infrastructure. It just works. And it was true. They've been right.
+
+Chamath Palihapitiya: Okay, one geopolitical question. How do you feel about India buying as much oil as they do from Russia? I know. We'll get into the whole Ukraine thing later.
+
+David Friedberg: Smart, smart.
+
+David Sacks: Look, India is a country that has two great powers in its neighborhood, China and Russia. It has a contested border with China. They've had border skirmishes. When you have a country that is much more powerful, that's actually a security threat to you, you then seek good relations, even possibly an alliance with the other great power in the neighborhood. That has been India's philosophy. They've had good relations with Russia for a long time, even going back to the Cold War. That is what makes sense for their security standpoint. By the way, the exact same thing is true of the United States. We just haven't realized the strategic reality. China is the peer competitor. I mean, Mearsheimer made this point at our all in summit. China is the peer competitor. It's the only country in the world that is a peer of the United States. It's the only country that's really capable of threatening our security. Russia is a distant number three in terms of the great power rankings. What you want to do if you're in a sort of heads up competition where there's two superpowers is you want to make an alliance with that number three. And what we've done is we've pushed Russia into the arms of China. What we ought to have been doing is the reverse. Kissinger. We did this during the Cold War, by the way. We had the Soviet Union and we had China. And in that case, the Soviet Union was the big threat to American security. So what did we do? We had Nixon and Kissinger go to China and make a deal with Mao. China was just as communist as the Soviet Union. Mao had blood on his hands to a degree that is much greater than someone like Putin has. And yet we were willing to shake hands with him and make an alliance, because that was real politic. And I think in a similar way, this is what our strategy should have been with Russia for the last two decades. And instead we've been foolishly pushing them into the arms of China.
+
+Jason Calacanis: Well, Sorkin, what's your read? I mean, what's your opinion on the.
+
+Chamath Palihapitiya: India's a tough look. India. India's a tough place to invest. Every. Everybody I know who's been talking India for the last, I don't know, 15, 20 years has been talking it up as the next great utopia, and it may very well be. It probably will be. It's just a question of when.
+
+David Friedberg: I think you have to. And you have to be specific about the end market. There are people that have made a ton of money there, but it's not the way classical Western economics has played out by any means.
+
+David Sacks: Andrew, I mean, what do you think about this sort of what I would call balance of Powers Logic 101?
+
+Chamath Palihapitiya: I get the idea that you go to your least, I don't know.
+
+David Friedberg: Your friend's friend. Your enemy's enemy is your friend.
+
+David Sacks: No, the enemy is your friend or whatever it is. Yeah, no, that is balance of power logic.
+
+Chamath Palihapitiya: I get where you're going with this. I just think that Russia, given all that they have done, it's hard to look at Russia and China and maybe Russia on the margins, on a relative basis in life, is better than China in certain ways, but in other ways it's not. And so it's very complicated to sort of, for me to look at it and go, okay, it's actually interesting. I mean, I was gonna use a real loaded word. Who's more evil? Right? Is China more evil or is Russia more evil?
+
+David Friedberg: I mean, I think.
+
+Chamath Palihapitiya: I think there'd be a big debate about that in the world.
+
+David Friedberg: Well, I think it's unnecessarily judgmental. Yeah, right.
+
+David Sacks: I think it's dangerous to look at foreign policy from a position of extreme moralism because ultimately the purpose of our foreign policy is to ensure American security and we can't rectify every injustice in the world. And over the past 25 years, we've become hyper interventionist in an attempt. So we've claimed to do that. Right. We keep saying that we've gotten involved in all these places because we want to promote our values and spread democracy. And by the way, we did the opposite. I mean, you look at the forever wars in the Middle east, we had interventions and occupations in Iraq, Afghanistan, Libya, Syria. How did all those things work out? They did not promote our values or spread democracy. So my point is just I don't think we should look at foreign policy from a position of extreme moralism. I prefer to think of neither of those countries as quote, unquote, evil. And I would prefer to think of them as countries which have their own interests. I think that with respect to China, the real issue is that it is a revisionist great power. It has made clear that it wants to basically annex Taiwan. It wants to turn the South China Sea into effectively a Chinese lake. It does not respect international waters. It has territorial disputes with Japan. And if we don't play a role in containing China, then China will revise the balance of power in East Asia in a major way. And I think that would have, I think, profound consequence for the United States.
+
+Chamath Palihapitiya: That may be.
+
+David Sacks: I don't know if Chinese are going.
+
+Chamath Palihapitiya: To show you off a roof one day and you won't even know it. I mean, that's the difference. And I don't know if that's a moral argument I'm not worried about.
+
+David Sacks: The United States is not going to be thrown off a roof by Russia, and that's the level at which we should think about these things. If you look at Russia's behavior, Russia actually is not a revisionist great power. What it wants is just security on its borders. The revisionist power actually in Europe over the past 25 years was the United States because we pushed NATO right up to Russia's borders, despite the promises that were made to Gorbachev in the 90s. So we're the ones who've revised the balance of power in a way that was profoundly threatening to the Russians. And I think it would be far better from the American standpoint to just work out a security architecture for Europe with Russia that gives the Russians the security they crave on their Western border and gives Europe the security it craves. And I think if we had had that mentality as opposed to this highly moralistic mentality where we basically want to spread American style democracy everywhere.
+
+Chamath Palihapitiya: You don't think that American style democracy, though, has helped the world in some way? I'm not saying we did it right everywhere. I believe we've lost a lot of wars that we should not have attempted.
+
+Jason Calacanis: But if it could be done, you're right. But the problem is, Andrew, the failure rate is too high. Look at what happened in Afghanistan, in Syria, in Iraq. As we've gone in to make, you know, regime change, we actually put those people in a worse condition than they were before. They don't end up with American democracy. After a trillion dollars in Afghanistan, the Taliban is back in charge, doing awful, brutal things.
+
+David Sacks: Right. Two trillion. And.
+
+Jason Calacanis: And I would be. I would be a proponent of. And by the way, this was also part of the promise of the open Internet. And I think from a fundamental point of view, the regulatory regime we had in the United States with the Internet was driven by this notion that the freedom of information would actually allow democratic proliferation. We were talking about the Arab Spring, as you'll recall. That was going to be this big moment. But at the end of the day, it turned out that didn't work either. That there's something much more complex in the history of a people in a geography, the deep ties that those people have. That this idea that turning on a screen or showing up with a tank is going to flip the switch to democracy turns out not to be true.
+
+David Sacks: And look, just to be clear, I think my lucky star is that I'm an American and we do have the type of government we have here. And my parents immigrated to the United States in 1977 for political reasons, because we have the type of government we have here. So, look, I'm a strong believer in American style democracy. The problem is our efforts to promote it or impose that style of government through regime change operations simply has not worked. I mean, this should be one of the big learnings of American foreign policy.
+
+Chamath Palihapitiya: All I'm suggesting is I think it's better to model it, Right? It's better to.
+
+David Sacks: Yeah. So how do you model it? I think you model it by being the shining city on the hill, by setting a good example, by focusing on our own country and making America the best it can be, so that people all over the world look to us and say, oh, we want to do that. And I actually think that what I'm describing is American soft power. If you go back to the 1980s, we had that soft power. I mean, the people of places like in Russia, they love buying American blue jeans and American music. And we had that soft power. We were inspiring to the world. But it all changed, I'd say, starting in the 90s, but then really in the 2000s when we started going into these countries with our militaries and occupying all these countries. We soured them on America. We made them hate us. And this is the problem with this hyper interventionism is what we should be doing is setting an example, not trying to occupy these countries.
+
+Chamath Palihapitiya: Let me read something to you. This is this week. This is Trump condemning the strikes going on in Kiev. This is. I'm not happy with the Russian strikes in Kiev. Not necessary. Very bad timing. Vladimir. Stop. Exclamation point. 5,000 soldiers a week are dying. Let's get the peace deal done. How is this deal gonna get done? I should also say Secretary of State Marco Rubio reportedly skipping a meeting on a ceasefire talk on Wednesday after Ukraine refused to recognize Russia's annexation of Crimea.
+
+David Sacks: Well, the reason why Rubio canceled that meeting is because the Americans put forward a peace proposal, and Zelenskyy dismissed it out of hand before the Russians could do anything. Zelenskyy dismissed it. And recognizing Russian ownership of Crimea, if you will, should be the easiest point for Zelenskyy to concede. And he dismissed it out of hand. Now, why do I say that? The Russians annexed Crimea in 2014. So this was not something that happened in 2022. It happened over 10 years ago. And if you look at what the people of Crimea want, and there's been a lot of Western polling on this, there's been man on the street interviews by NBC. The people of Crimea, by something like over 80%, say they want to be part of Russia. They're ethnic Russians. And I'd say the final point on this is that Zelensky and Ukraine tried to get Crimea back in the summer of 2023 with a summer counteroffensive. Remember, the whole point of that summer counteroffensive was to sever the land bridge to Crimea, destroy the Kerch bridge, isolate Crimea, and essentially lay siege to it. This was the whole point of that. And they got nowhere with that. They didn't even break through the first Surovikin line. So my point is that it's militarily impossible to retake Crimea. The people of Crimea don't want Ukraine to retake it. They want to be part of Russia. And yet Zelensky cannot give this up.
+
+Chamath Palihapitiya: Okay, so how do we get to yes? How do we get to yes? This is supposed to be done on day one, and here we are.
+
+David Sacks: The basic problem is that Zelenskyy doesn't want to make a deal. I mean, he has rebuffed the Americans on Crimea, which should be the easiest point to give on. He's been completely unrealistic about their prospects on the battlefield. He was insulting to the White House when he visited the White House in his T shirt or whatever. He was dressed inappropriately and then got.
+
+Chamath Palihapitiya: In one of the Rorschach tests for America. I think that meeting was.
+
+David Sacks: Well, I mean, he was insulting to the president and especially the vice president. He murmured under his breath a curse word to The Vice President. Remember that?
+
+Chamath Palihapitiya: Yep.
+
+David Sacks: I mean, it was really quite something. And remember, he's biting the hand that feeds him. I mean, he has an obligation, I think, to be respectful to his patrons in a way that his patrons may not, his patrons in a way that we may not to him. And he has demonstrated, I think, that he's unrealistic in every possible way. He's unrealistic about Ukrainian prospects on the battlefield, about retaking Crimea, and about who the hand is that feeds him. So my view on this is quite simple, which is, if Zelensky won't see reality, let him find new patrons. Let Starmer and Macron support him. They say they will. They say they have the ability to.
+
+Chamath Palihapitiya: Do this, but they can't. And they can't enough.
+
+David Sacks: Well, they appear to know. They say they can, but Zelensky has made his bed. Let him sleep in it. This is my point of view on it. He refuses to listen to the Americans. He refuses to recognize that this administration even has leverage over him.
+
+Chamath Palihapitiya: And you don't think that ultimately, if Putin takes Crimea plus plus whatever, that he's going after Poland next or, I mean, that's the dominant theory that becomes the complicated part?
+
+David Sacks: No, I don't think so. I don't think there's any evidence that he wants Poland. I don't even think he wants the part of Ukraine that is chock full of Ukrainian ultranationalists because you would have a massive insurgency there. He doesn't want a Gaza type situation. And by the way, just another point on Crimea, where is the insurgency? If Crimea really wanted to go with Ukraine as opposed to Russia, why has there been no uprising there over the past 10 years? So in any event, my point is there's no evidence that Putin wants Poland. Poland's part of NATO. That would start World War Three. I think Putin has shown that he's a calm, rational decision maker, and I don't think he wants World War Three. Now, the Russians have said what their terms are. They said it last year. They basically in this root cause speech they gave in, I think, June of last year. And basically what it comes down to is they want Istanbul. Plus there was a deal to end this war in the first month, the Istanbul deal, and it required Ukraine to basically sever its security relationship with the west and to recognize that it would not become part of NATO and they had to give up Crimea. Basically, that was the deal back then. What Russia has said is that's still the deal, plus realities on the ground. So in other words, the Russians have Lost, I don't know, hundred thousand plus. Hundreds of thousands of soldiers now taking this territory in the east. And obviously they're not going to give it up. So I think that the Ukrainians could have had a better deal in the first month of the war. The Biden administration rejected that. Now there's a different deal. It's Istanbul plus. And I think that the American proposal is pretty close to that. So I think this administration recognizes the wisdom and just reality of that deal. But the Ukrainians aren't. So look, my view is simple. If the Ukrainians are unwilling to take the deal that's on the table and they want to find new backers with the Europeans, let them. But why should we continue to support this?
+
+Chamath Palihapitiya: Okay, let's pivot. Let's talk markets and let's specifically talk a couple stocks.
+
+David Sacks: Because it was. But Andrew, do you disagree? Because I want to hear you disagree.
+
+Chamath Palihapitiya: No, no, I could, but I think we're going to run out of time. Okay, I want to talk Alphabet. So everybody thought the Blue Lake economy was dead OpenAI perplexity. All of it was going to take the search market. They come out with earnings. Sundar does way better than everybody expected. Revenue up $90.2 billion is up 12%. Net income was up, up almost 50% year over year. You got the cloud still ripping. You got a big buyback program. He starts talking about Waymo on the call for the first time in a long time, if ever. Stock's up about 5% on the news. What do we think?
+
+David Friedberg: What an incredible business. My gosh.
+
+Jason Calacanis: Oh, there's. There's a lot of resiliency in Alphabet that I don't think people have given the company credit for. First of all, I'll just highlight. With the dividends they're paying plus the share buyback, you're basically getting a 4 or 5% yield on the stock. So the dividends are like 10 billion a year. And they're announcing 70 billion back on 2 trillion in market cap. So you're making 4% a year just by owning the stock in the dividends and the buybacks. Then if you look at the revenue, it was 90 billion. 77 in services, 12 in cloud. So the 90 billion, about half of it was ads on search. And a lot of people have been talking about the decline in search due to AI. That's the end of Alphabet. Here you can kind of see the breakdown. What this shows is that there's such significant growth. 9 billion in YouTube, 7 1/2 billion in non Google Ads, 10 billion in subscriptions with 270 million subscribers across subscription businesses. 12 billion in cloud revenue, which is growing 30% year over year. There's a lot of resiliency even if you take out search. And so the question is, what's the downside? What's the upside? Well, the downside is what's the worst that could happen to search? What, they lose half of the market to ChatGPT? If they lost half the market to ChatGPT, and the rest of the business keeps growing the way it is, you get back to parity pretty quick. What's the upside? Well, the upside is they're able to use AI to actually reinvent search, retain the audience and create an entirely new search experience that's chat based or has some chat integration into search. So it seems to me trading at 18 times free cash flow, which is where this thing's at right now, plus the 4% yield on dividends and buybacks, plus the kind of seemingly pretty significant gap between the downside and the upside here. It's just such a powerful business. It just seems like it highlighted that this is not a business that's in decline and is about to die, as everyone's been kind of proclaiming. There's enough growth engines here and there's enough resilience and the price is so good. I feel quite good about the growth.
+
+Chamath Palihapitiya: I think there's $100 billion of hidden value called Waymo in this business. Waymo, 250,000 rides a week now, growing.
+
+Jason Calacanis: Like crazy, and they're only in like four cities. It's crazy.
+
+Chamath Palihapitiya: And I think, I think the market's giving them zero for that right now. Zero.
+
+David Friedberg: I think the most interesting stat that I saw, and they own 10% of.
+
+Jason Calacanis: SpaceX by the way, which is crazy.
+
+David Friedberg: The most interesting stat in the earnings was that I think they said that they had 270 million total paid subscriptions across YouTube and Google One. And my initial thought was, well, when are you just going to stick Gemini as the most obvious interface in front of it? I think that these companies now need to confront that this OpenAI behemoth is growing at a rate that was probably a hindrance before and now is a real strategic risk. And so if you have 270 million paid subs. Come on, guys, stuff Gemini right in front of these guys. That was my first takeaway. But again, they're doing it from a position of strength. But they need to get going because they're, they're probably hemming and hahing and there's probably all kinds of people, all kinds of cooks in that kitchen.
+
+Jason Calacanis: But I've heard a lot of stories about this question.
+
+David Friedberg: I think Sundar, Larry and Sergey just need to take the equity and the political capital they have as the CEO and the two largest shareholders and just stuff the decision down people's throats. So that's number one. The other thing that I think about actually relates to what I spoke about last week about Nvidia. So just to give you guys a little bit of a cleanup, you know, after we spoke about Nvidia, the Nvidia team reached out to me and they were like, hey, here's a bunch of stuff that will help you unpack what you spoke about in a little bit more detail. So let me tell you what Nvidia told me and then I think it relates to gcp. So what they told me, when you look at the SEC filings for Nvidia and you add up all the revenue, it says that about 47% of the revenue goes to China, Singapore, Taiwan, I think it was. And what these guys educated me on is that they've been trying to refine how this is described, but it's not what it seems. Meaning they report revenue on what's called the billing or the invoicing address. So meaning you are an entity, you'll buy a huge amount of chips or compute power and you issue the invoice out of Taiwan or Singapore or China. That's what represents 47% of Nvidia's reported revenue. So it turns out that that's actually not where the silicon gets shipped. So there's a Singaporean office that handles the invoicing. So then I said, well, who are these companies that are using these, these places? And it turns out that it's a bunch of major U.S. companies, including U.S. oEMs and clouds that use Singapore for invoicing their suppliers. But that the, you know, what industry sources have told us is that all of these products are almost always shipped elsewhere, including us, Mexico, Taiwan, et cetera, all over the place. So why is this interesting? There was a study by artificial analysis. Nick, I will send you the link, but basically what it showed was that the clouds were not doing any real form of KYC on who is using their stuff. So now I think we get to this next place which is like, I think the Google business is profoundly amazing. I think they need to do something with the subscriptions that they have and put Gemini right in front and really do a head on attack against ChatGPT. Those are the pluses, the minuses. Or the risks that I think now will get uncovered is are the clouds doing enough to make sure that China and other folks aren't getting access to compute that they should not get access to and that could have an impact on some of their revenue. So that's a GCP problem, I think it's an Azure problem, it's a AWS problem. And that's going to need to get sorted out in the next couple of quarters. Because if western governments basically say to the clouds, hey, you need to kyc your customers so that it's not somebody distilling the best of our models into a place we don't agree with, I think there could be some blowback.
+
+Chamath Palihapitiya: All these numbers obviously backward looking. Do we think, and I would be talking too much about tariffs, but do we think that the tariff story is going to impact a Google Next quarter? Do we think it's going to impact a meta next quarter? And to the extent that Google is saying look, we're going to keep our big infrastructure spend $75 billion full steam ahead, which is great for the ecosystem, great for Nvidia, great for everybody in that world, do we think that holds up if we think there's a hiccup between now and whenever all this tariff stuff gets sorted?
+
+David Sacks: If it does, I think it's going to hold up. I mean, look, I just think that this investment in CapEx and the data center buildouts is so strategic right now. I mean I think that the hyperscalers, it's only good for their businesses, but I think they see it as so strategic to their survival that they just have to do it no matter what. In other words, I think they're totally inelastic on this. But let me just go back to Google. Nick, can you throw up this chart? I mean, I think the problem that Google has with respect to ChatGPT is that Gemini is just not getting the usage and ChatGPT is just growing like crazy. If you look at how these models perform according to the benchmarks, Gemini is actually really good. I mean Gemini has made substantial progress catching up to ChatGPT, but they have not caught up on the usage side. Now to Jama's point, you could just make Gemini the default interface in Google search. But that is true innovator's dilemma because if you do that, you could be giving up more than half the search revenue. So I do think Google is, is in a really tough spot and the longer they wait to make Gemini front and center, the worse this usage problem gets. I mean, what's basically Happening right now is users are learning a new habit. I mean, they're learning to go to ChatGPT to get their questions answered or just their searches answered in a completely different way.
+
+David Friedberg: And let's be honest, they make using Gemini impossible and they can do just a much better job. At a minimum, give the best leading edge Gemini model to the 270 million people that are already paying you for a subscription. Just do that. Do something so that you can start to blunt the growth of OpenAI. Otherwise you're going to look back in four years and regret him ing and hawing today.
+
+Jason Calacanis: So Chamath, you're the CEO of Google. You've got a $200 billion run rate ad search, ad business. What's the right kind of integration of Gemini such that you don't massively disrupt the search ad business overnight? Or do you not care and you're just going to do it? I think that's the conundrum they're dealing with.
+
+David Friedberg: That's not a conundrum. If you don't understand how to value a dollar today versus a dollar tomorrow and a discount rate to disambiguate the emotionalness of that decision, it's not a hard decision to make. I think the more difficult question is what does the integration look like? And if you are already paying for a YouTube subscription or a Google One subscription, what should your experience be? That's a key question. The second question is today they're already inserting Gemini in all kinds of uncomfortable ways. So for example, if you use Gmail or if you use Google Workspace, what happens today is all these random Gemini pop ups come up all over the place. That is an implementation that happened at way too junior a level by people that have no product taste. So if you just stop that, it's not hard. But right now you have a bunch of honestly, people that don't have taste and are a little too junior creating a very cluttered experience. And if you use the products every day, it would be hard for you to disagree with me.
+
+Jason Calacanis: They have infinite capital and infinite access to talent.
+
+David Friedberg: Capital doesn't buy taste, right?
+
+Jason Calacanis: So what do you think's wrong?
+
+David Sacks: I agree that the Google interface trying to incorporate Gemini into the 20 blue links or whatever is very kludgy. But I don't know how you fix that without just getting rid of the blue links. I mean, I guess you can do a hybrid experience, but it doesn't compare to ChatGPT which is all in on the AI experience. So I think it's a real Innovator's dilemma for them.
+
+Chamath Palihapitiya: And look, the truth is the market was killing them already because people thought that that first little AI summary thing was actually going to kill the blue link economy, right? Like that was, that was their worry. And so it's this terror. I mean, I think it is a terrible conundrum. If you're Sundar, how do you, how do you, how do you do both things at the same time? Chamath, I think you're right. There's a design way to do it, but they're not doing it.
+
+David Friedberg: This comes down to taste. And I think you can't have group think, drive, creativity and taste. You either have it or you don't. And you need to find the one or two people and then you need to use the strength of your leverage as a CEO and the ownership that Larry and Sergey have to impose one person's taste on the decision.
+
+David Sacks: Well, Chamath, let me ask you a question. The Google homepage where they just have the search bar and the you can basically submit your search or I feel lucky or whatever, would you replace that search bar with an AI chatbot?
+
+David Friedberg: No, here's what I would do. I would first go to the critical other points that are around that today. Do not cannibalize the blue links. So the obvious insight should be if you look at the traffic patterns almost as a Sankey diagram, right?
+
+Chamath Palihapitiya: Yeah, we just tabbed one up.
+
+David Friedberg: Show a Sankey. Okay, there we go. Who cares about revenue? What the real thing you should be looking at here is where are the entry points into Google that then result in a clickable link. And what you would have is a very different Sankey. And what it would show you is that there are certain places that are highly deoptimized today for revenue generating events. They happen as a byproduct, but they don't happen as the use case. So in that example, you would put Gmail as a critical place. The YouTube one, the Google One subscription, and there's like five or six other places. That's where I would put Gemini as the front door and start to habituate 300 to 500 million people a week in using that, I think then you can figure out over time how much money you can make from all of that or how it directs derivative revenue and figure out what to do with google.com last. But my point is the experience in Gmail should be done today. The experience in YouTube should be done today. The experience in Google One should be done today.
+
+David Sacks: Would you. Okay, Nick, can you put up this here's their homepage, right? This is the famous shot. I just checked in. This hasn't changed in 25 years or whatever.
+
+David Friedberg: I would leave it alone because I think it's too disruptive and it's too politically fraught. I mean, you could do something else.
+
+David Sacks: What if they replaced I'm feeling Lucky, which is kind of antiquated now with AI. I mean, Gemini, basically.
+
+David Friedberg: I mean, I would need to look at the Sankey to understand how many people are actually generating monetizable events or behavior from I'm feeling lucky in 2025. I'm not sure it's a novelty. It was in 1990.
+
+David Sacks: No, it isn't the novelty. I think it's just there as like a whimsical thing. I don't know if it drives revenue for them or not. If it takes the user off site, I don't see how it drives revenue for them.
+
+David Friedberg: I'll tell you a great Facebook story just to explain this and why I get so animated about this. I was telling this to my 8090 team yesterday because we're dealing with this one product implementation issue and engineers always end up fighting about whether things should be opt in or opt out. Okay? And it's almost like this religion where people feel like, oh, you cannot force people to do something. You should always make things optional. And I remember at Facebook we bought this little company for a few million dollars that made contact importers, which essentially means if you're using any other email service to sign up for Facebook other than Hotmail back In the early 2000s, we could import your address book. Anyways, long story short, I remember getting into a huge fight about whether that thing should be opt in or opt out. And I remember telling the guy, and I'm not going to say who it is because you guys all know him, And I was literally like, honestly, just shut up and enjoy the success that will come from keeping this as an opt out. And it just reminds me that at some point somebody needs to impose their will to make very difficult product decisions. And if you leave it to a team, you'll end up with, by the way, go to gmail today with 95 Gemini popups. It's not what will allow them to win with what they have, which is a better product, which I will agree, it is a meaningfully better model on multiple dimensions than anything else.
+
+Chamath Palihapitiya: Okay, I know Sack says to go. Before you go, David, I just want to hit Tesla for half a second. Tesla's out with earnings this week. Stock is up 8%. On the back of that, back of that news, 23% up in the last five days, in large part because Elon basically said, I'm getting out of Doge and I'm going back into Tesla. So the question is, what can he actually do to fix Tesla at this point? What does he have to do? And is he really out of Doge?
+
+David Sacks: No, I don't think he's out of Doge. He didn't say he was out of Doge. It was just a matter of how much time he could allocate to each thing. I mean, look, I saw this before when I was part of the Twitter transition, is that for the first three months or so, he was basically full time at Twitter hq, learning the business down to the database level. I mean, every nook and cranny of that business he learned about. Once he felt like he had a mental model and he had the people in place that he trusted, he can move to more of a maintenance mode. And I think that's the only way he can manage five companies is that he has these intense bursts where he focuses on something, gets the right people and structure in place, feels like he understands it, and then he can delegate more. And I think that he has reached that point with Doge. But he was also clear that he's going to keep doing it, because if he doesn't, there's going to be a huge backsliding where all the corrupt interests will basically put back all this corrupt spending. So he's going to stay involved, but as an SGE, he's limited to 130 days a year anyway. And so it makes sense for him to kind of now ration his days a little more closely. But he's got the people in place. Remember Doge? It wasn't just him, it was also the US Digital service, which is basically the IT branch of the executive branch, which got put under Doge. So my sense is that Doge is going to continue. It's just that Elon is shifting to a mode where he can manage it one day a week or two days a week, as opposed to being there five days a week.
+
+Chamath Palihapitiya: Steve Bannon says he wants the receipts. He says there are no receipts. We don't have the receipts. He says we need itemized receipts to see what has actually happened. What do you think?
+
+David Sacks: Why wouldn't we want to cut as much of this corruption as possible?
+
+Chamath Palihapitiya: Well, I think we have to. We have to. The question is, should the public get to see exactly what's been cut and what hasn't?
+
+David Sacks: Why wouldn't they? Of course. And what we really need is for Congress to now embrace all of the corruption that Elon has found and eliminate it from the budget. Because at the end of the day, in order to capture the savings here, we do need those appropriations eliminated from the budget. And my biggest concern is not something that Doge is going to do or not. It's not up to Doge to do that. It's up to, frankly, these old bulls in Congress who control the appropriations process. Are they going to basically backslide and just put the spending back in? Because it's easier to just do that, to engage in this log rolling, or do we take advantage of this, I think, incredible sacrifice that Elon has made? I mean, look, this has cost him enormously. One of the reasons why Tesla is down is because you've had crazy leftists engaging in terrorism, firebombing Tesla dealerships. In any event, he's made this an enormous sacrifice in order to expose the corruption. And look at what we've learned. We've basically learned that this whole NGO thing is a giant scam where the people in government give enormous amounts of money to their friends, probably with the expectation that when they leave government, they're going to be next in line at the trough. And I think Elon's done an enormous service exposing this, but it's not entirely up to him. In order for us to realize the benefit, we need Congress now to act on that. I'm just afraid that's not going to happen.
+
+Chamath Palihapitiya: What kind of total number you think we get? I always say a dollar saved is a dollar made, and we should. We should say amen to that. The question is, what do you think the total number's ultimately going to be?
+
+David Sacks: Well, he says they're at 160 billion right now. I think that's. By the way, that's an annual number, as far as I understand it. So what I always hear with spending is they always multiply everything by 10 because they assume it's going to be 10 years. So if it is 160 billion a year, that would be 1.6 trillion over 10 years, probably more, because the spending always grows. And look, that's 160 billion that we weren't planning on saving before Elon got involved in the government. So if that's all it is, that would be great. I think there could be more. And it really comes down to whether Doge continues to be supported by the political process. And look, Elon can't force that. Right? I mean, ultimately, it's up to legislators to take advantage of the work that he did. And ultimately it's up to the people to put pressure on those legislators to embrace what he did. He's done an enormous amount, you know, but there's an old saying that you can bring a horse to water, but you can't make it drink. If the entrenched political interests at the end of the day aren't, if they're not going to embrace the savings that Elon has found, I don't know what we can do about that.
+
+Jason Calacanis: I mean, there's the administrative and discretionary aspect, but I've said for a while it's going to be necessary to have statutory resolve to actually fix the deficit problem in the United States. And that means getting Congress to act. And Congress has not shown a willingness to act. And every time I go to D.C. i come back more disappointed. I share the stories on this show and I talk about the fact that there are very few members of Congress that are saying up and saying at the end of the day, the first thing we need to solve is how do we reduce the deficit? Then we can address all of the policy issues that we want to talk about. But if we don't solve the deficit problem, there is no policy. There is nothing we're going to be able to do because the treasury rates are going to spike, there's going to be no capital, there's going to be no funding. We're going to go through a debt death spiral. So at the end of the day, we really do need Congress to stand up and lead here. It is not on one man's shoulders. There's only so much Elon can do without statutory authority from Congress. And I think that's really important in this, in this budget reconciliation process. And it's really important for the President to also help lead Congress to where we need to go on this. Members of Congress are elected because they get stuff for their constituents. The more they get, the more likely they are to get elected. And next cycle they gotta get their constituents more stuff. So it creates an escalating spiral staircase. It's a problem in how democracy operates.
+
+David Sacks: It creates a tragedy of the commons. There's a collective action problem because like you said, each individual congressman or senator primarily wants to get stuff for their district or their state, for their special interests. And there's no one really looking out for the public interest, the overall common good. And these appropriators are basically engaged in log rolling where they're willing to give their colleagues their pork if they get Their pork. And this is why we have a $2 trillion deficit. It's a really hard thing to fix. I mean, it's really hard.
+
+Jason Calacanis: This is the problem.
+
+David Sacks: This is why we need a line item.
+
+Jason Calacanis: Until you realize, you realize you can vote yourself all the money and that's what you do.
+
+David Sacks: I think this has been something that I remember Bush 41 in his state of the Union called for a line item veto. This was like 30 years ago. And we still need that. Because I do think that if the President had more authority over this process, it'd be less of a tragedy of the commons.
+
+Jason Calacanis: In my naive youth, I was very against that. And I felt like it was giving too much power to the President. And I never really understood the wisdom of it until we find ourselves at the end of the cycle, which is where we are here. That's.
+
+David Sacks: Yeah. And unfortunately, Congress will never, I think, change its ways until they're forced to by some sort of crisis, which Friedberg, I think is your point about. Eventually we'll be in a debt crisis, and then Congress will finally see the wisdom and they'll finally appreciate what Elon did. You know, there's all these entrenched political interests complaining about Elon. I mean, again, he undertook an enormous sacrifice to try and fix our fiscal situation, which is unsustainable. Before there's a crisis. One day there'll be a crisis. Everyone will see that he's right.
+
+Jason Calacanis: But to answer your question, Andrew, Nick, you want to pull up this Poly market? So this is the poly market on how much spending will dose.
+
+David Sacks: Oh, guys, unfortunately, I got to go.
+
+Jason Calacanis: Yeah, we'll see you later.
+
+David Friedberg: Bye, Saks. Love you, Dave.
+
+Chamath Palihapitiya: That was great. Thank you.
+
+David Sacks: Yeah, thank you.
+
+Jason Calacanis: Poly market's showing an 84% chance of less than 50 billion being cut in 2025. And only 10% chance.
+
+David Friedberg: Isn't the number on doge.gov right now like 160 or something?
+
+Jason Calacanis: 160. That's what they're saying they've cut in contracts. So that means the annualized run rate of savings from cutting contracts. But what Poly Market's showing is what's the actual savings in 2025 from Doge Action?
+
+David Friedberg: Oh. Cause these are multi year contracts.
+
+Chamath Palihapitiya: Multi year contracts. But then there's also reporting that like $92 billion of it, I think isn't actually itemized. So it's hard to understand what's actually. That's right on the list.
+
+David Friedberg: And they haven't done anything yet in defense. Right. So that's a big honey pot, I guess. If you want to use that word, potentially, that could be.
+
+Chamath Palihapitiya: Do you think he's going to go there?
+
+David Friedberg: Well, I mean, there are people at DOD and at hhs, but I don't think we've had a readout from any of those people yet. Right. I mean, all of this other stuff has been.
+
+Jason Calacanis: HHS is huge. That's the number. If you look at their list on the DOGE tracker on the website, HHS is the number one department of savings right now. They've got the contracts.
+
+David Sacks: Yeah.
+
+Jason Calacanis: Defense is okay.
+
+David Friedberg: So they are fine.
+
+Jason Calacanis: Remember, what they're doing is they're just cutting wasteful contracts. So they're cutting stupid stuff that aren't.
+
+David Friedberg: All the discretionary stuff, all the bullshit.
+
+Jason Calacanis: That'S not used or not needed.
+
+David Friedberg: No, no, no. But my point is, like, all of these things are still. These are not line item appropriations. Right. Because you can't cut those.
+
+Jason Calacanis: Well, here you can see the Department of the interior had a $3 billion contract for refugee resettlement with a company called Family Endeavors Inc. And so they put that as the number one contract they cut on the website. Saves 2.9 billion total treasury. They cut a deal with a company called Centennial Technologies, which is an enterprise software company. Saves $1.9 billion.
+
+David Friedberg: What is that? Technologies?
+
+Jason Calacanis: I mean, that's the thing. Go into this stuff.
+
+David Friedberg: You can disappear in that.
+
+Jason Calacanis: These are all, like, small. You can click on it, it shows you the contract. Here it is.
+
+David Friedberg: Well, no, I'm going to go and try to find the Centennial Technologies. Who are these guys? Nice.
+
+Jason Calacanis: You're going to invest? Yeah.
+
+Chamath Palihapitiya: Okay. Should we talk? You want to still talk a little Tesla or you think we should move to the science corner?
+
+David Friedberg: What I would say quickly on Tesla is I would encourage all of you guys to try fsd.
+
+Jason Calacanis: It's a new thing you've discovered. This is the reason I caught my Tesla. I've been using it for quality.
+
+David Friedberg: The quality of FSD is just so good. Yeah, but you never turn it on. You just set it in the pre thing.
+
+Jason Calacanis: No, I use it all the time.
+
+David Friedberg: It is just an incredible thing. I think there was a rev of it probably in the last month or two that I think took it from a 98 to 99.5 or something. It's just. There's just very few disengagements.
+
+Chamath Palihapitiya: Okay. So are you a believer that Tesla's doing real robo taxis in two years?
+
+David Friedberg: Oh, yeah, yeah. I mean, like, right now my car is effectively a robo taxi. The shittiest part about my Tesla experience is I have to hold the frickin steering wheel and look ahead because this camera's always looking at me. My wife, it's so funny, she'll come home and she'll be like angry because she got suspended because she was looking away and looking on her phone and they turn it off. They punish you. Tesla punishes you. If you look away too often, they put you in timeout for I don't know how many days or whatever. That's the worst part about the experience because it is so good. You're just like, oh, can I just take my hands off the wheel and just do something else.
+
+Jason Calacanis: Well, there's a lot of videos getting posted on Twitter of FSD being on. And then the car drives into the sunlight and at a certain angle, when the sun hits the cameras, the car goes into an emergency disconnect on fsd. And I've had that happen. So I know it's true, I know it's real. So it is a bit of a risk with the camera only mode on how Tesla operates fsd. If they can actually run a full, you know, never to disengage robo taxi service like Waymo does.
+
+Chamath Palihapitiya: Are you still pushing lidar on them? Is that what you're doing?
+
+Jason Calacanis: I don't. That's the, that's the word on Twitter, which is watch out, because without LiDAR, you're going to have a lot of disengagement. Elon.
+
+Chamath Palihapitiya: Elon's never doing lidar.
+
+Jason Calacanis: Never doing lidar.
+
+David Friedberg: Here's an interesting factoid I've been working with somebody here on trying to figure out what does next generation AI data centers look like and do you build inference pops all over the country? And I talked to some folks at Waymo, I talked to Takedra and what's interesting is the Waymo approach is they don't need pops anywhere because all of the models are on board. So these things go fully autonomous units out into the wild. They can make every decision themselves. They have the lidar and then they come back to the fleet and then they can resync the models. Whereas everything else, particularly if you have human intervention. Well, if you have human intervention. So all of the food delivery folks that have central knocks of people that can engage and intervene, they need all this real time ability so that things are multi millisecond latency maximum.
+
+Chamath Palihapitiya: Awesome. Should we go to the Science Corner, my friend?
+
+Jason Calacanis: Yeah, if you're ready for it, I'm ready. Today's Science Corner is on a discovery of a massive thorium reserve in China and a disclosed molten salt reactor in China that's been running for some time. So at a private.
+
+David Friedberg: Before you let me do the TF for this, Friedberg, tell us about these thorium reactors. I think the most important thing that everybody should know before I tee this up for free Berg, is that what he's going to talk about is a material called thorium, which doesn't split, it doesn't release energy unless it absorbs a neutron and then it transmutes to uranium 233. And by this, what I mean is this is a trans that everybody should be able to get behind. Over to you.
+
+Jason Calacanis: Hey, he got it. He got it. You get it, Andrew?
+
+Chamath Palihapitiya: I got it. It's a beautiful thing.
+
+Jason Calacanis: I don't think we brought it up in Science Corner before, but apparently there was a giant thorium deposit discovered in Inner Mongolia that has enough thorium to effectively power the entirety of China for 60,000 years. It was made by the Bayan Oboe mining complex. It's a million ton reserve in Inner Mongolia. And so thorium is much more abundant in the Earth's crust than uranium, which is what we've historically used for fission reactors and what we use today for all of the even new generation nuclear fission reactors. And for a long time folks have talked about building a thorium reactor. There's a lot of challenges with building a thorium reactor. It's a new set of systems. But if you build a molten salt thorium reactor, you can ultimately produce energy in a way that doesn't actually have the risk of a meltdown. It can passively shut itself down. It's not high pressure, so it can't explode. So it's technically a much safer, much more reliable way of producing power with a much more abundant fuel source. And people in the US have been talking about building these thorium molten salt reactors for decades. In fact, in 2009, the U.S. geological Survey in the United States went out and did a study to identify how much thorium existed just in the continental North American region. Turns out the US has about 64,000 tons. Canada has 172,000 tons of thorium reserves, and China just discovered a million tons in this, in this one region. But the amount of thorium that we have in the United States is enough to power our country for centuries. So in China, turns out they built a molten salt reactor. This was another secret. They've been operating it now for some time. Last June, while the reactor was running, they replaced the fuel. So it basically showed continuous use of the reactor without needing to do a Shutdown and refueling cycle. It's a 2 megawatt experimental unit and they're actually building and planning to take live a 10 megawatt unit by 2030. So this was all shared at a private meeting. It got out. The discovery in Inner Mongolia was also kept confidential for I think nearly two years. And then it got reported out. And after it got reported out, it was confirmed ultimately in a government meeting. And that that's how we know about it now. But I think this just. Is this another kind of critical point about this? Once China gets this 2 and 10 megawatt system running, this allows for very small, very modular nuclear reactors using a very abundant fuel source that can be quickly built, stood up and safely operated in a distributed way. You don't need to have one gigawatt, which is a thousand megawatt station running centrally, and then you've got to have a big construction project invested in to build and operate this thing. You can have many small reactors split around neighborhoods, split around cities and so on. This is not built into China's energy projection. So they actually have an electricity forecast that over the next 15 years gets them from 3 terawatts of electricity production to 8. And that's through a combination of solar, hydroelectric, and then the Gen 3 and Gen 4 traditional uranium nuclear reactors that they're building out. So if you add this in, it provides even more or perhaps lower cost or more distributed energy production capacity than is even provided in the forecasts today. Again, this is, I think, one of the base drivers that is part of the compounding effect of China's economic advantage for this century is energy, energy production, the cost of building new energy production systems and the cost to operate those energy production systems.
+
+David Friedberg: Can I say something about the Hu Jintao conversation about picking national champions and getting focused? This was an area that China chose. And now, you know, the US finds itself years behind on a technology that we invented. Right. So this was research that happened at Oak Ridge National Lab.
+
+Jason Calacanis: That's right.
+
+David Friedberg: We pioneered this decades ago and then we shelved it. And then the person in China that led it gave credit to the United States and basically said, americans let the research wait for the right successor. We were that successor. That's what he said in quotes. So here we are, we invent this cutting edge technology. It's a huge leap in innovation, but they can get organized.
+
+Jason Calacanis: We put a regulatory fence around it and we blocked it from getting organized.
+
+David Friedberg: And they're like, you know what, we can, we can just do this and we'll figure this out. Yeah, it's really, it's really unfortunate. Self goal here.
+
+Jason Calacanis: They have infinite thorium reserve. They don't need to refine it. One of the key advantages of thorium is you don't need to go through a refining process in uranium. You have a very expensive, very difficult kind of refinement process where you end up, I think, getting less than 1% of that uranium that you pull out can actually be used as fissile. And you have to enrich down to the uranium to find the fissile material. With thorium, 100% of it can be used as fuel. So it's a very low cost, very easy kind of fuel source that can be very quickly kind of put into production if we actually build out the supply chain and build out the energy systems to utilize it. So it's a real kind of reinvention of nuclear energy technology. And this will take off. I mean, once this experimental reactor is working, just to get the megawatt reactor going, boom.
+
+David Friedberg: Imagine how much fundamental leaps in science that we have funded that are just basically gathering dust or falling through the cracks that other countries are using right now. And probably a little bit snickering behind our backs about the fact that we did all of this work and then they were able to take advantage of it.
+
+Jason Calacanis: Well, here, I'll show you. Here's another. Let me put this in the group chat real quick.
+
+Chamath Palihapitiya: But how much of this do we have this? I mean, what's our ability to actually do this?
+
+David Friedberg: We have invented it.
+
+Jason Calacanis: We invented it.
+
+David Friedberg: I know we invented it.
+
+Jason Calacanis: Well, the big problem has been the regulatory fencing we put around it, Andrew.
+
+David Friedberg: So there's a bunch of trivia. There's forms.
+
+Jason Calacanis: Yeah.
+
+David Friedberg: There's pronouns. There's all kinds of stuff.
+
+Jason Calacanis: And just speaking to this point, so we've talked in the past about nuclear fusion. So, Andrew, this is. I don't know how familiar you are, but fusion is different than fission. Fission is where you take a heavy element like uranium or thorium, and it breaks and you release energy. Fusion is where you take a light element, like, you know, hydrogen, you accelerate it, you make it really dense, and you jam the protons together. And when you jam those protons together, they fuse. So hydrogen turns into helium. This is what goes on in the sun. And energy is released in a different form through, you know, accelerated neutrons. We capture that energy, we make electricity. So fusion is this next gen technology where we could theoretically just use water from the ocean to create all the electricity we need on planet Earth. 10 meter by 10 meter. By 10 meter of water makes all the power the entire planet uses every year. That's what you could ultimately do with fusion technology. So it turns out this is a satellite photo that discovered a very large scale fusion research center in Mian Yang, China, which we did not know about that was just kind of stumbled upon. It turns out it's the largest fusion reactor experimental facility in the world, now 50% larger than the national ignition facility run in the United States. Not only is China getting this new energy infrastructure built with all of the stuff that was discovered last century, but they are now getting ahead of us on the new discoveries to be made in the next gen of energy systems, which is fusion, which at some point this century will work. And we'll end up having this ability to unlock effectively unlimited free energy. And these are compounding value creators. China, ultimately, if they can make new energy systems cheaper than the United States, scale them faster, they will ultimately have much cheaper, much higher volumes of electricity, which gives them the advantage of manufacturing and production and transportation and everything. And that's where the economic advantage will. Will ultimately accrue to them. So this is, I think, key to the strategic puzzle on what's going to happen in the great race with China this century is the build out of electricity and the cost of that build out. So the regulatory constraints need to be addressed first and foremost. That's, in my opinion, the number one mission critical strategic imperative for the United States right now.
+
+Chamath Palihapitiya: Awesome.
+
+Jason Calacanis: Yeah. Anyway, that's just a red flag on China science corner for the day. Thorium is real thorium. So how was it, Andrew? How'd you like hanging out with the best?
+
+David Friedberg: I loved it.
+
+Chamath Palihapitiya: You know, I'm still getting used to it. I'm still getting used to the whole flow. Trying to figure out how you guys all roll, but it's good. It's good. It was a lot of fun.
+
+David Friedberg: Do the do the outro. Do you got to do your out? You got to do the outro.
+
+Chamath Palihapitiya: I got to do the outro. You guys do the outro. Come on, it's your show.
+
+David Friedberg: Do the outro.
+
+Jason Calacanis: Coming at you at kgb. What is. What is the outro?
+
+David Friedberg: I've never done an outro.
+
+Jason Calacanis: You do the outro.
+
+David Friedberg: On behalf of our crypto czar, David Sacks, our prince of panic attacks and sultan of science, David Freeberg, our new bestie guestie, Andrew Ross Sorkin.
+
+Chamath Palihapitiya: Thank you.
+
+David Friedberg: I am your chairman dictator Chamath. Palihapitiy. Thank you for listening to the all in podcast. We'll see you next time. Love you. Love you. Bye.
+
+Chamath Palihapitiya: Thanks guys. That was a lot of fun.
+
+Jason Calacanis: Awesome.
+
+David Sacks: We'll let your winners ride Rain Man David Sack. And instead we open sourced it to the fans and they've just gone crazy with it.
+
+Jason Calacanis: Love you, Queen of Kin. Besties are gone. That is my dog taking a notice in your driveway.
+
+David Sacks: Oh man.
+
+David Friedberg: My will meet me at. We should all just get a room and just have one big huge orgy. Cuz they're all just useless. It's like this like sexual tension that they just need to release somehow.
+
+Jason Calacanis: We need to get merch. These are.

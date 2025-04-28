@@ -1,0 +1,427 @@
+[
+  {
+    "id": "georgehwbush",
+    "name": "George H.W. Bush",
+    "years": "1989-93",
+    "approval": [
+      58,
+      70,
+      75,
+      45,
+      35
+    ],
+    "disapproval": [
+      35,
+      38,
+      40,
+      42,
+      45
+    ],
+    "range": [
+      [
+        58,
+        35
+      ],
+      [
+        70,
+        38
+      ],
+      [
+        75,
+        40
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        35,
+        45
+      ]
+    ],
+    "change_status": [
+      "Approval +23%",
+      "Approval +32%",
+      "Approval +35%",
+      "Approval +3%",
+      "Disapproval +10%"
+    ]
+  },
+  {
+    "id": "billclinton",
+    "name": "Bill Clinton",
+    "years": "1993-2001",
+    "approval": [
+      55,
+      45,
+      47,
+      52,
+      55
+    ],
+    "disapproval": [
+      40,
+      42,
+      40,
+      38,
+      35
+    ],
+    "range": [
+      [
+        55,
+        40
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        47,
+        40
+      ],
+      [
+        52,
+        38
+      ],
+      [
+        55,
+        35
+      ]
+    ],
+    "change_status": [
+      "Approval +15%",
+      "Approval +3%",
+      "Approval +7%",
+      "Approval +14%",
+      "Approval +20%"
+    ]
+  },
+  {
+    "id": "barackobama",
+    "name": "Barack Obama",
+    "years": "2009-17",
+    "approval": [
+      65,
+      47,
+      45,
+      48,
+      50
+    ],
+    "disapproval": [
+      35,
+      45,
+      47,
+      46,
+      45
+    ],
+    "range": [
+      [
+        65,
+        35
+      ],
+      [
+        47,
+        45
+      ],
+      [
+        45,
+        47
+      ],
+      [
+        48,
+        46
+      ],
+      [
+        50,
+        45
+      ]
+    ],
+    "change_status": [
+      "Approval +30%",
+      "Approval +2%",
+      "Disapproval +2%",
+      "Approval +2%",
+      "Approval +5%"
+    ]
+  },
+  {
+    "id": "ronaldreagan",
+    "name": "Ronald Reagan",
+    "years": "1981-89",
+    "approval": [
+      55,
+      48,
+      42,
+      48,
+      52
+    ],
+    "disapproval": [
+      40,
+      42,
+      45,
+      40,
+      38
+    ],
+    "range": [
+      [
+        55,
+        40
+      ],
+      [
+        48,
+        42
+      ],
+      [
+        42,
+        45
+      ],
+      [
+        48,
+        40
+      ],
+      [
+        52,
+        38
+      ]
+    ],
+    "change_status": [
+      "Approval +15%",
+      "Approval +6%",
+      "Disapproval +3%",
+      "Approval +8%",
+      "Approval +14%"
+    ]
+  },
+  {
+    "id": "jimmycarter",
+    "name": "Jimmy Carter",
+    "years": "1977-81",
+    "approval": [
+      65,
+      50,
+      45,
+      40,
+      35
+    ],
+    "disapproval": [
+      50,
+      45,
+      42,
+      45,
+      40
+    ],
+    "range": [
+      [
+        65,
+        50
+      ],
+      [
+        50,
+        45
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        40,
+        45
+      ],
+      [
+        35,
+        40
+      ]
+    ],
+    "change_status": [
+      "Approval +15%",
+      "Approval +5%",
+      "Approval +3%",
+      "Disapproval +5%",
+      "Disapproval +5%"
+    ]
+  },
+  {
+    "id": "richardnixon",
+    "name": "Richard Nixon",
+    "years": "1969-74",
+    "approval": [
+      58,
+      52,
+      50,
+      48,
+      55
+    ],
+    "disapproval": [
+      45,
+      42,
+      40,
+      38,
+      35
+    ],
+    "range": [
+      [
+        58,
+        45
+      ],
+      [
+        52,
+        42
+      ],
+      [
+        50,
+        40
+      ],
+      [
+        48,
+        38
+      ],
+      [
+        55,
+        35
+      ]
+    ],
+    "change_status": [
+      "Approval +13%",
+      "Approval +10%",
+      "Approval +10%",
+      "Approval +10%",
+      "Approval +20%"
+    ]
+  },
+  {
+    "id": "donaldtrump",
+    "name": "Donald Trump",
+    "years": "2017-2021",
+    "approval": [
+      45,
+      38,
+      40,
+      42,
+      39
+    ],
+    "disapproval": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "range": [
+      [
+        45,
+        41
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        40,
+        43
+      ],
+      [
+        42,
+        44
+      ],
+      [
+        39,
+        45
+      ]
+    ],
+    "change_status": [
+      "Approval +4%",
+      "Disapproval +4%",
+      "Disapproval +3%",
+      "Disapproval +2%",
+      "Disapproval +6%"
+    ]
+  },
+  {
+    "id": "georgewbush",
+    "name": "George W. Bush",
+    "years": "2001-09",
+    "approval": [
+      50,
+      80,
+      65,
+      45,
+      48
+    ],
+    "disapproval": [
+      40,
+      35,
+      40,
+      42,
+      45
+    ],
+    "range": [
+      [
+        50,
+        40
+      ],
+      [
+        80,
+        35
+      ],
+      [
+        65,
+        40
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        48,
+        45
+      ]
+    ],
+    "change_status": [
+      "Approval +10%",
+      "Approval +45%",
+      "Approval +25%",
+      "Approval +3%",
+      "Approval +3%"
+    ]
+  },
+  {
+    "id": "geraldford",
+    "name": "Gerald Ford",
+    "years": "1974-77",
+    "approval": [
+      60,
+      45,
+      42,
+      40
+    ],
+    "disapproval": [
+      50,
+      42,
+      40,
+      38
+    ],
+    "range": [
+      [
+        60,
+        50
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        42,
+        40
+      ],
+      [
+        40,
+        38
+      ]
+    ],
+    "change_status": [
+      "Approval +10%",
+      "Approval +3%",
+      "Approval +2%",
+      "Approval +2%"
+    ]
+  }
+]

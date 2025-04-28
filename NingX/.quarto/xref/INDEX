@@ -1,0 +1,38 @@
+{
+  "how_popular_biden.qmd": {
+    "how_popular_biden.html": "4fd558f0"
+  },
+  "about.qmd": {
+    "about.html": "900bbbd9"
+  },
+  "index.qmd": {
+    "index.html": "5c0dce99"
+  },
+  "mental_models/01_mental_model.qmd": {
+    "01_mental_model.html": "c8d7dca5"
+  },
+  "data_viz/01_how_popular_binden.qmd": {
+    "01_how_popular_binden.html": "74bef219"
+  },
+  "data_viz/02_how_popular_presidents.qmd": {
+    "02_how_popular_presidents.html": "e4e71938"
+  },
+  "data_viz/03_how_biden.qmd": {
+    "03_how_biden.html": "0bd9954e"
+  },
+  "data_viz/04_rechart.qmd": {
+    "04_rechart.html": "9b504a06"
+  },
+  "data_viz/05_rechart.qmd": {
+    "05_rechart.html": "987a8497"
+  },
+  "data_viz/04_highcharts.qmd": {
+    "04_highcharts.html": "45870022"
+  },
+  "data_viz/7_luiguis.qmd": {
+    "7_luiguis.html": "7ad5ec1c"
+  },
+  "data_viz/06_highcharts_backup.qmd": {
+    "06_highcharts_backup.html": "c184e747"
+  }
+}

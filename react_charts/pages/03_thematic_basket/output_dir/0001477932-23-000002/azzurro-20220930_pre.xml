@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="us-ascii" standalone="yes"?>
+<!--XBRL Document Created with XBRLMaster-->
+<!--Version: 2.3.08-->
+<!--Based on XBRL 2.1-->
+<!--Date of creation: 12/31/2022-->
+<!--Software architectural design and coding: A'c Dharmapremananda Avt.-->
+<!--Copyright (c) 2022 I-NET Business Solutions, Inc. All Rights Reserved.-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://azzurro.com/role/Cover" xlink:href="azzurro-20220930.xsd#Cover" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/BalanceSheets" xlink:href="azzurro-20220930.xsd#BalanceSheets" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/BalanceSheetsParenthetical" xlink:href="azzurro-20220930.xsd#BalanceSheetsParenthetical" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/StatementsOfOperationsAudited" xlink:href="azzurro-20220930.xsd#StatementsOfOperationsAudited" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/StatementOfStockholdersEquityAudited" xlink:href="azzurro-20220930.xsd#StatementOfStockholdersEquityAudited" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/StatementsOfCashFlowsAudited" xlink:href="azzurro-20220930.xsd#StatementsOfCashFlowsAudited" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/OrganizationAndBusiness" xlink:href="azzurro-20220930.xsd#OrganizationAndBusiness" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/GoingConcern" xlink:href="azzurro-20220930.xsd#GoingConcern" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/SummaryOfSignificantAccountingPolicies" xlink:href="azzurro-20220930.xsd#SummaryOfSignificantAccountingPolicies" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/CapitalStock" xlink:href="azzurro-20220930.xsd#CapitalStock" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/RelatedPartyTransactions" xlink:href="azzurro-20220930.xsd#RelatedPartyTransactions" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/SubsequentEvents" xlink:href="azzurro-20220930.xsd#SubsequentEvents" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies" xlink:href="azzurro-20220930.xsd#SummaryOfSignificantAccountingPoliciesPolicies" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/GoingConcernDetailsNarrative" xlink:href="azzurro-20220930.xsd#GoingConcernDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesDetailsNarrative" xlink:href="azzurro-20220930.xsd#SummaryOfSignificantAccountingPoliciesDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/CapitalStockDetailsNarrative" xlink:href="azzurro-20220930.xsd#CapitalStockDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative" xlink:href="azzurro-20220930.xsd#RelatedPartyTransactionsDetailsNarrative" xlink:type="simple" />
+  <link:roleRef roleURI="http://azzurro.com/role/SubsequentEventsDetailsNarrative" xlink:href="azzurro-20220930.xsd#SubsequentEventsDetailsNarrative" xlink:type="simple" />
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/Cover" xlink:title="00000001 - Document - Cover Page Information">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_CoverAbstract" xlink:label="loc_deiCoverAbstract" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityRegistrantName" xlink:label="loc_deiEntityRegistrantName" />
+    <link:presentationArc order="0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityRegistrantName" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityCentralIndexKey" xlink:label="loc_deiEntityCentralIndexKey" />
+    <link:presentationArc order="1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityCentralIndexKey" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_DocumentType" xlink:label="loc_deiDocumentType" />
+    <link:presentationArc order="2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiDocumentType" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_AmendmentFlag" xlink:label="loc_deiAmendmentFlag" />
+    <link:presentationArc order="3" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiAmendmentFlag" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityVoluntaryFilers" xlink:label="loc_deiEntityVoluntaryFilers" />
+    <link:presentationArc order="4" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityVoluntaryFilers" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_CurrentFiscalYearEndDate" xlink:label="loc_deiCurrentFiscalYearEndDate" />
+    <link:presentationArc order="5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiCurrentFiscalYearEndDate" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityWellKnownSeasonedIssuer" xlink:label="loc_deiEntityWellKnownSeasonedIssuer" />
+    <link:presentationArc order="6" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityWellKnownSeasonedIssuer" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntitySmallBusiness" xlink:label="loc_deiEntitySmallBusiness" />
+    <link:presentationArc order="7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntitySmallBusiness" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityShellCompany" xlink:label="loc_deiEntityShellCompany" />
+    <link:presentationArc order="8" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityShellCompany" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityEmergingGrowthCompany" xlink:label="loc_deiEntityEmergingGrowthCompany" />
+    <link:presentationArc order="9" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityEmergingGrowthCompany" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityCurrentReportingStatus" xlink:label="loc_deiEntityCurrentReportingStatus" />
+    <link:presentationArc order="10" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityCurrentReportingStatus" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_DocumentPeriodEndDate" xlink:label="loc_deiDocumentPeriodEndDate" />
+    <link:presentationArc order="11" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiDocumentPeriodEndDate" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityFilerCategory" xlink:label="loc_deiEntityFilerCategory" />
+    <link:presentationArc order="12" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityFilerCategory" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_DocumentFiscalPeriodFocus" xlink:label="loc_deiDocumentFiscalPeriodFocus" />
+    <link:presentationArc order="13" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiDocumentFiscalPeriodFocus" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_DocumentFiscalYearFocus" xlink:label="loc_deiDocumentFiscalYearFocus" />
+    <link:presentationArc order="14" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiDocumentFiscalYearFocus" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityExTransitionPeriod" xlink:label="loc_deiEntityExTransitionPeriod" />
+    <link:presentationArc order="15" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityExTransitionPeriod" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityCommonStockSharesOutstanding" xlink:label="loc_deiEntityCommonStockSharesOutstanding" />
+    <link:presentationArc order="16" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityCommonStockSharesOutstanding" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityPublicFloat" xlink:label="loc_deiEntityPublicFloat" />
+    <link:presentationArc order="17" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityPublicFloat" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_DocumentTransitionReport" xlink:label="loc_deiDocumentTransitionReport" />
+    <link:presentationArc order="18" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiDocumentTransitionReport" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityFileNumber" xlink:label="loc_deiEntityFileNumber" />
+    <link:presentationArc order="19" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityFileNumber" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityIncorporationStateCountryCode" xlink:label="loc_deiEntityIncorporationStateCountryCode" />
+    <link:presentationArc order="20" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityIncorporationStateCountryCode" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityTaxIdentificationNumber" xlink:label="loc_deiEntityTaxIdentificationNumber" />
+    <link:presentationArc order="21" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityTaxIdentificationNumber" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityAddressAddressLine1" xlink:label="loc_deiEntityAddressAddressLine1" />
+    <link:presentationArc order="22" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityAddressAddressLine1" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityAddressAddressLine2" xlink:label="loc_deiEntityAddressAddressLine2" />
+    <link:presentationArc order="23" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityAddressAddressLine2" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityAddressCityOrTown" xlink:label="loc_deiEntityAddressCityOrTown" />
+    <link:presentationArc order="24" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityAddressCityOrTown" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityAddressCountry" xlink:label="loc_deiEntityAddressCountry" />
+    <link:presentationArc order="25" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityAddressCountry" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_EntityAddressPostalZipCode" xlink:label="loc_deiEntityAddressPostalZipCode" />
+    <link:presentationArc order="26" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiEntityAddressPostalZipCode" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_CityAreaCode" xlink:label="loc_deiCityAreaCode" />
+    <link:presentationArc order="27" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiCityAreaCode" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_LocalPhoneNumber" xlink:label="loc_deiLocalPhoneNumber" />
+    <link:presentationArc order="28" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiLocalPhoneNumber" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_DocumentAnnualReport" xlink:label="loc_deiDocumentAnnualReport" />
+    <link:presentationArc order="29" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiDocumentAnnualReport" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_AuditorName" xlink:label="loc_deiAuditorName" />
+    <link:presentationArc order="30" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiAuditorName" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_AuditorLocation" xlink:label="loc_deiAuditorLocation" />
+    <link:presentationArc order="31" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiAuditorLocation" xlink:type="arc" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.sec.gov/dei/2022/dei-2022.xsd#dei_AuditorFirmId" xlink:label="loc_deiAuditorFirmId" />
+    <link:presentationArc order="32" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_deiCoverAbstract" xlink:to="loc_deiAuditorFirmId" xlink:type="arc" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/BalanceSheets" xlink:title="000002 - Statement - BALANCE SHEETS">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementOfFinancialPositionAbstract" xlink:label="loc_us-gaapStatementOfFinancialPositionAbstract_3f0d30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AssetsAbstract" xlink:label="loc_us-gaapAssetsAbstract_c8882c" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementOfFinancialPositionAbstract_3f0d30" xlink:to="loc_us-gaapAssetsAbstract_c8882c" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AssetsCurrentAbstract" xlink:label="loc_us-gaapAssetsCurrentAbstract_d86a4d" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAssetsAbstract_c8882c" xlink:to="loc_us-gaapAssetsCurrentAbstract_d86a4d" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CashAndCashEquivalentsAtCarryingValue" xlink:label="loc_us-gaapCashAndCashEquivalentsAtCarryingValue_efce7d" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAssetsCurrentAbstract_d86a4d" xlink:to="loc_us-gaapCashAndCashEquivalentsAtCarryingValue_efce7d" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AssetsCurrent" xlink:label="loc_us-gaapAssetsCurrent_105abe" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAssetsCurrentAbstract_d86a4d" xlink:to="loc_us-gaapAssetsCurrent_105abe" order="4" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Assets" xlink:label="loc_us-gaapAssets_2526c2" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAssetsCurrentAbstract_d86a4d" xlink:to="loc_us-gaapAssets_2526c2" order="5" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LiabilitiesAndStockholdersEquityAbstract" xlink:label="loc_us-gaapLiabilitiesAndStockholdersEquityAbstract_00a13e" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAssetsCurrentAbstract_d86a4d" xlink:to="loc_us-gaapLiabilitiesAndStockholdersEquityAbstract_00a13e" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LiabilitiesCurrentAbstract" xlink:label="loc_us-gaapLiabilitiesCurrentAbstract_cef476" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapLiabilitiesAndStockholdersEquityAbstract_00a13e" xlink:to="loc_us-gaapLiabilitiesCurrentAbstract_cef476" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccountsPayableCurrent" xlink:label="loc_us-gaapAccountsPayableCurrent_1610f6" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapLiabilitiesCurrentAbstract_cef476" xlink:to="loc_us-gaapAccountsPayableCurrent_1610f6" order="8" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DueToRelatedPartiesCurrent" xlink:label="loc_us-gaapDueToRelatedPartiesCurrent_4bafae" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapLiabilitiesCurrentAbstract_cef476" xlink:to="loc_us-gaapDueToRelatedPartiesCurrent_4bafae" order="9" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LiabilitiesCurrent" xlink:label="loc_us-gaapLiabilitiesCurrent_b6894a" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapLiabilitiesCurrentAbstract_cef476" xlink:to="loc_us-gaapLiabilitiesCurrent_b6894a" order="10" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Liabilities" xlink:label="loc_us-gaapLiabilities_414398" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapLiabilitiesCurrentAbstract_cef476" xlink:to="loc_us-gaapLiabilities_414398" order="11" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockholdersEquityAbstract" xlink:label="loc_us-gaapStockholdersEquityAbstract_059823" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapLiabilitiesCurrentAbstract_cef476" xlink:to="loc_us-gaapStockholdersEquityAbstract_059823" order="12" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockValue" xlink:label="loc_us-gaapCommonStockValue_ce70b9" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStockholdersEquityAbstract_059823" xlink:to="loc_us-gaapCommonStockValue_ce70b9" order="13" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AdditionalPaidInCapital" xlink:label="loc_us-gaapAdditionalPaidInCapital_5fb046" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStockholdersEquityAbstract_059823" xlink:to="loc_us-gaapAdditionalPaidInCapital_5fb046" order="14" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RetainedEarningsAccumulatedDeficit" xlink:label="loc_us-gaapRetainedEarningsAccumulatedDeficit_7a95ac" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStockholdersEquityAbstract_059823" xlink:to="loc_us-gaapRetainedEarningsAccumulatedDeficit_7a95ac" order="15" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockholdersEquity" xlink:label="loc_us-gaapStockholdersEquity_b7a5d8" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStockholdersEquityAbstract_059823" xlink:to="loc_us-gaapStockholdersEquity_b7a5d8" order="16" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_LiabilitiesAndStockholdersEquity" xlink:label="loc_us-gaapLiabilitiesAndStockholdersEquity_0dff9c" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStockholdersEquityAbstract_059823" xlink:to="loc_us-gaapLiabilitiesAndStockholdersEquity_0dff9c" order="17" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/BalanceSheetsParenthetical" xlink:title="000003 - Statement - BALANCE SHEETS (Parenthetical)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementOfFinancialPositionAbstract" xlink:label="loc_us-gaapStatementOfFinancialPositionAbstract_378cc7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockParOrStatedValuePerShare" xlink:label="loc_us-gaapCommonStockParOrStatedValuePerShare_8d8f70" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementOfFinancialPositionAbstract_378cc7" xlink:to="loc_us-gaapCommonStockParOrStatedValuePerShare_8d8f70" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesAuthorized" xlink:label="loc_us-gaapCommonStockSharesAuthorized_06a56a" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementOfFinancialPositionAbstract_378cc7" xlink:to="loc_us-gaapCommonStockSharesAuthorized_06a56a" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesOutstanding" xlink:label="loc_us-gaapCommonStockSharesOutstanding_af421b" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementOfFinancialPositionAbstract_378cc7" xlink:to="loc_us-gaapCommonStockSharesOutstanding_af421b" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesIssued" xlink:label="loc_us-gaapCommonStockSharesIssued_7fc355" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementOfFinancialPositionAbstract_378cc7" xlink:to="loc_us-gaapCommonStockSharesIssued_7fc355" order="4" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/StatementsOfOperationsAudited" xlink:title="000004 - Statement - STATEMENTS OF OPERATIONS (AUDITED)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncomeStatementAbstract" xlink:label="loc_us-gaapIncomeStatementAbstract_c7bf70" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OperatingExpensesAbstract" xlink:label="loc_us-gaapOperatingExpensesAbstract_1f2854" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapIncomeStatementAbstract_c7bf70" xlink:to="loc_us-gaapOperatingExpensesAbstract_1f2854" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SellingGeneralAndAdministrativeExpense" xlink:label="loc_us-gaapSellingGeneralAndAdministrativeExpense_354e98" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapOperatingExpensesAbstract_1f2854" xlink:to="loc_us-gaapSellingGeneralAndAdministrativeExpense_354e98" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OperatingIncomeLoss" xlink:label="loc_us-gaapOperatingIncomeLoss_89186b" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapOperatingExpensesAbstract_1f2854" xlink:to="loc_us-gaapOperatingIncomeLoss_89186b" order="3" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest" xlink:label="loc_us-gaapIncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest_221c8f" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapOperatingExpensesAbstract_1f2854" xlink:to="loc_us-gaapIncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest_221c8f" order="4" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncomeTaxExpenseBenefit" xlink:label="loc_us-gaapIncomeTaxExpenseBenefit_eb00ab" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapOperatingExpensesAbstract_1f2854" xlink:to="loc_us-gaapIncomeTaxExpenseBenefit_eb00ab" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetIncomeLoss" xlink:label="loc_us-gaapNetIncomeLoss_541377" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapOperatingExpensesAbstract_1f2854" xlink:to="loc_us-gaapNetIncomeLoss_541377" order="6" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_EarningsPerSharesBasicAndDilutedAbstract" xlink:label="loc_azzurroEarningsPerSharesBasicAndDilutedAbstract_98d6ea" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapOperatingExpensesAbstract_1f2854" xlink:to="loc_azzurroEarningsPerSharesBasicAndDilutedAbstract_98d6ea" order="7" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_EarningsPerShareBasicsAndDiluted" xlink:label="loc_azzurroEarningsPerShareBasicsAndDiluted_3e5229" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_azzurroEarningsPerSharesBasicAndDilutedAbstract_98d6ea" xlink:to="loc_azzurroEarningsPerShareBasicsAndDiluted_3e5229" order="8" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_WeightedAverageNumberOfSharesOutstandingAbstract" xlink:label="loc_us-gaapWeightedAverageNumberOfSharesOutstandingAbstract_8d437a" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_azzurroEarningsPerSharesBasicAndDilutedAbstract_98d6ea" xlink:to="loc_us-gaapWeightedAverageNumberOfSharesOutstandingAbstract_8d437a" order="9" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_WeightedAverageNumberOfShareOutstandingBasicsAndDiluted" xlink:label="loc_azzurroWeightedAverageNumberOfShareOutstandingBasicsAndDiluted_81414e" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapWeightedAverageNumberOfSharesOutstandingAbstract_8d437a" xlink:to="loc_azzurroWeightedAverageNumberOfShareOutstandingBasicsAndDiluted_81414e" order="10" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/StatementOfStockholdersEquityAudited" xlink:title="000005 - Statement - STATEMENT OF STOCKHOLDERS EQUITY (AUDITED)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementOfStockholdersEquityAbstract" xlink:label="loc_us-gaapStatementOfStockholdersEquityAbstract_5a565e" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable_0b636e" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementOfStockholdersEquityAbstract_5a565e" xlink:to="loc_us-gaapStatementTable_0b636e" order="100" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems_ce273f" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_0b636e" xlink:to="loc_us-gaapStatementLineItems_ce273f" order="2000" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementEquityComponentsAxis" xlink:label="loc_us-gaapStatementEquityComponentsAxis_fc826c" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_0b636e" xlink:to="loc_us-gaapStatementEquityComponentsAxis_fc826c" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_EquityComponentDomain" xlink:label="loc_us-gaapEquityComponentDomain_bf3360" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementEquityComponentsAxis_fc826c" xlink:to="loc_us-gaapEquityComponentDomain_bf3360" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockMember" xlink:label="loc_us-gaapCommonStockMember_0216fc" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapEquityComponentDomain_bf3360" xlink:to="loc_us-gaapCommonStockMember_0216fc" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AdditionalPaidInCapitalMember" xlink:label="loc_us-gaapAdditionalPaidInCapitalMember_a00d1c" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapEquityComponentDomain_bf3360" xlink:to="loc_us-gaapAdditionalPaidInCapitalMember_a00d1c" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RetainedEarningsMember" xlink:label="loc_us-gaapRetainedEarningsMember_af5729" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapEquityComponentDomain_bf3360" xlink:to="loc_us-gaapRetainedEarningsMember_af5729" order="23" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharesIssued" xlink:label="loc_us-gaapSharesIssued_3b2fc4" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_ce273f" xlink:to="loc_us-gaapSharesIssued_3b2fc4" order="1" preferredLabel="http://www.xbrl.org/2003/role/periodStartLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockholdersEquity" xlink:label="loc_us-gaapStockholdersEquity_e7f0f0" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_ce273f" xlink:to="loc_us-gaapStockholdersEquity_e7f0f0" order="2" preferredLabel="http://www.xbrl.org/2003/role/periodStartLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodSharesNewIssues" xlink:label="loc_us-gaapStockIssuedDuringPeriodSharesNewIssues_552e8c" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_ce273f" xlink:to="loc_us-gaapStockIssuedDuringPeriodSharesNewIssues_552e8c" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockIssuedDuringPeriodValueNewIssues" xlink:label="loc_us-gaapStockIssuedDuringPeriodValueNewIssues_ee731e" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_ce273f" xlink:to="loc_us-gaapStockIssuedDuringPeriodValueNewIssues_ee731e" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetIncomeLoss" xlink:label="loc_us-gaapNetIncomeLoss_e796c8" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_ce273f" xlink:to="loc_us-gaapNetIncomeLoss_e796c8" order="5" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharesIssued" xlink:label="loc_us-gaapSharesIssued_bb96d7" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_ce273f" xlink:to="loc_us-gaapSharesIssued_bb96d7" order="6" preferredLabel="http://www.xbrl.org/2003/role/periodEndLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockholdersEquity" xlink:label="loc_us-gaapStockholdersEquity_93ef95" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_ce273f" xlink:to="loc_us-gaapStockholdersEquity_93ef95" order="7" preferredLabel="http://www.xbrl.org/2003/role/periodEndLabel" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/StatementsOfCashFlowsAudited" xlink:title="000006 - Statement - STATEMENTS OF CASH FLOWS (AUDITED)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementOfCashFlowsAbstract" xlink:label="loc_us-gaapStatementOfCashFlowsAbstract_9f8d96" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract" xlink:label="loc_us-gaapNetCashProvidedByUsedInOperatingActivitiesAbstract_12fc7d" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementOfCashFlowsAbstract_9f8d96" xlink:to="loc_us-gaapNetCashProvidedByUsedInOperatingActivitiesAbstract_12fc7d" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ProfitLoss" xlink:label="loc_us-gaapProfitLoss_62b114" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivitiesAbstract_12fc7d" xlink:to="loc_us-gaapProfitLoss_62b114" order="2" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncreaseDecreaseInAccountsPayable" xlink:label="loc_us-gaapIncreaseDecreaseInAccountsPayable_0c7785" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivitiesAbstract_12fc7d" xlink:to="loc_us-gaapIncreaseDecreaseInAccountsPayable_0c7785" order="3" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities" xlink:label="loc_us-gaapNetCashProvidedByUsedInOperatingActivities_3039d1" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivitiesAbstract_12fc7d" xlink:to="loc_us-gaapNetCashProvidedByUsedInOperatingActivities_3039d1" order="4" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:label="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInOperatingActivitiesAbstract_12fc7d" xlink:to="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ProceedsFromRelatedPartyDebt" xlink:label="loc_us-gaapProceedsFromRelatedPartyDebt_6af8f0" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" xlink:to="loc_us-gaapProceedsFromRelatedPartyDebt_6af8f0" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ProceedsFromIssuanceOfCommonStock" xlink:label="loc_us-gaapProceedsFromIssuanceOfCommonStock_5378c5" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" xlink:to="loc_us-gaapProceedsFromIssuanceOfCommonStock_5378c5" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities" xlink:label="loc_us-gaapNetCashProvidedByUsedInFinancingActivities_9bd25d" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" xlink:to="loc_us-gaapNetCashProvidedByUsedInFinancingActivities_9bd25d" order="8" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect" xlink:label="loc_us-gaapCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect_c78c21" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" xlink:to="loc_us-gaapCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect_c78c21" order="9" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents" xlink:label="loc_us-gaapCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents_cc34cb" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" xlink:to="loc_us-gaapCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents_cc34cb" order="10" preferredLabel="http://www.xbrl.org/2003/role/periodStartLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents" xlink:label="loc_us-gaapCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents_61b472" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" xlink:to="loc_us-gaapCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents_61b472" order="11" preferredLabel="http://www.xbrl.org/2003/role/periodEndLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SupplementalCashFlowInformationAbstract" xlink:label="loc_us-gaapSupplementalCashFlowInformationAbstract_bd785b" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapNetCashProvidedByUsedInFinancingActivitiesAbstract_408328" xlink:to="loc_us-gaapSupplementalCashFlowInformationAbstract_bd785b" order="12" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_CashPaidForAbstract" xlink:label="loc_azzurroCashPaidForAbstract_9b8e95" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapSupplementalCashFlowInformationAbstract_bd785b" xlink:to="loc_azzurroCashPaidForAbstract_9b8e95" order="13" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_InterestPaid" xlink:label="loc_us-gaapInterestPaid_b55271" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_azzurroCashPaidForAbstract_9b8e95" xlink:to="loc_us-gaapInterestPaid_b55271" order="14" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncomeTaxesPaid" xlink:label="loc_us-gaapIncomeTaxesPaid_8d38ab" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_azzurroCashPaidForAbstract_9b8e95" xlink:to="loc_us-gaapIncomeTaxesPaid_8d38ab" order="15" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/OrganizationAndBusiness" xlink:title="000007 - Disclosure - ORGANIZATION AND BUSINESS">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OrganizationConsolidationAndPresentationOfFinancialStatementsAbstract" xlink:label="loc_us-gaapOrganizationConsolidationAndPresentationOfFinancialStatementsAbstract_930168" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock" xlink:label="loc_us-gaapOrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock_cdebac" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapOrganizationConsolidationAndPresentationOfFinancialStatementsAbstract_930168" xlink:to="loc_us-gaapOrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock_cdebac" order="1" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/GoingConcern" xlink:title="000008 - Disclosure - GOING CONCERN">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RisksAndUncertaintiesAbstract" xlink:label="loc_us-gaapRisksAndUncertaintiesAbstract_dfa57e" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubstantialDoubtAboutGoingConcernTextBlock" xlink:label="loc_us-gaapSubstantialDoubtAboutGoingConcernTextBlock_d5028b" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRisksAndUncertaintiesAbstract_dfa57e" xlink:to="loc_us-gaapSubstantialDoubtAboutGoingConcernTextBlock_d5028b" order="1" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/SummaryOfSignificantAccountingPolicies" xlink:title="000009 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccountingPoliciesAbstract" xlink:label="loc_us-gaapAccountingPoliciesAbstract_9d60c9" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SignificantAccountingPoliciesTextBlock" xlink:label="loc_us-gaapSignificantAccountingPoliciesTextBlock_c3e714" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_9d60c9" xlink:to="loc_us-gaapSignificantAccountingPoliciesTextBlock_c3e714" order="1" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/CapitalStock" xlink:title="000010 - Disclosure - CAPITAL STOCK">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_EquityAbstract" xlink:label="loc_us-gaapEquityAbstract_e58497" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StockholdersEquityNoteDisclosureTextBlock" xlink:label="loc_us-gaapStockholdersEquityNoteDisclosureTextBlock_aecb47" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapEquityAbstract_e58497" xlink:to="loc_us-gaapStockholdersEquityNoteDisclosureTextBlock_aecb47" order="1" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/RelatedPartyTransactions" xlink:title="000011 - Disclosure - RELATED PARTY TRANSACTIONS">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsAbstract" xlink:label="loc_us-gaapRelatedPartyTransactionsAbstract_5a30c6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsDisclosureTextBlock" xlink:label="loc_us-gaapRelatedPartyTransactionsDisclosureTextBlock_d011be" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRelatedPartyTransactionsAbstract_5a30c6" xlink:to="loc_us-gaapRelatedPartyTransactionsDisclosureTextBlock_d011be" order="1" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/SubsequentEvents" xlink:title="000012 - Disclosure - SUBSEQUENT EVENTS">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventsAbstract" xlink:label="loc_us-gaapSubsequentEventsAbstract_efd45c" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventsTextBlock" xlink:label="loc_us-gaapSubsequentEventsTextBlock_8e9714" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapSubsequentEventsAbstract_efd45c" xlink:to="loc_us-gaapSubsequentEventsTextBlock_8e9714" order="1" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesPolicies" xlink:title="000013 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccountingPoliciesAbstract" xlink:label="loc_us-gaapAccountingPoliciesAbstract_af3b23" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_BasisOfAccountingPolicyPolicyTextBlock" xlink:label="loc_us-gaapBasisOfAccountingPolicyPolicyTextBlock_58106a" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapBasisOfAccountingPolicyPolicyTextBlock_58106a" order="1" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CashAndCashEquivalentsPolicyTextBlock" xlink:label="loc_us-gaapCashAndCashEquivalentsPolicyTextBlock_7ce2b9" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapCashAndCashEquivalentsPolicyTextBlock_7ce2b9" order="2" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ShareBasedCompensationOptionAndIncentivePlansPolicy" xlink:label="loc_us-gaapShareBasedCompensationOptionAndIncentivePlansPolicy_50f495" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapShareBasedCompensationOptionAndIncentivePlansPolicy_50f495" order="3" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_UseOfEstimates" xlink:label="loc_us-gaapUseOfEstimates_96331d" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapUseOfEstimates_96331d" order="4" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncomeTaxPolicyTextBlock" xlink:label="loc_us-gaapIncomeTaxPolicyTextBlock_deb3a7" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapIncomeTaxPolicyTextBlock_deb3a7" order="5" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NewAccountingPronouncementsPolicyPolicyTextBlock" xlink:label="loc_us-gaapNewAccountingPronouncementsPolicyPolicyTextBlock_d78446" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapNewAccountingPronouncementsPolicyPolicyTextBlock_d78446" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_FairValueOfFinancialInstrumentsPolicy" xlink:label="loc_us-gaapFairValueOfFinancialInstrumentsPolicy_72bd5d" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapFairValueOfFinancialInstrumentsPolicy_72bd5d" order="7" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_EarningsPerSharePolicyTextBlock" xlink:label="loc_us-gaapEarningsPerSharePolicyTextBlock_9c85c5" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_af3b23" xlink:to="loc_us-gaapEarningsPerSharePolicyTextBlock_9c85c5" order="8" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/GoingConcernDetailsNarrative" xlink:title="000014 - Disclosure - GOING CONCERN (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RisksAndUncertaintiesAbstract" xlink:label="loc_us-gaapRisksAndUncertaintiesAbstract_e64676" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RetainedEarningsAccumulatedDeficit" xlink:label="loc_us-gaapRetainedEarningsAccumulatedDeficit_023092" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRisksAndUncertaintiesAbstract_e64676" xlink:to="loc_us-gaapRetainedEarningsAccumulatedDeficit_023092" order="1" preferredLabel="http://www.xbrl.org/2003/role/terseLabel" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/SummaryOfSignificantAccountingPoliciesDetailsNarrative" xlink:title="000015 - Disclosure - SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccountingPoliciesAbstract" xlink:label="loc_us-gaapAccountingPoliciesAbstract_669117" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CashFDICInsuredAmount" xlink:label="loc_us-gaapCashFDICInsuredAmount_8405ef" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapAccountingPoliciesAbstract_669117" xlink:to="loc_us-gaapCashFDICInsuredAmount_8405ef" order="1" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/CapitalStockDetailsNarrative" xlink:title="000016 - Disclosure - CAPITAL STOCK (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_EquityAbstract" xlink:label="loc_us-gaapEquityAbstract_0f1697" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable_53b7c8" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapEquityAbstract_0f1697" xlink:to="loc_us-gaapStatementTable_53b7c8" order="100" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems_36d0e9" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_53b7c8" xlink:to="loc_us-gaapStatementLineItems_36d0e9" order="2000" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementClassOfStockAxis" xlink:label="loc_us-gaapStatementClassOfStockAxis_70e4ac" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_53b7c8" xlink:to="loc_us-gaapStatementClassOfStockAxis_70e4ac" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_ClassOfStockDomain" xlink:label="loc_us-gaapClassOfStockDomain_2ebf65" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementClassOfStockAxis_70e4ac" xlink:to="loc_us-gaapClassOfStockDomain_2ebf65" order="20" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_CommonStockOneMember" xlink:label="loc_azzurroCommonStockOneMember_e4e86f" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapClassOfStockDomain_2ebf65" xlink:to="loc_azzurroCommonStockOneMember_e4e86f" order="21" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_CommonStocksMember" xlink:label="loc_azzurroCommonStocksMember_bd95d4" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapClassOfStockDomain_2ebf65" xlink:to="loc_azzurroCommonStocksMember_bd95d4" order="22" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesAuthorized" xlink:label="loc_us-gaapCommonStockSharesAuthorized_c6c634" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_36d0e9" xlink:to="loc_us-gaapCommonStockSharesAuthorized_c6c634" order="1" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockParOrStatedValuePerShare" xlink:label="loc_us-gaapCommonStockParOrStatedValuePerShare_080daf" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_36d0e9" xlink:to="loc_us-gaapCommonStockParOrStatedValuePerShare_080daf" order="2" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesOutstanding" xlink:label="loc_us-gaapCommonStockSharesOutstanding_b21a9e" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_36d0e9" xlink:to="loc_us-gaapCommonStockSharesOutstanding_b21a9e" order="3" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CommonStockSharesIssued" xlink:label="loc_us-gaapCommonStockSharesIssued_a861ca" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_36d0e9" xlink:to="loc_us-gaapCommonStockSharesIssued_a861ca" order="4" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_TotalProceedsamount" xlink:label="loc_azzurroTotalProceedsamount_6d32e8" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_36d0e9" xlink:to="loc_azzurroTotalProceedsamount_6d32e8" order="5" />
+    <link:loc xlink:type="locator" xlink:href="azzurro-20220930.xsd#azzurro_TotalProceedsShare" xlink:label="loc_azzurroTotalProceedsShare_6cead0" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_36d0e9" xlink:to="loc_azzurroTotalProceedsShare_6cead0" order="6" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SharesIssuedPricePerShare" xlink:label="loc_us-gaapSharesIssuedPricePerShare_c83804" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_36d0e9" xlink:to="loc_us-gaapSharesIssuedPricePerShare_c83804" order="7" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/RelatedPartyTransactionsDetailsNarrative" xlink:title="000017 - Disclosure - RELATED PARTY TRANSACTIONS (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsAbstract" xlink:label="loc_us-gaapRelatedPartyTransactionsAbstract_c21276" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable_9cbaa7" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRelatedPartyTransactionsAbstract_c21276" xlink:to="loc_us-gaapStatementTable_9cbaa7" order="100" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems_c8b6e3" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_9cbaa7" xlink:to="loc_us-gaapStatementLineItems_c8b6e3" order="2000" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis_27019b" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_9cbaa7" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis_27019b" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_e5802a" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis_27019b" xlink:to="loc_us-gaapRelatedPartyDomain_e5802a" order="20" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_DirectorMember" xlink:label="loc_srtDirectorMember_57c61c" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRelatedPartyDomain_e5802a" xlink:to="loc_srtDirectorMember_57c61c" order="21" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DueToRelatedPartiesCurrent" xlink:label="loc_us-gaapDueToRelatedPartiesCurrent_1f9e07" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_c8b6e3" xlink:to="loc_us-gaapDueToRelatedPartiesCurrent_1f9e07" order="1" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DueToOfficersOrStockholdersCurrent" xlink:label="loc_us-gaapDueToOfficersOrStockholdersCurrent_0b2447" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_c8b6e3" xlink:to="loc_us-gaapDueToOfficersOrStockholdersCurrent_0b2447" order="2" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+  </link:presentationLink>
+  <link:presentationLink xlink:type="extended" xlink:role="http://azzurro.com/role/SubsequentEventsDetailsNarrative" xlink:title="000018 - Disclosure - SUBSEQUENT EVENTS (Details Narrative)">
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventsAbstract" xlink:label="loc_us-gaapSubsequentEventsAbstract_845f3c" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementTable" xlink:label="loc_us-gaapStatementTable_034a8d" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapSubsequentEventsAbstract_845f3c" xlink:to="loc_us-gaapStatementTable_034a8d" order="100" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_StatementLineItems" xlink:label="loc_us-gaapStatementLineItems_2fbe67" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_034a8d" xlink:to="loc_us-gaapStatementLineItems_2fbe67" order="2000" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis" xlink:label="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis_635f79" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_034a8d" xlink:to="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis_635f79" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_RelatedPartyDomain" xlink:label="loc_us-gaapRelatedPartyDomain_4453c4" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRelatedPartyTransactionsByRelatedPartyAxis_635f79" xlink:to="loc_us-gaapRelatedPartyDomain_4453c4" order="10" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventTypeAxis" xlink:label="loc_us-gaapSubsequentEventTypeAxis_c52cbf" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementTable_034a8d" xlink:to="loc_us-gaapSubsequentEventTypeAxis_c52cbf" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventTypeDomain" xlink:label="loc_us-gaapSubsequentEventTypeDomain_e0e16e" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapSubsequentEventTypeAxis_c52cbf" xlink:to="loc_us-gaapSubsequentEventTypeDomain_e0e16e" order="30" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd#srt_DirectorMember" xlink:label="loc_srtDirectorMember_431734" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapRelatedPartyDomain_4453c4" xlink:to="loc_srtDirectorMember_431734" order="31" preferredLabel="http://www.xbrl.org/2003/role/verboseLabel" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_SubsequentEventMember" xlink:label="loc_us-gaapSubsequentEventMember_50d36b" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapSubsequentEventTypeDomain_e0e16e" xlink:to="loc_us-gaapSubsequentEventMember_50d36b" order="32" />
+    <link:loc xlink:type="locator" xlink:href="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DueToOfficersOrStockholdersCurrent" xlink:label="loc_us-gaapDueToOfficersOrStockholdersCurrent_0079bf" />
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_us-gaapStatementLineItems_2fbe67" xlink:to="loc_us-gaapDueToOfficersOrStockholdersCurrent_0079bf" order="1" preferredLabel="http://www.xbrl.org/2003/role/terseLabel" />
+  </link:presentationLink>
+</link:linkbase>

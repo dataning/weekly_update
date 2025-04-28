@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="us-ascii" standalone="yes"?>
+<!--XBRL Document Created with XBRLMaster-->
+<!--Version: 2.3.08-->
+<!--Based on XBRL 2.1-->
+<!--Date of creation: 01/03/2023-->
+<!--Software architectural design and coding: A'c Dharmapremananda Avt.-->
+<!--Copyright (c) 2023 I-NET Business Solutions, Inc. All Rights Reserved.-->
+<schema xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:currency="http://xbrl.sec.gov/currency/2022" xmlns:us-gaap-att="http://fasb.org/us-gaap/attributes" xmlns:sic="http://xbrl.sec.gov/sic/2022" xmlns:exch="http://xbrl.sec.gov/exch/2022" xmlns:invest="http://xbrl.sec.gov/invest/2013-01-31" xmlns:negated="http://www.xbrl.org/2009/role/negated" xmlns:naics="http://xbrl.sec.gov/naics/2022" xmlns:us-types="http://fasb.org/us-types/2022" xmlns:stpr="http://xbrl.sec.gov/stpr/2022" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:country="http://xbrl.sec.gov/country/2022" xmlns:utr="http://www.xbrl.org/2009/utr" xmlns:srt-types="http://fasb.org/srt-types/2022" xmlns:dtr-types="http://www.xbrl.org/dtr/type/2020-01-21" xmlns:srt-roles="http://fasb.org/srt-roles/2022" xmlns:dei="http://xbrl.sec.gov/dei/2022" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:srt="http://fasb.org/srt/2022" xmlns:us-gaap="http://fasb.org/us-gaap/2022" xmlns:fssn="http://fision.com/20211231" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://fision.com/20211231">
+  <annotation>
+    <appinfo>
+      <link:roleType roleURI="http://fision.com/role/Cover" id="Cover">
+        <link:definition>000001 - Document - Cover</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/ConsolidatedBalanceSheet" id="ConsolidatedBalanceSheet">
+        <link:definition>000002 - Statement - CONSOLIDATED BALANCE SHEET</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/ConsolidatedBalanceSheetParenthetical" id="ConsolidatedBalanceSheetParenthetical">
+        <link:definition>000003 - Statement - CONSOLIDATED BALANCE SHEET (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/ConsolidatedStatementsOfOperations" id="ConsolidatedStatementsOfOperations">
+        <link:definition>000004 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/ConsolidatedStatementsOfStockholdersDeficit" id="ConsolidatedStatementsOfStockholdersDeficit">
+        <link:definition>000005 - Statement - CONSOLIDATED STATEMENTS OF STOCKHOLDERS DEFICIT</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/ConsolidatedStatementsOfCashFlows" id="ConsolidatedStatementsOfCashFlows">
+        <link:definition>000006 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPolicies" id="OrganizationAndSignificantAccountingPolicies">
+        <link:definition>000007 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/GoingConcern" id="GoingConcern">
+        <link:definition>000008 - Disclosure - GOING CONCERN</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/FairValue" id="FairValue">
+        <link:definition>000009 - Disclosure - FAIR VALUE</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AccountsReceivable" id="AccountsReceivable">
+        <link:definition>000010 - Disclosure - ACCOUNTS RECEIVABLE</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/NotesReceivable" id="NotesReceivable">
+        <link:definition>000011 - Disclosure - NOTES RECEIVABLE</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/PropertyAndEquipment" id="PropertyAndEquipment">
+        <link:definition>000012 - Disclosure - PROPERTY AND EQUIPMENT</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IntangibleAssetsAndGoodwill" id="IntangibleAssetsAndGoodwill">
+        <link:definition>000013 - Disclosure - INTANGIBLE ASSETS AND GOODWILL</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/NotesPayable" id="NotesPayable">
+        <link:definition>000014 - Disclosure - NOTES PAYABLE</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/StockholdersDeficit" id="StockholdersDeficit">
+        <link:definition>000015 - Disclosure - STOCKHOLDERS DEFICIT</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/RelatedPartyTransactions" id="RelatedPartyTransactions">
+        <link:definition>000016 - Disclosure - RELATED PARTY TRANSACTIONS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/ACQUISITIONS" id="ACQUISITIONS">
+        <link:definition>000017 - Disclosure - ACQUISITIONS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/CommitmentsContingencies" id="CommitmentsContingencies">
+        <link:definition>000018 - Disclosure - COMMITMENTS CONTINGENCIES</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/LEASES" id="LEASES">
+        <link:definition>000019 - Disclosure - LEASES</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IncomeTaxes" id="IncomeTaxes">
+        <link:definition>000020 - Disclosure - INCOME TAXES</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/WARRANTS" id="WARRANTS">
+        <link:definition>000021 - Disclosure - WARRANTS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/CONCENTRATIONS" id="CONCENTRATIONS">
+        <link:definition>000022 - Disclosure - CONCENTRATIONS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/Covid19LoanAndLoanForgiveness" id="Covid19LoanAndLoanForgiveness">
+        <link:definition>000023 - Disclosure - COVID-19 LOAN and LOAN FORGIVENESS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/SubsequentEvents" id="SubsequentEvents">
+        <link:definition>000024 - Disclosure - SUBSEQUENT EVENTS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesPolicies" id="OrganizationAndSignificantAccountingPoliciesPolicies">
+        <link:definition>000025 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Policies)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesTables" id="OrganizationAndSignificantAccountingPoliciesTables">
+        <link:definition>000026 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/FairValueTables" id="FairValueTables">
+        <link:definition>000027 - Disclosure - FAIR VALUE (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AccountsReceivableTables" id="AccountsReceivableTables">
+        <link:definition>000028 - Disclosure - ACCOUNTS RECEIVABLE (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/NotesReceivableTables" id="NotesReceivableTables">
+        <link:definition>000029 - Disclosure - NOTES RECEIVABLE (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/PropertyAndEquipmentTables" id="PropertyAndEquipmentTables">
+        <link:definition>000030 - Disclosure - PROPERTY AND EQUIPMENT (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IntangibleAssetsAndGoodwillTables" id="IntangibleAssetsAndGoodwillTables">
+        <link:definition>000031 - Disclosure - INTANGIBLE ASSETS AND GOODWILL (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AcquisitionsTables" id="AcquisitionsTables">
+        <link:definition>000032 - Disclosure - ACQUISITIONS (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IncomeTaxesTables" id="IncomeTaxesTables">
+        <link:definition>000033 - Disclosure - INCOME TAXES (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/WarrantsTables" id="WarrantsTables">
+        <link:definition>000034 - Disclosure - WARRANTS (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails" id="OrganizationAndSignificantAccountingPoliciesDetails">
+        <link:definition>000035 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails1" id="OrganizationAndSignificantAccountingPoliciesDetails1">
+        <link:definition>000036 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details 1)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetails2" id="OrganizationAndSignificantAccountingPoliciesDetails2">
+        <link:definition>000037 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/OrganizationAndSignificantAccountingPoliciesDetailsNarrative" id="OrganizationAndSignificantAccountingPoliciesDetailsNarrative">
+        <link:definition>000038 - Disclosure - ORGANIZATION AND SIGNIFICANT ACCOUNTING POLICIES (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/GoingConcernDetailsNarrative" id="GoingConcernDetailsNarrative">
+        <link:definition>000039 - Disclosure - GOING CONCERN (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/FairValueDetails" id="FairValueDetails">
+        <link:definition>000040 - Disclosure - FAIR VALUE (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/FairValueDetails1" id="FairValueDetails1">
+        <link:definition>000041 - Disclosure - FAIR VALUE (Details 1)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/FairValueDetails2" id="FairValueDetails2">
+        <link:definition>000042 - Disclosure - FAIR VALUE (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/FairValueDetailsNarrative" id="FairValueDetailsNarrative">
+        <link:definition>000043 - Disclosure - FAIR VALUE (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AccountsReceivableDetails" id="AccountsReceivableDetails">
+        <link:definition>000044 - Disclosure - ACCOUNTS RECEIVABLE (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/NotesReceivableDetails" id="NotesReceivableDetails">
+        <link:definition>000045 - Disclosure - NOTES RECEIVABLE (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/NotesReceivableDetailsNarrative" id="NotesReceivableDetailsNarrative">
+        <link:definition>000046 - Disclosure - NOTES RECEIVABLE (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/PropertyAndEquipmentDetails" id="PropertyAndEquipmentDetails">
+        <link:definition>000047 - Disclosure - PROPERTY AND EQUIPMENT (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/PropertyAndEquipmentDetailsNarrative" id="PropertyAndEquipmentDetailsNarrative">
+        <link:definition>000048 - Disclosure - PROPERTY AND EQUIPMENT (Details Narrative )</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IntangibleAssetsAndGoodwillDetails" id="IntangibleAssetsAndGoodwillDetails">
+        <link:definition>000049 - Disclosure - INTANGIBLE ASSETS AND GOODWILL (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IntangibleAssetsAndGoodwillDetails1" id="IntangibleAssetsAndGoodwillDetails1">
+        <link:definition>000050 - Disclosure - INTANGIBLE ASSETS AND GOODWILL (Details 1)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IntangibleAssetsAndGoodwilllDetails2" id="IntangibleAssetsAndGoodwilllDetails2">
+        <link:definition>000051 - Disclosure - INTANGIBLE ASSETS AND GOODWILLL (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IntangibleAssetsAndGoodwilllDetailsNarrative" id="IntangibleAssetsAndGoodwilllDetailsNarrative">
+        <link:definition>000052 - Disclosure - INTANGIBLE ASSETS AND GOODWILLL (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/NotesPayableDetailsNarrative" id="NotesPayableDetailsNarrative">
+        <link:definition>000053 - Disclosure - NOTES PAYABLE (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/StockholdersDeficitDetailsNarrative" id="StockholdersDeficitDetailsNarrative">
+        <link:definition>000054 - Disclosure - STOCKHOLDERS DEFICIT (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/RelatedPartyTransactionsDetailsNarrative" id="RelatedPartyTransactionsDetailsNarrative">
+        <link:definition>000055 - Disclosure - RELATED PARTY TRANSACTIONS (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AcquisitionsDetails" id="AcquisitionsDetails">
+        <link:definition>000056 - Disclosure - ACQUISITIONS (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AcquisitionsDetails1" id="AcquisitionsDetails1">
+        <link:definition>000057 - Disclosure - ACQUISITIONS (Details 1)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AcquisitionsDetails2" id="AcquisitionsDetails2">
+        <link:definition>000058 - Disclosure - ACQUISITIONS (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/AcquisitionsDetailsNarrative" id="AcquisitionsDetailsNarrative">
+        <link:definition>000059 - Disclosure - ACQUISITIONS (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/CommitmentsAndContigenciesDetailsNarrative" id="CommitmentsAndContigenciesDetailsNarrative">
+        <link:definition>000060 - Disclosure - COMMITMENTS AND CONTIGENCIES (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IncomeTaxesDetails" id="IncomeTaxesDetails">
+        <link:definition>000061 - Disclosure - INCOME TAXES (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/IncomeTaxesDetailsNarrative" id="IncomeTaxesDetailsNarrative">
+        <link:definition>000062 - Disclosure - INCOME TAXES (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/WarrantsDetails" id="WarrantsDetails">
+        <link:definition>000063 - Disclosure - WARRANTS (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/ConcentrationsDetailsNarrative" id="ConcentrationsDetailsNarrative">
+        <link:definition>000064 - Disclosure - CONCENTRATIONS (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/Covid19LoanAndLoanForgivenessDetailsNarrative" id="Covid19LoanAndLoanForgivenessDetailsNarrative">
+        <link:definition>000065 - Disclosure - COVID19 LOAN and LOAN FORGIVENESS (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://fision.com/role/SubsequentEventsDetailsNarrative" id="SubsequentEventsDetailsNarrative">
+        <link:definition>000066 - Disclosure - SUBSEQUENT EVENTS (Details Narrative)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:linkbaseRef xlink:type="simple" xlink:href="fssn-20211231_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="fssn-20211231_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="fssn-20211231_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="fssn-20211231_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+  <import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+  <import namespace="http://xbrl.sec.gov/country/2022" schemaLocation="https://xbrl.sec.gov/country/2022/country-2022.xsd" />
+  <import namespace="http://xbrl.sec.gov/currency/2022" schemaLocation="https://xbrl.sec.gov/currency/2022/currency-2022.xsd" />
+  <import namespace="http://xbrl.sec.gov/dei/2022" schemaLocation="https://xbrl.sec.gov/dei/2022/dei-2022.xsd" />
+  <import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+  <import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+  <import namespace="http://xbrl.sec.gov/exch/2022" schemaLocation="https://xbrl.sec.gov/exch/2022/exch-2022.xsd" />
+  <import namespace="http://www.xbrl.org/2009/arcrole/fact-explanatoryFact" schemaLocation="http://www.xbrl.org/lrr/arcrole/factExplanatory-2009-12-16.xsd" />
+  <import namespace="http://www.xbrl.org/2009/role/negated" schemaLocation="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd" />
+  <import namespace="http://www.xbrl.org/2009/role/net" schemaLocation="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd" />
+  <import namespace="http://xbrl.sec.gov/naics/2022" schemaLocation="https://xbrl.sec.gov/naics/2022/naics-2022.xsd" />
+  <import namespace="http://xbrl.sec.gov/sic/2022" schemaLocation="https://xbrl.sec.gov/sic/2022/sic-2022.xsd" />
+  <import namespace="http://fasb.org/srt-roles/2022" schemaLocation="https://xbrl.fasb.org/srt/2022/elts/srt-roles-2022.xsd" />
+  <import namespace="http://fasb.org/srt-types/2022" schemaLocation="https://xbrl.fasb.org/srt/2022/elts/srt-types-2022.xsd" />
+  <import namespace="http://www.xbrl.org/dtr/type/2020-01-21" schemaLocation="https://www.xbrl.org/dtr/type/2020-01-21/types.xsd" />
+  <import namespace="http://xbrl.sec.gov/stpr/2022" schemaLocation="https://xbrl.sec.gov/stpr/2022/stpr-2022.xsd" />
+  <import namespace="http://fasb.org/us-roles/2022" schemaLocation="https://xbrl.fasb.org/us-gaap/2022/elts/us-roles-2022.xsd" />
+  <import namespace="http://fasb.org/us-types/2022" schemaLocation="https://xbrl.fasb.org/us-gaap/2022/elts/us-types-2022.xsd" />
+  <import namespace="http://fasb.org/srt/2022" schemaLocation="https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd" />
+  <import namespace="http://fasb.org/us-gaap/2022" schemaLocation="https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd" />
+  <element id="fssn_IntangibleAssetsNetOfAccumulatedAmortization" name="IntangibleAssetsNetOfAccumulatedAmortization" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_LongTermSbaPppLoan" name="LongTermSbaPppLoan" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_LiabilitiesAndStockholdersAbstract" name="LiabilitiesAndStockholdersAbstract" nillable="true" abstract="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_LongTermConvertibleNotesPayableNetOfDebtDiscountRelatedParty" name="LongTermConvertibleNotesPayableNetOfDebtDiscountRelatedParty" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AmortizationOfDebtsDiscountPremium" name="AmortizationOfDebtsDiscountPremium" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_GainLossOnSettlementOfNoteReceivable" name="GainLossOnSettlementOfNoteReceivable" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_OtherIncomeSbaPppLoanForgiveness" name="OtherIncomeSbaPppLoanForgiveness" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_StockIssuedForTrueUpPenaltySharesShares" name="StockIssuedForTrueUpPenaltySharesShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_StockIssuedForTrueUpPenaltySharesAmount" name="StockIssuedForTrueUpPenaltySharesAmount" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WarrantsOptionsGrantedForServices" name="WarrantsOptionsGrantedForServices" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WarrantsExercisedAmount" name="WarrantsExercisedAmount" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CommonStockIssuedForServices" name="CommonStockIssuedForServices" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_TrueUpAndPenaltySharesIssued" name="TrueUpAndPenaltySharesIssued" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_StockWarrantsStockOptionsIssuedForServices" name="StockWarrantsStockOptionsIssuedForServices" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_LossGainOnExtinguishmentOfDebtGainOnSettlementOfDebt" name="LossGainOnExtinguishmentOfDebtGainOnSettlementOfDebt" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_LoanForgivenessSbaPppLoan" name="LoanForgivenessSbaPppLoan" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_BadDebtExpense" name="BadDebtExpense" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_IncreaseDecreaseInDeposit" name="IncreaseDecreaseInDeposit" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CollectionsOnNotesReceivable" name="CollectionsOnNotesReceivable" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ProceedsFromSbaPppLoan" name="ProceedsFromSbaPppLoan" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentPeriodIncreaseDecreaseExcludingExchangeRateEffect" name="CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentPeriodIncreaseDecreaseExcludingExchangeRateEffect" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AccruedInterestIncreasingNotesReceivable" name="AccruedInterestIncreasingNotesReceivable" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DerivativesRecordedAsDebtDiscount" name="DerivativesRecordedAsDebtDiscount" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AcquisitionOfSubsidiaryWithConvertibleNotes" name="AcquisitionOfSubsidiaryWithConvertibleNotes" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionOfDebtAndAccruedInterestToCommonStock" name="ConversionOfDebtAndAccruedInterestToCommonStock" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionOfAccruedSalariesAndAccruedExpensesToConvertibleNotesPayableRelatedParty" name="ConversionOfAccruedSalariesAndAccruedExpensesToConvertibleNotesPayableRelatedParty" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionOfAccruedSalariesAndAccruedExpensesToConvertibleNotesPayable" name="ConversionOfAccruedSalariesAndAccruedExpensesToConvertibleNotesPayable" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_Covid19Loan" name="Covid19Loan" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_LeaseAccounting" name="LeaseAccounting" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_NetIncomeLossPerShare" name="NetIncomeLossPerShare" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ScheduleOfEstimatedLives" name="ScheduleOfEstimatedLives" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DerivativesAndFairValueTableTextBlock" name="DerivativesAndFairValueTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ScheduleOfNotesReceivableTablesTextBlock" name="ScheduleOfNotesReceivableTablesTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ScheduleOfWarrantsToPurchaseOurCommonStock" name="ScheduleOfWarrantsToPurchaseOurCommonStock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_MarketingSoftwareSolutions" name="MarketingSoftwareSolutions" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DilutiveEffectOfConvertibleDebt" name="DilutiveEffectOfConvertibleDebt" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_NetIncomeLossForDilutiveEarningsPerShare" name="NetIncomeLossForDilutiveEarningsPerShare" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_SharesUsedToComputeBasicEarningsPerShare" name="SharesUsedToComputeBasicEarningsPerShare" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DilutiveEffectOfWarrantsAndConvertibleDebt" name="DilutiveEffectOfWarrantsAndConvertibleDebt" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_SharesUsedToComputeDilutiveEarningsPerShare" name="SharesUsedToComputeDilutiveEarningsPerShare" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_BasicEarningsPerShare" name="BasicEarningsPerShare" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DilutedEarningsPerShare" name="DilutedEarningsPerShare" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ResearchAndDevelopmentExpenses" name="ResearchAndDevelopmentExpenses" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_IncomeTaxDescription" name="IncomeTaxDescription" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WorkingCapitalDeficiency" name="WorkingCapitalDeficiency" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DerivativeLiabilityBeginning" name="DerivativeLiabilityBeginning" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_Addition" name="Addition" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DerivativeLiabilityEnding" name="DerivativeLiabilityEnding" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_LessAllowanceForDoubtfulAccounts" name="LessAllowanceForDoubtfulAccounts" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_Total" name="Total" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AllowanceForDoubtfulNotesReceivable" name="AllowanceForDoubtfulNotesReceivable" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_SecuredLoanBalance" name="SecuredLoanBalance" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_OtherSurgeryCenterExpenses" name="OtherSurgeryCenterExpenses" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_GoodwillScoreincComAcquisition" name="GoodwillScoreincComAcquisition" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_TotalLoanForgiveness" name="TotalLoanForgiveness" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ShortTermNonRelatedPartyNotes" name="ShortTermNonRelatedPartyNotes" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CommonStockPerShare" name="CommonStockPerShare" nillable="true" xbrli:periodType="instant" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionDescription" name="ConversionDescription" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_DevelopmentAndTechnologyConsulting" name="DevelopmentAndTechnologyConsulting" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_TotalNotes" name="TotalNotes" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_RestrictedCommonSharesIssued" name="RestrictedCommonSharesIssued" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CommittedSharesThroughDebtConversionFeaturesAndWarrants" name="CommittedSharesThroughDebtConversionFeaturesAndWarrants" nillable="true" xbrli:periodType="instant" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CommitmentsSharesOutOfTheMoneyWarrants" name="CommitmentsSharesOutOfTheMoneyWarrants" nillable="true" xbrli:periodType="instant" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CommonStockSharesCommitted" name="CommonStockSharesCommitted" nillable="true" xbrli:periodType="instant" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_TrueUpAndPenaltySharesIssuedDescription" name="TrueUpAndPenaltySharesIssuedDescription" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionOfOutstandingNotesPayableAmount" name="ConversionOfOutstandingNotesPayableAmount" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionOfOutstandingNotesPayableShares" name="ConversionOfOutstandingNotesPayableShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionPricePerShare" name="ConversionPricePerShare" nillable="true" xbrli:periodType="instant" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CashproceedsFromAccreditedInvestor" name="CashproceedsFromAccreditedInvestor" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AdditionalCommonSharesExercisableissued" name="AdditionalCommonSharesExercisableissued" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionOfNotesPayableOfNonRelatedPartyamount" name="ConversionOfNotesPayableOfNonRelatedPartyamount" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionOfNotesPayableOfNonRelatedPartyShares" name="ConversionOfNotesPayableOfNonRelatedPartyShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ConversionPricepershare" name="ConversionPricepershare" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_FairValueConvertibleNoteWithConversionIntoCommonStock" name="FairValueConvertibleNoteWithConversionIntoCommonStock" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_TotalaggregatePurchasePrice" name="TotalaggregatePurchasePrice" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CashAcquiredInExcessOfPayments" name="CashAcquiredInExcessOfPayments" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_EstimatedFairValuesTotal" name="EstimatedFairValuesTotal" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CompensationServicesDescription" name="CompensationServicesDescription" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_OperatingLossCarryforwardExpireyYear" name="OperatingLossCarryforwardExpireyYear" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_CumulativeEstimatedNetTaxOperatingLoss" name="CumulativeEstimatedNetTaxOperatingLoss" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_NumberOfSharesAbstract" name="NumberOfSharesAbstract" nillable="true" abstract="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_NumberOfSharesOutstandingBeginningBalance" name="NumberOfSharesOutstandingBeginningBalance" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisedInPeriod" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisedInPeriod" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_NumberOfSharesOutstandingEndingBalance" name="NumberOfSharesOutstandingEndingBalance" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageExercisePriceAbstract" name="WeightedAverageExercisePriceAbstract" nillable="true" abstract="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageExercisePriceBeginningBalance" name="WeightedAverageExercisePriceBeginningBalance" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageExercisePriceExercised" name="WeightedAverageExercisePriceExercised" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageExercisePriceExpiredOrCancelled" name="WeightedAverageExercisePriceExpiredOrCancelled" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageExercisePriceEndingBalance" name="WeightedAverageExercisePriceEndingBalance" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageRemainingTermAbstract" name="WeightedAverageRemainingTermAbstract" nillable="true" abstract="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageRemainingTermBeginningBalance" name="WeightedAverageRemainingTermBeginningBalance" nillable="true" xbrli:periodType="duration" type="xbrli:durationItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_WeightedAverageRemainingTermEndingBalance" name="WeightedAverageRemainingTermEndingBalance" nillable="true" xbrli:periodType="duration" type="xbrli:durationItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AggregateIntrinsicValueAbstract" name="AggregateIntrinsicValueAbstract" nillable="true" abstract="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AggregateIntrinsicValueBeginningBalance" name="AggregateIntrinsicValueBeginningBalance" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_AggregateIntrinsicValueEndingBalance" name="AggregateIntrinsicValueEndingBalance" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+  <element id="fssn_RevenuePercentage" name="RevenuePercentage" nillable="true" xbrli:periodType="duration" type="num:percentItemType" substitutionGroup="xbrli:item" />
+  <element name="BridgeLoansMember" id="fssn_BridgeLoansMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ContinuityLogicMember" id="fssn_ContinuityLogicMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ContinuityLogicLLCMember" id="fssn_ContinuityLogicLLCMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ConstructionInProcessMember" id="fssn_ConstructionInProcessMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="AmortizationMember" id="fssn_AmortizationMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ComputerAndOfficeEquipmentMember" id="fssn_ComputerAndOfficeEquipmentMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="DuringAugustTwoThousandNinteenMember" id="fssn_DuringAugustTwoThousandNinteenMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ConvertibleAndNonConvertibleNotesPayableMember" id="fssn_ConvertibleAndNonConvertibleNotesPayableMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="RelatedPartyNotesMember" id="fssn_RelatedPartyNotesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="NonConvertibleNotesPayableMember" id="fssn_NonConvertibleNotesPayableMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="AprilTwentyTwentyMember" id="fssn_AprilTwentyTwentyMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="SmallBusinessAdministrationMember" id="fssn_SmallBusinessAdministrationMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="LongtermloanMember" id="fssn_LongtermloanMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="PayrollProtectionProgramMember" id="fssn_PayrollProtectionProgramMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="DuringJulyAugustTwentyTwentyMember" id="fssn_DuringJulyAugustTwentyTwentyMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ConvertibleNotesMember" id="fssn_ConvertibleNotesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="CMSMember" id="fssn_CMSMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="MGAHoldingMember" id="fssn_MGAHoldingMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="IgnitionCapitalLLCMember" id="fssn_IgnitionCapitalLLCMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="NoteholdersMember" id="fssn_NoteholdersMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="CapitalMarketSolutionsLlcMember" id="fssn_CapitalMarketSolutionsLlcMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="DirectorsMember" id="fssn_DirectorsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="AggregatePurchasePriceMember" id="fssn_AggregatePurchasePriceMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="EstimatedFairValuesMember" id="fssn_EstimatedFairValuesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="IntangibleAssetsMember" id="fssn_IntangibleAssetsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="IntangibleAssetsPermitsMember" id="fssn_IntangibleAssetsPermitsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="IntangibleAssetsWebsitesMember" id="fssn_IntangibleAssetsWebsitesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="IntangibleAssetsPartnerAgreementMember" id="fssn_IntangibleAssetsPartnerAgreementMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="IntangibleAssetsTradeNamesMember" id="fssn_IntangibleAssetsTradeNamesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ProFormaCombinedMember" id="fssn_ProFormaCombinedMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="DevelopedTechnologyMember" id="fssn_DevelopedTechnologyMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="PermitsMember" id="fssn_PermitsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="WebsiteMember" id="fssn_WebsiteMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="PartnerAgreementMember" id="fssn_PartnerAgreementMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="TradeNameMember" id="fssn_TradeNameMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="CapitalMarketSolutionsMember" id="fssn_CapitalMarketSolutionsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="FourDirectorMember" id="fssn_FourDirectorMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="JohnBodeMember" id="fssn_JohnBodeMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="MichaelBrownrMember" id="fssn_MichaelBrownrMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="WilliamGerhauserMember" id="fssn_WilliamGerhauserMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="GregNagelMember" id="fssn_GregNagelMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="AprilTwoZeroTwoOneMember" id="fssn_AprilTwoZeroTwoOneMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ExerciseOfWarrantsMember" id="fssn_ExerciseOfWarrantsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="PsaFisionCorporationMember" id="fssn_PsaFisionCorporationMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="JoshuaCarmonaMember" id="fssn_JoshuaCarmonaMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="SeniorSecuredPromissoryNoteMember" id="fssn_SeniorSecuredPromissoryNoteMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="InTwoZeroOneNineMember" id="fssn_InTwoZeroOneNineMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="CapitalMarketSolutionsLLCMember" id="fssn_CapitalMarketSolutionsLLCMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ScoreinccomMember" id="fssn_ScoreinccomMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="AprilTwoThousandTwentyMember" id="fssn_AprilTwoThousandTwentyMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="PayrollProtectionProgramPPPMember" id="fssn_PayrollProtectionProgramPPPMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="ThreeCustomersMember" id="fssn_ThreeCustomersMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="TwoCustomersMember" id="fssn_TwoCustomersMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="OneCustomersMember" id="fssn_OneCustomersMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="AccreditedInvestorsMember" id="fssn_AccreditedInvestorsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="DuringJulyTwentyTwentyMember" id="fssn_DuringJulyTwentyTwentyMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="GarryLowenthalMember" id="fssn_GarryLowenthalMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="FebruaryTwentyTwentyMember" id="fssn_FebruaryTwentyTwentyMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="PowerUpLendingGroupMember" id="fssn_PowerUpLendingGroupMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="IgnitionCapitalMember" id="fssn_IgnitionCapitalMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="MGAHoldingsMember" id="fssn_MGAHoldingsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+  <element name="TrueupandpenaltysharesMember" id="fssn_TrueupandpenaltysharesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+</schema>

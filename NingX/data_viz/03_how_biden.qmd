@@ -1,0 +1,199 @@
+---
+title: "Presidential Approval Ratings (1969-2021)"
+format: 
+  html:
+    theme: default
+    echo: false
+---
+
+```{ojs}
+// Import required Plot library with tip mark
+import {Plot} from "@observablehq/plot"
+
+// Restructure data to group approval and disapproval by month
+presidents = [
+  {
+    name: "Donald Trump",
+    years: "2017-2021",
+    party: "Republican",
+    data: [
+      { month: 0, approval: 45, disapproval: 41 },
+      { month: 12, approval: 38, disapproval: 42 },
+      { month: 24, approval: 40, disapproval: 43 },
+      { month: 36, approval: 42, disapproval: 44 },
+      { month: 48, approval: 39, disapproval: 45 }
+    ]
+  },
+  {
+    name: "Barack Obama",
+    years: "2009-17",
+    party: "Democratic",
+    data: [
+      { month: 0, approval: 65, disapproval: 35 },
+      { month: 12, approval: 47, disapproval: 45 },
+      { month: 24, approval: 45, disapproval: 47 },
+      { month: 36, approval: 48, disapproval: 46 },
+      { month: 48, approval: 50, disapproval: 45 }
+    ]
+  },
+  {
+    name: "George W. Bush",
+    years: "2001-09",
+    party: "Republican",
+    data: [
+      { month: 0, approval: 50, disapproval: 40 },
+      { month: 12, approval: 80, disapproval: 35 },
+      { month: 24, approval: 65, disapproval: 40 },
+      { month: 36, approval: 45, disapproval: 42 },
+      { month: 48, approval: 48, disapproval: 45 }
+    ]
+  }
+]
+
+// Convert data for plotting
+function convertData(presidentData) {
+  const result = [];
+  presidentData.forEach(d => {
+    result.push({ month: d.month, type: "approval", value: d.approval });
+    result.push({ month: d.month, type: "disapproval", value: d.disapproval });
+  });
+  return result;
+}
+
+viewof partyFilter = Inputs.select(
+  ["All", "Democratic", "Republican"],
+  {value: "All", label: "Party Filter"}
+)
+
+viewof selectedPresident = Inputs.select(
+  presidents
+    .filter(p => partyFilter === "All" || p.party === partyFilter)
+    .map(p => p.name),
+  {value: presidents[0].name, label: "Select President"}
+)
+
+viewof showPoints = Inputs.toggle({label: "Show Data Points", value: true})
+
+stats = {
+  const president = presidents.find(p => p.name === selectedPresident);
+  const data = president.data;
+  
+  return {
+    avgApproval: d3.mean(data, d => d.approval).toFixed(1),
+    avgDisapproval: d3.mean(data, d => d.disapproval).toFixed(1),
+    maxApproval: d3.max(data, d => d.approval),
+    minApproval: d3.min(data, d => d.approval)
+  }
+}
+
+{
+  const president = presidents.find(p => p.name === selectedPresident);
+  const plotData = convertData(president.data);
+  
+  const tooltipContent = (d) => {
+    const monthData = president.data.find(pd => pd.month === d.month);
+    return `Year ${Math.floor(d.month/12)}
+Approval: ${monthData.approval}%
+Disapproval: ${monthData.disapproval}%`;
+  };
+  
+  return Plot.plot({
+    width: 800,
+    height: 400,
+    margin: 60,
+    style: {
+      backgroundColor: "white",
+      fontSize: 12
+    },
+    y: {
+      domain: [20, 80],
+      grid: true,
+      label: "Rating (%)",
+      tickFormat: d => d + "%"
+    },
+    x: {
+      domain: [0, 48],
+      grid: true,
+      label: "Years in Office",
+      ticks: [0, 12, 24, 36, 48],
+      tickFormat: d => Math.floor(d/12)
+    },
+    color: {
+      domain: ["approval", "disapproval"],
+      range: ["black", "#4CAF50"],
+      legend: true
+    },
+    marks: [
+      Plot.ruleY([50], {stroke: "#ccc", strokeDasharray: "4,4"}),
+      Plot.line(plotData, {
+        x: "month",
+        y: "value",
+        stroke: "type",
+        strokeWidth: 2
+      }),
+      showPoints ? [
+        Plot.dot(plotData, {
+          x: "month",
+          y: "value",
+          stroke: "type",
+          fill: "white",
+          r: 4
+        }),
+        Plot.tip(president.data, Plot.pointer({
+          x: "month",
+          y: d => (d.approval + d.disapproval) / 2,  // Center the tooltip between approval and disapproval
+          title: tooltipContent,
+          fontSize: 12
+        }))
+      ] : null
+    ],
+    title: `${president.name} (${president.years}) - ${president.party}`
+  })
+}
+
+md`
+### Key Statistics for ${selectedPresident}
+- Average Approval: ${stats.avgApproval}%
+- Average Disapproval: ${stats.avgDisapproval}%
+- Highest Approval: ${stats.maxApproval}%
+- Lowest Approval: ${stats.minApproval}%
+`
+
+html`
+<style>
+.plot {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+select, input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.stats {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.plot-tooltip {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  font-size: 14px;
+  white-space: pre-line;
+}
+</style>
+`
+```

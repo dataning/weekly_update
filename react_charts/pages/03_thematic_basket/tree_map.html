@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&P 500 Companies Treemap</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/treemap.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <style>
+        body {
+            background-color: #1a1d25;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .instructions {
+            background-color: #252931;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        #container {
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="instructions">
+            <h2>S&P 500 Companies Treemap</h2>
+            <p>This visualization shows S&P 500 companies grouped by sector and industry. The size of each block represents market capitalization, while the color indicates 1-month performance.</p>
+            <p>Click on a sector to drill down and see individual companies.</p>
+        </div>
+        <div id="container"></div>
+    </div>
+
+    <script>
+    // This is where you would load your JSON data from the Python-generated file
+    // For the purpose of this example, we'll create a function to load the data
+    
+    const loadJSONData = async () => {
+        try {
+            // In a real implementation, you would fetch your Python-generated file:
+            // const response = await fetch('sp500_treemap_data.json');
+            // const data = await response.json();
+            
+            // For demo purposes, we'll use a small sample of data inline:
+            const data = [
+                {
+                    "id": "Technology",
+                    "name": "Technology",
+                    "custom": {"fullName": "Technology"}
+                },
+                {
+                    "id": "Financial",
+                    "name": "Financial",
+                    "custom": {"fullName": "Financial"}
+                },
+                {
+                    "id": "Consumer Cyclical",
+                    "name": "Consumer Cyclical",
+                    "custom": {"fullName": "Consumer Cyclical"}
+                },
+                {
+                    "id": "Application Software",
+                    "name": "Application Software",
+                    "parent": "Technology",
+                    "custom": {"fullName": "Application Software"}
+                },
+                {
+                    "id": "Semiconductors",
+                    "name": "Semiconductors",
+                    "parent": "Technology",
+                    "custom": {"fullName": "Semiconductors"}
+                },
+                {
+                    "name": "MSFT",
+                    "id": "MSFT",
+                    "value": 3000000000000,
+                    "parent": "Application Software",
+                    "colorValue": 8.45,
+                    "custom": {
+                        "fullName": "Microsoft Corp",
+                        "performance": "+8.45%"
+                    }
+                },
+                {
+                    "name": "AAPL",
+                    "id": "AAPL",
+                    "value": 2800000000000,
+                    "parent": "Technology Hardware, Storage & Peripherals",
+                    "colorValue": -2.34,
+                    "custom": {
+                        "fullName": "Apple Inc",
+                        "performance": "-2.34%"
+                    }
+                },
+                {
+                    "name": "NVDA",
+                    "id": "NVDA",
+                    "value": 1500000000000,
+                    "parent": "Semiconductors",
+                    "colorValue": 12.67,
+                    "custom": {
+                        "fullName": "NVIDIA Corp",
+                        "performance": "+12.67%"
+                    }
+                }
+                // In a real implementation, this would be all your data points
+            ];
+            
+            renderChart(data);
+        } catch (error) {
+            console.error('Error loading data:', error);
+        }
+    };
+
+    const renderChart = data => {
+        Highcharts.chart('container', {
+            chart: {
+                backgroundColor: '#252931'
+            },
+            series: [{
+                name: 'All',
+                type: 'treemap',
+                layoutAlgorithm: 'squarified',
+                allowDrillToNode: true,
+                animationLimit: 1000,
+                borderColor: '#252931',
+                color: '#252931',
+                opacity: 0.01,
+                nodeSizeBy: 'leaf',
+                dataLabels: {
+                    enabled: false,
+                    allowOverlap: true,
+                    style: {
+                        fontSize: '0.9em',
+                        textOutline: 'none'
+                    }
+                },
+                levels: [{
+                    level: 1,
+                    dataLabels: {
+                        enabled: true,
+                        headers: true,
+                        align: 'left',
+                        style: {
+                            fontWeight: 'bold',
+                            fontSize: '0.7em',
+                            lineClamp: 1,
+                            textTransform: 'uppercase'
+                        },
+                        padding: 3
+                    },
+                    borderWidth: 3,
+                    levelIsConstant: false
+                }, {
+                    level: 2,
+                    dataLabels: {
+                        enabled: true,
+                        headers: true,
+                        align: 'center',
+                        shape: 'callout',
+                        backgroundColor: 'gray',
+                        borderWidth: 1,
+                        borderColor: '#252931',
+                        padding: 0,
+                        style: {
+                            color: 'white',
+                            fontWeight: 'normal',
+                            fontSize: '0.6em',
+                            lineClamp: 1,
+                            textOutline: 'none',
+                            textTransform: 'uppercase'
+                        }
+                    },
+                    groupPadding: 1
+
+                // The companies
+                }, {
+                    level: 3,
+                    dataLabels: {
+                        enabled: true,
+                        align: 'center',
+                        format: '{point.name}<br><span style="font-size: 0.7em">' +
+                            '{point.custom.performance}</span>',
+                        style: {
+                            color: 'white'
+                        }
+                    }
+                }],
+                accessibility: {
+                    exposeAsGroupOnly: true
+                },
+                breadcrumbs: {
+                    buttonTheme: {
+                        style: {
+                            color: 'silver'
+                        },
+                        states: {
+                            hover: {
+                                fill: '#333'
+                            },
+                            select: {
+                                style: {
+                                    color: 'white'
+                                }
+                            }
+                        }
+                    }
+                },
+                data
+            }],
+            title: {
+                text: 'S&P 500 Companies',
+                align: 'left',
+                style: {
+                    color: 'white'
+                }
+            },
+            subtitle: {
+                text: 'Click points to drill down.',
+                align: 'left',
+                style: {
+                    color: 'silver'
+                }
+            },
+            tooltip: {
+                followPointer: true,
+                outside: true,
+                headerFormat: '<span style="font-size: 0.9em">' +
+                    '{point.custom.fullName}</span><br/>',
+                pointFormat: '<b>Market Cap:</b>' +
+                    ' USD {(divide point.value 1000000000):.1f} bln<br/>' +
+                    '{#if point.custom.performance}' +
+                    '<b>1 month performance:</b> {point.custom.performance}{/if}'
+            },
+            colorAxis: {
+                minColor: '#f73539',
+                maxColor: '#2ecc59',
+                stops: [
+                    [0, '#f73539'],
+                    [0.5, '#414555'],
+                    [1, '#2ecc59']
+                ],
+                min: -10,
+                max: 10,
+                gridLineWidth: 0,
+                labels: {
+                    overflow: 'allow',
+                    format: '{#gt value 0}+{value}{else}{value}{/gt}%',
+                    style: {
+                        color: 'white'
+                    }
+                }
+            },
+            legend: {
+                itemStyle: {
+                    color: 'white'
+                }
+            },
+            exporting: {
+                sourceWidth: 1200,
+                sourceHeight: 800,
+                buttons: {
+                    fullscreen: {
+                        text: '<i class="fa fa-arrows-alt"></i> Fullscreen',
+                        onclick: function () {
+                            this.fullscreen.toggle();
+                        }
+                    },
+                    contextButton: {
+                        menuItems: [
+                            'downloadPNG',
+                            'downloadJPEG',
+                            'downloadPDF',
+                            'downloadSVG'
+                        ],
+                        text: '<i class="fa fa-share-alt"></i> Export',
+                        symbol: void 0,
+                        y: -2
+                    }
+                }
+            },
+            navigation: {
+                buttonOptions: {
+                    theme: {
+                        fill: '#252931',
+                        style: {
+                            color: 'silver',
+                            whiteSpace: 'nowrap'
+                        },
+                        states: {
+                            hover: {
+                                fill: '#333',
+                                style: {
+                                    color: 'white'
+                                }
+                            }
+                        }
+                    },
+                    symbolStroke: 'silver',
+                    useHTML: true,
+                    y: -2
+                }
+            }
+        });
+    };
+
+    // Plugin for relative font size
+    Highcharts.addEvent(Highcharts.Series, 'drawDataLabels', function () {
+        if (this.type === 'treemap') {
+            this.points.forEach(point => {
+
+                // Color the level 2 headers with the combined performance of
+                // its children
+                if (point.node.level === 2 && Number.isFinite(point.value)) {
+                    const previousValue = point.node.children
+                        .reduce(
+                            (acc, child) => acc + (child.point.value || 0) -
+                            (child.point.value || 0) *
+                            (child.point.colorValue || 0) / 100,
+                            0
+                        );
+
+                    // Percentage change from previous value to point.value
+                    const perf = 100 * (point.value - previousValue) /
+                        (previousValue || 1);
+
+                    point.custom = {
+                        performance: (perf < 0 ? '' : '+') +
+                            perf.toFixed(2) + '%'
+                    };
+
+                    if (point.dlOptions) {
+                        point.dlOptions.backgroundColor = this.colorAxis
+                            .toColor(perf);
+                    }
+                }
+
+                // Set font size based on area of the point
+                if (point.node.level === 3 && point.shapeArgs) {
+                    const area = point.shapeArgs.width * point.shapeArgs.height;
+                    point.dlOptions.style.fontSize =
+                        `${Math.min(32, 7 + Math.round(area * 0.0008))}px`;
+                }
+            });
+        }
+    });
+
+    // Start the application
+    document.addEventListener('DOMContentLoaded', loadJSONData);
+    </script>
+</body>
+</html>

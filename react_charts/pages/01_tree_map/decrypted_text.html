@@ -1,0 +1,34 @@
+<!-- grid_lite_example.html -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highcharts/grid-lite/css/grid.css">
+<script src="https://cdn.jsdelivr.net/npm/@highcharts/grid-lite/grid-lite.js"></script>
+
+<style>
+  /* Container styling */
+  #container {
+    margin: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  /* Opacity‑theme variables for subtle hover states */
+  .opacity-theme {
+    /* row hover */
+    --hcg-row-hover-background: rgba(0, 0, 0, 0.04);
+    /* header hover */
+    --hcg-header-row-hover-background: rgba(0, 0, 0, 0.06);
+    /* cell hover */
+    --hcg-cell-hovered-background: rgba(0, 0, 0, 0.04);
+  }
+</style>
+
+<div id="container" style="height:500px; width:100%;"></div>
+
+<!-- Our JS module -->
+<script>
+  {{ GRID_LITE_JS }}
+</script>
+
+<script>
+  const tableData = {{ DATA_JSON }};
+  initGrid(tableData);
+</script>

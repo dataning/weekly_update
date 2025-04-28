@@ -1,0 +1,894 @@
+---
+title: How unpopular is Joe Biden?
+date: last-modified
+author: Your Name Here
+format: 
+  html:
+    echo: false
+    embed-resources: true # Ensures all resources are embedded in the HTML
+    include-in-header:    # Loads required JavaScript libraries for Highcharts
+        - text: |
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.2.0/highcharts.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.2.0/highcharts-more.js"></script>
+            <script src="https://code.highcharts.com/modules/grid-axis.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.2.0/modules/exporting.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.2.0/modules/offline-exporting.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.2.0/modules/export-data.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.2.0/modules/accessibility.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.10.3/Recharts.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+execute:
+    allow: true          # Enables Python code execution
+---
+
+```{python}
+#| echo: false
+#| output: asis
+
+import polars as pl
+import json
+
+def process_data(df):
+
+    # Convert date strings to timestamps
+    # Note: Polars handles dates natively and more efficiently
+    df = df.with_columns(
+        pl.col('Date').str.strptime(pl.Date, format='%Y-%m').alias('date')
+    ).with_columns(
+        (pl.col('date').cast(pl.Int64) * 1_000).alias('timestamp')
+    )
+    
+    # Create separate dataframes for each type and convert to lists
+    def get_type_data(type_name):
+        return (df
+                .filter(pl.col('Type') == type_name)
+                .select(['timestamp', 'Value'])
+                .rows())
+    
+    chart_data = {
+        'approve': sorted(get_type_data('approve')),
+        'disapprove': sorted(get_type_data('disapprove')),
+        'approveVariance': sorted(get_type_data('approve_var')),
+        'disapproveVariance': sorted(get_type_data('disapprove_var'))
+    }
+    
+    return chart_data
+
+# Read the CSV file
+df = pl.read_csv('approval_data.csv')
+
+# Process and convert to JSON
+chart_data = process_data(df)
+
+# Convert the data to JSON format for use in JavaScript
+chart_data_json = json.dumps(chart_data)
+
+# Insert the data into the JavaScript environment
+print(f"<script>const chartData = {chart_data_json};</script>")
+```
+
+## First chapter
+
+```{=html}
+<!-- Styling Section -->
+<!-- Modify these styles to change the chart's container appearance -->
+<style>
+    .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        width: 95%;        /* Controls the width relative to the container */
+        margin: 0 auto;    /* Centers the card horizontally */
+        padding: 24px;     /* Creates space around the chart */
+    }
+    #chart {
+        width: 100%;       /* Makes the chart fill its container */
+        min-height: 600px; /* Sets a minimum height for the chart */
+        margin: 0 auto;
+    }
+</style>
+
+<!-- Chart Container -->
+<div class="card">
+    <div id="chart"></div>
+</div>
+
+<!-- -------------------------------------------------------------------------- -->
+<!--                            Chart Implementation                            -->
+<!-- -------------------------------------------------------------------------- -->
+
+<script>
+// Wait for the document to load before creating the chart
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Highcharts Configuration
+    // This section controls all aspects of the chart's appearance and behavior
+    Highcharts.chart('chart', {
+
+        // Basic chart settings
+        // ========================================================================
+        // Modify these to change the overall chart appearance
+        chart: {
+            type: 'line',
+            animation: { duration: 1500 },
+            spacing: [30, 50, 30, 50], // [top, right, bottom, left]
+            marginTop: 60,
+            marginBottom: 150,
+            width: null,    // null allows responsive sizing
+            height: 600     // fixed height in pixels
+        },
+        
+        // Title settings
+        // Modify text, color, and positioning here
+        title: {
+            useHTML: true,
+            text: 'How <span style="color: #008000">unpopular</span> is Joe Biden?',
+            align: 'center',
+            margin: 0,
+            y: -10,
+            style: {
+                fontSize: '20px',
+                fontWeight: '600',
+                color: '#000000' 
+            }
+        },
+
+        // Subtitle settings
+        subtitle: {
+            text: '95% OF POLLS PROJECTED TO FALL IN THIS RANGE',
+            align: 'center',
+            y: 15,
+            style: {
+                color: '#666666',
+                fontSize: '14px'
+            }
+        },
+
+        // Export menu settings
+        // Customize the export options and appearance
+        exporting: {
+            enabled: true,
+            fallbackToExportServer: false,
+            sourceWidth: 1200,
+            sourceHeight: 800,
+            scale: 2,
+            chartOptions: {
+                chart: {
+                    spacing: [50, 50, 50, 50],
+                    marginTop: 80,
+                    marginBottom: 170,
+                    backgroundColor: '#ffffff'
+                },
+                xAxis: { labels: { y: 30 } },
+                title: {
+                    margin: 60,
+                    style: { fontSize: '24px' }
+                },
+                subtitle: {
+                    style: { fontSize: '16px' }
+                },
+                legend: {
+                    y: 10,
+                    margin: 50
+                }
+            },
+            buttons: {
+                contextButton: {
+                    menuItems: ['downloadPNG', 'downloadJPEG', 'downloadPDF', 'downloadSVG', 
+                            'separator', 'downloadCSV', 'downloadXLS']
+                }
+            }
+        },
+
+        // Legend settings
+        // Modify position, symbols, and spacing
+        legend: {
+            align: 'center',
+            verticalAlign: 'bottom',
+            layout: 'horizontal',
+            itemStyle: {
+                color: '#666',
+                fontWeight: '500',
+                fontFamily: 'Inter, sans-serif'
+            },
+            symbolWidth: 24,
+            symbolHeight: 2,
+            symbolRadius: 0,
+            y: 20,
+            padding: 12,
+            itemMarginTop: 10,
+            margin: 50
+        },
+
+        // X-axis settings
+        // Customize date display and grid lines
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                format: '{value:%b %Y}',
+                rotation: -45,
+                y: 30,
+                style: {
+                    fontFamily: 'JetBrains Mono, monospace',
+                    fontSize: '12px',
+                    color: '#666'
+                }
+            },
+            tickmarkPlacement: 'on',
+            gridLineWidth: 1,
+            // gridLineColor: 'rgba(0,0,0,0.05)',
+            gridLineDashStyle: 'dot',
+            gridLineColor: '#b7b8bc'  // Light gray color
+        },
+
+        // Y-axis settings
+        // Modify range, labels, and title
+        yAxis: {
+            title: {
+                text: 'Approval Rating (%)',
+                align: 'high',
+                rotation: 270,
+                y: 200,
+                x: 0,
+                style: {
+                    color: '#666666',
+                    fontSize: '14px',
+                    fontFamily: 'Inter, sans-serif'
+                }
+            },
+            labels: {
+                format: '{value}%',
+                style: {
+                    fontFamily: 'JetBrains Mono, monospace',
+                    fontSize: '12px',
+                    color: '#666'
+                }
+            },
+            min: 20,
+            max: 80,
+            gridLineWidth: 1,
+            // gridLineColor: 'rgba(0,0,0,0.05)',
+            gridLineDashStyle: 'dot',
+            gridLineColor: '#b7b8bc'  // Light gray color
+        },
+
+        // Tooltip configuration
+        // Customize the hover information display
+        tooltip: {
+            shared: true,
+            crosshairs: true,
+            useHTML: true,
+            formatter: function() {
+                const date = Highcharts.dateFormat('%B %Y', this.x);
+                let approveValue, disapproveValue;
+                
+                this.points.forEach(point => {
+                    if (point.series.name === 'Approve') {
+                        approveValue = point.y;
+                    } else if (point.series.name === 'Disapprove') {
+                        disapproveValue = point.y;
+                    }
+                });
+
+                const difference = approveValue - disapproveValue;
+                const differenceText = difference > 0 ? 
+                    `Approve +${difference.toFixed(1)}%` : 
+                    `Disapprove ${(-difference).toFixed(1)}%`;
+                const differenceColor = difference > 0 ? '#059669' : '#EC4899';
+
+                return `
+                    <div style="font-family: 'Inter', sans-serif;">
+                        <div style="font-size: 0.9em; color: #666; margin-bottom: 8px;">${date}</div>
+                        <div style="font-family: 'JetBrains Mono', monospace; margin-bottom: 4px;">
+                            <span style="color: #059669">●</span> Approve: 
+                            <b>${approveValue?.toFixed(1)}%</b>
+                        </div>
+                        <div style="font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;">
+                            <span style="color: #EC4899">●</span> Disapprove: 
+                            <b>${disapproveValue?.toFixed(1)}%</b>
+                        </div>
+                        <div style="padding-top: 8px; border-top: 1px solid #eee; font-family: 'JetBrains Mono', monospace;">
+                            <span style="color: ${differenceColor}; font-weight: 500">
+                                ${differenceText}
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }
+        },
+        plotOptions: {
+            series: {
+                animation: { duration: 1500 }
+            },
+            line: {
+                marker: {
+                    enabled: false,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            radius: 5
+                        }
+                    }
+                },
+                states: {
+                    hover: { lineWidth: 3 }
+                }
+            }
+        },
+
+        // Series configuration
+        // Define the data series and their appearance
+        series: [{
+            name: 'Approve',
+            data: chartData.approve,
+            color: '#059669',
+            zIndex: 2,
+            lineWidth: 2
+        }, {
+            name: 'Disapprove',
+            data: chartData.disapprove,
+            color: '#EC4899',
+            zIndex: 2,
+            lineWidth: 2
+        }, {
+            name: 'Approve Variance',
+            type: 'scatter',
+            data: chartData.approveVariance,
+            color: '#059669',
+            opacity: 0.15,
+            enableMouseTracking: false,
+            showInLegend: false,
+            zIndex: 1
+        }, {
+            name: 'Disapprove Variance',
+            type: 'scatter',
+            data: chartData.disapproveVariance,
+            color: '#EC4899',
+            opacity: 0.15,
+            enableMouseTracking: false,
+            showInLegend: false,
+            zIndex: 1
+        }],
+        credits: {
+            enabled: false
+        }
+    });
+});
+</script>
+```
+
+
+## Second chapter
+
+```{python}
+#| echo: false
+#| output: asis
+
+import polars as pl
+import json
+
+def process_presidential_data(df):
+    # Get unique presidents
+    unique_presidents = df.select('president').unique().to_series().to_list()
+    presidents_data = []
+    
+    for president in unique_presidents:
+        # Filter data for current president
+        president_df = df.filter(pl.col('president') == president)
+        
+        # Get the first row's years value for this president
+        years = president_df.select('years').row(0)[0]
+        
+        # Get values in order of year_in_term
+        sorted_df = president_df.sort('year_in_term')
+        approval_values = sorted_df.select('approval').to_series().to_list()
+        disapproval_values = sorted_df.select('disapproval').to_series().to_list()
+        change_status_values = sorted_df.select('change_status').to_series().to_list()
+        
+        # Create range data for the area between lines
+        range_data = [[apr, dis] for apr, dis in zip(approval_values, disapproval_values)]
+        
+        # Create clean ID from president name
+        clean_id = president.lower().replace(' ', '').replace('.', '')
+        
+        president_data = {
+            'id': clean_id,
+            'name': president,
+            'years': years,
+            'approval': approval_values,
+            'disapproval': disapproval_values,
+            'range': range_data,
+            'change_status': change_status_values
+        }
+        presidents_data.append(president_data)
+    
+    return presidents_data
+
+# Read and process the data
+df = pl.read_csv('presidential_approval.csv')
+
+df_with_diff = df.with_columns([
+    pl.struct(['approval', 'disapproval'])
+    .map_elements(
+        lambda x: 
+            f"Approval +{x['approval'] - x['disapproval']}%" 
+            if x['approval'] > x['disapproval']
+            else f"Disapproval +{x['disapproval'] - x['approval']}%",
+        return_dtype=pl.Utf8  # Specify return type as string
+    ).alias('change_status')
+])
+
+df_with_diff = df_with_diff.sort(['president', 'year_in_term'])
+
+chart_data = process_presidential_data(df_with_diff)
+
+# Convert to JSON and output as JavaScript
+print("<script>")
+print(f"const multi_chartData = {json.dumps(chart_data)};")
+print("</script>")
+```
+
+```{=html}
+<div style="padding: 20px;">
+    <div id="export-container" style="background-color: white;">
+        <!-- Title section -->
+        <div style="text-align: center; padding: 20px 0 30px 0;">
+            <h1 style="margin: 0; font-size: 2em; color: #333;">Presidential Approval Ratings</h1>
+            <p style="margin: 10px 0 0 0; font-size: 1.1em; color: #666;">Tracking Presidential Performance Through the Years</p>
+        </div>
+        
+        <!-- Charts grid -->
+        <div id="chartsContainer" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div id="donaldtrump" style="min-width: 300px;"></div>
+            <div id="barackobama" style="min-width: 300px;"></div>
+            <div id="georgewbush" style="min-width: 300px;"></div>
+            <div id="billclinton" style="min-width: 300px;"></div>
+            <div id="georgehwbush" style="min-width: 300px;"></div>
+            <div id="ronaldreagan" style="min-width: 300px;"></div>
+            <div id="jimmycarter" style="min-width: 300px;"></div>
+            <div id="geraldford" style="min-width: 300px;"></div>
+            <div id="richardnixon" style="min-width: 300px;"></div>
+        </div>
+    </div>
+    
+    <!-- Button container -->
+    <div style="text-align: center; padding: 20px;">
+        <button onclick="exportCharts()" id="export-button" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            Export as PNG
+        </button>
+    </div>
+</div>
+
+<script>
+// Add event listener to the export button
+document.getElementById('export-button').addEventListener('click', exportCharts);
+
+function exportCharts() {
+    const container = document.getElementById('export-container');
+    
+    html2canvas(container, {
+        backgroundColor: 'white',
+        scale: 2, // Increase quality
+        logging: true,
+        onclone: function(clonedDoc) {
+            // Any modifications to the cloned document before capture
+        }
+    }).then(canvas => {
+        // Convert canvas to PNG and trigger download
+        const link = document.createElement('a');
+        link.download = 'presidential_approval_charts.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
+}
+
+// Store all chart instances
+const charts = [];
+
+// Synchronize hovering across charts
+function syncHover(e) {
+    const event = {
+        xAxis: [{
+            value: e.target.x,
+            axis: e.target.series.xAxis
+        }],
+        chartX: e.target.series.chart.xAxis[0].toPixels(e.target.x),
+        chartY: e.target.series.chart.yAxis[0].toPixels(e.target.y)
+    };
+
+    charts.forEach(function(chart) {
+        chart.tooltip.refresh([
+            chart.series[0].points[e.target.x],
+            chart.series[1].points[e.target.x]
+        ]);
+    });
+}
+
+// Handle mouseout with complete reset
+function syncMouseOut(e) {
+    charts.forEach(function(chart) {
+        chart.tooltip.hide();
+        chart.series.forEach(series => {
+            series.points.forEach(point => {
+                point.setState('');
+            });
+        });
+    });
+}
+
+// Create charts
+document.addEventListener('DOMContentLoaded', function() {
+    multi_chartData.forEach(president => {        
+        const chart = Highcharts.chart(president.id, {
+            exporting: { enabled: false },
+            title: {
+                text: `${president.name}<br><span style="font-size: 12px; color: #666;">${president.years}</span>`,
+                useHTML: true
+            },
+            yAxis: {
+                title: { text: 'Rating (%)' },
+                min: 20,
+                max: 80,
+                gridLineWidth: 1
+            },
+            xAxis: {
+                title: { text: 'Years' },
+                categories: ['0', '1', '2', '3', '4'],
+                gridLineWidth: 1
+            },
+            legend: {
+                align: 'center',
+                verticalAlign: 'bottom'
+            },
+            plotOptions: {
+                series: {
+                    stickyTracking: false,
+                    marker: {
+                        enabled: false,
+                        radius: 3
+                    },
+                    point: {
+                        events: {
+                            mouseOver: syncHover,
+                            mouseOut: syncMouseOut
+                        }
+                    },
+                    states: {
+                        inactive: {
+                            opacity: 1 // Keep full opacity when other series are hovered
+                        }
+                    }
+                },
+                spline: {
+                    tension: 0.4,
+                    step: false
+                },
+                areasplinerange: {
+                    fillOpacity: 0.1,
+                    lineWidth: 0,
+                    marker: {
+                        enabled: false
+                    },
+                    enableMouseTracking: false,
+                    states: {
+                        hover: {
+                            enabled: false
+                        },
+                        inactive: {
+                            opacity: 1 // Keep the area visible even when inactive
+                        }
+                    }
+                }
+            },
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                useHTML: true,
+                formatter: function() {
+                    let approveValue, disapproveValue;
+                    this.points.forEach(point => {
+                        if (point.series.name === 'Approval') {
+                            approveValue = point.y;
+                        } else if (point.series.name === 'Disapproval') {
+                            disapproveValue = point.y;
+                        }
+                    });
+                    
+                    const difference = approveValue - disapproveValue;
+                    const differenceText = difference > 0 ?
+                        `Approval +${difference.toFixed(1)}%` :
+                        `Disapproval +${(-difference).toFixed(1)}%`;
+                    const differenceColor = difference > 0 ? '#059669' : '#EC4899';
+                    
+                    return `
+                        <div style="font-family: sans-serif;">
+                            <div style="font-size: 0.9em; color: #666; margin-bottom: 8px;">Year ${this.x}</div>
+                            <div style="margin-bottom: 4px;">
+                                <span style="color: #059669">●</span> Approval:
+                                <b>${approveValue?.toFixed(1)}%</b>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <span style="color: #EC4899">●</span> Disapproval:
+                                <b>${disapproveValue?.toFixed(1)}%</b>
+                            </div>
+                            <div style="padding-top: 8px; border-top: 1px solid #eee;">
+                                <span style="color: ${differenceColor}; font-weight: 500">
+                                    ${differenceText}
+                                </span>
+                            </div>
+                        </div>
+                    `;
+                }
+            },
+            series: [{
+                name: 'Approval',
+                type: 'spline',
+                data: president.approval,
+                color: '#059669',
+                lineWidth: 2,
+                zIndex: 2
+            }, {
+                name: 'Disapproval',
+                type: 'spline',
+                data: president.disapproval,
+                color: '#EC4899',
+                lineWidth: 2,
+                zIndex: 2
+            }, {
+                name: 'Range',
+                type: 'areasplinerange',
+                data: president.range,
+                color: '#6B7280',
+                fillOpacity: 0.1,
+                lineWidth: 0,
+                showInLegend: false,
+                enableMouseTracking: false,
+                zIndex: 1
+            }],
+            credits: {
+                enabled: false
+            }
+        });
+        
+        charts.push(chart);
+    });
+});
+</script>
+
+<style>
+#export-button:hover {
+    background-color: #45a049;
+}
+</style>
+```
+
+
+## Third chapter
+
+
+```{python}
+#| output: asis
+import polars as pl
+import json
+
+# Read the CSV file
+df = pl.read_csv('presidential_approval.csv')
+
+# Create a list to store the processed data
+presidents_data = []
+
+# Get unique presidents
+unique_presidents = df.get_column('president').unique().to_list()
+
+for president in unique_presidents:
+    president_df = df.filter(pl.col('president') == president)
+    years = president_df.get_column('years')[0]
+    
+    data_points = []
+    for row in president_df.iter_rows(named=True):
+        data_points.append({
+            'month': int(row['year_in_term'] * 12),
+            'approval': row['approval'],
+            'disapproval': row['disapproval']
+        })
+    
+    president_obj = {
+        'name': president,
+        'years': years,
+        'data': data_points
+    }
+    
+    presidents_data.append(president_obj)
+
+print(f"<script>const presidentsData = {json.dumps(presidents_data)};</script>")
+```
+
+```{=html}
+<div class="visualization-container" style="position: relative; max-width: 1200px; margin: 0 auto; background-color: white;">
+    <!-- Content to be exported -->
+    <div class="export-content" style="background-color: white;">
+        <div style="text-align: center; padding: 20px 0 30px 0;">
+            <h1 style="margin: 0; font-size: 2em; color: #333;">Presidential Approval Ratings</h1>
+            <p style="margin: 10px 0 0 0; font-size: 1.1em; color: #666;">Tracking Presidential Performance Through the Years</p>
+        </div>
+        <div id="presidential-approval"></div>
+    </div>
+    
+    <!-- Button container -->
+    <div style="text-align: center; padding: 20px;">
+        <button id="export-button" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            Export as PNG
+        </button>
+    </div>
+</div>
+
+<script>
+const { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Legend } = Recharts;
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return React.createElement('div', {
+      style: {
+        backgroundColor: 'white',
+        padding: '8px',
+        border: '1px solid #ccc',
+        borderRadius: '4px'
+      }
+    }, [
+      React.createElement('p', { key: 'year', style: { fontWeight: 'bold' } }, `Year ${label/12}`),
+      React.createElement('p', { key: 'approval' }, `Approval: ${payload[0].value}%`),
+      React.createElement('p', { key: 'disapproval', style: { color: '#4CAF50' } }, `Disapproval: ${payload[1].value}%`)
+    ]);
+  }
+  return null;
+};
+
+const App = () => {
+  return React.createElement('div', {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gap: '1.5rem',
+      padding: '1rem',
+      width: '100%',
+      backgroundColor: 'white'
+    }
+  }, presidentsData.map(president => 
+    React.createElement('div', {
+      key: president.name,
+      style: {
+        border: '1px solid #ccc',
+        borderRadius: '8px',
+        padding: '1rem',
+        backgroundColor: 'white'
+      }
+    }, [
+      React.createElement('div', {
+        key: 'header',
+        style: { 
+          fontSize: '1.125rem',
+          fontWeight: '600',
+          marginBottom: '0.25rem'
+        }
+      }, [
+        president.name,
+        React.createElement('span', {
+          key: 'years',
+          style: {
+            color: '#666',
+            fontSize: '0.875rem',
+            marginLeft: '0.5rem'
+          }
+        }, president.years)
+      ]),
+      React.createElement('div', {
+        key: 'chart',
+        style: { height: '240px' }
+      }, React.createElement(ResponsiveContainer, { width: '100%', height: '100%' },
+        React.createElement(LineChart, {
+          data: president.data,
+          margin: { top: 5, right: 30, bottom: 10, left: 5 }
+        }, [
+          React.createElement(CartesianGrid, { key: 'grid', strokeDasharray: '3 3' }),
+          React.createElement(XAxis, {
+            key: 'xaxis',
+            dataKey: 'month',
+            type: 'number',
+            domain: [0, 48],
+            ticks: [0, 12, 24, 36, 48],
+            label: { value: 'Years', position: 'bottom' }
+          }),
+          React.createElement(YAxis, {
+            key: 'yaxis',
+            domain: [20, 80],
+            ticks: [20, 50, 80]
+          }),
+          React.createElement(Tooltip, {
+            key: 'tooltip',
+            content: CustomTooltip
+          }),
+          React.createElement(Legend, {
+            key: 'legend',
+            verticalAlign: 'bottom',
+            align: 'center',
+            wrapperStyle: { paddingTop: '30px' },
+            iconType: 'circle'
+          }),
+          React.createElement(Line, {
+            key: 'approval',
+            type: 'monotone',
+            dataKey: 'approval',
+            name: 'Approval',
+            stroke: '#000000',
+            dot: false,
+            strokeWidth: 2,
+            activeDot: { r: 4 }
+          }),
+          React.createElement(Line, {
+            key: 'disapproval',
+            type: 'monotone',
+            dataKey: 'disapproval',
+            name: 'Disapproval',
+            stroke: '#4CAF50',
+            dot: false,
+            strokeWidth: 2,
+            activeDot: { r: 4 }
+          })
+        ])
+      ))
+    ])
+  ));
+};
+
+// Render the app
+const container = document.getElementById('presidential-approval');
+const root = ReactDOM.createRoot(container);
+root.render(React.createElement(App));
+
+// Add export functionality
+document.getElementById('export-button').addEventListener('click', async () => {
+    try {
+        await new Promise(resolve => setTimeout(resolve, 500));
+        const element = document.querySelector('.export-content');
+        if (!element) {
+            throw new Error('Could not find the visualization container');
+        }
+        
+        const canvas = await html2canvas(element, {
+            backgroundColor: 'white',
+            scale: 2,
+            logging: true,
+            width: element.offsetWidth,
+            height: element.offsetHeight,
+            useCORS: true
+        });
+        
+        const link = document.createElement('a');
+        link.download = 'presidential_approval_ratings.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    } catch (error) {
+        console.error('Error during export:', error);
+        alert('There was an error exporting the chart. Please check the console for details.');
+    }
+});
+</script>
+
+<style>
+#presidential-approval {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#export-button:hover {
+  background-color: #45a049;
+}
+
+.visualization-container {
+  background-color: white;
+}
+</style>
+```
