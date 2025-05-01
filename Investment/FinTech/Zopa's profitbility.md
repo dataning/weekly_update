@@ -1,9 +1,0 @@
-
-“In fact, our Smart ISA attracted over 1 billion in less than a year, capturing a significant part of the growth in the market. Bank of England data shows that UK savers have been moving around 3 billion per month into ISA for several months now. These achievements reflect our wider growth at Zopa.”
-
-“I think, I mean, obviously, that's a big number and it feels like a success, but I think that what stood out to me as maybe more of a point or two success is the fact that they achieved profitability and they appear to be demonstrating sustainability. Because I feel like for, especially in the US and I think globally, like over the last year or so, we've really shifted from a growth mindset in the industry to one that is really centered on profitability. Private capital is a lot tighter and in order to demonstrate success, you really have to be able to at least show you can show a path to profitability.”
-
-“Yeah, I was looking at this and it's interesting because when you compare it to other UK challenger banks, NEO banks, who've been profitable in this time frame, a lot of them have relied a lot on SME lending and focused on businesses. So the likes of Oak North, Starling with the business recovery loans and Alica Bank. Those are the, I guess, the hallmarks of profitable banks in the UK that share a similar story to Zopa, albeit that Zopa was founded in 2005.
-
-So to really grow to this level on consumer products is really impressive. And I think it's obviously a great time to be a bank with high interest rates. And this product is quite an interesting and novel approach to savings and presents a more customer-friendly approach to putting money away, which I think is, yeah, which just shows how important getting the customer proposition and execution right on these things.”
-
